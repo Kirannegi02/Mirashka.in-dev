@@ -32,7 +32,7 @@
 
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
             <p style="color: #7f8c8d; font-size: 14px;">
-                If you have any questions, please contact us at support@elevateonemedia.com
+                If you have any questions, please contact us at info@mirashka.in
             </p>
             <p style="color: #7f8c8d; font-size: 14px;">
                 &copy; {{ date('Y') }} Elevate One Media. All rights reserved.

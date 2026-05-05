@@ -989,8 +989,8 @@ Elevate One Media makes growing your brand effortless with assured visibility an
                         <div class="text ">
                            <h3>General Enquiries</h3>
                            <hr>
-                           <p>Phone: +91-8287938388
-                              &nbsp;|&nbsp; Email: hello@elevateonemedia.com
+                           <p>Phone: +91 8796927200
+                              &nbsp;|&nbsp; Email: info@mirashka.in
 
 
                            </p>

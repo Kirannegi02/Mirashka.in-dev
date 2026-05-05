@@ -53,8 +53,8 @@
 
             <h5 class="fw-semibold mt-4">Refund Contact</h5>
             <p>
-                Email: hello@elevateonemedia.com<br>
-                Address: GT-43, First Floor, Sector 117, Noida (U.P.) – 201301
+                Email: info@mirashka.in<br>
+                Address: GT-43, First Floor, Sector 117 Noida (U.P.) -201301
             </p>
 
         </div>

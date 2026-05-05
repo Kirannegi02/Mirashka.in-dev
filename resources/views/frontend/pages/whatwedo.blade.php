@@ -73,7 +73,7 @@
                      <!-- CTA 1 -->
                      <li>
                         <div class="theme_btn_all color_two">
-                           <a href="tel:08287938388" class="theme-btn one primary-color-two">
+                           <a href="tel:08796927200" class="theme-btn one primary-color-two">
                               Book a Discovery Call
                            </a>
                         </div>

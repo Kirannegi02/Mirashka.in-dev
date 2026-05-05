@@ -44,7 +44,7 @@
                         </div>
                         <!-- WhatsApp CTA -->
                         <p style="text-align:center; margin:25px 0;">
-                           <a href="https://wa.me/918287938388" style="background:#25D366; color:#ffffff; padding:12px 22px;
+                           <a href="https://wa.me/918796927200" style="background:#25D366; color:#ffffff; padding:12px 22px;
                               text-decoration:none; border-radius:30px; font-size:15px;
                               display:inline-block;">
                            Chat on WhatsApp

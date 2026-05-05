@@ -32,7 +32,7 @@
                      </div>
 
                      <div class="theme_btn">
-                        <a id="expertise-link" href="tel:+918287938388" class="theme-btn one">Book a Discovery Call</a>
+                        <a id="expertise-link" href="tel:+918796927200" class="theme-btn one">Book a Discovery Call</a>
                      </div>
 
                   </div>
@@ -131,7 +131,7 @@ Sports is one of the most visible and emotionally charged categories in the mark
                <div class="mr_bottom_30"></div>
                <!-- CTA -->
                <div class="theme_btn_all color_one">
-                  <a href="tel:+918287938388" class="theme-btn five">
+                  <a href="tel:+918796927200" class="theme-btn five">
                   Book a Discovery Call <i class="icon-right-arrow"></i>
                   </a>
                </div>
@@ -502,8 +502,8 @@ Sports is one of the most visible and emotionally charged categories in the mark
                      <div class="text ">
                         <h3>General Enquiries</h3>
                         <hr>
-                        <p>Phone: +91-8287938388
-                           &nbsp;|&nbsp; Email: hello@elevateonemedia.com
+                        <p>Phone: +91 8796927200
+                           &nbsp;|&nbsp; Email: info@mirashka.in
                         </p>
                      </div>
                   </div>
@@ -746,8 +746,8 @@ Sports is one of the most visible and emotionally charged categories in the mark
                                     <span class="icon-phone-call1 icon"></span>
                                     <div class="content_bx">
                                        <p>
-                                          Email: hello@elevateonemedia.com <br>
-                                          Phone: +91-8287938388
+                                          Email: info@mirashka.in <br>
+                                          Phone: +91 8796927200
                                        </p>
                                     </div>
                                  </div>

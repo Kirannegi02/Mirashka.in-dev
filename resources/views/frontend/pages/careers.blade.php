@@ -268,7 +268,7 @@
                                  <a href="#">Current Open Positions</a>
                               </h2>
                               <p class="short_desc">We are hiring across multiple departments. Browse our current openings by department and location above. Whether you're a PR Executive, Media Relations Specialist, Content Writer, or Digital marketer—there's a place for you at ElevateOne.
-Not seeing a role that fits? Don't hesitate to send us your CV at careers@elevateonemedia.com. We are always looking for talented individuals to join our growing team.
+Not seeing a role that fits? Don't hesitate to send us your CV at info@mirashka.in. We are always looking for talented individuals to join our growing team.
 </p>
                            </div>
                         </div>
@@ -315,8 +315,8 @@ Our teams are based in Delhi NCR, Mumbai, Bangalore, Noida, and offer remote opp
                               <h2 class="title_service">
                                  <a href="#">Ready to Elevate Your Career?</a>
                               </h2>
-                              <p class="short_desc">If you're passionate about communications, driven by results, and excited about shaping India's corporate narrative, we'd love to hear from you. Apply for an open position above or reach out directly at careers@elevateonemedia.com.
-You can also call us at +91-8287938388 or schedule a casual conversation with our team. Let's explore if ElevateOne Media is the right fit for your next career move.
+                              <p class="short_desc">If you're passionate about communications, driven by results, and excited about shaping India's corporate narrative, we'd love to hear from you. Apply for an open position above or reach out directly at info@mirashka.in.
+You can also call us at +91 8796927200 or schedule a casual conversation with our team. Let's explore if ElevateOne Media is the right fit for your next career move.
 Looking forward to connecting with you!
 </p>
                            </div>
@@ -496,7 +496,7 @@ Looking forward to connecting with you!
                 <div class="cta_box bg_op_1 rounded_radius text-center p-5" style="background: url('{{ asset('assets/frontend/images/contact-hm-15.jpg') }}');">
                     <h3 class="text-white mb-3">Why Join ElevateOne Media?</h3>
                     <p class="text-white opacity-75 mb-4">Since 2010, ElevateOne Media has empowered India's leading CXOs, founders, and enterprises to build measurable visibility and thought leadership. We are redefining how executives and organizations shape narratives in the digital age. If you are passionate about strategic communications, media relations, and making a tangible impact, we want you on our team.</p>
-                    <a href="mailto:careers@elevateonemedia.com" class="btn btn-light">
+                    <a href="mailto:info@mirashka.in" class="btn btn-light">
                         <i class="fa fa-envelope me-2"></i> Send Your CV
                     </a>
                 </div>

@@ -503,8 +503,8 @@ Infrastructure, energy, and sustainability brands operate in environments shaped
                      <div class="text ">
                         <h3>General Enquiries</h3>
                         <hr>
-                        <p>Phone: +91-8287938388
-                           &nbsp;|&nbsp; Email: hello@elevateonemedia.com
+                        <p>Phone: +91 8796927200
+                           &nbsp;|&nbsp; Email: info@mirashka.in
                         </p>
                      </div>
                   </div>
@@ -791,8 +791,8 @@ Is Your Sector Story Visible Where Trust, Policy, and Stakeholder Confidence Are
                                     <span class="icon-phone-call1 icon"></span>
                                     <div class="content_bx">
                                        <p>
-                                          Email: hello@elevateonemedia.com <br>
-                                          Phone: +91-8287938388
+                                          Email: info@mirashka.in <br>
+                                          Phone: +91 8796927200
                                        </p>
                                     </div>
                                  </div>

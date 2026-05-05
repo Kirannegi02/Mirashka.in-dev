@@ -213,7 +213,7 @@
                      <!-- CTA BUTTON -->
                      <div class="bottom_content">
                          <div class="button_content">
-                           <a href="tel:918287938388" class="theme-btn three">
+                           <a href="tel:918796927200" class="theme-btn three">
                               Book a Discovery Call
                               <i class="icon-right-arrow-long"></i>
                            </a>

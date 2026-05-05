@@ -83,19 +83,19 @@
                               <li class="single">
                                  <p>
                                     <span class="icon-telephone"></span>
-                                    <a href="tel:+918287938388">91-8287938388</a>
+                                    <a href="tel:+918796927200">+91 8796927200</a>
                                  </p>
                               </li>
                               <li class="single">
                                  <p>
                                     <span class="icon-mail"></span>
-                                    <a href="mailto:hello@elevateonemedia.com">hello@elevateonemedia.com</a>
+                                    <a href="mailto:info@mirashka.in">info@mirashka.in</a>
                                  </p>
                               </li>
                               <li class="single">
                                  <p>
                                     <span class="icon-location2"></span>
-                                    Delhi, India
+                                    GT-43, First Floor, Sector 117 Noida (U.P.) -201301
                                  </p>
                               </li>
                            </ul>

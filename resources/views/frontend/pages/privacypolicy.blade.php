@@ -55,8 +55,8 @@
 
             <p>Your use of this website is governed by our Privacy Policy outlined below.</p>
             <p>If you have any questions or need further details about our privacy practices, please email us at
-                <a href="mailto:hello@elevateonemedia.com">hello@elevateonemedia.com</a>
-                or write to: <strong>ElevateOne Media GT-43, First Floor, Sector 117 Noida (U.P.) - 201301</strong>.
+                <a href="mailto:info@mirashka.in">info@mirashka.in</a>
+                or write to: <strong>ElevateOne Media GT-43, First Floor, Sector 117 Noida (U.P.) -201301</strong>.
             </p>
             <p>We may collect information you provide when you subscribe, register, fill out forms, participate in
                 surveys, or contact us by email. Additionally, we may collect data about your visits to

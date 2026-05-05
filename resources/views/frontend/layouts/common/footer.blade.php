@@ -14,7 +14,7 @@
              <!--         </div>-->
              <!--         <div class="contnet">-->
              <!--            <h3>Office Address</h3>-->
-             <!--            <p>GT-43, First Floor, Sector 117 Noida (U.P.) - 201301</p>-->
+             <!--            <p>GT-43, First Floor, Sector 117 Noida (U.P.) -201301</p>-->
              <!--         </div>-->
              <!--      </div>-->
              <!--   </div>-->
@@ -27,7 +27,7 @@
                       </div>
                       <div class="contnet">
                          <h3>Contact Us</h3>
-                         <p>Phone: 91-8287938388 &amp; Email: hello@elevateonemedia.com</p>
+                         <p>Phone: +91 8796927200 &amp; Email: info@mirashka.in</p>
                       </div>
                    </div>
                 </div>

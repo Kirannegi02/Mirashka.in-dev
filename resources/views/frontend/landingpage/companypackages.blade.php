@@ -518,7 +518,7 @@ In a world racing toward tomorrow, we bring back the timeless art of reputation,
                               <div class="text ">
                                  <h3>General Enquiries</h3>
                                  <hr>
-                                 <p>Phone: +91-8287938388 | Email: hello@elevateonemedia.com</p>
+                                 <p>Phone: +91 8796927200 | Email: info@mirashka.in</p>
                               </div>
                            </div>
                         </div>
@@ -953,7 +953,7 @@ In a world racing toward tomorrow, we bring back the timeless art of reputation,
                                  <h1>Your Reputation Is Your Biggest Business Asset.</h1>
                                     <!-- WhatsApp CTA -->
    <div class="whatsapp_cta mt-3">
-      <a href="https://wa.me/918287938388?text=Hi%20ElevateOne%20Media,%20I%20would%20like%20to%20know%20more." " 
+      <a href="https://wa.me/918796927200?text=Hi%20ElevateOne%20Media,%20I%20would%20like%20to%20know%20more." " 
          class="btn  rounded-pill px-4 py-2 d-inline-flex align-items-center"
          style="font-weight:500; gap:8px; background-color:#006039; color:#fff;">
          <i class="fab fa-whatsapp" style="font-size:20px;  "></i> Connect on WhatsApp

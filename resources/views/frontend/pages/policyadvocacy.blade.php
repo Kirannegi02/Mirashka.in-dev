@@ -482,8 +482,8 @@
                         <div class="text ">
                            <h3>General Enquiries</h3>
                            <hr>
-                           <p>Phone: +91-8287938388
-                              &nbsp;|&nbsp; Email: hello@elevateonemedia.com
+                           <p>Phone: +91 8796927200
+                              &nbsp;|&nbsp; Email: info@mirashka.in
 
 
                            </p>
@@ -605,7 +605,7 @@
                     </div>
                     <div class="text">
                       <h3>WhatsApp</h3>
-                      <p>+91-8287938388</p>
+                      <p>+91 8796927200</p>
                     </div>
                   </div>
                 </div>
@@ -621,7 +621,7 @@
                     </div>
                     <div class="text">
                       <h3>Video Meeting</h3>
-                      <p>hello@elevateonemedia.com</p>
+                      <p>info@mirashka.in</p>
                     </div>
                   </div>
                 </div>
@@ -784,7 +784,7 @@
                         <span class="icon-phone-call1 icon"></span>
                         <div class="content_bx">
                           <h2>Contact Us</h2>
-                          <p>Email: hello@elevateonemedia.com &amp; Phone: +91-8287938388</p>
+                          <p>Email: info@mirashka.in &amp; Phone: +91 8796927200</p>
                         </div>
                       </div>
                     </div>

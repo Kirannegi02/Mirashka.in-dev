@@ -230,7 +230,7 @@
                     <div class="contact-card bg_light_1 rounded_radius p-4 mt-4">
                         <h5 class="mb-3">Questions?</h5>
                         <p class="text-muted small mb-3">If you have any questions about this role, feel free to reach out.</p>
-                        <a href="mailto:careers@elevateonemedia.com" class="btn btn-outline-secondary w-100">
+                        <a href="mailto:info@mirashka.in" class="btn btn-outline-secondary w-100">
                             <i class="fa fa-envelope me-2"></i> Contact HR Team
                         </a>
                     </div>
