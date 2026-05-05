@@ -1,0 +1,9 @@
+@media (max-width: 575.98px) {
+  .header_top {
+    display: none !important;
+  }
+      .nav {
+      display: none !important;
+    }
+
+}

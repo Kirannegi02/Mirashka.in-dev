@@ -1,0 +1,1 @@
+[01-Apr-2026 12:24:44 UTC] PHP Fatal error:  Trait "App\Http\Controllers\Illuminate\Support\Facades\Http" not found in /home4/elevateonemedia/public_html/dev/app/Http/Controllers/FrontendController.php on line 16

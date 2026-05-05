@@ -1,0 +1,4 @@
+<<<<<<< HEAD
+# elevateonemedia
+Laravel Application
+=======

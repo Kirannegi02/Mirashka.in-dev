@@ -1,0 +1,134 @@
+elevateonemedia/
+│
+├── app/
+│   ├── Console/
+│   │   └── Kernel.php
+│   │
+│   ├── Exceptions/
+│   │   └── Handler.php
+│   │
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/
+│   │   │   │   ├── BannerController.php
+│   │   │   │   ├── PodcastController.php
+│   │   │   │   └── WebinarController.php
+│   │   │   │
+│   │   │   ├── FrontendController.php
+│   │   │   └── ContactFormController.php
+|   |   |   └── AdminController.php
+│   │   │
+│   │   ├── Middleware/
+│   │   │   ├── Authenticate.php
+│   │   │   ├── RedirectIfAuthenticated.php
+│   │   │   └── VerifyCsrfToken.php
+│   │   │
+│   │   └── Requests/
+│   │       └── StoreContactFormRequest.php
+│   │
+│   ├── Mail/
+│   │   ├── AdminContactMail.php
+│   │   └── UserContactMail.php
+│   │
+│   ├── Models/
+│   │   ├── Banner.php
+│   │   ├── Podcast.php
+│   │   ├── Webinar.php
+│   │   ├── ContactForm.php
+│   │   └── User.php
+│   │
+│   └── Providers/
+│       ├── AppServiceProvider.php
+│       ├── AuthServiceProvider.php
+│       └── RouteServiceProvider.php
+│
+├── bootstrap/
+│   └── app.php
+│
+├── config/
+│   ├── app.php
+│   ├── auth.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── mail.php
+│   ├── queue.php
+│   └── services.php
+│
+├── database/
+│   ├── factories/
+│   │
+│   ├── migrations/
+│   │   ├── create_users_table.php
+│   │   ├── create_banners_table.php
+│   │   ├── create_podcasts_table.php
+│   │   ├── create_webinars_table.php
+│   │   └── create_contact_forms_table.php
+│   │
+│   └── seeders/
+│       ├── DatabaseSeeder.php
+│       └── UserSeeder.php
+│
+├── public/
+│   ├── assets/
+│   │   ├── admin/
+│   │   │   ├── css/
+│   │   │   ├── js/
+│   │   │   └── images/
+│   │   │
+│   │   └── frontend/
+│   │       ├── css/
+│   │       ├── js/
+│   │       └── images/
+│   │
+│   └── index.php
+│
+├── resources/
+│   ├── views/
+│   │   ├── admin/
+│   │   │   ├── layouts/
+│   │   │   │   └── app.blade.php
+│   │   │   ├── dashboard.blade.php
+│   │   │   ├── banners/
+│   │   │   │   ├── index.blade.php
+│   │   │   │   ├── create.blade.php
+│   │   │   │   └── edit.blade.php
+│   │   │   ├── podcasts/
+│   │   │   └── webinars/
+│   │   │
+│   │   ├── frontend/
+│   │   │   ├── layouts/
+│   │   │   │   └── app.blade.php
+│   │   │   └── pages/
+│   │   │       ├── home.blade.php
+│   │   │       ├── about.blade.php
+│   │   │       ├── contact.blade.php
+│   │   │       └── thankyou.blade.php
+│   │   │
+│   │   └── emails/
+│   │       ├── contact-admin.blade.php
+│   │       └── contact-user.blade.php
+│   │
+│   └── lang/
+│
+├── routes/
+│   ├── web.php
+│   ├── api.php
+│   └── console.php
+│
+├── storage/
+│   ├── app/
+│   │   └── public/
+│   ├── framework/
+│   └── logs/
+│
+├── tests/
+│   ├── Feature/
+│   └── Unit/
+│
+├── .env
+├── .env.example
+├── artisan
+├── composer.json
+├── composer.lock
+└── package.json
