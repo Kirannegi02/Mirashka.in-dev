@@ -95,7 +95,7 @@
                               <li class="single">
                                  <p>
                                     <span class="icon-location2"></span>
-                                    GT-43, First Floor, Sector 117 Noida (U.P.) -201301
+                                    Sector 117 Noida (U.P.) -201301
                                  </p>
                               </li>
                            </ul>
@@ -122,13 +122,19 @@
                            <div class="header_menu_box">
                               <div class="navigation_menu">
                                  <ul id="myNavbar" class="navbar_nav">
-                                    <li class="menu-item nav-item">
+                                    <li class="menu-item nav-item active">
                                        <a href="{{ url('/') }}" class="nav-link"><span>Home</span></a>
                                     </li>
                                     @include('frontend.layouts.common.megamenu.who')
+                                    <li class="menu-item nav-item active">
+                                       <a href="{{ route('whatwedo') }}" class="nav-link"><span>Solutions</span></a>
+                                    </li>
                                     @include('frontend.layouts.common.megamenu.services')
                                     @include('frontend.layouts.common.megamenu.industries')
                                     @include('frontend.layouts.common.megamenu.insights')
+                                    <li class="menu-item nav-item active">
+                                       <a href="{{ route('careers') }}" class="nav-link"><span>Careers</span></a>
+                                    </li>
                                     @include('frontend.layouts.common.megamenu.contact')
                                  </ul>
                               </div>

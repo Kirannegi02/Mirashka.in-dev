@@ -61,6 +61,31 @@
 
   }
 
+  .right-box .left-title {
+    font-weight: inherit;
+  }
+
+  .right-box .wwa-innovation-award {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+
+  .right-box .left-title a,
+  .right-box .left-title a.wwa-learn-more-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 800 !important;
+  }
+
+  .right-box .left-title a:hover,
+  .right-box .left-title a.wwa-learn-more-link:hover {
+    color: #006039;
+    text-decoration: underline;
+  }
+
   /* Mobile adjustments */
   @media (max-width: 767px) {
     .left-box {
@@ -80,8 +105,8 @@
       <div class="row p-3 align-items-start">
         <!-- Left column: Image + Lottie -->
         <div class="col-lg-3 col-md-4 text-center left-box">
-          <h3 class="left-title mb-2">Premium PR for CXOs, Corporates & Visionaries</h3>
-          <img src="{{ asset('assets/frontend/img/page/wwa-menu1.png') }}" alt="Image" class="img-fluid rounded mb-2 shadow-sm">
+          <h3 class="left-title mb-2">Innovation Award Management Consulting</h3>
+          <img src="{{ asset('assets/frontend/img/page/wwa-menu1.jpg') }}" alt="Image" class="img-fluid rounded mb-2 shadow-sm">
 
         </div>
 
@@ -103,7 +128,7 @@
                 <div class="tab-card">
                   <i class="ri-user-star-line fa-lg text-success"></i>
                   <div>
-                    <h6>Leadership Team</h6>
+                    <h6>Mission and values</h6>
                   </div>
                 </div>
               </a>
@@ -113,7 +138,7 @@
                 <div class="tab-card">
                   <i class="ri-team-line fa-lg text-warning"></i>
                   <div>
-                    <h6>Culture & Careers</h6>
+                    <h6>History</h6>
                   </div>
                 </div>
               </a>
@@ -123,7 +148,7 @@
                 <div class="tab-card">
                   <i class="ri-award-line fa-lg text-danger"></i>
                   <div>
-                    <h6>Awards</h6>
+                    <h6>General Enquiries</h6>
                   </div>
                 </div>
               </a>
@@ -133,7 +158,7 @@
                 <div class="tab-card">
                   <i class="ri-slideshow-line fa-lg text-info"></i>
                   <div>
-                    <h6>Methodology</h6>
+                    <h6>Employee Wellbeing</h6>
                   </div>
                 </div>
               </a>
@@ -141,22 +166,72 @@
             <div class="col-md-6">
               <a href="{{ url('client') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="ri-user-tie fa-lg text-info"></i>
+                  <i class="ri-group-line fa-lg text-info"></i>
                   <div>
-                    <h6>Our Clients</h6>
+                    <h6>Community Engagement</h6>
                   </div>
                 </div>
               </a>
             </div>
-            <div class="col-md-12">
-              <h5 class="text-center" style="font-size: 16px;line-height: 20px;font-weight: 600;margin-bottom: 0;">Our proven methodology, guided by integrity and agility, is designed to turn CXO narratives into measurable media impact.</h5>   
+            <div class="col-md-6">
+              <a href="{{ route('leadershipteam') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-map-pin-2-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Regional Offices</h6>
+                  </div>
+                </div>
+              </a>
             </div>
+            <div class="col-md-6">
+              <a href="{{ route('leadershipteam') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-global-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Global Partnerships</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="{{ route('leadershipteam') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-rocket-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Lead with Impact</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="{{ route('leadershipteam') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-line-chart-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Scale with Agility</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="{{ route('leadershipteam') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-user-heart-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Attract &amp; Retain Top Talent</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
            
           </div>
         </div>
 
         <div class="col-lg-3 col-md-4 text-center right-box">
-          <h3 class="left-title mb-2">From Discovery to Dominance</h3>
+          <h3 class="left-title mb-2">
+            <a href="{{ route('aboutus') }}" class="wwa-learn-more-link">Learn more Mirashka HR</a>
+          </h3>
           <img src="{{ asset('assets/frontend/img/page/wwa-menu2.png') }}" alt="Image" class="img-fluid rounded mb-2 shadow-sm">
         </div>
 

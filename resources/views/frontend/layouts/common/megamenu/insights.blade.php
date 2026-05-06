@@ -1,6 +1,6 @@
 <li class="menu-item menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
   <a href="#" class="dropdown-toggle nav-link">
-    <span>Resources & Insights</span>
+    <span>Insights</span>
   </a>
   <ul class="dropdown-menu width_90_percentage mega-border">
     <li>

@@ -1,6 +1,6 @@
 <li class="menu-item menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
   <a href="{{ route('whoweserve') }}" class="dropdown-toggle nav-link">
-    <span>Who We Serve</span>
+    <span>Industries</span>
   </a>
   <ul class="dropdown-menu width_100_percentage mega-border">
   <li>
@@ -13,30 +13,40 @@
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/enterprise-tech.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/bfsi.jpg') }}" class="img-fluid" alt="Asset Management" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('enterprisetechsaas') }}">Enterprise Tech & SaaS</a></h2>
-                <a class="date" href="{{ route('enterprisetechsaas') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('capitalmarketscommunication') }}">Asset Management</a></h2>
+                <a class="date" href="{{ route('capitalmarketscommunication') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/al-deep.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/infrastructure-energy.jpg') }}" class="img-fluid" alt="Manufacturing" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('aideeptech') }}">AI & Deep Tech</a></h2>
-                <a class="date" href="{{ route('aideeptech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('infrastructureenergy') }}">Manufacturing</a></h2>
+                <a class="date" href="{{ route('infrastructureenergy') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/health-wellness.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/bfsi.jpg') }}" class="img-fluid" alt="Insurance" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('healthwellness') }}">Health & Wellness</a></h2>
+                <h2 class="title"><a href="{{ route('bfsifintech') }}">Insurance</a></h2>
+                <a class="date" href="{{ route('bfsifintech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+              </div>
+            </div>
+
+            <div class="news_recent clearfix image_s">
+              <div class="image">
+                <img src="{{ asset('assets/frontend/img/menu/health-wellness.jpg') }}" class="img-fluid" alt="Pharmaceuticals" loading="lazy">
+              </div>
+              <div class="content">
+                <h2 class="title"><a href="{{ route('healthwellness') }}">Pharmaceuticals</a></h2>
                 <a class="date" href="{{ route('healthwellness') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
@@ -52,31 +62,41 @@
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/bfsi.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/health-wellness.jpg') }}" class="img-fluid" alt="Medical Devices" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('bfsifintech') }}">BFSI & Fintech</a></h2>
-                <a class="date" href="{{ route('bfsifintech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('healthwellness') }}">Medical Devices</a></h2>
+                <a class="date" href="{{ route('healthwellness') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/infrastructure-energy.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/al-deep.jpg') }}" class="img-fluid" alt="Emerging Technologies" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('infrastructureenergy') }}">Infrastructure & Energy</a></h2>
-                <a class="date" href="{{ route('infrastructureenergy') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('aideeptech') }}">Emerging Technologies</a></h2>
+                <a class="date" href="{{ route('aideeptech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/luxury-brands.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/enterprise-tech.jpg') }}" class="img-fluid" alt="Software & SaaS" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('luxurybrands') }}">Luxury Brands</a></h2>
-                <a class="date" href="{{ route('luxurybrands') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('enterprisetechsaas') }}">Software &amp; SaaS</a></h2>
+                <a class="date" href="{{ route('enterprisetechsaas') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+              </div>
+            </div>
+
+            <div class="news_recent clearfix image_s">
+              <div class="image">
+                <img src="{{ asset('assets/frontend/img/menu/enterprise-tech.jpg') }}" class="img-fluid" alt="E-commerce" loading="lazy">
+              </div>
+              <div class="content">
+                <h2 class="title"><a href="{{ route('digitalpresencethoughtleadership') }}">E-commerce</a></h2>
+                <a class="date" href="{{ route('digitalpresencethoughtleadership') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
@@ -91,25 +111,33 @@
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/education-edtech.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/luxury-brands.jpg') }}" class="img-fluid" alt="Fashion & Apparel" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('educationedtech') }}">Education & Edtech </a></h2>
-                <a class="date" href="{{ route('educationedtech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('luxurybrands') }}">Fashion &amp; Apparel</a></h2>
+                <a class="date" href="{{ route('luxurybrands') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
             <div class="news_recent clearfix image_s">
               <div class="image">
-                <img src="{{ asset('assets/frontend/img/menu/sports.jpg') }}" class="img-fluid" alt="img" loading="lazy">
+                <img src="{{ asset('assets/frontend/img/menu/bfsi.jpg') }}" class="img-fluid" alt="Banking" loading="lazy">
               </div>
               <div class="content">
-                <h2 class="title"><a href="{{ route('sports') }}">Sports</a></h2>
-                <a class="date" href="{{ route('sports') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+                <h2 class="title"><a href="{{ route('bfsifintech') }}">Banking</a></h2>
+                <a class="date" href="{{ route('bfsifintech') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
               </div>
             </div>
 
-            
+            <div class="news_recent clearfix image_s">
+              <div class="image">
+                <img src="{{ asset('assets/frontend/img/menu/infrastructure-energy.jpg') }}" class="img-fluid" alt="Oil & Gas" loading="lazy">
+              </div>
+              <div class="content">
+                <h2 class="title"><a href="{{ route('infrastructureenergy') }}">Oil &amp; Gas</a></h2>
+                <a class="date" href="{{ route('infrastructureenergy') }}"><span class="fa fa-angle-double-right"></span>Read More</a>
+              </div>
+            </div>
 
           </div>
         </div>

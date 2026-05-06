@@ -9,29 +9,28 @@
       <!-- Left Column -->
       <div class="col-lg-4 col-md-4" style="max-height:400px; overflow-y:auto;">
         <ul class="list-unstyled vertical-tab-list">
-          <li><a href="{{ route('executiveinfluencemediaauthority') }}" class="dropdown-item active" onclick="showWhoServeContent(1)" onmouseover="showWhoServeContent(1)">Executive Influence & Media Authority</a></li>
-          <li><a href="{{ route('digitalpresencethoughtleadership') }}" class="dropdown-item" onclick="showWhoServeContent(2)" onmouseover="showWhoServeContent(2)">Digital Presence & Thought Leadership</a></li>
-          <li><a href="{{ route('voiceofleadershippodcastaudioip') }}" class="dropdown-item" onclick="showWhoServeContent(3)" onmouseover="showWhoServeContent(3)">Voice of Leadership – Podcast & Audio IP</a></li>
-          <li><a href="{{ route('reputationcapitalawardspositioning') }}" class="dropdown-item" onclick="showWhoServeContent(4)" onmouseover="showWhoServeContent(4)">Reputation Capital & Awards Positioning</a></li>
-          <li><a href="{{ route('cxopresenceindustryvisibility') }}" class="dropdown-item" onclick="showWhoServeContent(5)" onmouseover="showWhoServeContent(5)">CXO Presence & Industry Visibility</a></li>
-          <li><a href="{{ route('regionalimpactcommunication') }}" class="dropdown-item" onclick="showWhoServeContent(6)" onmouseover="showWhoServeContent(6)">Regional Impact Communication</a></li>
+          <li><a href="{{ route('executiveinfluencemediaauthority') }}" class="dropdown-item active" onclick="showWhoServeContent(1)" onmouseover="showWhoServeContent(1)">Compliance Integrity</a></li>
+          <li><a href="{{ route('digitalpresencethoughtleadership') }}" class="dropdown-item" onclick="showWhoServeContent(2)" onmouseover="showWhoServeContent(2)">Workforce Efficiency</a></li>
+          <li><a href="{{ route('voiceofleadershippodcastaudioip') }}" class="dropdown-item" onclick="showWhoServeContent(3)" onmouseover="showWhoServeContent(3)">Leadership Mastery</a></li>
+          <li><a href="{{ route('reputationcapitalawardspositioning') }}" class="dropdown-item" onclick="showWhoServeContent(4)" onmouseover="showWhoServeContent(4)">Hiring Excellence</a></li>
+          <li><a href="{{ route('cxopresenceindustryvisibility') }}" class="dropdown-item" onclick="showWhoServeContent(5)" onmouseover="showWhoServeContent(5)">HRaaS Solutions</a></li>
         </ul>
       </div>
 
       <!-- Right Column -->
       <div class="col-lg-8 col-md-8">
 
-        <!-- Content 1 -->
+        <!-- Content 1 — Compliance Integrity -->
         <div class="who-serve-content" id="who-serve-content-1">
           <div class="row g-3">
 
             <div class="col-md-6">
               <a href="{{ route('strategicmediaplacements') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-bullhorn fa-lg text-primary"></i>
+                  <i class="fas fa-graduation-cap fa-lg text-primary"></i>
                   <div>
-                    <h6>Strategic Media Placements</h6>
-                    <p class="small">Boost executive visibility in top media.</p>
+                    <h6>Employee Growth &amp; Upskilling</h6>
+                    <p class="small">Learning and development programs to enhance career progression.</p>
                   </div>
                 </div>
               </a>
@@ -40,10 +39,10 @@
             <div class="col-md-6">
               <a href="{{ route('capitalmarketscommunication') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-chart-line fa-lg text-success"></i>
+                  <i class="fas fa-balance-scale fa-lg text-success"></i>
                   <div>
-                    <h6>Capital Markets Communication</h6>
-                    <p class="small">Position leadership for investors & markets.</p>
+                    <h6>Expert Legal &amp; HR Consultations</h6>
+                    <p class="small">Specialist guidance on employment law and people policies.</p>
                   </div>
                 </div>
               </a>
@@ -52,120 +51,22 @@
             <div class="col-md-6">
               <a href="{{ route('investorvisibility') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-user-tie fa-lg text-warning"></i>
+                  <i class="fas fa-file-contract fa-lg text-warning"></i>
                   <div>
-                    <h6>Investor Visibility</h6>
-                    <p class="small">Enhance reputation among stakeholders.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Content 2 -->
-        <div class="who-serve-content" id="who-serve-content-2" style="display:none;">
-          <div class="row g-3">
-
-            <div class="col-md-6">
-              <a href="{{ route('linkedinauthoritybuilding') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fab fa-linkedin fa-lg text-primary"></i>
-                  <div>
-                    <h6>LinkedIn Authority Building</h6>
-                    <p class="small">Grow executive voice on LinkedIn.</p>
+                    <h6>Policy &amp; Documentation Excellence</h6>
+                    <p class="small">Handbooks, contracts, and HR records built for clarity and compliance.</p>
                   </div>
                 </div>
               </a>
             </div>
 
             <div class="col-md-6">
-              <a href="{{ route('leadershipmediatraining') }}" class="card-link">
+              <a href="{{ route('strategicmediaplacements') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-chalkboard-teacher fa-lg text-success"></i>
+                  <i class="fas fa-clipboard-check fa-lg text-danger"></i>
                   <div>
-                    <h6>Leadership Media Training</h6>
-                    <p class="small">Prepare leaders for media interviews.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-6">
-              <a href="{{ route('influencecoaching') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fas fa-comments fa-lg text-warning"></i>
-                  <div>
-                    <h6>Influence Coaching</h6>
-                    <p class="small">Develop authentic executive influence.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Content 3 -->
-        <div class="who-serve-content" id="who-serve-content-3" style="display:none;">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <a href="{{ route('podcastingservices') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fas fa-podcast fa-lg text-danger"></i>
-                  <div>
-                    <h6>Podcasting Services</h6>
-                    <p class="small">Launch branded podcasts & audio IP.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Content 4 -->
-        <div class="who-serve-content" id="who-serve-content-4" style="display:none;">
-          <div class="row g-3">
-
-            <div class="col-md-6">
-              <a href="{{ route('awardsconsulting') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fas fa-award fa-lg text-warning"></i>
-                  <div>
-                    <h6>Awards Consulting</h6>
-                    <p class="small">Strategize & apply for industry awards.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="col-md-6">
-              <a href="{{ route('reputationriskcrisispreparedness') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fas fa-shield-alt fa-lg text-danger"></i>
-                  <div>
-                    <h6>Reputation Risk & Crisis Preparedness</h6>
-                    <p class="small">Safeguard brand reputation proactively.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Content 5 -->
-        <div class="who-serve-content" id="who-serve-content-5" style="display:none;">
-          <div class="row g-3">
-
-            <div class="col-md-6">
-              <a href="{{ route('speakingengagementsevents') }}" class="card-link">
-                <div class="tab-card">
-                  <i class="fas fa-microphone fa-lg text-primary"></i>
-                  <div>
-                    <h6>Speaking Engagements & Events</h6>
-                    <p class="small">Secure speaking slots for leaders.</p>
+                    <h6>Compliance &amp; Risk Assessments</h6>
+                    <p class="small">Structured reviews to surface risk and strengthen controls.</p>
                   </div>
                 </div>
               </a>
@@ -174,10 +75,10 @@
             <div class="col-md-6">
               <a href="{{ route('capitalmarketscommunication') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-chart-line fa-lg text-success"></i>
+                  <i class="fas fa-hands-helping fa-lg text-info"></i>
                   <div>
-                    <h6>Capital Markets Communication</h6>
-                    <p class="small">Communicate effectively with markets.</p>
+                    <h6>Workplace Ethics &amp; Prevention Training</h6>
+                    <p class="small">Training that reinforces respect, integrity, and prevention.</p>
                   </div>
                 </div>
               </a>
@@ -186,20 +87,318 @@
           </div>
         </div>
 
-        <!-- Content 6 -->
-        <div class="who-serve-content" id="who-serve-content-6" style="display:none;">
+        <!-- Content 2 — Workforce Efficiency -->
+        <div class="who-serve-content" id="who-serve-content-2" style="display:none;">
           <div class="row g-3">
+
             <div class="col-md-6">
-              <a href="{{ route('localisedmediastrategy') }}" class="card-link">
+              <a href="{{ route('linkedinauthoritybuilding') }}" class="card-link">
                 <div class="tab-card">
-                  <i class="fas fa-globe-asia fa-lg text-info"></i>
+                  <i class="fas fa-bookmark fa-lg text-primary"></i>
                   <div>
-                    <h6>Localised Media Strategy</h6>
-                    <p class="small">Tailored messaging for regional markets.</p>
+                    <h6>Policy Design &amp; Compliance Audit</h6>
+                    <p class="small">Development and regular auditing of HR policies to ensure legal compliance and alignment with organizational goals.</p>
                   </div>
                 </div>
               </a>
             </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('leadershipmediatraining') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-chart-bar fa-lg text-success"></i>
+                  <div>
+                    <h6>Payroll Outsourcing &amp; Administration</h6>
+                    <p class="small">End-to-end payroll management, ensuring accurate processing, tax compliance, and seamless benefits administration.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('influencecoaching') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-user-tie fa-lg text-warning"></i>
+                  <div>
+                    <h6>Remote HR Solutions</h6>
+                    <p class="small">Virtual HR services acting as your external HR team, managing recruitment, onboarding, employee records, and compliance remotely.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Content 3 — Leadership Mastery -->
+        <div class="who-serve-content" id="who-serve-content-3" style="display:none;">
+          <div class="row g-3">
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-users fa-lg text-danger"></i>
+                  <div>
+                    <h6>Executive Search &amp; Leadership Hiring</h6>
+                    <p class="small">Finding transformational leaders who align with your vision and culture.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-landmark fa-lg text-success"></i>
+                  <div>
+                    <h6>Board &amp; CEO Advisory</h6>
+                    <p class="small">Strategic advice for boards and CEOs to enhance governance, leadership effectiveness, and long-term planning.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-arrow-trend-up fa-lg text-warning"></i>
+                  <div>
+                    <h6>CEO Succession &amp; Performance Acceleration</h6>
+                    <p class="small">Seamless CEO succession planning and performance optimization for new leadership.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-user-check fa-lg text-success"></i>
+                  <div>
+                    <h6>Executive Assessment &amp; Leadership Consulting</h6>
+                    <p class="small">Leadership evaluations and development roadmaps to align leadership capability with business strategy.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-sitemap fa-lg text-success"></i>
+                  <div>
+                    <h6>HR &amp; Talent Strategy Advisory</h6>
+                    <p class="small">Strategic workforce planning, culture transformation, and future talent pipeline development.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-microchip fa-lg text-info"></i>
+                  <div>
+                    <h6>Digital Transformation &amp; Workforce Evolution</h6>
+                    <p class="small">Helping HR teams and leadership adapt to digital-first operations through reskilling and HR tech integration.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-hand-holding-heart fa-lg text-primary"></i>
+                  <div>
+                    <h6>Diversity, Equity &amp; Inclusion Advisory</h6>
+                    <p class="small">Designing and embedding inclusive hiring, leadership, and culture strategies.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-people-arrows fa-lg text-danger"></i>
+                  <div>
+                    <h6>Family Business Leadership Solutions</h6>
+                    <p class="small">Specialized advisory for family-owned businesses on governance, succession, and leadership transitions.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <a href="{{ route('podcastingservices') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-project-diagram fa-lg text-primary"></i>
+                  <div>
+                    <h6>Restructuring &amp; Organizational Transformation</h6>
+                    <p class="small">Advisory support for leadership teams navigating restructuring, workforce redeployment, and cultural transformation.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Content 4 — Hiring Excellence -->
+        <div class="who-serve-content" id="who-serve-content-4" style="display:none;">
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <a href="{{ route('awardsconsulting') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-gears fa-lg text-danger"></i>
+                  <div>
+                    <h6>IT Staffing</h6>
+                    <p class="small">Placing skilled tech talent across emerging technologies.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('reputationriskcrisispreparedness') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-laptop-code fa-lg text-primary"></i>
+                  <div>
+                    <h6>IT Recruitment</h6>
+                    <p class="small">Specialist hiring for technology and innovation roles.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('awardsconsulting') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-magnifying-glass fa-lg" style="color: #8b6914;"></i>
+                  <div>
+                    <h6>General Staffing</h6>
+                    <p class="small">End-to-end staffing for non-technical roles across industries.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('reputationriskcrisispreparedness') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-building-user fa-lg text-success"></i>
+                  <div>
+                    <h6>Recruitment Process Outsourcing (RPO)</h6>
+                    <p class="small">Acting as your extended recruitment team to handle full-cycle hiring.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('awardsconsulting') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-globe fa-lg text-primary"></i>
+                  <div>
+                    <h6>NAPS (National Apprenticeship Promotion Scheme)</h6>
+                    <p class="small">Helping businesses leverage apprenticeships for future-ready talent and government incentives.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('reputationriskcrisispreparedness') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-user-tie fa-lg text-danger"></i>
+                  <div>
+                    <h6>Executive Search</h6>
+                    <p class="small">Identifying and placing transformational leadership talent aligned with your business vision.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="who-serve-content" id="who-serve-content-5" style="display:none;">
+          <div class="row g-3">
+
+            <div class="col-md-6">
+              <a href="{{ route('speakingengagementsevents') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-people-arrows fa-lg text-primary"></i>
+                  <div>
+                    <h6>HR Outsourcing</h6>
+                    <p class="small">Full-service HR management including payroll, benefits administration, and compliance oversight, scaled to your needs.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('capitalmarketscommunication') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-users-gear fa-lg text-info"></i>
+                  <div>
+                    <h6>Employee Engagement &amp; Performance Management</h6>
+                    <p class="small">Developing engagement strategies, performance frameworks, and real-time employee feedback programs.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('speakingengagementsevents') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-users fa-lg text-warning"></i>
+                  <div>
+                    <h6>Employer Branding</h6>
+                    <p class="small">Positioning your company as an employer of choice to attract top talent.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('capitalmarketscommunication') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-clipboard-check fa-lg text-success"></i>
+                  <div>
+                    <h6>Employee Surveys &amp; Retention Strategies</h6>
+                    <p class="small">Continuous feedback mechanisms to measure satisfaction and proactively improve retention.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('speakingengagementsevents') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-magnifying-glass fa-lg text-primary"></i>
+                  <div>
+                    <h6>Candidate Sourcing</h6>
+                    <p class="small">Curated candidate pipelines designed to fit your culture and hiring needs.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-6">
+              <a href="{{ route('capitalmarketscommunication') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="fas fa-diagram-project fa-lg text-danger"></i>
+                  <div>
+                    <h6>HR Technology Solutions</h6>
+                    <p class="small">Implementing HR software, analytics platforms, and process automation tools to enhance HR efficiency.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
           </div>
         </div>
 
