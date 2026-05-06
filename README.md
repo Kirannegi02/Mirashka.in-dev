@@ -16,7 +16,7 @@ The project uses Blade views with custom frontend assets and Laravel routing/con
 ### 1) Prerequisites
 
 - PHP `8.2+`
-- Composer `2.x`
+- Composer `2.x`    
 - MySQL server running
 
 ### 2) Install dependencies
@@ -58,3 +58,7 @@ php artisan serve
 Open:
 
 - `http://127.0.0.1:8000`
+
+## Deployment Check
+
+This line is added to trigger and verify GitHub Actions deployment to cPanel.
