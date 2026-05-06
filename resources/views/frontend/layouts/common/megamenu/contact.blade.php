@@ -12,7 +12,7 @@
             <i class="ri-file-list-3-line fa-lg text-primary"></i>
           </div>
           <div class="txt_content">
-            <h3><a href="{{ route('projectenquiries') }}">Project Enquiries Form</a></h3>
+            <h3><a href="{{ route('projectenquiries') }}">General Inquiries</a></h3>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
             <i class="ri-megaphone-line fa-lg text-success"></i>
           </div>
           <div class="txt_content">
-            <h3><a href="{{ route('mediapresscontact') }}">Media / Press Contact</a></h3>
+            <h3><a href="{{ route('mediapresscontact') }}">Service Requests</a></h3>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
             <i class="ri-hand-coin-line fa-lg text-warning"></i>
           </div>
           <div class="txt_content">
-            <h3><a href="{{ route('partnershipscontact') }}">Partnerships Contact</a></h3>
+            <h3><a href="{{ route('partnershipscontact') }}">Partnership Opportunities</a></h3>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
             <i class="ri-map-pin-line fa-lg text-danger"></i>
           </div>
           <div class="txt_content">
-            <h3><a href="{{ route('officelocations') }}">Office Locations & Maps</a></h3>
+            <h3><a href="{{ route('officelocations') }}">Office Locations</a></h3>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
             <i class="ri-login-box-line fa-lg text-info"></i>
           </div>
           <div class="txt_content">
-            <h3><a href="{{ route('clientportallogin') }} ">Client Portal Login</a></h3>
+            <h3><a href="{{ route('clientportallogin') }}">Regional Contacts</a></h3>
           </div>
         </div>
       </div>
