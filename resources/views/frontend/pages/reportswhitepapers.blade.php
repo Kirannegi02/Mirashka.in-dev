@@ -317,9 +317,9 @@ body { background: var(--bg); color: var(--text); }
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
-        <div class="hero-label"><i class="fa fa-file-alt"></i> White Paper by Elevate One Media</div>
+        <div class="hero-label"><i class="fa fa-file-alt"></i> White Paper by Mirashka</div>
         <h1>The Executive Influence Flywheel:<br/><em>How CXOs Drive Growth Through</em><br/>Reputation and Thought Leadership</h1>
-        <p class="hero-sub">A Research-Driven White Paper by Elevate One Media</p>
+        <p class="hero-sub">A Research-Driven White Paper by Mirashka</p>
         <div class="hero-badge"><i class="fa fa-lock me-1"></i> Research-Backed &nbsp;·&nbsp; <i class="fa fa-chart-line me-1"></i> Data-Driven Insights &nbsp;·&nbsp; <i class="fa fa-globe me-1"></i> Global Studies</div>
       </div>
       <div class="col-md-4">
@@ -872,8 +872,8 @@ body { background: var(--bg); color: var(--text); }
     <div class="about-strip">
       <div class="about-icon"><i class="fa fa-building"></i></div>
       <div>
-        <h5>About Elevate One Media</h5>
-        <p>Elevate One Media specializes in premium PR, CXO profiling, and strategic communication services for leaders and organizations seeking to build sustainable influence and drive measurable business growth. Founded in 2009 as Whiz Consulting and evolved through 15+ years of experience, we combine research-driven insights with creative storytelling to help clients activate their Executive Influence Flywheel.<br/><br/>For more information about implementing executive influence strategies for your organization, visit <a href="https://www.elevateonemedia.com" target="_blank">www.elevateonemedia.com</a></p>
+        <h5>About Mirashka</h5>
+        <p>Mirashka specializes in premium PR, CXO profiling, and strategic communication services for leaders and organizations seeking to build sustainable influence and drive measurable business growth. Founded in 2009 as Whiz Consulting and evolved through 15+ years of experience, we combine research-driven insights with creative storytelling to help clients activate their Executive Influence Flywheel.<br/><br/>For more information about implementing executive influence strategies for your organization, visit <a href="https://www.elevateonemedia.com" target="_blank">www.elevateonemedia.com</a></p>
       </div>
     </div>
   </div>

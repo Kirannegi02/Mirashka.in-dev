@@ -19,7 +19,7 @@
                            Building Category Authority for Enterprise Tech & B2B SaaS Leaders
                         </h2>
                         <p id="expertise-desc">
-                           Elevate One Media helps enterprise technology brands, SaaS founders, and B2B leadership teams build trust, sharpen positioning, and create the kind of visibility that influences buyers, investors, partners, and the wider market.
+                           Mirashka helps enterprise technology brands, SaaS founders, and B2B leadership teams build trust, sharpen positioning, and create the kind of visibility that influences buyers, investors, partners, and the wider market.
                         </p>
                      </div>
                      <div class="theme_btn">

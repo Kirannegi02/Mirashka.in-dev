@@ -33,7 +33,7 @@
                         <div class="custom-badge">VOICE OF LEADERSHIP </div>
                   <h2 class="title_big text-white">Build a Digital Presence That Reflects Leadership, Not Just Activity
 </h2>
-                   <p class="text-white">When voice is used well, it creates trust, memory, and closeness faster than most content formats ever can. Elevate One Media helps leaders and brands build premium podcast and audio IP that turns expertise into a long-term thought-leadership asset.</p>
+                   <p class="text-white">When voice is used well, it creates trust, memory, and closeness faster than most content formats ever can. Mirashka helps leaders and brands build premium podcast and audio IP that turns expertise into a long-term thought-leadership asset.</p>
 
                </div>
             </div>
@@ -613,8 +613,8 @@
    <div class="title_all_box style_one dark_color">
       <div class="title_sections left">
 
-         <div class="before_title">Why Elevate One Media</div>
-         <h2 class="title">Why Elevate One Media Is Different</h2>
+         <div class="before_title">Why Mirashka</div>
+         <h2 class="title">Why Mirashka Is Different</h2>
 
          <p>
             We do not create random podcasts. We build strategic audio properties designed for long-term influence.

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login | ElevateOne Media</title>
+    <title>Login | Mirashka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Font -->
@@ -183,7 +183,7 @@
 
         <!-- Logo -->
         <div class="logo">
-            <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="ElevateOne Media">
+            <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="Mirashka">
         </div>
 
         <div class="login-title">
@@ -219,7 +219,7 @@
 
 
         <div class="footer-text">
-            © {{ date('Y') }} ElevateOne Media
+            © {{ date('Y') }} Mirashka
         </div>
 
     </div>

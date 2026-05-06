@@ -151,7 +151,7 @@
                        <p class="text-black">
                           A powerful LinkedIn presence does more than improve visibility. It shapes how investors, clients, peers, media, talent, and industry stakeholders perceive your leadership.
 
-                          At Elevate One Media, we help leaders move beyond inconsistent posting and generic personal branding. Our LinkedIn Authority Building service is designed to create a digital presence that reflects clarity of thought, credibility of experience, and strategic relevance in your industry. The objective is not just to post more—but to be remembered for the right ideas.
+                          At Mirashka, we help leaders move beyond inconsistent posting and generic personal branding. Our LinkedIn Authority Building service is designed to create a digital presence that reflects clarity of thought, credibility of experience, and strategic relevance in your industry. The objective is not just to post more—but to be remembered for the right ideas.
                        </p>
 
                        <div class="bottom_content">
@@ -1044,7 +1044,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Elevate One Media for LinkedIn Authority Building</h2>
+                    <h2 class="title">Why Mirashka for LinkedIn Authority Building</h2>
                     <p>
                        We help leaders build LinkedIn into a strategic authority platform—focused on credibility, consistency, and meaningful professional influence rather than superficial personal branding.
                     </p>

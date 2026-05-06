@@ -28,7 +28,7 @@ class UserRegistered extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Welcome to Elevate One Media - Account Created',
+            subject: 'Welcome to Mirashka - Account Created',
         );
     }
 
@@ -39,3 +39,4 @@ class UserRegistered extends Mailable implements ShouldQueue
         );
     }
 }
+

@@ -202,7 +202,7 @@
                        <h1 class="text-black">Media Visibility with Strategic Intent</h1>
                        <p class="text-black">Strategic media placements are not about chasing random press mentions. They are about placing your voice where it matters most—before customers, investors, partners, policy stakeholders, and industry decision-makers.
 
-                          At Elevate One Media, we combine messaging clarity, editorial relevance, and relationship-led outreach to secure meaningful coverage that strengthens authority. Whether the objective is category leadership, market entry, investor confidence, product credibility, or executive profiling, every placement is pursued with a defined communication outcome in mind.</p>
+                          At Mirashka, we combine messaging clarity, editorial relevance, and relationship-led outreach to secure meaningful coverage that strengthens authority. Whether the objective is category leadership, market entry, investor confidence, product credibility, or executive profiling, every placement is pursued with a defined communication outcome in mind.</p>
 
                        <div class="bottom_content">
                           <div class="button_content">
@@ -992,7 +992,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Clients Trust Elevate One Media for Strategic Placements</h2>
+                    <h2 class="title">Why Clients Trust Mirashka for Strategic Placements</h2>
                     <p>
                        We combine strategic thinking with execution excellence to deliver placements that build credibility, authority, and long-term brand value.
                     </p>

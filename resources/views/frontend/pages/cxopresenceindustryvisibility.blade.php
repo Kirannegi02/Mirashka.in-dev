@@ -32,7 +32,7 @@
 CXO PRESENCE & INDUSTRY VISIBILITY</div>
                   <h2 class="title_big text-white">Put Leadership Where Industry Influence Is Actually Built
 </h2>
-                   <p class="text-white">The right room can change how a leader is perceived. Elevate One Media helps founders, CXOs, and public-facing business leaders strengthen visibility across speaking platforms, market-facing conversations, investor environments, and industry ecosystems where trust is shaped in real time.</p>
+                   <p class="text-white">The right room can change how a leader is perceived. Mirashka helps founders, CXOs, and public-facing business leaders strengthen visibility across speaking platforms, market-facing conversations, investor environments, and industry ecosystems where trust is shaped in real time.</p>
 
                </div>
             </div>
@@ -697,11 +697,11 @@ CXO PRESENCE & INDUSTRY VISIBILITY</div>
                <div class="title_sections left">
 
                   <div class="before_title">
-                     Why Elevate One Media
+                     Why Mirashka
                   </div>
 
                   <h2 class="title">
-                     Why Elevate One Media Is Different
+                     Why Mirashka Is Different
                   </h2>
 
                   <p>

@@ -25,7 +25,7 @@ Building Trust, Authority, and Public Confidence for Health & Wellness Brands
 
 
 
-Elevate One Media helps healthcare, wellness, and impact-led brands build visibility that strengthens expert credibility, leadership trust, and long-term category authority.
+Mirashka helps healthcare, wellness, and impact-led brands build visibility that strengthens expert credibility, leadership trust, and long-term category authority.
                         </p>
                      </div>
                      <div class="theme_btn">

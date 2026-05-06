@@ -299,7 +299,7 @@
                         <dd class="accordion-content hide">
                            <p>
                               We provide strategic PR, CXO positioning, award consulting, media training, and digital
-                              presence solutions tailored to elevate your brand.
+                              presence solutions tailored to strengthen your brand.
                            </p>
                         </dd>
                         <dt class="faq_header">

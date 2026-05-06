@@ -622,10 +622,10 @@
             <div class="title_all_box style_one dark_color">
                <div class="title_sections left">
 
-                  <div class="before_title">Why Elevate One Media</div>
+                  <div class="before_title">Why Mirashka</div>
 
                   <h2 class="title">
-                     Why Elevate One Media Is Different
+                     Why Mirashka Is Different
                   </h2>
 
                   <p>

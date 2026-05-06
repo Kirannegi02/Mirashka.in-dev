@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $data['title'] ?? 'Elevate One Media' }}</title>
+    <title>{{ $data['title'] ?? 'Mirashka' }}</title>
     <meta name="title" content="{{ $data['title'] ?? '' }}">
     <meta name="description" content="{{ $data['description'] ?? '' }}">
     <meta name="keywords" content="{{ $data['keywords'] ?? '' }}">

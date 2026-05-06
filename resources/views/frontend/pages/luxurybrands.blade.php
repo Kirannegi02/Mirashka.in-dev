@@ -23,7 +23,7 @@
                         </h2>
 
                         <p id="expertise-desc">
-                           Elevate One Media helps luxury and premium brands shape visibility that feels refined, culturally relevant, and reputation-led — strengthening aspiration, trust, and long-term market distinction.
+                           Mirashka helps luxury and premium brands shape visibility that feels refined, culturally relevant, and reputation-led — strengthening aspiration, trust, and long-term market distinction.
                         </p>
 
                      </div>
@@ -97,7 +97,7 @@
 
                      <!-- BODY -->
                      <p>
-                        Luxury and premium consumer brands are judged not only by what they sell, but by how they are seen. Communication in this category must elevate desire without diluting credibility, and create aspiration without feeling noisy.
+                        Luxury and premium consumer brands are judged not only by what they sell, but by how they are seen. Communication in this category must build desire without diluting credibility, and create aspiration without feeling noisy.
                      </p>
 
                      <p>

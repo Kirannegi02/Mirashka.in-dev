@@ -22,7 +22,7 @@
                      <h2 class="title_big text-white">Build Media Authority That Shapes Perception, Trust, and Business
                         Relevance</h2>
                      <p class="text-white">Your brand does not become influential simply because it is visible. It becomes
-                        influential when the right people see it, understand it, and begin to trust it. Elevate One Media
+                        influential when the right people see it, understand it, and begin to trust it. Mirashka
                         helps founders, CXOs, business leaders, and public-facing personalities build executive influence
                         through premium media authority, thought-led positioning, and strategic visibility that creates
                         long-term reputational value.</p>
@@ -693,8 +693,8 @@
             <div class="col-xl-6 col-lg-12 pd_left_35">
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections">
-                     <div class="before_title">Why Elevate One Media</div>
-                     <h2 class="title">Why Elevate One Media Is the Right Partner</h2>
+                     <div class="before_title">Why Mirashka</div>
+                     <h2 class="title">Why Mirashka Is the Right Partner</h2>
                      <p>
                         We do not chase visibility for optics. We build authority for impact.
                      </p>

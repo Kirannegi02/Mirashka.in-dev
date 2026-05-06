@@ -131,7 +131,7 @@
                        <p class="text-black">
                           A crisis does not begin when the news breaks. It begins much earlier—when a risk is ignored, a narrative is unmonitored, or a response system is unclear.
 
-                          At Elevate One Media, we help organisations prepare for reputation-sensitive situations with strategic foresight and disciplined communication planning. Whether the concern is media scrutiny, leadership controversy, stakeholder backlash, misinformation, operational disruption, regulatory sensitivity, or social media escalation, our approach is built to reduce confusion, protect trust, and strengthen response confidence.
+                          At Mirashka, we help organisations prepare for reputation-sensitive situations with strategic foresight and disciplined communication planning. Whether the concern is media scrutiny, leadership controversy, stakeholder backlash, misinformation, operational disruption, regulatory sensitivity, or social media escalation, our approach is built to reduce confusion, protect trust, and strengthen response confidence.
                        </p>
 
                        <div class="bottom_content">
@@ -964,7 +964,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Elevate One Media for Reputation Risk & Crisis Preparedness</h2>
+                    <h2 class="title">Why Mirashka for Reputation Risk & Crisis Preparedness</h2>
                     <p>
                        We help organizations and leaders protect their most valuable asset—trust. Our approach moves beyond reactive statements to build a disciplined foundation of foresight, framework, and response clarity.
                     </p>

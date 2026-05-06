@@ -48,7 +48,8 @@ class ApplicationStatusUpdatedMail extends Mailable
                 'jobTitle' => $this->application->job->title ?? 'Unknown Position',
                 'status' => $this->status,
                 'statusMessage' => $this->statusMessage,
-                'companyName' => config('app.name', 'Elevate One Media'),
+                'companyName' => config('app.name', 'Mirashka'),
             ]);
     }
 }
+

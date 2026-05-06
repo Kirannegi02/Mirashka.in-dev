@@ -23,7 +23,7 @@ Building Authority, Stakeholder Trust, and National Relevance for Infrastructure
                         <p id="expertise-desc">
 
 
-Elevate One Media helps infrastructure, energy, clean-tech, ESG, and sustainability-led brands build visibility that reflects scale, seriousness, transformation, and long-term public value.
+Mirashka helps infrastructure, energy, clean-tech, ESG, and sustainability-led brands build visibility that reflects scale, seriousness, transformation, and long-term public value.
                         </p>
                      </div>
                      <div class="theme_btn">

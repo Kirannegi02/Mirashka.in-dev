@@ -26,7 +26,7 @@
                         </h2>
 
                         <p id="expertise-desc">
-                           Elevate One Media helps sports brands, teams, academies, leagues, athletes, and sports-business leaders build communication that creates relevance, strengthens credibility, and turns visibility into lasting influence.
+                           Mirashka helps sports brands, teams, academies, leagues, athletes, and sports-business leaders build communication that creates relevance, strengthens credibility, and turns visibility into lasting influence.
                         </p>
 
                      </div>

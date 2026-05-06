@@ -650,7 +650,7 @@
                 <div class="link_box_contents style_two">
                     <div class="link_content_bx">
                         <div class="con_box">
-                            <h2>Why India’s CXOs choose Elevate One Media</h2>
+                            <h2>Why India’s CXOs choose Mirashka</h2>
                             <a href="https://calendly.com/elevateonemedia/30min">Get Appointment <i
                                     class="icon-right-arrow-long"></i></a>
                         </div>

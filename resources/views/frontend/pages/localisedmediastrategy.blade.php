@@ -125,7 +125,7 @@
                        <p class="text-black">
                           A message that works in one market does not always work in another. Regional audiences respond to different priorities, media ecosystems, cultural cues, language patterns, and trust signals.
 
-                          At Elevate One Media, we help brands move beyond one-size-fits-all communication and build market-sensitive visibility strategies tailored to local realities. Whether the goal is geographic expansion, regional reputation building, policy communication, city-led brand activation, or stronger relevance in a specific state or cluster, our approach ensures that visibility feels native, not imported.
+                          At Mirashka, we help brands move beyond one-size-fits-all communication and build market-sensitive visibility strategies tailored to local realities. Whether the goal is geographic expansion, regional reputation building, policy communication, city-led brand activation, or stronger relevance in a specific state or cluster, our approach ensures that visibility feels native, not imported.
                        </p>
 
                        <div class="bottom_content">
@@ -957,7 +957,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Elevate One Media for Localised Media Strategy</h2>
+                    <h2 class="title">Why Mirashka for Localised Media Strategy</h2>
                     <p>
                        We help brands and organizations turn regional visibility into local influence. Our approach moves beyond simple translation to ensure every market-specific strategy serves a deliberate reputation goal.
                     </p>

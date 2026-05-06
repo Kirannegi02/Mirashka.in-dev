@@ -15,7 +15,7 @@
         <div class="brand-content">
           <div class="brand-logo">
           
-              <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="ElevateOne Media" style="
+              <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="Mirashka" style="
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;

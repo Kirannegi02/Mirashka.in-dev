@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
                 'status' => 'approved',
                 'is_active' => true,
                 'phone' => '+91 98765 43210',
-                'company_name' => 'Elevate One Media',
+                'company_name' => 'Mirashka',
                 'industry' => 'Media',
                 'approved_at' => now(),
             ]

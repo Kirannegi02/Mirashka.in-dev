@@ -161,7 +161,7 @@
                            A podcast is not just a content format. When built well, it becomes a strategic platform for
                            thought leadership, executive visibility, audience trust, and brand differentiation.
 
-                           At Elevate One Media, we help leaders and organizations conceptualize, shape, and activate
+                           At Mirashka, we help leaders and organizations conceptualize, shape, and activate
                            podcast and audio IP that reflects their expertise and amplifies their presence. From concept
                            creation and show positioning to guest strategy, narrative direction, and visibility planning,
                            we build audio platforms that do more than publish episodes—they build influence.
@@ -992,7 +992,7 @@
                         style="background-image: url({{ asset('assets/images/pannern-n3.png') }})!important;">
                         <div class="title_all_box style_one light_color">
                            <div class="title_sections left">
-                              <div class="before_title color_white">Why Elevate One Media</div>
+                              <div class="before_title color_white">Why Mirashka</div>
                               <p class="color_white">
                                  Podcast & Audio IP Strategy for Leadership Visibility
                               </p>
@@ -1008,10 +1008,10 @@
          <div class="col-xl-6 col-lg-12 pd_left_35">
             <div class="title_all_box style_one dark_color">
                <div class="title_sections">
-                  <div class="before_title">Why Elevate One Media</div>
-                  <h2 class="title">Why Elevate One Media for Podcast & Audio IP</h2>
+                  <div class="before_title">Why Mirashka</div>
+                  <h2 class="title">Why Mirashka for Podcast & Audio IP</h2>
                   <p>
-                     The site positions Elevate One Media around CXO-level engagement, owned-plus-earned integration,
+                     The site positions Mirashka around CXO-level engagement, owned-plus-earned integration,
                      reputation IP development, and insight-driven strategy.
                   </p>
                </div>

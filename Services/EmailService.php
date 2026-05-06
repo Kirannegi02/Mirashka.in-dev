@@ -231,7 +231,7 @@ class EmailService
     private function getMailableSubject(string $mailableClass): string
     {
         $subjects = [
-            \App\Mail\UserRegistered::class => 'Welcome to Elevate One Media',
+            \App\Mail\UserRegistered::class => 'Welcome to Mirashka',
             \App\Mail\UserContactMail::class => 'Thank you for contacting us',
             \App\Mail\AdminContactMail::class => 'New Contact Form Submission',
             \App\Mail\WebinarConfirmationMail::class => 'Webinar Registration Confirmed',
@@ -239,7 +239,7 @@ class EmailService
             \App\Mail\WebinarReminderMail::class => 'Webinar Reminder',
         ];
 
-        return $subjects[$mailableClass] ?? 'Email from Elevate One Media';
+        return $subjects[$mailableClass] ?? 'Email from Mirashka';
     }
 
     private function extractEmail(object $recipient): ?string

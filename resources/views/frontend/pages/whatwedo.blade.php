@@ -50,7 +50,7 @@
                <div class="slider_content light_color">
 
                   <!-- TOP LABEL -->
-                  <h6>Elevate One Media</h6>
+                  <h6>Mirashka</h6>
 
                   <div class="pd_bottom_10"></div>
 
@@ -61,7 +61,7 @@
 
                   <!-- UPDATED SUBHEADLINE -->
                   <p class="description color_white">
-                     Elevate One Media partners with founders, CXOs, corporates, and high-visibility personalities to
+                     Mirashka partners with founders, CXOs, corporates, and high-visibility personalities to
                      transform leadership narratives into measurable media impact, thought leadership, recognition, and
                      market trust.
                   </p>
@@ -131,11 +131,11 @@
             <div class="col-xl-6 col-lg-12">
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections ">
-                     <div class="before_title"> Elevate One Media </div>
+                     <div class="before_title"> Mirashka </div>
                      <h2>From Visibility to Authority. From Presence to Impact</h2>
 
                      <p class="short_desc pt-3">
-                        Elevate One Media is built for leaders and brands that want more than publicity. We design
+                        Mirashka is built for leaders and brands that want more than publicity. We design
                         communication and visibility systems that strengthen authority, sharpen perception, and build
                         long-term reputation capital. Whether the objective is media presence, digital thought leadership,
                         podcast-led influence, awards positioning, investor visibility, or regional communication
@@ -612,7 +612,7 @@
                      <div class="before_title">WHAT CLIENTS GET</div>
 
                      <div class="title">
-                        What Elevate One Media Helps You Build
+                        What Mirashka Helps You Build
                      </div>
 
                      <!-- SUBHEADLINE -->
@@ -1081,7 +1081,7 @@
                            style="background-image: url({{ asset('assets/images/pannern-n3.png') }})!important;">
                            <div class="title_all_box style_one light_color">
                               <div class="title_sections left">
-                                 <div class="before_title color_white">Why Elevate One Media</div>
+                                 <div class="before_title color_white">Why Mirashka</div>
                                  <p class="color_white">
                                     A reputation-led approach designed for leaders, brands, and high-visibility growth
                                     journeys
@@ -1098,8 +1098,8 @@
             <div class="col-xl-6 col-lg-12 pd_left_35">
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections">
-                     <div class="before_title">WHY ELEVATE ONE MEDIA</div>
-                     <h2 class="title">Why Elevate One Media Is a Different Kind of Partner</h2>
+                     <div class="before_title">WHY Mirashka</div>
+                     <h2 class="title">Why Mirashka Is a Different Kind of Partner</h2>
 
                   </div>
                </div>

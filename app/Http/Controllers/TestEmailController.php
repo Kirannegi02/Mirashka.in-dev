@@ -11,7 +11,7 @@ class TestEmailController extends Controller
     public function test()
     {
         try {
-            Mail::raw('Test email from Elevate One Media', function ($message) {
+            Mail::raw('Test email from Mirashka', function ($message) {
                 $message->to('test@example.com')
                     ->subject('Test Email');
             });

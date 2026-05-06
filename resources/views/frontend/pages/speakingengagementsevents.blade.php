@@ -125,7 +125,7 @@
                        <p class="text-black">
                           Speaking engagements are not just appearances. They are reputation moments. The right event, audience, and message can elevate a leader from being known in a circle to being respected across an industry.
                           <br><br>
-                          At Elevate One Media, we help leaders and brands build meaningful visibility through conferences, panels, summits, roundtables, keynote opportunities, fireside chats, and curated industry events. Our focus is not on volume, but on relevance—placing leaders where their voice can create the greatest strategic impact.
+                          At Mirashka, we help leaders and brands build meaningful visibility through conferences, panels, summits, roundtables, keynote opportunities, fireside chats, and curated industry events. Our focus is not on volume, but on relevance—placing leaders where their voice can create the greatest strategic impact.
                        </p>
 
                        <div class="bottom_content">
@@ -932,7 +932,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Elevate One Media for Speaking Engagements & Events</h2>
+                    <h2 class="title">Why Mirashka for Speaking Engagements & Events</h2>
                     <p>
                        We help leaders and organizations turn presence into influence. Our approach moves beyond just filling calendars to ensuring every stage appearance serves a deliberate reputation goal.
                     </p>

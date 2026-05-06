@@ -23,7 +23,7 @@ Building Trust, Relevance, and Category Authority for AI, Deep Tech & Innovation
                         <p id="expertise-desc">
 
 
-Elevate One Media helps AI-first companies, deep-tech ventures, and innovation-led brands build communication that transforms technical complexity into market clarity, investor confidence, and leadership credibility.
+Mirashka helps AI-first companies, deep-tech ventures, and innovation-led brands build communication that transforms technical complexity into market clarity, investor confidence, and leadership credibility.
                         </p>
                      </div>
                      <div class="theme_btn">

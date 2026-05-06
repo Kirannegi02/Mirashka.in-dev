@@ -143,7 +143,7 @@
                        <p class="text-black">
                           Leadership media training is not about scripted soundbites or artificial polish. It is about helping senior leaders express ideas clearly, respond thoughtfully, stay composed under pressure, and represent the organization with confidence.
 
-                          At Elevate One Media, we train leaders to communicate in a way that strengthens trust, protects reputation, and reinforces authority. Whether the requirement is for media interviews, investor-facing communication, keynote appearances, podcast conversations, internal leadership visibility, or public-facing brand representation, our approach ensures that the leader’s presence matches the seriousness of the role.
+                          At Mirashka, we train leaders to communicate in a way that strengthens trust, protects reputation, and reinforces authority. Whether the requirement is for media interviews, investor-facing communication, keynote appearances, podcast conversations, internal leadership visibility, or public-facing brand representation, our approach ensures that the leader’s presence matches the seriousness of the role.
                        </p>
 
                        <div class="bottom_content">
@@ -976,7 +976,7 @@
             <div class="title_all_box style_one dark_color">
                <div class="title_sections">
                   <div class="before_title">Why Choose Us</div>
-                  <h2 class="title">Why Elevate One Media for Leadership Media Training</h2>
+                  <h2 class="title">Why Mirashka for Leadership Media Training</h2>
                   <p>
                      We help leaders communicate with clarity, confidence, and control in high-stakes environments—aligning messaging with business priorities, reputation, and stakeholder expectations.
                   </p>

@@ -136,7 +136,7 @@
           <div class="auto-container">
              <div class="rows">
                 <div class="col-l-12">
-                   <div class="footer_copy_content">© 2026 <a href="index.html">Elevateone Media</a> All Rights Reserved.
+                   <div class="footer_copy_content">© 2026 <a href="index.html">Mirashka</a> All Rights Reserved.
                    </div>
                 </div>
              </div>
@@ -195,10 +195,10 @@
              <div class="col-lg-4 col-md-12 about_company_inner">
                 <div class="abt_content">
                    <div class="logo">
-                      <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="ElevateOne Media Logo" class="company_logo_modal">
+                      <img src="{{ asset('assets/frontend/img/elevatenew.svg') }}" alt="Mirashka Logo" class="company_logo_modal">
                    </div>
                    <div class="text">
-                      <p> ElevateOne Media partners with India’s CXOs & founders to build measurable visibility, award-winning narratives and thought leadership that aligns with business growth. </p>
+                      <p> Mirashka partners with India’s CXOs & founders to build measurable visibility, award-winning narratives and thought leadership that aligns with business growth. </p>
                       <a href="#">Discover Our Approach</a>
                    </div>
                    <!-- <div class="post_contet_modal">
@@ -232,7 +232,7 @@
                               </div>
                            </div> -->
                    <div class="copright">
-                      © 2026 ElevateOne Media. All Rights Reserved.
+                      © 2026 Mirashka. All Rights Reserved.
                    </div>
                 </div>
              </div>

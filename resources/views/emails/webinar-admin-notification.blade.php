@@ -12,7 +12,7 @@
                <!-- Header -->
                <tr>
                   <td style="background:#006039; padding:20px; text-align:center;">
-                     <img src="https://elevateonemedia.com/assets/img/elevateone-logo.png" alt="Elevate One Media" width="160" style="display:block; margin:0 auto; background-color:#ffffff; padding:10px; border-radius:12px;">
+                     <img src="https://elevateonemedia.com/assets/img/elevateone-logo.png" alt="Mirashka" width="160" style="display:block; margin:0 auto; background-color:#ffffff; padding:10px; border-radius:12px;">
                   </td>
                </tr>
                <!-- Content -->
@@ -65,14 +65,14 @@
                      
                      <hr style="border:none; border-top:1px solid #e5e5e5; margin:30px 0;">
                      <p style="font-size:13px; color:#777;">
-                        This is an automated notification from the Elevate One Media website.
+                        This is an automated notification from the Mirashka website.
                      </p>
                   </td>
                </tr>
                <!-- Bottom -->
                <tr>
                   <td style="background:#006039; text-align:center; padding:12px; color:#ffffff; font-size:12px;">
-                     © {{ date('Y') }} Elevate One Media. All rights reserved.
+                     © {{ date('Y') }} Mirashka. All rights reserved.
                   </td>
                </tr>
             </table>
@@ -81,3 +81,4 @@
    </table>
 </body>
 </html>
+

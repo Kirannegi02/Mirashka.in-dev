@@ -129,7 +129,7 @@
                        <p class="text-black">
                           In today’s professional landscape, influence is one of the most valuable leadership assets. It shapes how people listen, how they remember, and how they respond to your ideas.
 
-                          At Elevate One Media, our Influence Coaching service is designed for leaders who want more than surface-level visibility. We help build presence that is grounded in thought clarity, communication confidence, and strategic positioning—so your words, actions, and digital footprint work together to strengthen trust and authority over time.
+                          At Mirashka, our Influence Coaching service is designed for leaders who want more than surface-level visibility. We help build presence that is grounded in thought clarity, communication confidence, and strategic positioning—so your words, actions, and digital footprint work together to strengthen trust and authority over time.
                        </p>
 
                        <div class="bottom_content">
@@ -926,7 +926,7 @@
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
                     <div class="before_title">Why Choose Us</div>
-                    <h2 class="title">Why Elevate One Media for Influence Coaching</h2>
+                    <h2 class="title">Why Mirashka for Influence Coaching</h2>
                     <p>
                        We help leaders build a presence that is grounded in thought clarity, communication confidence, and strategic positioning—ensuring your professional footprint strengthens trust and authority.
                     </p>

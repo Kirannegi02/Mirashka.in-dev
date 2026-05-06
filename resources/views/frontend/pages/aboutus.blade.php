@@ -111,7 +111,7 @@
                <div class="slider_content light_color">
 
                   <!-- TOP LABEL -->
-                  <h6>Elevate One Media</h6>
+                  <h6>Mirashka</h6>
 
                   <div class="pd_bottom_10"></div>
 
@@ -126,7 +126,7 @@
                   </p>
                                     <p class="description color_white">
 
-Every great agency has a founding story. Ours is built on trust, grit, and an unshakable belief that powerful communications can transform businesses and careers. What started as a small but ambitious consulting firm in May 2009 has grown, evolved, and scaled into one of India's most respected premium PR agencies — Elevate One Media.
+Every great agency has a founding story. Ours is built on trust, grit, and an unshakable belief that powerful communications can transform businesses and careers. What started as a small but ambitious consulting firm in May 2009 has grown, evolved, and scaled into one of India's most respected premium PR agencies — Mirashka.
                   </p>
 
                   <!-- CTA + VIDEO -->
@@ -419,7 +419,7 @@ Every great agency has a founding story. Ours is built on trust, grit, and an un
                               <div class="c_box">
                                  <h2><a href="#">Strategic Evolution</a></h2>
                                  <p>
-                                    Pivoted to Premium PR, launched CXO-focused services, and rebranded as Elevate One Media after serving 200+ clients.
+                                    Pivoted to Premium PR, launched CXO-focused services, and rebranded as Mirashka after serving 200+ clients.
                                  </p>
                               </div>
                            </div>
@@ -437,7 +437,7 @@ Every great agency has a founding story. Ours is built on trust, grit, and an un
                                  <img src="{{ asset('assets/frontend/img/page2/eom.webp') }}">
                               </div>
                               <div class="c_box">
-                                 <h2><a href="#">Elevate One Media</a></h2>
+                                 <h2><a href="#">Mirashka</a></h2>
                                  <p>
                                     Introduced structured PR frameworks, expanded services, and strengthened the team with senior strategists and media experts.
                                  </p>
@@ -496,7 +496,7 @@ Every great agency has a founding story. Ours is built on trust, grit, and an un
             <div class="title_all_box style_one text-center dark_color">
                <div class="title_sections">
                   <div class="before_title">The Evolution Story</div>
-                  <div class="title">From Whiz Consulting to Elevate One Media — Why We Evolved</div>
+                  <div class="title">From Whiz Consulting to Mirashka — Why We Evolved</div>
                </div>
                <div class="pd_bottom_40"></div>
             </div>

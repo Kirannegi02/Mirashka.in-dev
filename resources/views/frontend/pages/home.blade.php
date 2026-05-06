@@ -261,7 +261,7 @@
                      <div class="description_box">
                         <p>We help CXOs, Corporates & Brands to become industry thought leaders through elite PR and content – delivering brand authority and qualified leads
                         </p>
-                        <p>At Elevate One Media, we specialize in premium PR and authority-building for CXOs and corporate leaders—combining top-tier media placements with business-focused storytelling that fuels visibility, credibility, and qualified pipeline growth.
+                        <p>At Mirashka, we specialize in premium PR and authority-building for CXOs and corporate leaders—combining top-tier media placements with business-focused storytelling that fuels visibility, credibility, and qualified pipeline growth.
                         </p>
                      </div>
                      <!--===============spacing==============-->
@@ -338,7 +338,7 @@
                <div class="link_box_contents style_two">
                   <div class="link_content_bx">
                      <div class="con_box">
-                        <h2>Why India’s CXOs choose Elevate One Media</h2>
+                        <h2>Why India’s CXOs choose Mirashka</h2>
                         <a href="https://calendly.com/elevateonemedia/30min">Get Appointment <i class="icon-right-arrow-long"></i></a>
                      </div>
                      <div class="image_box">
@@ -443,7 +443,7 @@
                   <div class="pd_bottom_25"></div>
                   <!--===============spacing==============-->
                   <div class="description_box">
-                     <p>ElevateOne Media partners with founders & CXOs to transform leadership narratives into measurable media impact, thought leadership, and awards recognition.</p>
+                     <p>Mirashka partners with founders & CXOs to transform leadership narratives into measurable media impact, thought leadership, and awards recognition.</p>
                   </div>
                   <!--===============spacing==============-->
                   <div class="pd_bottom_30"></div>
@@ -857,7 +857,7 @@
                   <div class="title_sections">
                      <div class="before_title color_white">Strategic Partnership</div>
                      <h2>Amplify Your CXO Visibility</h2>
-                     <p>Discover how ElevateOne Media helps leaders craft powerful narratives, secure targeted media, and drive outcomes that matter to business growth and reputation.</p>
+                     <p>Discover how Mirashka helps leaders craft powerful narratives, secure targeted media, and drive outcomes that matter to business growth and reputation.</p>
                   </div>
                </div>
                <div class="content_box_cn style_one light_color">
@@ -1002,7 +1002,7 @@
    <!--         </div>-->
    <!--         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
    <!--            <div class="description_box">-->
-   <!--               <p>At ElevateOne Media, our leadership combines decades of experience in PR strategy, digital media, and thought leadership advisory to help CXOs and brands shape impactful narratives.</p>-->
+   <!--               <p>At Mirashka, our leadership combines decades of experience in PR strategy, digital media, and thought leadership advisory to help CXOs and brands shape impactful narratives.</p>-->
    <!--               <div class="mr_bottom_20"></div>-->
    <!--            </div>-->
    <!--         </div>-->
@@ -1397,7 +1397,7 @@
                                        </dt>
                                        <dd class="accordion-content hide">
                                           <p>
-                                             We provide strategic PR, CXO positioning, award consulting, media training, and digital presence solutions tailored to elevate your brand.
+                                             We provide strategic PR, CXO positioning, award consulting, media training, and digital presence solutions tailored to strengthen your brand.
                                           </p>
                                        </dd>
                                        <dt class="faq_header">

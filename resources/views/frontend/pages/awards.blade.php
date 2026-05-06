@@ -58,7 +58,7 @@
                       <div class="before_title">OUR ACHIEVEMENTS</div>
                       <h2>A Legacy of Industry Recognition</h2>
                       <div class="description_box">
-                         <p>At Elevate One Media, every award we win is a reflection of the relentless creativity, strategic thinking, and measurable impact our team delivers for our clients. From prestigious PR industry honours to brand excellence platforms, our trophy shelf is built on real campaigns, real results, and real relationships — spanning over a decade of Premium PR practice.</p>
+                         <p>At Mirashka, every award we win is a reflection of the relentless creativity, strategic thinking, and measurable impact our team delivers for our clients. From prestigious PR industry honours to brand excellence platforms, our trophy shelf is built on real campaigns, real results, and real relationships — spanning over a decade of Premium PR practice.</p>
                       </div>
                    </div>
                   <!--===============spacing==============-->
@@ -158,7 +158,7 @@
       <div class="col-12 award-card show" data-year="2024">
         <div class="award-year-badge"><i class="fa fa-calendar-alt"></i> 2024</div>
         <div class="award-title">BW Merit Award <span class="featured-badge"><i class="fa fa-star me-1"></i>Latest</span></div>
-        <div class="award-org"><i class="fa fa-building"></i> Organiser: BusinessWorld Elevate One Media</div>
+        <div class="award-org"><i class="fa fa-building"></i> Organiser: BusinessWorld Mirashka</div>
         <div class="divider-line"></div>
         <div class="medals-row">
           <span class="medal medal-gold"><i class="fa fa-medal"></i> 1 Gold</span>
@@ -177,7 +177,7 @@
           <span class="medal medal-silver"><i class="fa fa-medal"></i> 3 Silver</span>
           <span class="medal medal-bronze"><i class="fa fa-medal"></i> 1 Bronze</span>
         </div>
-        <p class="award-desc">At the Economic Times Brand Bharat Summit & Awards 2022, Elevate One Media claimed 3 Silver and 1 Bronze — celebrating our work in building brand narratives for India-first businesses and reinforcing our commitment to driving meaningful PR outcomes in an evolving media landscape.</p>
+        <p class="award-desc">At the Economic Times Brand Bharat Summit & Awards 2022, Mirashka claimed 3 Silver and 1 Bronze — celebrating our work in building brand narratives for India-first businesses and reinforcing our commitment to driving meaningful PR outcomes in an evolving media landscape.</p>
         <div class="total-medals"><i class="fa fa-award"></i> 4 total medals this year</div>
       </div>
 
@@ -189,7 +189,7 @@
         <div class="medals-row">
           <span class="medal medal-silver"><i class="fa fa-medal"></i> 3 Silver</span>
         </div>
-        <p class="award-desc">The Fulcrum Awards 2021 recognised Elevate One Media's campaign excellence with 3 Silver Awards — a testament to our team's ability to craft campaigns that resonate, influence, and deliver even in the challenging post-pandemic media landscape.</p>
+        <p class="award-desc">The Fulcrum Awards 2021 recognised Mirashka's campaign excellence with 3 Silver Awards — a testament to our team's ability to craft campaigns that resonate, influence, and deliver even in the challenging post-pandemic media landscape.</p>
         <div class="total-medals"><i class="fa fa-award"></i> 3 total medals this year</div>
       </div>
 
@@ -202,7 +202,7 @@
           <span class="medal medal-gold"><i class="fa fa-medal"></i> 1 Gold</span>
           <span class="medal medal-silver"><i class="fa fa-medal"></i> 2 Silver</span>
         </div>
-        <p class="award-desc">Elevate One Media's innovative PR campaigns earned top honours at the Kleido Awards 2020, with 1 Gold and 2 Silver recognitions. This achievement highlights our ability to blend creative storytelling with strategic media placement — delivering campaigns that stand out even in the most competitive categories.</p>
+        <p class="award-desc">Mirashka's innovative PR campaigns earned top honours at the Kleido Awards 2020, with 1 Gold and 2 Silver recognitions. This achievement highlights our ability to blend creative storytelling with strategic media placement — delivering campaigns that stand out even in the most competitive categories.</p>
         <div class="total-medals"><i class="fa fa-award"></i> 3 total medals this year</div>
       </div>
 
@@ -215,7 +215,7 @@
           <span class="medal medal-silver"><i class="fa fa-medal"></i> 2 Silver</span>
           <span class="medal medal-bronze"><i class="fa fa-medal"></i> 1 Bronze</span>
         </div>
-        <p class="award-desc">One of India's most respected PR industry platforms, the Campaign India PR Awards 2017 recognised Elevate One Media with 2 Silver and 1 Bronze — celebrating the strategic depth and creative execution of our client campaigns, confirming our standing as a serious, results-driven PR agency.</p>
+        <p class="award-desc">One of India's most respected PR industry platforms, the Campaign India PR Awards 2017 recognised Mirashka with 2 Silver and 1 Bronze — celebrating the strategic depth and creative execution of our client campaigns, confirming our standing as a serious, results-driven PR agency.</p>
         <div class="total-medals"><i class="fa fa-award"></i> 3 total medals this year</div>
       </div>
 
@@ -229,7 +229,7 @@
           <span class="medal medal-silver"><i class="fa fa-medal"></i> 2 Silver</span>
           <span class="medal medal-bronze"><i class="fa fa-medal"></i> 2 Bronze</span>
         </div>
-        <p class="award-desc">2013 was a landmark year for Elevate One Media — our most decorated year at the time, with 3 Gold, 2 Silver, and 2 Bronze awards across multiple categories. This haul of 7 medals in a single year established our agency as a powerhouse of PR creativity and effectiveness, setting the tone for the award-winning culture we continue to this day.</p>
+        <p class="award-desc">2013 was a landmark year for Mirashka — our most decorated year at the time, with 3 Gold, 2 Silver, and 2 Bronze awards across multiple categories. This haul of 7 medals in a single year established our agency as a powerhouse of PR creativity and effectiveness, setting the tone for the award-winning culture we continue to this day.</p>
         <div class="total-medals"><i class="fa fa-award"></i> 7 total medals this year — our best ever</div>
       </div>
 
@@ -241,7 +241,7 @@
         <div class="medals-row">
           <span class="medal medal-special"><i class="fa fa-trophy"></i> Campaign of the Year</span>
         </div>
-        <p class="award-desc">The honour that started it all. In 2012, Elevate One Media was recognised with the prestigious Provoke PR Campaign of the Year — one of the most coveted global PR industry accolades — for our groundbreaking work on the BMW India campaign. This recognition by Provoke Media, the gold standard of global PR industry awards, cemented Elevate One Media's reputation for delivering world-class, award-worthy PR from the very beginning.</p>
+        <p class="award-desc">The honour that started it all. In 2012, Mirashka was recognised with the prestigious Provoke PR Campaign of the Year — one of the most coveted global PR industry accolades — for our groundbreaking work on the BMW India campaign. This recognition by Provoke Media, the gold standard of global PR industry awards, cemented Mirashka's reputation for delivering world-class, award-worthy PR from the very beginning.</p>
         <div class="total-medals"><i class="fa fa-star"></i> Global recognition — the campaign that defined us</div>
       </div>
 
@@ -459,7 +459,7 @@
                   <div class="main_content">
                       <h3 class="text-white mb-3">Founder Quote</h3>
                       <p>"Every award we have earned is not ours — it belongs to the clients who trusted us, the campaigns we bled for, and the journalists who believed our stories were worth telling. Recognition by our industry peers is the greatest validation that what we do every day, truly matters."</p>
-                      <h5 class="text-white">— Founder & CEO, Elevate One Media</h5>
+                      <h5 class="text-white">— Founder & CEO, Mirashka</h5>
                   </div>
                </div>
             </div>

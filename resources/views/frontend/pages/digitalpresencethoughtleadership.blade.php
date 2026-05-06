@@ -36,7 +36,7 @@
                         </h2>
                         <p class="text-white">Your digital presence should do more than show that you exist. It should show
                            what you stand for,
-                           how you think, and why people should trust your leadership. Elevate One Media helps founders,
+                           how you think, and why people should trust your leadership. Mirashka helps founders,
                            CXOs,
                            and public-facing professionals transform digital visibility into authority, relevance, and
                            thought
@@ -665,8 +665,8 @@
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections left">
 
-                     <div class="before_title">Why Elevate One Media</div>
-                     <h2 class="title">Why Elevate One Media Is Different</h2>
+                     <div class="before_title">Why Mirashka</div>
+                     <h2 class="title">Why Mirashka Is Different</h2>
 
                      <p>
                         We do not treat digital presence as casual posting. We treat it as executive reputation

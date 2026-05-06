@@ -25,7 +25,7 @@
 <div class="container">
 <div class="row">
 
-<p>Welcome to ElevateOne Media. By accessing our website and services, you agree to comply with the following Terms and Conditions.</p>
+<p>Welcome to Mirashka. By accessing our website and services, you agree to comply with the following Terms and Conditions.</p>
 
 <h5 class="fw-semibold mt-4">Business Information</h5>
 <p>
@@ -39,10 +39,10 @@ Registered Address: B9-1702, Gardenia Glory, Sector 46, Noida, Uttar Pradesh –
 <p>We provide professional marketing, branding, PR and digital consulting services as per mutually agreed scope.</p>
 
 <h5 class="fw-semibold mt-4">Payments</h5>
-<p>All payments must be made through authorized payment gateways. ElevateOne Media is not responsible for technical failures from third-party gateways.</p>
+<p>All payments must be made through authorized payment gateways. Mirashka is not responsible for technical failures from third-party gateways.</p>
 
 <h5 class="fw-semibold mt-4">Intellectual Property</h5>
-<p>All website content, designs, graphics, text and branding elements are owned by ElevateOne Media and cannot be reused without written permission.</p>
+<p>All website content, designs, graphics, text and branding elements are owned by Mirashka and cannot be reused without written permission.</p>
 
 <h5 class="fw-semibold mt-4">User Obligations</h5>
 <ul style="list-style:none;padding-left:0;">
@@ -52,7 +52,7 @@ Registered Address: B9-1702, Gardenia Glory, Sector 46, Noida, Uttar Pradesh –
 </ul>
 
 <h5 class="fw-semibold mt-4">Limitation of Liability</h5>
-<p>ElevateOne Media shall not be liable for any indirect, incidental or consequential losses.</p>
+<p>Mirashka shall not be liable for any indirect, incidental or consequential losses.</p>
 
 <h5 class="fw-semibold mt-4">Termination</h5>
 <p>We reserve the right to suspend or terminate access if any violation occurs.</p>

@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
 
-            <p>ElevateOne Media provides service-based digital and consulting solutions.</p>
+            <p>Mirashka provides service-based digital and consulting solutions.</p>
 
             <h5 class="fw-semibold mt-4">Nature of Services</h5>
             <p>As our offerings are professional services, physical returns are not applicable.</p>

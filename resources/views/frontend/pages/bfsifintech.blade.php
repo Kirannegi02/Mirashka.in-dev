@@ -21,7 +21,7 @@ Building Trust, Credibility, and Market Confidence for BFSI & Fintech Brands
                         </h2>
                         <p id="expertise-desc">
 
-Elevate One Media helps banks, NBFCs, fintech brands, financial platforms, and sector leaders build communication that strengthens trust, sharpens positioning, and creates lasting credibility across customers, investors, partners, regulators, and the market.
+Mirashka helps banks, NBFCs, fintech brands, financial platforms, and sector leaders build communication that strengthens trust, sharpens positioning, and creates lasting credibility across customers, investors, partners, regulators, and the market.
                         </p>
                      </div>
                      <div class="theme_btn">

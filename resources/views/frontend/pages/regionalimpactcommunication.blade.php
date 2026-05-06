@@ -33,7 +33,7 @@
                         <h2 class="title_big text-white">Build Communication That Feels Relevant in the Markets You Want to Win
 
                         </h2>
-                        <p class="text-white">A brand can be nationally visible and still feel locally distant. Elevate One Media helps organisations build stronger regional relevance through localised media strategy, market-sensitive messaging, and communication systems designed to feel credible in the places that matter most</p>
+                        <p class="text-white">A brand can be nationally visible and still feel locally distant. Mirashka helps organisations build stronger regional relevance through localised media strategy, market-sensitive messaging, and communication systems designed to feel credible in the places that matter most</p>
 
                      </div>
                   </div>
@@ -711,11 +711,11 @@
                   <div class="title_sections left">
 
                      <div class="before_title">
-                        Why Elevate One Media
+                        Why Mirashka
                      </div>
 
                      <h2 class="title">
-                        Why Elevate One Media Is Different
+                        Why Mirashka Is Different
                      </h2>
 
                      <p>

@@ -23,7 +23,7 @@
                         </h2>
 
                         <p id="expertise-desc">
-                           Elevate One Media helps education institutions, learning brands, and edtech platforms build visibility that strengthens trust, sharpens positioning, and supports long-term credibility with students, parents, educators, investors, and stakeholders.
+                           Mirashka helps education institutions, learning brands, and edtech platforms build visibility that strengthens trust, sharpens positioning, and supports long-term credibility with students, parents, educators, investors, and stakeholders.
                         </p>
 
                      </div>

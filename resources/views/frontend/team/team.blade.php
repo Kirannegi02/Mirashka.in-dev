@@ -39,7 +39,7 @@
                         <h2>Meet the Minds Behind ElevateOneMedia</h2>
 
                         <p>
-                            At Elevate One Media, our strength lies in a team of creative thinkers, strategists,
+                            At Mirashka, our strength lies in a team of creative thinkers, strategists,
                             and digital experts who are passionate about building impactful brand stories.
                             We believe that every brand has a unique voice, and our mission is to amplify it
                             through innovative ideas, strategic planning, and result-oriented execution.

@@ -156,7 +156,7 @@
                            interaction with investors, analysts, media, and market participants reflects clarity,
                            consistency, and strategic intent.
 
-                           At Elevate One Media, we help organizations manage visibility around high-stakes corporate
+                           At Mirashka, we help organizations manage visibility around high-stakes corporate
                            moments—whether it is pre-IPO positioning, investor trust-building, leadership communication,
                            major announcements, or sustained post-listing visibility. Our approach combines message
                            discipline, market sensitivity, and reputation intelligence to create communication that
@@ -1001,7 +1001,7 @@
                            style="background-image: url({{ asset('assets/images/pannern-n3.png') }})!important;">
                            <div class="title_all_box style_one light_color">
                               <div class="title_sections left">
-                                 <div class="before_title color_white">Why Elevate One Media</div>
+                                 <div class="before_title color_white">Why Mirashka</div>
                                  <p class="color_white">Capital markets communication requires precision, credibility, and
                                     leadership-aligned strategy</p>
                               </div>
@@ -1016,8 +1016,8 @@
             <div class="col-xl-6 col-lg-12 pd_left_35">
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections">
-                     <div class="before_title">Why Elevate One Media</div>
-                     <h2 class="title">Why Elevate One Media for Capital Markets Communication</h2>
+                     <div class="before_title">Why Mirashka</div>
+                     <h2 class="title">Why Mirashka for Capital Markets Communication</h2>
                      <p>
                         We bring together strategic clarity, leadership-focused communication, and market-sensitive
                         execution to build credibility where it matters most.
@@ -1093,14 +1093,14 @@
             <div class="title_all_box style_one dark_color">
                <div class="title_sections">
 
-                  <div class="before_title">WHY ELEVATE ONE MEDIA</div>
+                  <div class="before_title">WHY Mirashka</div>
 
                   <h2 class="title">
-                     Why Elevate One Media Is a Different Kind of Partner
+                     Why Mirashka Is a Different Kind of Partner
                   </h2>
 
                   <p>
-                     What makes Elevate One Media different is not just the services. It is the way the work is thought through.
+                     What makes Mirashka different is not just the services. It is the way the work is thought through.
                   </p>
 
                </div>
@@ -1174,7 +1174,7 @@
                         <div class="title_all_box style_one light_color">
                            <div class="title_sections left">
 
-                              <div class="before_title color_white">WHY ELEVATE ONE MEDIA</div>
+                              <div class="before_title color_white">WHY Mirashka</div>
 
                               <p class="color_white">
                                  A reputation-led, leadership-first approach to building influence, trust, and market authority.

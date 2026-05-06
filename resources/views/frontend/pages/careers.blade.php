@@ -12,7 +12,7 @@
               <div class="title_all_box style_one text-center light_color">
                  <div class="title_sections">
                     <div class="before_title">
-                       Join Our Team at ElevateOne Media
+                       Join Our Team at Mirashka
                     </div>
                     <div class="title font_40">
                        Build Your Career in Strategic Communications & Media Relations
@@ -148,7 +148,7 @@
               <div class="title_all_box style_one text-center light_color">
                  <div class="title_sections">
                     <div class="title">What We Offer</div>
-                    <p>At ElevateOne Media, we invest in our people:</p>
+                    <p>At Mirashka, we invest in our people:</p>
                  </div>
                  <!--===============spacing==============-->
                  <div class="pd_bottom_20"></div>
@@ -289,7 +289,7 @@ Not seeing a role that fits? Don't hesitate to send us your CV at info@mirashka.
                            <span class="icon-megaphone bg_im"></span>
                            <div class="content_box">
                               <h2 class="title_service">
-                                 <a href="#">Life at ElevateOne Media</a>
+                                 <a href="#">Life at Mirashka</a>
                               </h2>
                               <p class="short_desc">Our team is our greatest asset. We believe in fostering a workplace where creativity thrives, collaboration is celebrated, and individual growth is prioritized. From team brainstorming sessions to industry events, client successes to internal milestones—we celebrate every achievement together.
 Our teams are based in Delhi NCR, Mumbai, Bangalore, Noida, and offer remote opportunities. No matter where you are, you're part of the ElevateOne family
@@ -316,7 +316,7 @@ Our teams are based in Delhi NCR, Mumbai, Bangalore, Noida, and offer remote opp
                                  <a href="#">Ready to Elevate Your Career?</a>
                               </h2>
                               <p class="short_desc">If you're passionate about communications, driven by results, and excited about shaping India's corporate narrative, we'd love to hear from you. Apply for an open position above or reach out directly at info@mirashka.in.
-You can also call us at +91 8796927200 or schedule a casual conversation with our team. Let's explore if ElevateOne Media is the right fit for your next career move.
+You can also call us at +91 8796927200 or schedule a casual conversation with our team. Let's explore if Mirashka is the right fit for your next career move.
 Looking forward to connecting with you!
 </p>
                            </div>
@@ -494,8 +494,8 @@ Looking forward to connecting with you!
         <div class="row">
             <div class="col-lg-12">
                 <div class="cta_box bg_op_1 rounded_radius text-center p-5" style="background: url('{{ asset('assets/frontend/images/contact-hm-15.jpg') }}');">
-                    <h3 class="text-white mb-3">Why Join ElevateOne Media?</h3>
-                    <p class="text-white opacity-75 mb-4">Since 2010, ElevateOne Media has empowered India's leading CXOs, founders, and enterprises to build measurable visibility and thought leadership. We are redefining how executives and organizations shape narratives in the digital age. If you are passionate about strategic communications, media relations, and making a tangible impact, we want you on our team.</p>
+                    <h3 class="text-white mb-3">Why Join Mirashka?</h3>
+                    <p class="text-white opacity-75 mb-4">Since 2010, Mirashka has empowered India's leading CXOs, founders, and enterprises to build measurable visibility and thought leadership. We are redefining how executives and organizations shape narratives in the digital age. If you are passionate about strategic communications, media relations, and making a tangible impact, we want you on our team.</p>
                     <a href="mailto:info@mirashka.in" class="btn btn-light">
                         <i class="fa fa-envelope me-2"></i> Send Your CV
                     </a>

@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Elevate One Media</title>
+    <title>Welcome to Mirashka</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
     <div style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #2c3e50; margin: 0;">Elevate One Media</h1>
+            <h1 style="color: #2c3e50; margin: 0;">Mirashka</h1>
             <p style="color: #7f8c8d; margin-top: 5px;">Your Trusted Media Partner</p>
         </div>
 
@@ -35,9 +35,10 @@
                 If you have any questions, please contact us at info@mirashka.in
             </p>
             <p style="color: #7f8c8d; font-size: 14px;">
-                &copy; {{ date('Y') }} Elevate One Media. All rights reserved.
+                &copy; {{ date('Y') }} Mirashka. All rights reserved.
             </p>
         </div>
     </div>
 </body>
 </html>
+

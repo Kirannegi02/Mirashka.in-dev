@@ -35,7 +35,7 @@
                <div class="slider_content light_color">
 
                   <!-- TOP LABEL -->
-                  <h6>Elevate One Media</h6>
+                  <h6>Mirashka</h6>
 
                   <div class="pd_bottom_10"></div>
 
@@ -46,7 +46,7 @@
 
                   <!-- UPDATED SUBHEADLINE -->
                   <p class="description color_white">
-                     At Elevate One Media, we partner with leaders across technology, finance, healthcare, sustainability,
+                     At Mirashka, we partner with leaders across technology, finance, healthcare, sustainability,
                      luxury, education, and sports to build reputation-led visibility, authority, and long-term market
                      trust.
                   </p>
@@ -124,12 +124,12 @@
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections">
 
-                     <div class="before_title">Elevate One Media</div>
+                     <div class="before_title">Mirashka</div>
 
                      <h2>Industry Expertise Is Not a Label. It Is a Strategic Advantage.</h2>
 
                      <p class="short_desc ">
-                        The strongest communication strategy is built on industry understanding. At Elevate One Media, we
+                        The strongest communication strategy is built on industry understanding. At Mirashka, we
                         approach every mandate through the lens of category context—what the market values, what the media
                         responds to, what stakeholders need to hear, and what kind of visibility actually builds trust.
                      </p>
@@ -613,7 +613,7 @@
 
                      <p>
                         A strong media strategy depends not only on story quality, but also on access, fit, and relevance.
-                        Elevate One Media works with a broad ecosystem of national and international media environments
+                        Mirashka works with a broad ecosystem of national and international media environments
                         across business, technology, lifestyle, finance, sectoral, leadership, and mainstream visibility spaces.
                      </p>
 
@@ -770,7 +770,7 @@
 
 <!-- 5 -->
 <dt class="faq_header">
-   <span class="icon-play"></span> What makes Elevate One Media different in industry-led communications?
+   <span class="icon-play"></span> What makes Mirashka different in industry-led communications?
 </dt>
 <dd class="accordion-content">
    <p>

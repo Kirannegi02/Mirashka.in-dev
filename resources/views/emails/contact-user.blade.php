@@ -15,7 +15,7 @@
                      <td style="background:#006039; padding:20px; text-align:center;">
                         <!-- PNG LOGO (Email Safe) -->
                         <img src="https://elevateonemedia.com/assets/img/elevateone-logo.png"
-                           alt="Elevate One Media" width="160" style="display:block;
+                           alt="Mirashka" width="160" style="display:block;
                            margin:0 auto;
                            background-color:#ffffff;
                            padding:10px;
@@ -54,7 +54,7 @@
                         <!-- Footer -->
                         <p style="font-size:13px; color:#777;">
                            Regards,<br>
-                           <strong style="color:#006039;">Elevate One Media</strong>
+                           <strong style="color:#006039;">Mirashka</strong>
                         </p>
                         <!-- Social Media Icons (IMAGE BASED) -->
                         <p style="margin-top:15px;">
@@ -76,7 +76,7 @@
                   <!-- Bottom -->
                   <tr>
                      <td style="background:#006039; text-align:center; padding:12px; color:#ffffff; font-size:12px;">
-                        © {{ date('Y') }} Elevate One Media. All rights reserved.
+                        © {{ date('Y') }} Mirashka. All rights reserved.
                      </td>
                   </tr>
                </table>
