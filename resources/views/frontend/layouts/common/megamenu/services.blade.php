@@ -85,6 +85,27 @@
     text-decoration: underline;
   }
 
+  .right-box .wwa-dummy-text {
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4b5563;
+    text-align: left;
+  }
+
+  .right-box .wwa-dummy-text .wwa-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .right-box .wwa-right-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
   /* Mobile adjustments */
   @media (max-width: 767px) {
     .left-box {
@@ -92,6 +113,10 @@
       border-bottom: 1px solid #e0e0e0;
       padding-bottom: 10px;
       margin-bottom: 10px;
+    }
+
+    .right-box .wwa-right-image {
+      height: auto;
     }
   }
 </style>
@@ -241,7 +266,8 @@
           <h3 class="left-title mb-2">
             <a href="{{ route('aboutus') }}" class="wwa-learn-more-link">Learn more Mirashka HR</a>
           </h3>
-          <img src="{{ asset('assets/frontend/img/page/wwa-menu2.png') }}" alt="Image" class="img-fluid rounded mb-2 shadow-sm">
+          <p class="wwa-dummy-text"><span class="wwa-line">Mirashka builds people-first HR strategy.</span><span class="wwa-line">We help businesses scale with confidence.</span></p>
+          <img src="{{ asset('assets/frontend/img/page/wwa-menu2.png') }}" alt="Image" class="img-fluid rounded mb-2 shadow-sm wwa-right-image">
         </div>
 
       </div>
