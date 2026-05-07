@@ -59,6 +59,12 @@ Open:
 
 - `http://127.0.0.1:8000`
 
+Hot Relaod:
+
+```bash
+npx browser-sync start --proxy "http://localhost:8001" --files "resources/views/**/*.blade.php,public/assets/frontend/css/**/*.css,public/assets/frontend/js/**/*.js
+```
+
 ## Deployment Check
 
 This line is added to trigger and verify GitHub Actions deployment to cPanel.

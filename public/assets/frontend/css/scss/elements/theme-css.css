@@ -25905,7 +25905,7 @@ form .wpcf7-response-output {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 .recent_news_em_wp .news_recent.image_s .image:before {
   position: absolute;
@@ -25921,7 +25921,7 @@ form .wpcf7-response-output {
   -o-transition: all 0.5s ease;
   background: var(--primary-color-one);
   -ms-transition: all 0.5s ease;
-  border-radius: 50%;
+  border-radius: 5px;
   z-index: 1;
 }
 .recent_news_em_wp .news_recent.image_s:hover .image::before {

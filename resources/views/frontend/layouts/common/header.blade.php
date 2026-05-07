@@ -126,15 +126,10 @@
                                        <a href="{{ url('/') }}" class="nav-link"><span>Home</span></a>
                                     </li>
                                     @include('frontend.layouts.common.megamenu.who')
-                                    <li class="menu-item nav-item active">
-                                       <a href="{{ route('whatwedo') }}" class="nav-link"><span>Solutions</span></a>
-                                    </li>
+                                    @include('frontend.layouts.common.megamenu.solutions')
                                     @include('frontend.layouts.common.megamenu.services')
                                     @include('frontend.layouts.common.megamenu.industries')
                                     @include('frontend.layouts.common.megamenu.insights')
-                                    <li class="menu-item nav-item active">
-                                       <a href="{{ route('careers') }}" class="nav-link"><span>Careers</span></a>
-                                    </li>
                                     @include('frontend.layouts.common.megamenu.contact')
                                  </ul>
                               </div>

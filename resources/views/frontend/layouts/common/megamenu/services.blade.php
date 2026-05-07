@@ -19,7 +19,7 @@
   /* Card style */
   .tab-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -57,8 +57,7 @@
   }
 
   .tab-card i {
-    margin-top: 6px !important;
-
+    margin-top: 0 !important;
   }
 
   .right-box .left-title {
@@ -219,6 +218,16 @@
                   <i class="ri-user-heart-line fa-lg text-success"></i>
                   <div>
                     <h6>Attract &amp; Retain Top Talent</h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="{{ route('careers') }}" class="card-link">
+                <div class="tab-card">
+                  <i class="ri-briefcase-line fa-lg text-success"></i>
+                  <div>
+                    <h6>Careers</h6>
                   </div>
                 </div>
               </a>
