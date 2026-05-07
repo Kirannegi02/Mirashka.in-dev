@@ -12,14 +12,16 @@ class ContactFormController extends Controller
 {
     public function submitContact(StoreContactFormRequest $request)
     {
+        $leadType = $request->input('lead_type') === 'project_enquiry' ? 'ProjectEnquiry' : 'ContactForm';
+
         $contact = ContactForm::create($request->validated());
 
         try {
-            $response = Http::timeout(30)->post('https://flow.zoho.in/60069463164/flow/webhook/incoming?zapikey=1001.0b9702156501bd94d7d4bd0b27eafb69.2417d5b6f9f2cedb335ce441b2aa075b&isdebug=false', [
+            $response = Http::connectTimeout(3)->timeout(5)->post('https://flow.zoho.in/60069463164/flow/webhook/incoming?zapikey=1001.0b9702156501bd94d7d4bd0b27eafb69.2417d5b6f9f2cedb335ce441b2aa075b&isdebug=false', [
                 "name" => $request->name,
-                "phone" => $request->phone,
+                "phone" => $request->phone ?? '',
                 "email" => $request->email,
-                "company_name" => $request->company_name,
+                "company_name" => $request->company_name ?? '',
                 "message" => $request->message
             ]);
 
@@ -37,7 +39,7 @@ class ContactFormController extends Controller
         }
 
         try {
-            SendLeadEmailJob::dispatch($contact, 'ContactForm');
+            SendLeadEmailJob::dispatch($contact, $leadType);
         } catch (\Throwable $e) {
             Log::error('Email job dispatch failed', [
                 'error' => $e->getMessage(),

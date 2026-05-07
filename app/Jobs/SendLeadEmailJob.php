@@ -76,8 +76,10 @@ class SendLeadEmailJob implements ShouldQueue
 
     private function getMailable(object $lead): Mailable
     {
+        $isProjectEnquiry = $this->leadType === 'ProjectEnquiry';
+
         return match (true) {
-            $lead instanceof ContactForm => new UserContactMail($lead),
+            $lead instanceof ContactForm => new UserContactMail($lead, $isProjectEnquiry),
             $lead instanceof WebinarRegistration => new WebinarConfirmationMail($lead),
             default => throw new \InvalidArgumentException('Unknown lead type: '.get_class($lead)),
         };
@@ -85,8 +87,13 @@ class SendLeadEmailJob implements ShouldQueue
 
     private function getTemplateName(Mailable $mailable): string
     {
+        if ($this->leadType === 'ProjectEnquiry' && $mailable instanceof UserContactMail) {
+            return 'project-enquiry-user';
+        }
+
         return match (true) {
             $mailable instanceof UserContactMail => 'contact-user',
+            $this->leadType === 'ProjectEnquiry' && $mailable instanceof AdminContactMail => 'project-enquiry-admin',
             $mailable instanceof AdminContactMail => 'contact-admin',
             $mailable instanceof WebinarConfirmationMail => 'webinar-confirmation',
             $mailable instanceof WebinarAdminNotificationMail => 'webinar-admin-notification',
@@ -104,15 +111,10 @@ class SendLeadEmailJob implements ShouldQueue
 
         try {
             $mailable = $lead instanceof ContactForm
-                ? new AdminContactMail($lead)
+                ? new AdminContactMail($lead, $this->leadType === 'ProjectEnquiry')
                 : new WebinarAdminNotificationMail($lead);
 
             Mail::mailer('smtp')->to($adminEmail)->send($mailable);
-
-            Log::info('Admin notification sent', [
-                'lead_type' => $this->leadType,
-                'lead_id' => $lead->id,
-            ]);
 
         } catch (Throwable $e) {
             Log::warning('Admin notification failed (non-critical)', [

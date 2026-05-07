@@ -16,13 +16,15 @@ class UserContactMail extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public ContactForm $contact;
+    public bool $isProjectEnquiry;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(ContactForm $contact)
+    public function __construct(ContactForm $contact, bool $isProjectEnquiry = false)
     {
         $this->contact = $contact;
+        $this->isProjectEnquiry = $isProjectEnquiry;
     }
 
     /**
@@ -31,7 +33,7 @@ class UserContactMail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Thank you for contacting us'
+            subject: $this->isProjectEnquiry ? 'Thanks for your project enquiry' : 'Thank you for contacting us'
         );
     }
 
@@ -41,7 +43,7 @@ class UserContactMail extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact-user',
+            view: $this->isProjectEnquiry ? 'emails.project-enquiry-user' : 'emails.contact-user',
             with: [
                 'contact' => $this->contact,
             ]

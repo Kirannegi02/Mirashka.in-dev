@@ -133,7 +133,9 @@
             <div class="contact_form_box_all type_one">
                <div class="contact_form_box_inner">
                   <div class="contact_form_shortcode">
-                     <form id="project-enquiry-form" method="post" action="your-action.php" role="form">
+                     <form id="project-enquiry-form" class="contactForm" method="post" action="{{ route('contact.submit') }}" role="form">
+                        @csrf
+                        <input type="hidden" name="lead_type" value="project_enquiry">
                         <div class="messages"></div>
                         <div class="controls">
                            <div class="row">
@@ -142,6 +144,14 @@
                                     <label>Your Name<br /></label>
                                     <input type="text" name="name" placeholder="Your Name *" required="required"
                                        data-error="Enter Your Name">
+                                    <div class="help-block with-errors"></div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-12">
+                                 <div class="form-group">
+                                    <label>Your Phone<br /></label>
+                                    <input type="tel" name="phone" placeholder="Phone *" required="required"
+                                       data-error="Enter Your Phone Number">
                                     <div class="help-block with-errors"></div>
                                  </div>
                               </div>
@@ -170,7 +180,7 @@
                               </div>
                               <div class="col-sm-12">
                                  <div class="form-group mg_top apbtn">
-                                    <button class="theme_btn" type="submit">Submit Enquiry</button>
+                                    <button class="theme_btn submitBtn" type="submit">Submit Enquiry</button>
                                  </div>
                               </div>
                            </div>
