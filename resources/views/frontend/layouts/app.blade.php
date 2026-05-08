@@ -89,7 +89,7 @@
 
     @if(!$isAuth)
         @include('frontend.layouts.common.sections.blogs')
-        @include('frontend.layouts.common.newsletter')
+        @include('frontend.layouts.common.footer-cta')
         @include('frontend.layouts.common.footer')
     @endif
 

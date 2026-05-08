@@ -1,4 +1,390 @@
 <section class="newsteller style_one bg_dark_1">
+    <div class="pd_top_40"></div>
+    <div class="auto-container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="content">
+                    <h2>Join Mirashka Growth Circle</h2>
+                    <p>For receiving Mirashka insights and updates in your inbox directly.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="item_scubscribe">
+                    <div class="input_group">
+                        <form action="http://localhost/elevate/newsletter/subscribe" class="mc4wp-form" method="post" data-name="Subscibe">
+                            <div class="mc4wp-form-fields">
+                                <input type="email" name="email" placeholder="Your email address" required="">
+                                <input type="submit" value="Sign up">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pd_bottom_40"></div>
+</section>
+<section class="footer-cta-overlap">
+    <div class="container">
+        <div class="footer-cta-card">
+            <div class="footer-cta-content">
+                <h2>Take the first step towards a healthier mind and body</h2>
+                <p>
+                    Find caring support and expert guidance shaped for your wellness journey.
+                    Begin today for a brighter and balanced tomorrow
+                </p>
+                <a href="{{ url('/contact-us') }}" class="footer-cta-btn">Contact Us</a>
+            </div>
+            <div class="footer-cta-image-wrap">
+                <img src="{{ asset('assets/frontend/img/menu/Animesh-Singh-Chief-Talent-Architect.png') }}" alt="Mirashka support" class="footer-cta-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .footer-cta-overlap {
+        position: relative;
+        z-index: 5;
+        margin-bottom: -90px;
+    }
+
+    .footer-cta-card {
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 290px;
+        background: radial-gradient(circle at 35% 45%, #15af90 0%, #0f8d82 38%, #10606a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 42px 46px;
+    }
+
+    .footer-cta-content {
+        max-width: 560px;
+        color: #fff;
+    }
+
+    .footer-cta-content h2 {
+        font-size: 50px;
+        line-height: 1.18;
+        margin: 0 0 16px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .footer-cta-content p {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .footer-cta-btn {
+        display: inline-block;
+        background: #fff;
+        color: #1a2433;
+        border-radius: 10px;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .footer-cta-btn:hover {
+        color: #1a2433;
+    }
+
+    .footer-cta-image-wrap {
+        width: 36%;
+        min-width: 260px;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .footer-cta-image {
+        width: 100%;
+        max-height: 340px;
+        object-fit: contain;
+        object-position: bottom right;
+    }
+
+    @media (max-width: 991px) {
+        .footer-cta-overlap {
+            margin-bottom: -54px;
+        }
+
+        .footer-cta-card {
+            flex-direction: column;
+            padding: 26px 20px 18px;
+            min-height: auto;
+            text-align: center;
+        }
+
+        .footer-cta-content {
+            max-width: 100%;
+        }
+
+        .footer-cta-content h2 {
+            font-size: 30px;
+        }
+
+        .footer-cta-content p {
+            font-size: 16px;
+        }
+
+        .footer-cta-btn {
+            font-size: 16px;
+        }
+
+        .footer-cta-image-wrap {
+            width: 60%;
+            min-width: 180px;
+            margin-top: 18px;
+        }
+    }
+</style>
+<section class="footer-cta-overlap">
+    <div class="container">
+        <div class="footer-cta-card">
+            <div class="footer-cta-content">
+                <h2>Take the first step towards a healthier mind and body</h2>
+                <p>
+                    Find caring support and expert guidance shaped for your wellness journey.
+                    Begin today for a brighter and balanced tomorrow
+                </p>
+                <a href="{{ url('/contact-us') }}" class="footer-cta-btn">Contact Us</a>
+            </div>
+            <div class="footer-cta-image-wrap">
+                <img src="{{ asset('assets/frontend/img/menu/Animesh-Singh-Chief-Talent-Architect.png') }}" alt="Mirashka support" class="footer-cta-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .footer-cta-overlap {
+        position: relative;
+        z-index: 5;
+        margin-bottom: -90px;
+    }
+
+    .footer-cta-card {
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 290px;
+        background: radial-gradient(circle at 35% 45%, #15af90 0%, #0f8d82 38%, #10606a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 42px 46px;
+    }
+
+    .footer-cta-content {
+        max-width: 560px;
+        color: #fff;
+    }
+
+    .footer-cta-content h2 {
+        font-size: 50px;
+        line-height: 1.18;
+        margin: 0 0 16px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .footer-cta-content p {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .footer-cta-btn {
+        display: inline-block;
+        background: #fff;
+        color: #1a2433;
+        border-radius: 10px;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .footer-cta-btn:hover {
+        color: #1a2433;
+    }
+
+    .footer-cta-image-wrap {
+        width: 36%;
+        min-width: 260px;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .footer-cta-image {
+        width: 100%;
+        max-height: 340px;
+        object-fit: contain;
+        object-position: bottom right;
+    }
+
+    @media (max-width: 991px) {
+        .footer-cta-overlap {
+            margin-bottom: -54px;
+        }
+
+        .footer-cta-card {
+            flex-direction: column;
+            padding: 26px 20px 18px;
+            min-height: auto;
+            text-align: center;
+        }
+
+        .footer-cta-content {
+            max-width: 100%;
+        }
+
+        .footer-cta-content h2 {
+            font-size: 30px;
+        }
+
+        .footer-cta-content p {
+            font-size: 16px;
+        }
+
+        .footer-cta-btn {
+            font-size: 16px;
+        }
+
+        .footer-cta-image-wrap {
+            width: 60%;
+            min-width: 180px;
+            margin-top: 18px;
+        }
+    }
+</style>
+<section class="footer-cta-overlap">
+    <div class="container">
+        <div class="footer-cta-card">
+            <div class="footer-cta-content">
+                <h2>Take the first step towards a healthier mind and body</h2>
+                <p>
+                    Find caring support and expert guidance shaped for your wellness journey.
+                    Begin today for a brighter and balanced tomorrow
+                </p>
+                <a href="{{ url('/contact-us') }}" class="footer-cta-btn">Contact Us</a>
+            </div>
+            <div class="footer-cta-image-wrap">
+                <img src="{{ asset('assets/frontend/img/menu/Animesh-Singh-Chief-Talent-Architect.png') }}" alt="Mirashka support" class="footer-cta-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .footer-cta-overlap {
+        position: relative;
+        z-index: 5;
+        margin-bottom: -90px;
+    }
+
+    .footer-cta-card {
+        border-radius: 18px;
+        overflow: hidden;
+        min-height: 290px;
+        background: radial-gradient(circle at 35% 45%, #15af90 0%, #0f8d82 38%, #10606a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 42px 46px;
+    }
+
+    .footer-cta-content {
+        max-width: 560px;
+        color: #fff;
+    }
+
+    .footer-cta-content h2 {
+        font-size: 50px;
+        line-height: 1.18;
+        margin: 0 0 16px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .footer-cta-content p {
+        margin: 0 0 20px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .footer-cta-btn {
+        display: inline-block;
+        background: #fff;
+        color: #1a2433;
+        border-radius: 10px;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .footer-cta-btn:hover {
+        color: #1a2433;
+    }
+
+    .footer-cta-image-wrap {
+        width: 36%;
+        min-width: 260px;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .footer-cta-image {
+        width: 100%;
+        max-height: 340px;
+        object-fit: contain;
+        object-position: bottom right;
+    }
+
+    @media (max-width: 991px) {
+        .footer-cta-overlap {
+            margin-bottom: -54px;
+        }
+
+        .footer-cta-card {
+            flex-direction: column;
+            padding: 26px 20px 18px;
+            min-height: auto;
+            text-align: center;
+        }
+
+        .footer-cta-content {
+            max-width: 100%;
+        }
+
+        .footer-cta-content h2 {
+            font-size: 30px;
+        }
+
+        .footer-cta-content p {
+            font-size: 16px;
+        }
+
+        .footer-cta-btn {
+            font-size: 16px;
+        }
+
+        .footer-cta-image-wrap {
+            width: 60%;
+            min-width: 180px;
+            margin-top: 18px;
+        }
+    }
+</style>
+<section class="newsteller style_one bg_dark_1">
     <!--===============spacing==============-->
     <div class="pd_top_40"></div>
     <!--===============spacing==============-->
