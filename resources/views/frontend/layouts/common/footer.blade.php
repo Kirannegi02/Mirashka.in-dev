@@ -1,20 +1,23 @@
-<footer class="mir-footer position-relative overflow-hidden pb-0 pt-6 pt-lg-8" data-bs-theme="dark">
-   <div class="container position-relative mt-sm-5 mir-footer-container">
+<footer class="mir-footer position-relative overflow-hidden pb-0" data-bs-theme="dark">
+   <div class="container position-relative mir-footer-container">
       <div class="row g-4 mir-footer-main-row">
-         <div class="col-lg-3 col-md-6">
+         <div class="col-lg-2 col-md-6">
             <a class="me-0" href="{{ url('/') }}">
                <img class="mir-footer-logo" src="https://mirashka.digital/assets/frontend/img/logo.png" alt="Mirashka logo">
             </a>
             <p class="mt-4 mb-2 mir-footer-about">
                Mirashka is a design-led growth partner unifying brand, technology, and marketing into one operating system. Through its SPROUT framework, we launch products, build demand, secure trust, and scale revenue with disciplined execution, transparent dashboards, and repeatable, founder-friendly playbooks that scale.
             </p>
-            <h6 class="mb-2 mb-md-3">Follow on</h6>
-            <ul class="list-inline mb-0 mt-3">
-               <li class="list-inline-item"><a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-facebook-f lh-base"></i></a></li>
-               <li class="list-inline-item"><a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-instagram lh-base"></i></a></li>
-               <li class="list-inline-item"><a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-twitter lh-base"></i></a></li>
-               <li class="list-inline-item"><a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a></li>
-               <li class="list-inline-item"><a class="btn btn-xs btn-icon btn-light" href="#"><i class="fab fa-fw fa-youtube lh-base"></i></a></li>
+         </div>
+
+         <div class="col-lg-2 col-md-6">
+            <h6 class="mb-2 mb-md-4">What We Do</h6>
+            <ul class="nav flex-column mir-footer-links">
+               <li class="nav-item"><a class="nav-link pt-0" href="{{ route('whatwedo') }}">Compliance Integrity</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Workforce Efficiency</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Leadership Mastery</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Hiring Excellence</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">HRaaS Solutions</a></li>
             </ul>
          </div>
 
@@ -44,6 +47,13 @@
                <li class="nav-item"><a class="nav-link" href="#">For Franchises</a></li>
                <li class="nav-item"><a class="nav-link" href="#">For Startups</a></li>
             </ul>
+            <h6 class="mb-2 mb-md-4 mt-4 pt-2 mir-footer-partnership-heading">Partnership</h6>
+            <ul class="nav flex-column mir-footer-links">
+               <li class="nav-item"><a class="nav-link pt-0" href="{{ route('partnershipscontact') }}">Strategic Alliances</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('partnershipscontact') }}">Joint Ventures</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('partnershipscontact') }}">Media Partnerships</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('partnershipscontact') }}">Event Collaborations</a></li>
+            </ul>
          </div>
 
          <div class="col-lg-2 col-md-6">
@@ -63,20 +73,21 @@
             </ul>
          </div>
 
-         <div class="col-lg-3 col-md-6">
-            <h6 class="mb-2 mb-md-4">Contact Us</h6>
-
-            <div class="mir-footer-contact-item">
-               <i class="bi bi-geo-alt"></i>
-               <span>GT-43, First Floor, Sector 117, Noida, UP, India</span>
-            </div>
-            <div class="mir-footer-contact-item">
-               <i class="bi bi-telephone"></i>
-               <span>+91 8796927200</span>
-            </div>
-            <div class="mir-footer-contact-item">
-               <i class="bi bi-envelope"></i>
-               <span>info@mirashka.in</span>
+         <div class="col-lg-2 col-md-6">
+            <div class="footer-contact">
+               <h5>Contact Us</h5>
+               <p>GT-43, First Floor,<br>Sector 117, Noida, UP,<br>India</p>
+               <p><a href="tel:+918796927200">+91 8796927200</a></p>
+               <p><a href="mailto:info@mirashka.in">info@mirashka.in</a></p>
+               <hr class="footer-contact-hr">
+               <h6>Follow us on</h6>
+               <div class="social-icons">
+                  <a class="btn btn-xs btn-icon btn-light" href="#" aria-label="Facebook"><i class="fab fa-fw fa-facebook-f lh-base"></i></a>
+                  <a class="btn btn-xs btn-icon btn-light" href="#" aria-label="Instagram"><i class="fab fa-fw fa-instagram lh-base"></i></a>
+                  <a class="btn btn-xs btn-icon btn-light" href="#" aria-label="Twitter / X"><i class="fab fa-fw fa-twitter lh-base"></i></a>
+                  <a class="btn btn-xs btn-icon btn-light" href="#" aria-label="LinkedIn"><i class="fab fa-fw fa-linkedin-in lh-base"></i></a>
+                  <a class="btn btn-xs btn-icon btn-light" href="#" aria-label="YouTube"><i class="fab fa-fw fa-youtube lh-base"></i></a>
+               </div>
             </div>
          </div>
       </div>
@@ -110,7 +121,7 @@
    .mir-footer {
       background-color: #202124;
       color: #c4c5c7;
-      padding-top: 8rem !important;
+      padding-top: 6rem !important;
       font-family: "Instrument Sans", sans-serif;
       letter-spacing: 0;
       --bs-body-font-family: "Instrument Sans", sans-serif;
@@ -234,6 +245,81 @@
       hyphens: none;
    }
 
+   .mir-footer-partnership-heading {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+   }
+
+   .mir-footer .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      text-align: left;
+   }
+
+   .mir-footer .footer-contact h5 {
+      margin-bottom: 15px;
+      color: #fff !important;
+      font-size: 19px;
+      line-height: 1.22;
+      font-weight: 600;
+      letter-spacing: .1px;
+   }
+
+   .mir-footer .footer-contact > p {
+      margin: 0 0 8px 0;
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.5;
+      max-width: 100%;
+   }
+
+   .mir-footer .footer-contact > p > a {
+      display: inline;
+      margin: 0;
+      color: inherit;
+      text-decoration: none;
+   }
+
+   .mir-footer .footer-contact > p > a:hover {
+      color: #e2930c;
+      text-decoration: underline;
+   }
+
+   .mir-footer .footer-contact .footer-contact-hr {
+      width: 100%;
+      margin: 8px 0 16px;
+      border: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      opacity: 1;
+   }
+
+   .mir-footer .footer-contact > h6 {
+      margin: 0 0 12px 0 !important;
+   }
+
+   .mir-footer .footer-contact .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+   }
+
+   .mir-footer .footer-contact .social-icons a {
+      display: inline-flex !important;
+      margin: 0 !important;
+   }
+
+   .mir-footer .footer-contact .social-icons .btn-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .16);
+      border: none !important;
+      color: #fff !important;
+   }
+
    .mir-footer .mir-footer-resource-desc {
       font-family: var(--bs-body-font-family);
       font-size: 0.875em !important;
@@ -264,30 +350,6 @@
       justify-content: center;
    }
 
-   .mir-footer-contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      color: #fff;
-      font-size: 15px;
-      line-height: 1.45;
-   }
-
-   .mir-footer-contact-item i {
-      font-size: 17px;
-      line-height: 1.2;
-      margin-top: 2px;
-      color: #fff;
-   }
-
-   .mir-footer-contact-social .btn-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .16);
-   }
-
    .mir-footer .btn-icon:hover {
       background: #e2930c;
       color: #fff;
@@ -316,7 +378,7 @@
 
    @media (max-width: 991px) {
       .mir-footer {
-         padding-top: 4rem !important;
+         padding-top: 1.75rem !important;
       }
 
       .mir-footer-container {
@@ -335,6 +397,10 @@
       }
 
       .mir-footer h6 {
+         font-size: 18px;
+      }
+
+      .mir-footer .footer-contact h5 {
          font-size: 18px;
       }
    }
