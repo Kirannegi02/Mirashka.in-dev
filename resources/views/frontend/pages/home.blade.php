@@ -182,7 +182,7 @@
                </ul>
             </div>
          </div>
-      </div>
+      </div>   
 
    </section>
 
@@ -1250,7 +1250,7 @@
                                     FAQs
                                  </div>
                                  <div class="title">Frequently Asked Questions</div>
-                                 <div class="small_text_sub">Have questions? We’re here to help.</div>
+                                 <div class="small_text_sub">FAQs for Mirashka’s Home Page</div>
                               </div>
                               <div class="pd_bottom_40"></div>
                            </div>
@@ -1286,44 +1286,60 @@
                               <div class="block_faq">
                                  <div class="accordion">
                                     <dl>
-                                       <dt class="faq_header">
-                                          <span class="icon-play"></span> What services do you offer?
-                                       </dt>
-                                       <dd class="accordion-content hide">
-                                          <p>
-                                             We provide strategic PR, CXO positioning, award consulting, media training, and digital presence solutions tailored to strengthen your brand.
-                                          </p>
-                                       </dd>
-                                       <dt class="faq_header">
-                                          <span class="icon-play"></span> Do you work with startups or only large companies?
-                                       </dt>
-                                       <dd class="accordion-content hide">
-                                          <p>
-                                             We partner with growth-stage startups, SMEs, and large enterprises alike—focusing on brands that want to build credible market influence.
-                                          </p>
-                                       </dd>
-                                       <dt class="faq_header">
-                                          <span class="icon-play"></span> How soon can I see results?
-                                       </dt>
-                                       <dd class="accordion-content hide">
-                                          <p>
-                                             Timelines vary, but most clients start seeing media traction or digital visibility improvements within the first 60–90 days of engagement.
-                                          </p>
-                                       </dd>
-                                       <dt class="faq_header">
-                                          <span class="icon-play"></span> Do you guarantee media coverage?
-                                       </dt>
-                                       <dd class="accordion-content hide">
-                                          <p>
-                                             While we cannot promise specific headlines, our team uses strong editorial networks and insight-driven strategies to maximize coverage potential.
-                                          </p>
-                                       </dd>
                                        <dt class="faq_header active">
-                                          <span class="icon-play"></span> How do I get started?
+                                          <span class="icon-play"></span> What services does Mirashka offer?
                                        </dt>
                                        <dd class="accordion-content hide" style="display: block;">
                                           <p>
-                                             Simply reach out through our website contact form or schedule a discovery call with our consultants to discuss your goals and next steps.
+                                             Mirashka offers end-to-end HR solutions including HR as a Service (HRaaS), Compliance &amp; Legal Advisory, Leadership Hiring, Talent Acquisition, Payroll Management, Employee Engagement, and HR Process Optimization—tailored for startups, MSMEs, and growing businesses.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> How can Mirashka help startups and entrepreneurs?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             We provide affordable, flexible HR solutions so startups can access expert-level HR support without hiring a full in-house team. From hiring your first employee to setting up HR policies, payroll, and compliance, we help you build a strong foundation.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> What makes Mirashka different from traditional HR firms?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             Unlike corporate HR firms that focus only on big companies, Mirashka specializes in helping startups, family businesses, MSMEs, and fast-growing companies—with scalable, pay-as-you-go HR services designed for agile businesses.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> What is HRaaS and why is it beneficial?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             HR as a Service (HRaaS) allows businesses to outsource all HR functions—from hiring to payroll, compliance, employee engagement, and HR tech—at a fraction of the cost of hiring an in-house HR team.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> Can Mirashka help with leadership hiring?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             Yes, our Executive Search service helps businesses find senior leaders, CXOs, and Board Members who match your vision, culture, and growth needs.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> How does Mirashka ensure compliance and legal protection for businesses?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             We offer compliance audits, policy creation, labor law advisory, POSH training, and workplace safety audits to keep your business legally safe and future-ready.
+                                          </p>
+                                       </dd>
+                                       <dt class="faq_header">
+                                          <span class="icon-play"></span> Does Mirashka offer customized solutions for different industries?
+                                       </dt>
+                                       <dd class="accordion-content hide">
+                                          <p>
+                                             Absolutely! Every business is unique—our solutions are fully tailored to your industry, growth stage, culture, and specific workforce challenges.
                                           </p>
                                        </dd>
                                     </dl>
