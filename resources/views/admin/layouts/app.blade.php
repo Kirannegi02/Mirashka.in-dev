@@ -67,9 +67,10 @@
         }
     </style>
     
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/admin/css/plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin/css/style.css') }}">
+    <x-mirashka-fonts />
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/mirashka-fonts.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('assets/frontend/img/elevatefav.svg') }}" sizes="16x16">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">

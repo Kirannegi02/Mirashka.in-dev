@@ -5,9 +5,9 @@
     <title>Login | Mirashka</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-       <link rel="icon" type="image/png" href="{{ asset('assets/frontend/img/elevatefav.svg') }}" sizes="16x16">
+    <x-mirashka-fonts />
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/mirashka-fonts.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/frontend/img/elevatefav.svg') }}" sizes="16x16">
     <style>
         :root {
             --primary: #006039;
@@ -19,7 +19,7 @@
 
         * {
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: var(--font-sans);
         }
 
         body {

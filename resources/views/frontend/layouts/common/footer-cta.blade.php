@@ -87,7 +87,7 @@
         background-color: #ffffff;
         margin: 0;
         padding: 48px 0 36px;
-        font-family: "Inter", sans-serif;
+        font-family: var(--font-sans);
         font-size: 0.9375rem;
         color: #01735c;
         line-height: 1.5;

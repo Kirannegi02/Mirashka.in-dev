@@ -115,7 +115,7 @@
   --auth-radius: 20px;
   --auth-radius-sm: 12px;
   --auth-transition: .3s cubic-bezier(.4,0,.2,1);
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-sans: var(--mirashka-font-primary);
 }
 
 .auth-page { width: 100%; height: 100vh; background: var(--auth-bg); font-family: var(--font-sans); color: var(--auth-text); display: flex; align-items: center; justify-content: center; }

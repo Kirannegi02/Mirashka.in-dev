@@ -214,6 +214,29 @@
     margin-bottom: 20px;
 }
 
+/* testimonial avatars & taglines */
+.testimonial-tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #006039;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar-initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #006039;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+}
+
 /* testimonial box */
 @media (max-width: 768px) {
 
@@ -231,6 +254,12 @@
   .authour_image {
     width: 80px;
     margin: 0 auto;
+  }
+
+  .testimonial-avatar-initials {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 1.35rem;
   }
 
   .authour_image img {

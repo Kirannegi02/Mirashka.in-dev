@@ -1,0 +1,63 @@
+/**
+ * Global font application (tokens defined in components/mirashka-fonts.blade.php).
+ * Load after theme-css.css so overrides win.
+ */
+
+:root {
+    --creote-family-one: var(--mirashka-font-primary) !important;
+    --creote-family-two: var(--mirashka-font-secondary) !important;
+}
+
+html,
+body {
+    font-family: var(--font-sans);
+}
+
+/* Creote / theme base */
+body,
+button,
+input,
+select,
+textarea {
+    font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.title_sections .title {
+    font-family: var(--mirashka-font-heading);
+}
+
+/* Admin panel (was Jost via Google Fonts) */
+.layout-light,
+.layout-light body,
+.layout-light .sidebar,
+.layout-light .contents,
+.layout-light .navbar,
+.layout-light .footer-wrapper,
+.layout-light h1,
+.layout-light h2,
+.layout-light h3,
+.layout-light h4,
+.layout-light h5,
+.layout-light h6,
+.layout-light p,
+.layout-light a,
+.layout-light button,
+.layout-light input,
+.layout-light select,
+.layout-light textarea,
+.layout-light .table {
+    font-family: var(--font-sans) !important;
+}
+
+/* Auth / standalone login pages */
+.auth-page,
+.auth-page *:not(i):not([class*="fa-"]):not([class*="ri-"]):not([class*="icon-"]) {
+    font-family: var(--font-sans);
+}

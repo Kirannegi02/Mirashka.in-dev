@@ -11,8 +11,6 @@
     <meta name="keywords" content="{{ $data['keywords'] ?? '' }}">
     
     {{-- Preconnect to external domains for faster connection --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
@@ -46,10 +44,6 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/pawan.css') }}">
     
-    {{-- Google Fonts --}}
-    <link rel="preload" href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap' as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap'></noscript>
-    
     {{-- Icon fonts --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
@@ -62,6 +56,8 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/flexslider.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/scss/elements/theme-css.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/vj.css') }}">
+    <x-mirashka-fonts />
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/mirashka-fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/scss/elements/color-switcher/color.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
