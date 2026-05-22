@@ -51,6 +51,18 @@ class FrontendController extends Controller
         return view('frontend.pages.whatwedo');
     }
 
+    public function whymirashka()
+    {
+        $meta = config('why_mirashka.meta', []);
+        $data = [
+            'title' => $meta['title'] ?? 'Why Mirashka | HRaaS Partner',
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.whymirashka', compact('data'));
+    }
+
     public function cpackages()
     {
         return view('frontend.landingpage.companypackages');

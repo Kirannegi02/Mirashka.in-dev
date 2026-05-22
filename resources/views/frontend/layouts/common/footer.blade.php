@@ -24,7 +24,8 @@
          <div class="col-lg-2 col-md-6">
             <h6 class="mb-2 mb-md-4">Who We Are</h6>
             <ul class="nav flex-column mir-footer-links">
-               <li class="nav-item"><a class="nav-link pt-0" href="#">Our Story</a></li>
+               <li class="nav-item"><a class="nav-link pt-0" href="{{ route('whymirashka') }}">Why Mirashka</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">Our Story</a></li>
                <li class="nav-item"><a class="nav-link" href="#">Mission and Values</a></li>
                <li class="nav-item"><a class="nav-link" href="#">History</a></li>
                <li class="nav-item"><a class="nav-link" href="#">General Enquiries</a></li>

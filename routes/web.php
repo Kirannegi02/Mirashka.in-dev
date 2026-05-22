@@ -51,6 +51,7 @@ Route::get('/project-enquiries', [FrontendController::class, 'projectenquiries']
 Route::get('/policy-advocacy', [FrontendController::class, 'policyadvocacy'])->name('policyadvocacy');
 Route::get('/podcasting-services', [FrontendController::class, 'podcastingservices'])->name('podcastingservices');
 Route::get('/what-we-do', [FrontendController::class, 'whatwedo'])->name('whatwedo');
+Route::get('/why-mirashka', [FrontendController::class, 'whymirashka'])->name('whymirashka');
 Route::get('/partnerships-contact', [FrontendController::class, 'partnershipscontact'])->name('partnershipscontact');
 Route::get('/office-locations', [FrontendController::class, 'officelocations'])->name('officelocations');
 Route::get('/methodology', [FrontendController::class, 'methodology'])->name('methodology');

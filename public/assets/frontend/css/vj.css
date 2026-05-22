@@ -41,8 +41,23 @@ a.animateme i.fa.fa-angle-down {
 #homeOneBanner.home2-pmv-section .pmv-bottom .pmv-nav ul li a {
     font-weight: 800;
 }
-.boxsl1, .boxsl2, .boxsl3, .boxsl4 {
+.boxsl1, .boxsl2, .boxsl3, .boxsl4, .boxsl5, .boxsl6 {
     height: 535px;
+}
+#homeOneBanner .tab-pane {
+    position: relative;
+}
+#homeOneBanner .tab-pane::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+#homeOneBanner .tab-pane .container {
+    position: relative;
+    z-index: 2;
 }
 .tentArea {
     padding: 90px 0 25px;
@@ -89,6 +104,22 @@ span.line {
 }
 i.icon-quote {
     transform: translateY(-30px);
+}
+
+/* Testimonials: readable subtitle (replaces theme watermark small_text_sub) */
+.testimonial-section .testimonial-section-subtitle {
+    position: static;
+    display: block;
+    margin: 14px auto 0;
+    padding: 0 16px;
+    max-width: 720px;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    font-weight: 500;
+    color: #475569;
+    opacity: 1;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
 }
 #homeOneBanner .tab-pane {
     opacity: 0;

@@ -12,14 +12,14 @@
     <div class="{{ $useFluidContainer ? 'container-fluid' : 'container' }}">
         <div class="row">
             <div class="col-12 text-center">
-                <div class="title_all_box style_seven dark_color">
+                <div class="title_all_box style_seven text-center dark_color">
                     <div class="title_sections">
                         <div class="before_title">{{ $beforeTitle }}</div>
                         <div class="title">{{ $sectionTitle }}</div>
-                        @if($sectionSubtitle)
-                            <div class="small_text_sub">{{ $sectionSubtitle }}</div>
-                        @endif
                     </div>
+                    @if($sectionSubtitle)
+                        <p class="testimonial-section-subtitle">{{ $sectionSubtitle }}</p>
+                    @endif
                     <div class="pb-4"></div>
                 </div>
             </div>

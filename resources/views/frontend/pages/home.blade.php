@@ -175,7 +175,7 @@
                   @foreach($banners as $key => $banner)
                   <li>
                      <a href="#para{{ $key+2 }}" class="{{ $key==0 ? 'active' : '' }}">
-                        {{ $banner->nav_title ?? ' '.($key+1) }}
+                        {{ $key + 1 }}
                      </a>
                   </li>
                   @endforeach
