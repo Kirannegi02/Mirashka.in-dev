@@ -21081,7 +21081,11 @@ form .wpcf7-response-output {
   position: relative;
 }
 .description_box p {
-  margin: 0;
+  margin: 0 0 1.75em;
+}
+
+.description_box p:last-child {
+  margin-bottom: 0;
 }
 .description_box p span {
   color: var(--primary-color-one);

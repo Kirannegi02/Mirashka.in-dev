@@ -47,10 +47,11 @@
 
                             @php
                             $image = $post['_embedded']['wp:featuredmedia'][0]['source_url'] ?? asset('assets/images/default.jpg');
+                            $imageAlt = $post['image_alt'] ?? strip_tags($post['title']['rendered'] ?? 'Blog post');
                             @endphp
 
                             <div class="blog_feature_image">
-                                <img src="{{ $image }}" class="wp-post-image" alt="img">
+                                <img src="{{ $image }}" class="wp-post-image" alt="{{ $imageAlt }}" loading="lazy">
                             </div>
 
                             <div class="pd_bottom_20"></div>
@@ -91,6 +92,7 @@
 
                                     @php
                                     $image = $rel['_embedded']['wp:featuredmedia'][0]['source_url'] ?? asset('assets/images/default.jpg');
+                                    $imageAlt = $rel['image_alt'] ?? strip_tags($rel['title']['rendered'] ?? 'Related post');
                                     @endphp
 
                                     <div class="swiper-slide">
@@ -98,7 +100,7 @@
                                         <div class="news_box default_style list_view normal_view clearfix">
 
                                             <div class="image img_hover-1">
-                                                <img src="{{ $image }}" class="img-fluid">
+                                                <img src="{{ $image }}" class="img-fluid" alt="{{ $imageAlt }}" loading="lazy">
 
                                                 <a href="{{ url('blog/'.$rel['slug']) }}" class="categories">
                                                     <i class="icon-folder"></i>
@@ -186,12 +188,13 @@
 
                             @php
                             $image = $recent['_embedded']['wp:featuredmedia'][0]['source_url'] ?? asset('assets/images/default.jpg');
+                            $imageAlt = $recent['image_alt'] ?? strip_tags($recent['title']['rendered'] ?? 'Recent post');
                             @endphp
 
                             <div class="blog_in clearfix image_in">
 
                                 <div class="image">
-                                    <img src="{{ $image }}">
+                                    <img src="{{ $image }}" alt="{{ $imageAlt }}" loading="lazy">
                                 </div>
 
                                 <div class="content_inner">

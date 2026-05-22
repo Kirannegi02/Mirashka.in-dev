@@ -5,7 +5,6 @@ namespace App\Providers;
 use App\Contracts\UserRepositoryInterface;
 use App\Repositories\UserRepository;
 use App\Services\PostService;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Intervention\Image\Drivers\Gd\Driver;
@@ -33,12 +32,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // Inject latest posts only where used to avoid needless external requests.
         View::composer('frontend.layouts.common.sections.blogs', function ($view) {
-            $latestPosts = Cache::remember('wp_latest_posts_3', now()->addMinutes(10), function () {
-                return app(PostService::class)->getLatestPosts(3);
-            });
-
             $view->with([
-                'latest_posts' => $latestPosts,
+                'latest_posts' => app(PostService::class)->getLatestPosts(3),
             ]);
         });
 

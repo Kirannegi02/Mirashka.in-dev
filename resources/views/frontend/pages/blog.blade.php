@@ -73,20 +73,16 @@
                   @foreach($posts as $post)
 
                   @php
-                  $image = isset($post['_embedded']['wp:featuredmedia'][0]['source_url'])
-                  ? $post['_embedded']['wp:featuredmedia'][0]['source_url']
-                  : asset('assets/images/default.jpg');
-
-                  $author = isset($post['_embedded']['author'][0]['name'])
-                  ? $post['_embedded']['author'][0]['name']
-                  : 'Unknown';
+                  $image = $post['_embedded']['wp:featuredmedia'][0]['source_url'] ?? asset('assets/images/default.jpg');
+                  $imageAlt = $post['image_alt'] ?? strip_tags($post['title']['rendered'] ?? 'Blog post');
+                  $author = $post['_embedded']['author'][0]['name'] ?? 'Mirashka';
                   @endphp
 
                   <div class="grid_box _card">
                      <div class="news_box style_seven">
 
                         <div class="image_box">
-                           <img src="{{ $image }}" class="img-fluid" alt="img">
+                           <img src="{{ $image }}" class="img-fluid" alt="{{ $imageAlt }}" loading="lazy">
 
                            <div class="date">
                               {{ \Carbon\Carbon::parse($post['date'])->format('F j, Y') }}

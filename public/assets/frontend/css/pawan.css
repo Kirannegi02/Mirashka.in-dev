@@ -27,7 +27,11 @@
 
 /* --- Paragraphs --- */
 .description_box p {
-  margin: 0 0 1.1em;
+  margin: 0 0 1.75em;
+}
+
+.description_box p:last-child {
+  margin-bottom: 0;
 }
 
 /* Post Date */
@@ -66,7 +70,11 @@
 }
 
 /* --- Text Formatting --- */
-.description_box strong { font-weight: 500; }
+.description_box strong,
+.description_box b {
+  font-weight: 700;
+  color: var(--color-text);
+}
 .description_box em { font-style: italic; }
 
 /* --- Horizontal Rules --- */

@@ -33,11 +33,9 @@
                   @forelse($latest_posts as $post)
 
                      @php
-                        $img = $post['_embedded']['wp:featuredmedia'][0]['source_url'] 
-                               ?? asset('assets/img/default-blog.jpg');
-
-                        $category = $post['_embedded']['wp:term'][0][0]['name'] 
-                                    ?? 'General';
+                        $img = $post['_embedded']['wp:featuredmedia'][0]['source_url'] ?? asset('assets/img/default-blog.jpg');
+                        $imageAlt = $post['image_alt'] ?? strip_tags($post['title']['rendered'] ?? 'Blog post');
+                        $category = $post['_embedded']['wp:term'][0][0]['name'] ?? 'General';
                      @endphp
 
                      <div class="grid_box _card">
@@ -48,7 +46,7 @@
                               <img width="750" height="420"
                                    src="{{ $img }}"
                                    class="img-fluid"
-                                   alt="blog image"
+                                   alt="{{ $imageAlt }}"
                                    loading="lazy">
                            </div>
 

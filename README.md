@@ -59,10 +59,10 @@ Open:
 
 - `http://127.0.0.1:8000`
 
-Hot Relaod:
+Hot Reload (run in a second terminal while `php artisan serve` is running):
 
 ```bash
-npx browser-sync start --proxy "http://localhost:8001" --files "resources/views/**/*.blade.php,public/assets/frontend/css/**/*.css,public/assets/frontend/js/**/*.js
+npx browser-sync start --proxy "http://127.0.0.1:8000" --files "resources/views/**/*.blade.php,public/assets/frontend/css/**/*.css,public/assets/frontend/js/**/*.js"
 ```
 
 ## Deployment Check
