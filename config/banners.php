@@ -14,7 +14,7 @@ return [
         'sub_heading' => 'Leaders today, visionaries for tomorrow.',
         'description' => 'We specialize in connecting organizations with visionary leaders who bring innovation, growth, and sustainable success. Our tailored search ensures the perfect fit for your executive needs.',
         'button_text' => 'Explore HRaaS Solutions',
-        'button_link' => '/what-we-do',
+        'button_link' => '/hraas',
         'status' => 'active',
         'image_source' => 'leadership-hiring.jpg',
         'image_webp' => 'leadership-hiring.webp',

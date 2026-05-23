@@ -69,43 +69,11 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/executive-search-leadership-hiring/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/leadership-consulting-1.png" alt="Executive Assessment and Leadership Consulting" class="whatwedo-leadership-icon" loading="lazy">
-      <div>
-        <h5 class="whatwedo-leadership-title">Executive Assessment &amp; Leadership Consulting</h5>
-        <p class="whatwedo-leadership-desc">Leadership evaluations and development roadmaps to align leadership capability with business strategy.</p>
-      </div>
-    </a>
-
-    <a href="https://mirashka.in/service/diversity-equity-inclusion-advisory/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2025/02/Employee-Surveys.webp" alt="Diversity Equity and Inclusion Advisory" class="whatwedo-leadership-icon" loading="lazy">
-      <div>
-        <h5 class="whatwedo-leadership-title">Diversity, Equity &amp; Inclusion Advisory</h5>
-        <p class="whatwedo-leadership-desc">Designing and embedding inclusive hiring, leadership, and culture strategies.</p>
-      </div>
-    </a>
-
     <a href="https://mirashka.in/service/board-ceo-advisory/" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/board-and-CEO-advisory.png" alt="Board and CEO Advisory" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">Board &amp; CEO Advisory</h5>
         <p class="whatwedo-leadership-desc">Strategic advice for boards and CEOs to enhance governance, leadership effectiveness, and long-term planning.</p>
-      </div>
-    </a>
-
-    <a href="https://mirashka.in/service/board-ceo-advisory/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/HR-and-talent.png" alt="HR and Talent Strategy Advisory" class="whatwedo-leadership-icon" loading="lazy">
-      <div>
-        <h5 class="whatwedo-leadership-title">HR &amp; Talent Strategy Advisory</h5>
-        <p class="whatwedo-leadership-desc">Strategic workforce planning, culture transformation, and future talent pipeline development.</p>
-      </div>
-    </a>
-
-    <a href="https://mirashka.in/service/family-business-leadership-solutions/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/family-business-leadership-solution-1.png" alt="Family Business Leadership Solutions" class="whatwedo-leadership-icon" loading="lazy">
-      <div>
-        <h5 class="whatwedo-leadership-title">Family Business Leadership Solutions</h5>
-        <p class="whatwedo-leadership-desc">Specialized advisory for family-owned businesses on governance, succession, and leadership transitions.</p>
       </div>
     </a>
 
@@ -117,19 +85,19 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/ceo-succession-performance-acceleration/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/digital-transformation.png" alt="Digital Transformation and Workforce Evolution" class="whatwedo-leadership-icon" loading="lazy">
+    <a href="https://mirashka.in/service/executive-search-leadership-hiring/" class="whatwedo-leadership-card">
+      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/leadership-consulting-1.png" alt="Leadership Assessment and Consulting" class="whatwedo-leadership-icon" loading="lazy">
       <div>
-        <h5 class="whatwedo-leadership-title">Digital Transformation &amp; Workforce Evolution</h5>
-        <p class="whatwedo-leadership-desc">Helping HR teams and leadership adapt to digital-first operations through reskilling and HR tech integration.</p>
+        <h5 class="whatwedo-leadership-title">Leadership Assessment &amp; Consulting</h5>
+        <p class="whatwedo-leadership-desc">Leadership evaluations and development roadmaps to align leadership capability with business strategy.</p>
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/restructuring-organizational-transformation/" class="whatwedo-leadership-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/restructuring-organizational-performance.png" alt="Restructuring and Organizational Transformation" class="whatwedo-leadership-icon" loading="lazy">
+    <a href="https://mirashka.in/service/board-ceo-advisory/" class="whatwedo-leadership-card">
+      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/HR-and-talent.png" alt="HR and Talent Strategy Advisory" class="whatwedo-leadership-icon" loading="lazy">
       <div>
-        <h5 class="whatwedo-leadership-title">Restructuring &amp; Organizational Transformation</h5>
-        <p class="whatwedo-leadership-desc">Advisory support for leadership teams navigating restructuring, workforce redeployment, and cultural transformation.</p>
+        <h5 class="whatwedo-leadership-title">HR &amp; Talent Strategy Advisory</h5>
+        <p class="whatwedo-leadership-desc">Strategic workforce planning, culture transformation, and future talent pipeline development.</p>
       </div>
     </a>
   </div>

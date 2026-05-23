@@ -138,14 +138,6 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/it-recruitment/" class="whatwedo-hiring-card">
-        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/it-recruitment-1.png" alt="IT Recruitment" class="whatwedo-hiring-icon" loading="lazy">
-        <div>
-          <h5 class="whatwedo-hiring-title">IT Recruitment</h5>
-          <p class="whatwedo-hiring-desc">Specialist hiring for technology and innovation roles.</p>
-        </div>
-      </a>
-
       <a href="https://mirashka.in/service/general-staffing/" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/general-staffing-1.png" alt="General Staffing" class="whatwedo-hiring-icon" loading="lazy">
         <div>
@@ -154,19 +146,27 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/recruitment-process-outsourcing-rpo/" class="whatwedo-hiring-card">
-        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/recruitment-process-outsourcing-1.png" alt="Recruitment Process Outsourcing" class="whatwedo-hiring-icon" loading="lazy">
+      <a href="https://mirashka.in/service/naps-national-apprenticeship-promotion-scheme/" class="whatwedo-hiring-card">
+        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/National-apprenticeship-promotion-1.png" alt="NAPS Apprenticeship Support" class="whatwedo-hiring-icon" loading="lazy">
         <div>
-          <h5 class="whatwedo-hiring-title">Recruitment Process Outsourcing (RPO)</h5>
-          <p class="whatwedo-hiring-desc">Acting as your extended recruitment team to handle full-cycle hiring.</p>
+          <h5 class="whatwedo-hiring-title">NAPS Apprenticeship Support</h5>
+          <p class="whatwedo-hiring-desc">Helping businesses leverage apprenticeships for future-ready talent and government incentives.</p>
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/naps-national-apprenticeship-promotion-scheme/" class="whatwedo-hiring-card">
-        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/National-apprenticeship-promotion-1.png" alt="NAPS" class="whatwedo-hiring-icon" loading="lazy">
+      <a href="https://mirashka.in/service/it-recruitment/" class="whatwedo-hiring-card">
+        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/it-recruitment-1.png" alt="IT Recruitment" class="whatwedo-hiring-icon" loading="lazy">
         <div>
-          <h5 class="whatwedo-hiring-title">NAPS (National Apprenticeship Promotion Scheme)</h5>
-          <p class="whatwedo-hiring-desc">Helping businesses leverage apprenticeships for future-ready talent and government incentives.</p>
+          <h5 class="whatwedo-hiring-title">IT Recruitment</h5>
+          <p class="whatwedo-hiring-desc">Specialist hiring for technology and innovation roles.</p>
+        </div>
+      </a>
+
+      <a href="https://mirashka.in/service/recruitment-process-outsourcing-rpo/" class="whatwedo-hiring-card">
+        <img src="https://mirashka.co.in/wp-content/uploads/2024/06/recruitment-process-outsourcing-1.png" alt="Recruitment Process Outsourcing" class="whatwedo-hiring-icon" loading="lazy">
+        <div>
+          <h5 class="whatwedo-hiring-title">Recruitment Process Outsourcing</h5>
+          <p class="whatwedo-hiring-desc">Acting as your extended recruitment team to handle full-cycle hiring.</p>
         </div>
       </a>
 

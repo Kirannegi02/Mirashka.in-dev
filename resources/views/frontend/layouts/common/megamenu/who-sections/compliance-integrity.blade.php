@@ -1,7 +1,7 @@
 <style>
   .whatwedo-cards {
     display: grid;
-    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
     border-top: 1px solid #ececec;
     border-left: 1px solid #ececec;
   }
@@ -10,7 +10,7 @@
     border-right: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
     padding: 16px 18px 16px;
-    min-height: 278px;
+    min-height: 320px;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@
   }
 
   .whatwedo-card:not(.active-card) .whatwedo-card-img {
-    height: 100px;
+    height: 145px;
     border-radius: 20px;
     margin-bottom: 14px;
   }
@@ -164,14 +164,6 @@
 
 <div class="whatwedo-pane active" data-whatwedo-pane="compliance-integrity" role="tabpanel">
   <div class="whatwedo-cards">
-    <a href="{{ route('strategicmediaplacements') }}" class="whatwedo-card active-card">
-      <img src="https://mirashka.co.in/wp-content/uploads/2024/06/employee-growth-and-office-skills-1.webp" alt="Employee Growth and Upskilling" class="whatwedo-card-img" loading="lazy">
-      <h5 class="whatwedo-card-title">Employee Growth &amp; Upskilling</h5>
-      <span class="whatwedo-card-divider"></span>
-      <p class="whatwedo-card-desc">Learning and development programs to enhance career progression.</p>
-      <span class="whatwedo-link">Read More <i class="ri-arrow-right-line"></i></span>
-    </a>
-
     <a href="https://mirashka.in/service/expert-legal-hr-consultations/" class="whatwedo-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/expert-legal-and-HR-consultation.webp" alt="Expert legal and HR consultations" class="whatwedo-card-img" loading="lazy">
       <h5 class="whatwedo-card-title">Expert Legal &amp; HR Consultations</h5>

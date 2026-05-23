@@ -131,10 +131,10 @@
 <div class="whatwedo-pane" data-whatwedo-pane="hraas-solutions" role="tabpanel" aria-hidden="true">
   <div class="whatwedo-hraas-layout">
     <div class="whatwedo-hraas-feature">
-      <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-growth-and-up-skills.webp" alt="Employee Growth and Upskilling" loading="lazy">
-      <h5>Employee Growth &amp; Upskilling</h5>
-      <p>Learning and development programs to enhance career progression.</p>
-      <a href="https://mirashka.in/partnership-opportunities/">partnership opportunities</a>
+      <img src="{{ asset('assets/admin/image/banner/hraas-solutions.webp') }}" alt="Build Your HR Operating System" loading="lazy">
+      <h5>Build Your HR Operating System</h5>
+      <p>From hiring and payroll to compliance and leadership, Mirashka works as your extended HR office.</p>
+      <a href="{{ route('hraas') }}">Explore HRaaS Solutions</a>
     </div>
 
     <div class="whatwedo-hraas-grid">
@@ -147,14 +147,6 @@
       </a>
 
       <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
-        <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-engagement.png" alt="Employee Engagement and Performance Management" class="whatwedo-hraas-icon" loading="lazy">
-        <div>
-          <h6 class="whatwedo-hraas-title">Employee Engagement &amp; Performance Management</h6>
-          <p class="whatwedo-hraas-desc">Developing engagement strategies, performance frameworks, and real-time employee feedback programs.</p>
-        </div>
-      </a>
-
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employer-branding.png" alt="Employer Branding" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Employer Branding</h6>
@@ -163,18 +155,26 @@
       </a>
 
       <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
-        <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-surveys.png" alt="Employee Surveys and Retention Strategies" class="whatwedo-hraas-icon" loading="lazy">
-        <div>
-          <h6 class="whatwedo-hraas-title">Employee Surveys &amp; Retention Strategies</h6>
-          <p class="whatwedo-hraas-desc">Continuous feedback mechanisms to measure satisfaction and proactively improve retention.</p>
-        </div>
-      </a>
-
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/candidate-Sourcing.png" alt="Candidate Sourcing" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Candidate Sourcing</h6>
           <p class="whatwedo-hraas-desc">Curated candidate pipelines designed to fit your culture and hiring needs.</p>
+        </div>
+      </a>
+
+      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+        <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-engagement.png" alt="Employee Engagement and Performance" class="whatwedo-hraas-icon" loading="lazy">
+        <div>
+          <h6 class="whatwedo-hraas-title">Employee Engagement &amp; Performance</h6>
+          <p class="whatwedo-hraas-desc">Developing engagement strategies, performance frameworks, and real-time employee feedback programs.</p>
+        </div>
+      </a>
+
+      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+        <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-surveys.png" alt="Employee Surveys and Retention" class="whatwedo-hraas-icon" loading="lazy">
+        <div>
+          <h6 class="whatwedo-hraas-title">Employee Surveys &amp; Retention</h6>
+          <p class="whatwedo-hraas-desc">Continuous feedback mechanisms to measure satisfaction and proactively improve retention.</p>
         </div>
       </a>
 

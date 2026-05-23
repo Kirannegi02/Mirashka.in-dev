@@ -24,6 +24,8 @@
     position: relative;
     cursor: pointer;
     transition: color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
   }
 
   .whatwedo-tab-btn:hover {
@@ -43,6 +45,72 @@
     bottom: -1px;
     height: 2px;
     background: #111827;
+  }
+
+  .whatwedo-tab-hraas-group {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .whatwedo-tab-hraas-group .whatwedo-tab-btn {
+    font-family: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: none;
+  }
+
+  .whatwedo-tab-open-page {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #d3a126;
+    background: #fff;
+    color: #b8860b;
+    text-decoration: none;
+    flex-shrink: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  }
+
+  .whatwedo-tab-open-page i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .whatwedo-tab-hraas-group.is-active .whatwedo-tab-open-page,
+  .whatwedo-tab-hraas-group:hover .whatwedo-tab-open-page {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  .whatwedo-tab-hraas-group.is-active .whatwedo-tab-open-page:hover,
+  .whatwedo-tab-hraas-group:hover .whatwedo-tab-open-page:hover {
+    transform: scale(1);
+  }
+
+  .whatwedo-tab-open-page:hover {
+    background: #d3a126;
+    color: #fff;
+    border-color: #d3a126;
+  }
+
+  .whatwedo-tab-open-page:hover i {
+    color: #fff;
   }
 
   .whatwedo-pane {
@@ -82,11 +150,16 @@
     <li>
       <div class="whatwedo-mega">
         <div class="whatwedo-tabs" role="tablist" aria-label="What we do categories">
-          <button class="whatwedo-tab-btn active" type="button" role="tab" aria-selected="true" data-whatwedo-tab="compliance-integrity">Compliance Integrity</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Efficiency</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership Mastery</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Hiring Excellence</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hraas-solutions">HRaaS Solutions</button>
+          <button class="whatwedo-tab-btn active" type="button" role="tab" aria-selected="true" data-whatwedo-tab="compliance-integrity">Compliance &amp; Workplace Integrity</button>
+          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Management</button>
+          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership &amp; Organization</button>
+          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Talent Acquisition &amp; Staffing</button>
+          <div class="whatwedo-tab-hraas-group">
+            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hraas-solutions">HR as a Service</button>
+            <a href="{{ route('hraas') }}" class="whatwedo-tab-open-page" title="Open HR as a Service page" aria-label="Open HR as a Service page">
+              <i class="ri-external-link-line"></i>
+            </a>
+          </div>
         </div>
 
         @include('frontend.layouts.common.megamenu.who-sections.compliance-integrity')
@@ -105,28 +178,69 @@
     var panes = document.querySelectorAll('.whatwedo-pane');
     if (!tabButtons.length || !panes.length) return;
 
+    function openMegaMenuDropdown(triggerEl) {
+      var mega = triggerEl.closest('.mega_menu');
+      if (!mega) return;
+      mega.classList.add('show');
+      var toggle = mega.querySelector('.dropdown-toggle');
+      var menu = mega.querySelector('.dropdown-menu');
+      if (toggle) {
+        toggle.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      if (menu) {
+        menu.classList.add('show');
+      }
+    }
+
+    var hraasTabGroup = document.querySelector('.whatwedo-tab-hraas-group');
+
+    function activateTab(tabKey, activeButton) {
+      tabButtons.forEach(function (btn) {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+
+      panes.forEach(function (pane) {
+        pane.classList.remove('active');
+        pane.setAttribute('aria-hidden', 'true');
+      });
+
+      activeButton.classList.add('active');
+      activeButton.setAttribute('aria-selected', 'true');
+
+      if (hraasTabGroup) {
+        hraasTabGroup.classList.toggle('is-active', tabKey === 'hraas-solutions');
+      }
+
+      var activePane = document.querySelector('.whatwedo-pane[data-whatwedo-pane="' + tabKey + '"]');
+      if (activePane) {
+        activePane.classList.add('active');
+        activePane.setAttribute('aria-hidden', 'false');
+      }
+    }
+
     tabButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
         var tabKey = button.getAttribute('data-whatwedo-tab');
 
-        tabButtons.forEach(function (btn) {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-selected', 'false');
-        });
+        activateTab(tabKey, button);
+        openMegaMenuDropdown(button);
+      });
+    });
 
-        panes.forEach(function (pane) {
-          pane.classList.remove('active');
-          pane.setAttribute('aria-hidden', 'true');
-        });
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('tab') === 'hraas-solutions') {
+      var hraasTab = document.querySelector('.whatwedo-tab-hraas-group .whatwedo-tab-btn[data-whatwedo-tab="hraas-solutions"]');
+      if (hraasTab) {
+        activateTab('hraas-solutions', hraasTab);
+      }
+    }
 
-        button.classList.add('active');
-        button.setAttribute('aria-selected', 'true');
-
-        var activePane = document.querySelector('.whatwedo-pane[data-whatwedo-pane="' + tabKey + '"]');
-        if (activePane) {
-          activePane.classList.add('active');
-          activePane.setAttribute('aria-hidden', 'false');
-        }
+    document.querySelectorAll('.whatwedo-tab-open-page').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.stopPropagation();
       });
     });
   });

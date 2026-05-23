@@ -45,15 +45,16 @@
 
   .whatwedo-service-title {
     margin: 7px 0 0;
-    font-size: 34px;
-    line-height: 1.12;
-    color: #111827;
-    font-weight: 500;
-    letter-spacing: -0.2px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #192437;
+    font-weight: 600;
+    letter-spacing: 0;
+    min-height: 34px;
   }
 
   .whatwedo-service-desc {
-    margin: 0 0 14px;
+    margin: 0 0 12px;
     color: #4b5563;
     font-size: 14px;
     line-height: 1.55;
@@ -61,34 +62,29 @@
   }
 
   .whatwedo-service-divider {
-    border-top: 1px solid #e2e2e2;
-    margin: 0 0 14px;
+    border-top: 1px solid #d9dde3;
+    margin: 8px 0 10px;
   }
 
   .whatwedo-service-link {
     margin-top: auto;
-    color: #111827;
-    font-size: 32px;
-    line-height: 1;
-    font-weight: 400;
+    color: #192437;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
   }
 
   .whatwedo-service-link i {
-    font-size: 32px;
+    font-size: 18px;
     line-height: 1;
   }
 
   @media (max-width: 1199.98px) {
     .whatwedo-service-title {
-      font-size: 28px;
-    }
-
-    .whatwedo-service-link,
-    .whatwedo-service-link i {
-      font-size: 24px;
+      font-size: 13px;
     }
   }
 

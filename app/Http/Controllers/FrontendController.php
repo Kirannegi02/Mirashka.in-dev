@@ -51,6 +51,18 @@ class FrontendController extends Controller
         return view('frontend.pages.whatwedo');
     }
 
+    public function hraas()
+    {
+        $meta = config('hraas.meta', []);
+        $data = [
+            'title' => $meta['title'] ?? 'Mirashka HRaaS',
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.hraas', compact('data'));
+    }
+
     public function whymirashka()
     {
         $meta = config('why_mirashka.meta', []);
