@@ -63,6 +63,18 @@ class FrontendController extends Controller
         return view('frontend.pages.hraas', compact('data'));
     }
 
+    public function compliance()
+    {
+        $meta = config('compliance-workplace-integrity.meta', []);
+        $data = [
+            'title' => $meta['title'] ?? 'Compliance & Workplace Integrity | Mirashka',
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.compliance-workplace-integrity', compact('data'));
+    }
+
     public function whymirashka()
     {
         $meta = config('why_mirashka.meta', []);

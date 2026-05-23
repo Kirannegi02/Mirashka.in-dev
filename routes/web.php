@@ -52,6 +52,8 @@ Route::get('/policy-advocacy', [FrontendController::class, 'policyadvocacy'])->n
 Route::get('/podcasting-services', [FrontendController::class, 'podcastingservices'])->name('podcastingservices');
 Route::get('/what-we-do', [FrontendController::class, 'whatwedo'])->name('whatwedo');
 Route::get('/hraas', [FrontendController::class, 'hraas'])->name('hraas');
+Route::get('/compliance-workplace-integrity', [FrontendController::class, 'compliance'])->name('compliance');
+Route::redirect('/hraas/compliance-workplace-integrity', '/compliance-workplace-integrity', 301);
 Route::get('/why-mirashka', [FrontendController::class, 'whymirashka'])->name('whymirashka');
 Route::get('/partnerships-contact', [FrontendController::class, 'partnershipscontact'])->name('partnershipscontact');
 Route::get('/office-locations', [FrontendController::class, 'officelocations'])->name('officelocations');

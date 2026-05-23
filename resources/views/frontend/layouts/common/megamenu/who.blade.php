@@ -47,14 +47,14 @@
     background: #111827;
   }
 
-  .whatwedo-tab-hraas-group {
+  .whatwedo-tab-page-group {
     display: inline-flex;
     align-items: flex-end;
     gap: 8px;
     flex-shrink: 0;
   }
 
-  .whatwedo-tab-hraas-group .whatwedo-tab-btn {
+  .whatwedo-tab-page-group .whatwedo-tab-btn {
     font-family: inherit;
     line-height: inherit;
     letter-spacing: inherit;
@@ -91,15 +91,15 @@
     padding: 0;
   }
 
-  .whatwedo-tab-hraas-group.is-active .whatwedo-tab-open-page,
-  .whatwedo-tab-hraas-group:hover .whatwedo-tab-open-page {
+  .whatwedo-tab-page-group.is-active .whatwedo-tab-open-page,
+  .whatwedo-tab-page-group:hover .whatwedo-tab-open-page {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
   }
 
-  .whatwedo-tab-hraas-group.is-active .whatwedo-tab-open-page:hover,
-  .whatwedo-tab-hraas-group:hover .whatwedo-tab-open-page:hover {
+  .whatwedo-tab-page-group.is-active .whatwedo-tab-open-page:hover,
+  .whatwedo-tab-page-group:hover .whatwedo-tab-open-page:hover {
     transform: scale(1);
   }
 
@@ -150,11 +150,16 @@
     <li>
       <div class="whatwedo-mega">
         <div class="whatwedo-tabs" role="tablist" aria-label="What we do categories">
-          <button class="whatwedo-tab-btn active" type="button" role="tab" aria-selected="true" data-whatwedo-tab="compliance-integrity">Compliance &amp; Workplace Integrity</button>
+          <div class="whatwedo-tab-page-group whatwedo-tab-compliance-group is-active">
+            <button class="whatwedo-tab-btn active" type="button" role="tab" aria-selected="true" data-whatwedo-tab="compliance-integrity">Compliance &amp; Workplace Integrity</button>
+            <a href="{{ route('compliance') }}" class="whatwedo-tab-open-page" title="Open Compliance &amp; Workplace Integrity page" aria-label="Open Compliance &amp; Workplace Integrity page">
+              <i class="ri-external-link-line"></i>
+            </a>
+          </div>
           <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Management</button>
           <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership &amp; Organization</button>
           <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Talent Acquisition &amp; Staffing</button>
-          <div class="whatwedo-tab-hraas-group">
+          <div class="whatwedo-tab-page-group whatwedo-tab-hraas-group">
             <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hraas-solutions">HR as a Service</button>
             <a href="{{ route('hraas') }}" class="whatwedo-tab-open-page" title="Open HR as a Service page" aria-label="Open HR as a Service page">
               <i class="ri-external-link-line"></i>
@@ -193,6 +198,7 @@
       }
     }
 
+    var complianceTabGroup = document.querySelector('.whatwedo-tab-compliance-group');
     var hraasTabGroup = document.querySelector('.whatwedo-tab-hraas-group');
 
     function activateTab(tabKey, activeButton) {
@@ -208,6 +214,10 @@
 
       activeButton.classList.add('active');
       activeButton.setAttribute('aria-selected', 'true');
+
+      if (complianceTabGroup) {
+        complianceTabGroup.classList.toggle('is-active', tabKey === 'compliance-integrity');
+      }
 
       if (hraasTabGroup) {
         hraasTabGroup.classList.toggle('is-active', tabKey === 'hraas-solutions');
@@ -231,10 +241,16 @@
     });
 
     var params = new URLSearchParams(window.location.search);
-    if (params.get('tab') === 'hraas-solutions') {
+    var tabFromUrl = params.get('tab');
+    if (tabFromUrl === 'hraas-solutions') {
       var hraasTab = document.querySelector('.whatwedo-tab-hraas-group .whatwedo-tab-btn[data-whatwedo-tab="hraas-solutions"]');
       if (hraasTab) {
         activateTab('hraas-solutions', hraasTab);
+      }
+    } else if (tabFromUrl === 'compliance-integrity') {
+      var complianceTab = document.querySelector('.whatwedo-tab-compliance-group .whatwedo-tab-btn[data-whatwedo-tab="compliance-integrity"]');
+      if (complianceTab) {
+        activateTab('compliance-integrity', complianceTab);
       }
     }
 

@@ -13,7 +13,7 @@
          <div class="col-lg-2 col-md-6">
             <h6 class="mb-2 mb-md-4">What We Do</h6>
             <ul class="nav flex-column mir-footer-links">
-               <li class="nav-item"><a class="nav-link pt-0" href="{{ route('whatwedo') }}">Compliance &amp; Workplace Integrity</a></li>
+               <li class="nav-item"><a class="nav-link pt-0" href="{{ route('compliance') }}">Compliance &amp; Workplace Integrity</a></li>
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Workforce Management</a></li>
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Leadership &amp; Organization</a></li>
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Talent Acquisition &amp; Staffing</a></li>
