@@ -1,10 +1,41 @@
 @extends('frontend.layouts.app')
 
 @php
-    $page = config('compliance-workplace-integrity');
-    $hero = $page['hero'];
-    $complianceSubServices = config('compliance-sub-services.services', []);
-    $complianceServiceSlugs = array_keys($complianceSubServices);
+    $categorySlug = $categorySlug ?? 'compliance-workplace-integrity';
+    $category = $category ?? config('what-we-do-categories.' . $categorySlug, []);
+    $page = $page ?? config($category['page_config'] ?? 'compliance-workplace-integrity', []);
+    $hero = $page['hero'] ?? [];
+    $subServices = config(($category['sub_services_config'] ?? 'compliance-sub-services') . '.services', []);
+    $serviceSlugs = array_keys($subServices);
+    $subRouteName = ($category['route_name'] ?? 'compliance') . '.sub';
+    $faqKey = $category['faq_key'] ?? 'compliance';
+    $exploreHeading = $category['explore_heading'] ?? ($category['short_label'] ?? 'HR') . ' solutions in detail';
+
+    $pageSections = $page['sections'] ?? [
+        'hero', 'risk', 'services', 'framework', 'workplace_integrity', 'deliverables', 'suitable_for', 'sub_services',
+    ];
+    $sectionViews = [
+        'hero' => 'hero',
+        'risk' => 'risk',
+        'services' => 'services',
+        'framework' => 'framework',
+        'workplace_integrity' => 'split-feature',
+        'payroll_workflow' => 'workflow',
+        'remote_desk' => 'split-feature',
+        'reporting_dashboard' => 'dashboard',
+        'board_advisory' => 'split-feature',
+        'succession_journey' => 'journey',
+        'assessment_tools' => 'card-grid',
+        'candidate_quality' => 'split-feature',
+        'staffing_models' => 'card-grid',
+        'hiring_dashboard' => 'dashboard',
+        'dedicated_partner' => 'split-feature',
+        'monthly_review' => 'monthly-review',
+        'engagement_plans' => 'card-grid',
+        'deliverables' => 'deliverables',
+        'suitable_for' => 'suitable-for',
+        'sub_services' => 'sub-services',
+    ];
 @endphp
 
 @section('content')
@@ -31,13 +62,6 @@
     }
     .cwi-section--light .before_title { color: var(--cwi-green); }
     .cwi-section--light .title { color: var(--cwi-navy); }
-    .cwi-reveal {
-        opacity: 0;
-        transform: translateY(24px);
-        transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .cwi-reveal.is-visible { opacity: 1; transform: translateY(0); }
-
     /* 1. Hero — same banner as HRaaS */
     .cwi-hero.hraas-hero.single_banner.style_one {
         padding: 90px 0 100px !important;
@@ -275,6 +299,37 @@
         color: rgba(255, 255, 255, 0.82);
         line-height: 1.45;
     }
+    .cwi-risk__visual-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        min-height: 100%;
+    }
+    .cwi-risk__visual--no-cap img {
+        border-radius: 18px 18px 0 0;
+    }
+    .cwi-risk__visual-cap-below {
+        padding: 20px 22px;
+        background: #fff;
+        border: 1px solid #e3e9ef;
+        border-top: none;
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    }
+    .cwi-risk__visual-cap-below strong {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 800;
+        color: var(--cwi-navy);
+        margin-bottom: 8px;
+        line-height: 1.35;
+    }
+    .cwi-risk__visual-cap-below p {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.6;
+        color: var(--cwi-slate);
+    }
 
     /* 3. Services — dark process split (steps + center image) */
     .cwi-services {
@@ -414,6 +469,12 @@
         height: 3px;
         background: linear-gradient(90deg, var(--cwi-green), var(--cwi-mint));
         z-index: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+    }
+    .cwi-framework__track.is-visible::before {
+        transform: scaleX(1);
     }
     .cwi-framework-step {
         text-align: center;
@@ -523,20 +584,69 @@
     }
     .cwi-integrity__actions {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
-        gap: 20px 28px;
+        justify-content: flex-start;
+        gap: 24px 32px;
         margin-top: 8px;
     }
-    .cwi-integrity__actions .theme-btn.one.bordered {
-        border: 2px solid var(--cwi-mint);
-        color: var(--cwi-mint);
-        background: transparent;
+    .cwi-integrity__actions .theme_btn_all {
+        flex: 0 0 auto;
+        width: auto !important;
+        max-width: none;
+        margin: 0 !important;
+        display: inline-block;
     }
-    .cwi-integrity__actions .theme-btn.one.bordered:hover {
-        background: var(--cwi-green);
-        border-color: var(--cwi-green);
-        color: #fff;
+    .cwi-integrity__actions .theme-btn.one {
+        white-space: nowrap;
+    }
+    .cwi-integrity__trust {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 360px;
+        margin: 0;
+    }
+    /* Paired CTAs: dark = outline → filled on hover; light = filled → outline on hover */
+    a.cwi-btn-cta.theme-btn.one {
+        border: 2px solid transparent;
+        transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, border-radius 0.35s ease;
+    }
+    a.cwi-btn-cta--on-dark {
+        background: transparent !important;
+        border-color: var(--cwi-mint) !important;
+        color: var(--cwi-mint) !important;
+    }
+    a.cwi-btn-cta--on-dark:hover,
+    a.cwi-btn-cta--on-dark:focus-visible {
+        background: var(--cwi-green) !important;
+        border-color: var(--cwi-green) !important;
+        color: #fff !important;
+        border-radius: 0 10px 0 10px;
+    }
+    a.cwi-btn-cta--on-dark:hover i,
+    a.cwi-btn-cta--on-dark:hover i::before,
+    a.cwi-btn-cta--on-dark:focus-visible i,
+    a.cwi-btn-cta--on-dark:focus-visible i::before {
+        color: #fff !important;
+    }
+    a.cwi-btn-cta--on-light {
+        background: var(--cwi-green) !important;
+        border-color: var(--cwi-green) !important;
+        color: #fff !important;
+    }
+    a.cwi-btn-cta--on-light:hover,
+    a.cwi-btn-cta--on-light:focus-visible {
+        background: transparent !important;
+        border-color: var(--cwi-mint) !important;
+        color: var(--cwi-green) !important;
+        border-radius: 0 10px 0 10px;
+    }
+    a.cwi-btn-cta--on-light:hover i,
+    a.cwi-btn-cta--on-light:hover i::before,
+    a.cwi-btn-cta--on-light:focus-visible i,
+    a.cwi-btn-cta--on-light:focus-visible i::before {
+        color: var(--cwi-green) !important;
     }
     .cwi-integrity__trust strong {
         display: block;
@@ -962,6 +1072,15 @@
         }
         .cwi-integrity-float--top { left: -4%; }
         .cwi-integrity-float--bottom { right: -4%; }
+        .cwi-integrity__actions {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 16px 24px;
+        }
+        .cwi-integrity__actions .theme_btn_all {
+            width: 100% !important;
+        }
+        .cwi-integrity__trust { max-width: none; flex: 1 1 100%; }
         .cwi-cta__overlay { grid-template-columns: 1fr; }
         .cwi-cta__person { display: none; }
     }
@@ -993,335 +1112,72 @@
         .cwi-integrity__hex { order: 1; max-width: 280px; }
         .cwi-integrity-float--bottom { order: 3; }
     }
-    @media (prefers-reduced-motion: reduce) {
-        .cwi-reveal { opacity: 1; transform: none; transition: none; }
-    }
 </style>
+
+@include('frontend.pages.what-we-do.category-extra-styles')
+@include('frontend.layouts.common.sections.what-we-do.category-animations')
 
 <div class="cwi-page" data-cwi-page>
 
-{{-- 1. Hero — same banner UI as HRaaS --}}
-<section class="single_banner style_one bg_op_1 cwi-hero hraas-hero custom_black_overlay position-relative"
-    style="background-image: url({{ asset($hero['image']) }});">
-    <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12">
-                <div class="pd_top_40"></div>
-                <div class="slider_content light_color text-center">
-                    <h6>{{ $hero['label'] }}</h6>
-                    <p class="hero-tagline">{{ $hero['tagline'] }}</p>
-                    <h1 class="color_white">{{ $hero['title'] }}</h1>
-                    @if(!empty($hero['headline']))
-                        <p class="hero-headline">{{ $hero['headline'] }}</p>
-                    @endif
-                    <p class="hero-intro">{{ $hero['content'] }}</p>
-                    <ul class="d_inline_block">
-                        <li>
-                            <div class="theme_btn_all color_two">
-                                <a href="{{ route('projectenquiries') }}" class="theme-btn one primary-color-two">{{ $hero['primary_cta'] }}</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="theme_btn_all">
-                                <a href="{{ route('projectenquiries') }}" class="theme-btn two">{{ $hero['secondary_cta'] }}</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pd_bottom_60"></div>
-            </div>
-        </div>
-    </div>
-</section>
+@foreach($pageSections as $sectionId)
+    @php
+        $viewName = $sectionViews[$sectionId] ?? null;
+        if ($sectionId === 'payroll_workflow' && ($page['payroll_workflow']['layout'] ?? '') === 'tabs') {
+            $viewName = 'payroll-workflow-tabs';
+        }
+        if ($sectionId === 'monthly_review' && ($page['monthly_review']['layout'] ?? '') === 'media-split') {
+            $viewName = 'monthly-review-media';
+        }
+        if (in_array($sectionId, ['reporting_dashboard', 'hiring_dashboard'], true)
+            && ($page[$sectionId]['layout'] ?? '') === 'standout-grid') {
+            $viewName = 'dashboard-standout';
+        }
+        if (! $viewName) {
+            continue;
+        }
+        if ($sectionId === 'sub_services' && ! count($subServices)) {
+            continue;
+        }
+        $sectionAliases = [
+            'workplace_integrity' => ['workplace_integrity', 'integrity', 'board_advisory', 'remote_desk', 'candidate_quality', 'dedicated_partner'],
+        ];
+        if ($sectionId === 'hero') {
+            $sectionData = $hero;
+        } elseif (isset($sectionAliases[$sectionId])) {
+            $sectionData = null;
+            foreach ($sectionAliases[$sectionId] as $aliasKey) {
+                if (! empty($page[$aliasKey])) {
+                    $sectionData = $page[$aliasKey];
+                    break;
+                }
+            }
+        } else {
+            $sectionData = $page[$sectionId] ?? null;
+        }
+        if ($sectionId !== 'hero' && $sectionId !== 'sub_services' && empty($sectionData)) {
+            continue;
+        }
+    @endphp
+    @include('frontend.pages.what-we-do.sections.' . $viewName, [
+        'section' => $sectionData,
+        'hero' => $hero,
+        'serviceSlugs' => $serviceSlugs,
+        'subRouteName' => $subRouteName,
+        'subServices' => $subServices,
+        'exploreHeading' => $exploreHeading,
+    ])
+@endforeach
 
-{{-- 2. Risk Reality --}}
-<section class="cwi-risk cwi-section--light">
-    <div class="container">
-        <header class="cwi-risk__header cwi-reveal">
-            <span class="cwi-risk__eyebrow">{{ $page['risk']['before_title'] }}</span>
-            <h2>{{ $page['risk']['heading'] }}</h2>
-            <p class="cwi-risk__lead">{{ $page['risk']['lead'] }}</p>
-            <p class="cwi-risk__text">{{ $page['risk']['content'] }}</p>
-        </header>
-
-        <div class="cwi-risk__body">
-            <div class="cwi-risk__card cwi-reveal">
-                <span class="cwi-risk__card-label">
-                    <i class="ri-alert-line" aria-hidden="true"></i>
-                    Common compliance gaps
-                </span>
-                <ul class="cwi-risk__list">
-                    @foreach($page['risk']['risks'] as $risk)
-                        <li>
-                            <i class="ri-close-line" aria-hidden="true"></i>
-                            {{ $risk }}
-                        </li>
-                    @endforeach
-                </ul>
-                <div class="theme_btn_all">
-                    <a href="{{ route('projectenquiries') }}" class="theme-btn one">{{ $page['risk']['cta'] }} <i class="icon-right-arrow"></i></a>
-                </div>
-            </div>
-            <figure class="cwi-risk__visual cwi-reveal">
-                <img src="{{ asset($page['risk']['image']) }}" alt="HR compliance dashboard — from scattered risks to structured people operations" loading="lazy">
-                <figcaption class="cwi-risk__visual-cap">
-                    <strong>From risk chaos to HR clarity</strong>
-                    <span>Structured policies, documentation and compliance visibility in one place.</span>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-</section>
-
-{{-- 3. Services — steps flanking center image --}}
-@php
-    $serviceItems = $page['services']['items'];
-    $serviceLeft = array_slice($serviceItems, 0, 2);
-    $serviceRight = array_slice($serviceItems, 2, 2);
-@endphp
-<section class="cwi-services cwi-section--dark">
-    <div class="container">
-        <div class="title_all_box style_one text-center light_color cwi-reveal">
-            <div class="title_sections">
-                <div class="before_title">— {{ $page['services']['before_title'] }} —</div>
-                <h2 class="title">{{ $page['services']['heading'] }}</h2>
-                @if(!empty($page['services']['content']))
-                    <p>{{ $page['services']['content'] }}</p>
-                @endif
-            </div>
-        </div>
-
-        <div class="cwi-services__process">
-            <div class="cwi-services__col cwi-services__col--left">
-                @foreach($serviceLeft as $service)
-                    @php $serviceIndex = $loop->index; @endphp
-                    <article class="cwi-services-step cwi-reveal">
-                        <span class="cwi-services-step__watermark" aria-hidden="true">{{ $service['step'] }}</span>
-                        <span class="cwi-services-step__icon" aria-hidden="true"><i class="{{ $service['icon'] }}"></i></span>
-                        <div class="cwi-services-step__body">
-                            <h3>
-                                @if(isset($complianceServiceSlugs[$serviceIndex]))
-                                    <a href="{{ route('compliance.sub', $complianceServiceSlugs[$serviceIndex]) }}" class="cwi-services-step__link">{{ $service['title'] }}</a>
-                                @else
-                                    {{ $service['title'] }}
-                                @endif
-                            </h3>
-                            <p>{{ $service['text'] }}</p>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-
-            <figure class="cwi-services__media cwi-reveal">
-                <img
-                    src="{{ asset($page['services']['image']) }}"
-                    alt="{{ $page['services']['image_alt'] ?? $page['services']['heading'] }}"
-                    loading="lazy"
-                    width="640"
-                    height="800"
-                >
-            </figure>
-
-            <div class="cwi-services__col cwi-services__col--right">
-                @foreach($serviceRight as $service)
-                    @php $serviceIndex = $loop->index + 2; @endphp
-                    <article class="cwi-services-step cwi-services-step--right cwi-reveal">
-                        <span class="cwi-services-step__watermark" aria-hidden="true">{{ $service['step'] }}</span>
-                        <span class="cwi-services-step__icon" aria-hidden="true"><i class="{{ $service['icon'] }}"></i></span>
-                        <div class="cwi-services-step__body">
-                            <h3>
-                                @if(isset($complianceServiceSlugs[$serviceIndex]))
-                                    <a href="{{ route('compliance.sub', $complianceServiceSlugs[$serviceIndex]) }}" class="cwi-services-step__link">{{ $service['title'] }}</a>
-                                @else
-                                    {{ $service['title'] }}
-                                @endif
-                            </h3>
-                            <p>{{ $service['text'] }}</p>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- 4. Framework — light --}}
-<section class="cwi-framework cwi-section--light">
-    <div class="container">
-        <div class="title_all_box style_one text-center dark_color cwi-reveal">
-            <div class="title_sections">
-                <div class="before_title">{{ $page['framework']['before_title'] }}</div>
-                <h2 class="title">{{ $page['framework']['heading'] }}</h2>
-                <p>{{ $page['framework']['content'] }}</p>
-            </div>
-        </div>
-        <div class="cwi-framework__track">
-            @foreach($page['framework']['steps'] as $step)
-                <div class="cwi-framework-step cwi-reveal">
-                    <span class="cwi-framework-step__dot" aria-hidden="true"><i class="{{ $step['icon'] }}"></i></span>
-                    <p class="cwi-framework-step__subtitle">{{ $step['subtitle'] }}</p>
-                    <h3 class="cwi-framework-step__title">{{ $step['title'] }}</h3>
-                    <p>{{ $step['text'] }}</p>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- 5. Integrity — split + hex visual & float cards --}}
-<section class="cwi-integrity cwi-section--dark">
-    <div class="container">
-        <div class="cwi-integrity__layout">
-            <div class="cwi-integrity__copy cwi-reveal">
-                <span class="cwi-integrity__eyebrow">{{ $page['integrity']['eyebrow'] }}</span>
-                <h2>{{ $page['integrity']['heading'] }}</h2>
-                <p class="cwi-integrity__intro">{{ $page['integrity']['content'] }}</p>
-
-                @foreach($page['integrity']['features'] as $feature)
-                    <div class="cwi-integrity-feature">
-                        <span class="cwi-integrity-feature__icon" aria-hidden="true"><i class="{{ $feature['icon'] }}"></i></span>
-                        <div>
-                            <h3>{{ $feature['title'] }}</h3>
-                            <p>{{ $feature['text'] }}</p>
-                        </div>
-                    </div>
-                @endforeach
-
-                <div class="cwi-integrity__actions">
-                    <a href="{{ route('projectenquiries') }}" class="theme-btn one bordered">{{ $page['integrity']['cta'] }} <i class="icon-right-arrow"></i></a>
-                    <div class="cwi-integrity__trust">
-                        <strong>{{ $page['integrity']['trust_name'] }}</strong>
-                        <span>{{ $page['integrity']['trust_role'] }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cwi-integrity__visual cwi-reveal">
-                <div class="cwi-integrity__hex">
-                    <img
-                        src="{{ asset($page['integrity']['image']) }}"
-                        alt="{{ $page['integrity']['image_alt'] ?? $page['integrity']['heading'] }}"
-                        loading="lazy"
-                    >
-                </div>
-                @foreach($page['integrity']['float_cards'] as $index => $card)
-                    <div class="cwi-integrity-float {{ $index === 0 ? 'cwi-integrity-float--top' : 'cwi-integrity-float--bottom' }}">
-                        <span class="cwi-integrity-float__icon" aria-hidden="true"><i class="{{ $card['icon'] }}"></i></span>
-                        <h4>{{ $card['title'] }}</h4>
-                        <p>{{ $card['text'] }}</p>
-                        @if(!empty($card['link']))
-                            <a href="{{ $card['link'] }}" class="cwi-integrity-float__link">Read more <i class="icon-right-arrow"></i></a>
-                        @endif
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- 6. Deliverables — three solution cards --}}
-<section class="cwi-deliverables cwi-section--dark">
-    <div class="container">
-        <div class="title_all_box style_one text-center cwi-reveal">
-            <div class="title_sections light_color">
-                <div class="before_title">— {{ $page['deliverables']['before_title'] }} —</div>
-                <h2 class="title">{{ $page['deliverables']['heading'] }}</h2>
-                @if(!empty($page['deliverables']['content']))
-                    <p>{{ $page['deliverables']['content'] }}</p>
-                @endif
-            </div>
-        </div>
-        <div class="cwi-deliverables__cards">
-            @foreach($page['deliverables']['cards'] as $card)
-                <article class="cwi-del-card cwi-del-card--{{ $card['style'] }} cwi-reveal">
-                    <div
-                        class="cwi-del-card__bg"
-                        style="background-image: url('{{ asset($card['image']) }}');"
-                        aria-hidden="true"
-                    ></div>
-
-                    <div class="cwi-del-card__panel">
-                        @if($card['style'] === 'standard' && !empty($card['icon']))
-                            <span class="cwi-del-card__icon" aria-hidden="true"><i class="{{ $card['icon'] }}"></i></span>
-                        @endif
-                        <h3>{{ $card['title'] }}</h3>
-                        <p>{{ $card['text'] }}</p>
-                        @if(!empty($card['bullets']))
-                            <ul class="cwi-del-card__bullets">
-                                @foreach($card['bullets'] as $bullet)
-                                    <li>{{ $bullet }}</li>
-                                @endforeach
-                            </ul>
-                        @endif
-                    </div>
-                </article>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- 7. Suitable For — circular steps --}}
-<section class="cwi-suitable cwi-section--light">
-    <div class="container">
-        <div class="title_all_box style_one text-center dark_color cwi-reveal">
-            <div class="title_sections">
-                <div class="before_title">— {{ $page['suitable_for']['before_title'] }} —</div>
-                <h2 class="title">{{ $page['suitable_for']['heading'] }}</h2>
-            </div>
-        </div>
-        <div class="cwi-suitable__steps">
-            @foreach($page['suitable_for']['segments'] as $seg)
-                <article class="cwi-suitable-step cwi-reveal">
-                    <div class="cwi-suitable-step__icon-wrap">
-                        <span class="cwi-suitable-step__num" aria-hidden="true">{{ $seg['step'] }}</span>
-                        <i class="{{ $seg['icon'] }} cwi-suitable-step__icon" aria-hidden="true"></i>
-                    </div>
-                    <h3>{{ $seg['label'] }}</h3>
-                    <p>{{ $seg['text'] }}</p>
-                </article>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- 8. Sub-service cards --}}
-@if(count($complianceSubServices))
-<section class="cwi-sub-services-nav cwi-section--light" style="padding: 64px 0 48px; background: #f6f8f7;">
-    <div class="container">
-        <div class="title_all_box style_one text-center dark_color cwi-reveal">
-            <div class="title_sections">
-                <div class="before_title">Explore Services</div>
-                <h2 class="title">Compliance solutions in detail</h2>
-            </div>
-        </div>
-        <div class="row gutter_30px" style="margin-top: 32px;">
-            @foreach($complianceSubServices as $subSlug => $sub)
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <article class="cwi-related-services__card cwi-reveal">
-                        <a href="{{ route('compliance.sub', $subSlug) }}">
-                            <img src="{{ asset($sub['card']['image']) }}" alt="{{ $sub['card']['title'] }}" loading="lazy">
-                        </a>
-                        <div class="cwi-related-services__body">
-                            <h3><a href="{{ route('compliance.sub', $subSlug) }}">{{ $sub['card']['title'] }}</a></h3>
-                            <a href="{{ route('compliance.sub', $subSlug) }}" class="cwi-related-services__link">Read More <i class="icon-right-arrow"></i></a>
-                        </div>
-                    </article>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-@endif
-
-@include('frontend.layouts.common.sections.compliance.cta')
-
-</div>
+@include('frontend.layouts.common.sections.compliance.cta', ['cta' => $page['cta'] ?? null])
 
 @include('frontend.layouts.common.sections.faqs.category', [
-    'categoryKey' => 'compliance',
-    'sectionClass' => 'cwi-section--light',
+    'categoryKey' => $faqKey,
+    'sectionClass' => 'cwi-section--light cwi-section-glow',
     'compactTop' => true,
+    'animate' => true,
 ])
+
+</div>
 
 @endsection
 
@@ -1329,19 +1185,65 @@
 <script>
 (function () {
     var root = document.querySelector('[data-cwi-page]');
-    if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        if (root) root.querySelectorAll('.cwi-reveal').forEach(function (el) { el.classList.add('is-visible'); });
+    if (!root) return;
+
+    var animatedSelector = [
+        '.cwi-anim',
+        '.cwi-risk__card',
+        '.cwi-risk__list',
+        '.cwi-risk__visual',
+        '.cwi-services-step',
+        '.cwi-services__media',
+        '.cwi-framework__track',
+        '.cwi-framework-step',
+        '.cwi-integrity__hex',
+        '.cwi-integrity-float',
+        '.cwi-del-card',
+        '.cwi-suitable-step',
+        '.cwi-related-services__card',
+        '.cwi-workflow__step',
+        '.cwi-workflow__visual',
+        '.cwi-payroll-tabs__header',
+        '.cwi-payroll-tabs__panel',
+        '.cwi-dashboard__metric',
+        '.cwi-dashboard__figure',
+        '.cwi-standout__header',
+        '.cwi-standout__col--left',
+        '.cwi-standout__col--center',
+        '.cwi-standout__col--right',
+        '.cwi-journey__phase',
+        '.cwi-card-grid__card',
+        '.cwi-monthly__visual',
+        '.cwi-monthly__agenda li',
+        '.cwi-monthly-media__header',
+        '.cwi-monthly-media__visual',
+        '.cwi-monthly-media__grid-item',
+        '.cwi-risk__visual-col',
+        '.mirashka-faq-category.cwi-anim'
+    ].join(', ');
+
+    var revealAll = function () {
+        root.querySelectorAll(animatedSelector).forEach(function (el) {
+            el.classList.add('is-visible');
+        });
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealAll();
         return;
     }
+
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.1 });
-    root.querySelectorAll('.cwi-reveal').forEach(function (el) { observer.observe(el); });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+    root.querySelectorAll(animatedSelector).forEach(function (el) {
+        observer.observe(el);
+    });
 })();
 </script>
 @endpush

@@ -130,7 +130,7 @@
 <div class="whatwedo-pane" data-whatwedo-pane="hiring-excellence" role="tabpanel" aria-hidden="true">
   <div class="whatwedo-hiring-layout">
     <div class="whatwedo-hiring-services">
-      <a href="https://mirashka.in/service/it-staffing/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'it-staffing') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/it-staffing-1.png" alt="IT Staffing" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">IT Staffing</h5>
@@ -138,7 +138,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/general-staffing/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'general-staffing') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/general-staffing-1.png" alt="General Staffing" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">General Staffing</h5>
@@ -146,7 +146,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/naps-national-apprenticeship-promotion-scheme/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'naps-apprenticeship-support') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/National-apprenticeship-promotion-1.png" alt="NAPS Apprenticeship Support" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">NAPS Apprenticeship Support</h5>
@@ -154,7 +154,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/it-recruitment/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'it-recruitment') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/it-recruitment-1.png" alt="IT Recruitment" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">IT Recruitment</h5>
@@ -162,7 +162,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/recruitment-process-outsourcing-rpo/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'recruitment-process-outsourcing') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/recruitment-process-outsourcing-1.png" alt="Recruitment Process Outsourcing" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">Recruitment Process Outsourcing</h5>
@@ -170,7 +170,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/executive-search/" class="whatwedo-hiring-card">
+      <a href="{{ route('talent-acquisition.sub', 'executive-search') }}" class="whatwedo-hiring-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2024/06/executive-search-1.png" alt="Executive Search" class="whatwedo-hiring-icon" loading="lazy">
         <div>
           <h5 class="whatwedo-hiring-title">Executive Search</h5>

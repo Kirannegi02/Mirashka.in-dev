@@ -5,7 +5,7 @@
 
     Keys (config/faqs.php): compliance | workforce | leadership | talent | hraas
 
-    Optional: showHeader, sectionClass, sectionId, compactTop, compactBottom
+    Optional: showHeader, sectionClass, sectionId, compactTop, compactBottom, animate
 --}}
 @php
     $categoryKey = $categoryKey ?? 'compliance';
@@ -13,10 +13,11 @@
     $showHeader = $showHeader ?? true;
     $sectionClass = $sectionClass ?? 'bg_light_1';
     $sectionId = $sectionId ?? 'faqs-'.$categoryKey;
+    $animClass = ($animate ?? false) ? ' cwi-anim cwi-anim--up' : '';
 @endphp
 
 @if($faq)
-<section class="mirashka-faq-category faqs-section {{ $sectionClass }}" id="{{ $sectionId }}">
+<section class="mirashka-faq-category faqs-section {{ $sectionClass }}{{ $animClass }}" id="{{ $sectionId }}">
     <div class="{{ ($compactTop ?? false) ? 'pt-5' : 'pd_top_80' }}"></div>
     <div class="container">
         @if($showHeader)

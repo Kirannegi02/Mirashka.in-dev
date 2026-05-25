@@ -156,12 +156,27 @@
               <i class="ri-external-link-line"></i>
             </a>
           </div>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Management</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership &amp; Organization</button>
-          <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Talent Acquisition &amp; Staffing</button>
+          <div class="whatwedo-tab-page-group whatwedo-tab-workforce-group">
+            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Management</button>
+            <a href="{{ route('workforce') }}" class="whatwedo-tab-open-page" title="Open Workforce Management page" aria-label="Open Workforce Management page">
+              <i class="ri-external-link-line"></i>
+            </a>
+          </div>
+          <div class="whatwedo-tab-page-group whatwedo-tab-leadership-group">
+            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership &amp; Organization</button>
+            <a href="{{ route('leadership-organization') }}" class="whatwedo-tab-open-page" title="Open Leadership &amp; Organization page" aria-label="Open Leadership &amp; Organization page">
+              <i class="ri-external-link-line"></i>
+            </a>
+          </div>
+          <div class="whatwedo-tab-page-group whatwedo-tab-talent-group">
+            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Talent Acquisition &amp; Staffing</button>
+            <a href="{{ route('talent-acquisition') }}" class="whatwedo-tab-open-page" title="Open Talent Acquisition &amp; Staffing page" aria-label="Open Talent Acquisition &amp; Staffing page">
+              <i class="ri-external-link-line"></i>
+            </a>
+          </div>
           <div class="whatwedo-tab-page-group whatwedo-tab-hraas-group">
             <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hraas-solutions">HR as a Service</button>
-            <a href="{{ route('hraas') }}" class="whatwedo-tab-open-page" title="Open HR as a Service page" aria-label="Open HR as a Service page">
+            <a href="{{ route('hr-as-a-service') }}" class="whatwedo-tab-open-page" title="Open HR as a Service page" aria-label="Open HR as a Service page">
               <i class="ri-external-link-line"></i>
             </a>
           </div>
@@ -198,8 +213,13 @@
       }
     }
 
-    var complianceTabGroup = document.querySelector('.whatwedo-tab-compliance-group');
-    var hraasTabGroup = document.querySelector('.whatwedo-tab-hraas-group');
+    var tabPageGroups = {
+      'compliance-integrity': document.querySelector('.whatwedo-tab-compliance-group'),
+      'workforce-efficiency': document.querySelector('.whatwedo-tab-workforce-group'),
+      'leadership-mastery': document.querySelector('.whatwedo-tab-leadership-group'),
+      'hiring-excellence': document.querySelector('.whatwedo-tab-talent-group'),
+      'hraas-solutions': document.querySelector('.whatwedo-tab-hraas-group'),
+    };
 
     function activateTab(tabKey, activeButton) {
       tabButtons.forEach(function (btn) {
@@ -215,13 +235,12 @@
       activeButton.classList.add('active');
       activeButton.setAttribute('aria-selected', 'true');
 
-      if (complianceTabGroup) {
-        complianceTabGroup.classList.toggle('is-active', tabKey === 'compliance-integrity');
-      }
-
-      if (hraasTabGroup) {
-        hraasTabGroup.classList.toggle('is-active', tabKey === 'hraas-solutions');
-      }
+      Object.keys(tabPageGroups).forEach(function (key) {
+        var group = tabPageGroups[key];
+        if (group) {
+          group.classList.toggle('is-active', tabKey === key);
+        }
+      });
 
       var activePane = document.querySelector('.whatwedo-pane[data-whatwedo-pane="' + tabKey + '"]');
       if (activePane) {
@@ -242,15 +261,10 @@
 
     var params = new URLSearchParams(window.location.search);
     var tabFromUrl = params.get('tab');
-    if (tabFromUrl === 'hraas-solutions') {
-      var hraasTab = document.querySelector('.whatwedo-tab-hraas-group .whatwedo-tab-btn[data-whatwedo-tab="hraas-solutions"]');
-      if (hraasTab) {
-        activateTab('hraas-solutions', hraasTab);
-      }
-    } else if (tabFromUrl === 'compliance-integrity') {
-      var complianceTab = document.querySelector('.whatwedo-tab-compliance-group .whatwedo-tab-btn[data-whatwedo-tab="compliance-integrity"]');
-      if (complianceTab) {
-        activateTab('compliance-integrity', complianceTab);
+    if (tabFromUrl && tabPageGroups[tabFromUrl]) {
+      var tabBtn = document.querySelector('.whatwedo-tab-btn[data-whatwedo-tab="' + tabFromUrl + '"]');
+      if (tabBtn) {
+        activateTab(tabFromUrl, tabBtn);
       }
     }
 

@@ -17,7 +17,7 @@
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Workforce Management</a></li>
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Leadership &amp; Organization</a></li>
                <li class="nav-item"><a class="nav-link" href="{{ route('whatwedo') }}">Talent Acquisition &amp; Staffing</a></li>
-               <li class="nav-item"><a class="nav-link" href="{{ route('hraas') }}">HR as a Service</a></li>
+               <li class="nav-item"><a class="nav-link" href="{{ route('hr-as-a-service') }}">HR as a Service</a></li>
             </ul>
          </div>
 

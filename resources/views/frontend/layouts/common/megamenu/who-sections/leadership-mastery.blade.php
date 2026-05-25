@@ -61,7 +61,7 @@
 
 <div class="whatwedo-pane" data-whatwedo-pane="leadership-mastery" role="tabpanel" aria-hidden="true">
   <div class="whatwedo-leadership-grid">
-    <a href="https://mirashka.in/service/executive-search-leadership-hiring/" class="whatwedo-leadership-card">
+    <a href="{{ route('leadership-organization.sub', 'executive-search-leadership-hiring') }}" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/leadership-consulting.png" alt="Executive Search and Leadership Hiring" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">Executive Search &amp; Leadership Hiring</h5>
@@ -69,7 +69,7 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/board-ceo-advisory/" class="whatwedo-leadership-card">
+    <a href="{{ route('leadership-organization.sub', 'board-ceo-advisory') }}" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/board-and-CEO-advisory.png" alt="Board and CEO Advisory" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">Board &amp; CEO Advisory</h5>
@@ -77,7 +77,7 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/ceo-succession-performance-acceleration/" class="whatwedo-leadership-card">
+    <a href="{{ route('leadership-organization.sub', 'ceo-succession-performance-acceleration') }}" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/CEO-succession.png" alt="CEO Succession and Performance Acceleration" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">CEO Succession &amp; Performance Acceleration</h5>
@@ -85,7 +85,7 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/executive-search-leadership-hiring/" class="whatwedo-leadership-card">
+    <a href="{{ route('leadership-organization.sub', 'leadership-assessment-consulting') }}" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/leadership-consulting-1.png" alt="Leadership Assessment and Consulting" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">Leadership Assessment &amp; Consulting</h5>
@@ -93,7 +93,7 @@
       </div>
     </a>
 
-    <a href="https://mirashka.in/service/board-ceo-advisory/" class="whatwedo-leadership-card">
+    <a href="{{ route('leadership-organization.sub', 'hr-talent-strategy-advisory') }}" class="whatwedo-leadership-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/HR-and-talent.png" alt="HR and Talent Strategy Advisory" class="whatwedo-leadership-icon" loading="lazy">
       <div>
         <h5 class="whatwedo-leadership-title">HR &amp; Talent Strategy Advisory</h5>

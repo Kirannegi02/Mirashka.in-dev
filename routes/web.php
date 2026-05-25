@@ -51,12 +51,24 @@ Route::get('/project-enquiries', [FrontendController::class, 'projectenquiries']
 Route::get('/policy-advocacy', [FrontendController::class, 'policyadvocacy'])->name('policyadvocacy');
 Route::get('/podcasting-services', [FrontendController::class, 'podcastingservices'])->name('podcastingservices');
 Route::get('/what-we-do', [FrontendController::class, 'whatwedo'])->name('whatwedo');
-Route::get('/hraas', [FrontendController::class, 'hraas'])->name('hraas');
-Route::get('/compliance-workplace-integrity', [FrontendController::class, 'compliance'])->name('compliance');
-Route::get('/compliance-workplace-integrity/{slug}', [FrontendController::class, 'complianceSubService'])
-    ->where('slug', 'expert-legal-hr-consultations|policy-documentation-excellence|compliance-risk-assessments|workplace-ethics-training')
-    ->name('compliance.sub');
 Route::redirect('/hraas/compliance-workplace-integrity', '/compliance-workplace-integrity', 301);
+Route::redirect('/hraas', '/hr-as-a-service', 301);
+
+foreach (config('what-we-do-categories', []) as $categorySlug => $category) {
+    $subSlugs = implode('|', array_keys(config($category['sub_services_config'].'.services', [])));
+    $routeName = $category['route_name'];
+
+    Route::get('/'.$categorySlug, [FrontendController::class, 'whatWeDoCategory'])
+        ->defaults('categorySlug', $categorySlug)
+        ->name($routeName);
+
+    if ($subSlugs !== '') {
+        Route::get('/'.$categorySlug.'/{slug}', [FrontendController::class, 'whatWeDoSubService'])
+            ->defaults('categorySlug', $categorySlug)
+            ->where('slug', $subSlugs)
+            ->name($routeName.'.sub');
+    }
+}
 Route::get('/why-mirashka', [FrontendController::class, 'whymirashka'])->name('whymirashka');
 Route::get('/partnerships-contact', [FrontendController::class, 'partnershipscontact'])->name('partnershipscontact');
 Route::get('/office-locations', [FrontendController::class, 'officelocations'])->name('officelocations');

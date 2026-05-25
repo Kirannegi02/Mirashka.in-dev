@@ -51,33 +51,49 @@ class FrontendController extends Controller
         return view('frontend.pages.whatwedo');
     }
 
-    public function hraas()
-    {
-        $meta = config('hraas.meta', []);
-        $data = [
-            'title' => $meta['title'] ?? 'Mirashka HRaaS',
-            'description' => $meta['description'] ?? '',
-            'keywords' => $meta['keywords'] ?? '',
-        ];
-
-        return view('frontend.pages.hraas', compact('data'));
-    }
-
     public function compliance()
     {
-        $meta = config('compliance-workplace-integrity.meta', []);
-        $data = [
-            'title' => $meta['title'] ?? 'Compliance & Workplace Integrity | Mirashka',
-            'description' => $meta['description'] ?? '',
-            'keywords' => $meta['keywords'] ?? '',
-        ];
-
-        return view('frontend.pages.compliance-workplace-integrity', compact('data'));
+        return $this->whatWeDoCategory('compliance-workplace-integrity');
     }
 
     public function complianceSubService(string $slug)
     {
-        $services = config('compliance-sub-services.services', []);
+        return $this->whatWeDoSubService($slug, 'compliance-workplace-integrity');
+    }
+
+    public function whatWeDoCategory(string $categorySlug)
+    {
+        $category = config('what-we-do-categories.'.$categorySlug);
+
+        if (! $category) {
+            abort(404);
+        }
+
+        $page = config($category['page_config'], []);
+
+        if (empty($page)) {
+            abort(404);
+        }
+
+        $meta = $page['meta'] ?? [];
+        $data = [
+            'title' => $meta['title'] ?? ($category['label'].' | Mirashka'),
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.what-we-do.category', compact('data', 'categorySlug', 'category', 'page'));
+    }
+
+    public function whatWeDoSubService(string $slug, string $categorySlug)
+    {
+        $category = config('what-we-do-categories.'.$categorySlug);
+
+        if (! $category) {
+            abort(404);
+        }
+
+        $services = config($category['sub_services_config'].'.services', []);
 
         if (! isset($services[$slug])) {
             abort(404);
@@ -85,14 +101,13 @@ class FrontendController extends Controller
 
         $service = $services[$slug];
         $meta = $service['meta'] ?? [];
-
         $data = [
-            'title' => $meta['title'] ?? 'Compliance | Mirashka',
+            'title' => $meta['title'] ?? ($category['label'].' | Mirashka'),
             'description' => $meta['description'] ?? '',
             'keywords' => $meta['keywords'] ?? '',
         ];
 
-        return view('frontend.pages.compliance.sub-service', compact('data', 'service', 'slug'));
+        return view('frontend.pages.what-we-do.sub-service', compact('data', 'service', 'slug', 'categorySlug', 'category'));
     }
 
     public function whymirashka()

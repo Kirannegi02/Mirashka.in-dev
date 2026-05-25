@@ -1,8 +1,14 @@
 @extends('frontend.layouts.app')
 
 @php
-    $parent = config('compliance-sub-services.shared');
-    $allServices = config('compliance-sub-services.services', []);
+    $categorySlug = $categorySlug ?? 'compliance-workplace-integrity';
+    $category = $category ?? config('what-we-do-categories.' . $categorySlug, []);
+    $subConfigKey = $category['sub_services_config'] ?? 'compliance-sub-services';
+    $parent = config($subConfigKey . '.shared', []);
+    $allServices = config($subConfigKey . '.services', []);
+    $subRouteName = ($category['route_name'] ?? 'compliance') . '.sub';
+    $parentRouteName = $category['route_name'] ?? 'compliance';
+    $relatedHeading = $category['related_heading'] ?? 'More solutions from Mirashka';
 @endphp
 
 @section('content')
@@ -18,7 +24,7 @@
         <div class="container">
             <div class="slider_content">
                 <nav class="cwi-sub-breadcrumb" aria-label="Breadcrumb">
-                    <a href="{{ route($parent['parent_route']) }}">{{ $parent['parent_label'] }}</a>
+                    <a href="{{ route($parentRouteName) }}">{{ $parent['parent_label'] ?? $category['label'] }}</a>
                     <span aria-hidden="true">/</span>
                     <span style="color: rgba(255,255,255,0.9);">{{ $service['hero']['label'] }}</span>
                 </nav>
@@ -34,8 +40,8 @@
         </div>
     </section>
 
-    {{-- Focus card + sidebar (Creote blog layout) --}}
-    <section class="content-section cwi-focus-split bg_light_1">
+    {{-- Focus card + sidebar — light --}}
+    <section class="content-section cwi-focus-split cwi-sub-section--light bg_light_1">
         <div class="container">
             <div class="row gutter_30px align-items-stretch">
                 <div class="col-lg-8 mb-4 mb-lg-0">
@@ -82,8 +88,8 @@
         </div>
     </section>
 
-    {{-- Process steps (HRaaS How It Works) --}}
-    <section class="content-section hraas-section--dark bg_dark_3">
+    {{-- Named content sections (process steps) — dark --}}
+    <section class="content-section cwi-sub-section--dark hraas-section--dark bg_dark_3">
         <div class="pd_top_80"></div>
         <div class="container">
             <div class="title_all_box style_one text-center light_color">
@@ -111,8 +117,8 @@
         <div class="pd_bottom_80"></div>
     </section>
 
-    {{-- Tabbed dashboard (HR Visibility) --}}
-    <section class="content-section bg_light_1">
+    {{-- Tabbed service focus — light --}}
+    <section class="content-section cwi-sub-section--light bg_light_1">
         <div class="pd_top_80"></div>
         <div class="container">
             <div class="title_all_box style_one dark_color text-center">
@@ -169,13 +175,35 @@
         <div class="pd_bottom_80"></div>
     </section>
 
-    {{-- Related sub-services (4-card row) --}}
-    <section class="content-section bg_light_1 cwi-related-services">
+    {{-- Page CTA band — dark --}}
+    <section class="content-section cwi-sub-page-cta cwi-sub-section--dark bg_dark_3">
+        <div class="pd_top_60"></div>
         <div class="container">
-            <div class="title_all_box style_one text-center dark_color">
+            <div class="cwi-sub-page-cta__inner text-center light_color">
+                <div class="title_all_box style_one light_color">
+                    <div class="title_sections">
+                        <div class="before_title">Ready to move forward?</div>
+                        <h2 class="title">{{ $service['process']['steps'][count($service['process']['steps']) - 1]['title'] ?? 'Get started' }}</h2>
+                        <p class="cwi-sub-page-cta__text">{{ $service['focus']['content'] ?? $service['hero']['content'] }}</p>
+                    </div>
+                </div>
+                <div class="theme_btn_all color_two">
+                    <a href="{{ route('projectenquiries') }}" class="theme-btn one">
+                        {{ $service['page_cta']['button'] ?? 'Speak to an Advisor' }} <i class="icon-right-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pd_bottom_60"></div>
+    </section>
+
+    {{-- Related sub-services — dark --}}
+    <section class="content-section cwi-sub-section--dark hraas-section--dark bg_dark_3 cwi-related-services">
+        <div class="container">
+            <div class="title_all_box style_one text-center light_color">
                 <div class="title_sections">
                     <div class="before_title">Related Services</div>
-                    <h2 class="title">More compliance solutions from Mirashka</h2>
+                    <h2 class="title">{{ $relatedHeading }}</h2>
                 </div>
             </div>
             <div class="pd_top_32"></div>
@@ -186,12 +214,12 @@
                     @endif
                     <div class="col-lg-4 col-md-6 mb-4">
                         <article class="cwi-related-services__card">
-                            <a href="{{ route('compliance.sub', $serviceSlug) }}">
+                            <a href="{{ route($subRouteName, $serviceSlug) }}">
                                 <img src="{{ asset($related['card']['image']) }}" alt="{{ $related['card']['title'] }}" loading="lazy">
                             </a>
                             <div class="cwi-related-services__body">
-                                <h3><a href="{{ route('compliance.sub', $serviceSlug) }}">{{ $related['card']['title'] }}</a></h3>
-                                <a href="{{ route('compliance.sub', $serviceSlug) }}" class="cwi-related-services__link">Read More <i class="icon-right-arrow"></i></a>
+                                <h3><a href="{{ route($subRouteName, $serviceSlug) }}">{{ $related['card']['title'] }}</a></h3>
+                                <a href="{{ route($subRouteName, $serviceSlug) }}" class="cwi-related-services__link">Read More <i class="icon-right-arrow"></i></a>
                             </div>
                         </article>
                     </div>
@@ -202,6 +230,7 @@
     </section>
 
     @include('frontend.layouts.common.sections.compliance.cta', [
+        'cta' => $parent['cta'] ?? null,
         'primaryLabel' => $service['page_cta']['button'] ?? null,
         'secondaryLabel' => $service['page_cta']['secondary'] ?? null,
     ])

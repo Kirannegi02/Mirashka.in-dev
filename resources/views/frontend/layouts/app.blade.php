@@ -15,7 +15,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     {{-- Favicon --}}
-    <link rel="icon" href="{{ asset('assets/frontend/img/fav.svg') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
+    <link rel="apple-touch-icon" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
     
     {{-- ANTI-FOUC: Hide body initially --}}
     <style>
@@ -36,6 +37,31 @@
         body.auth-page #content, body.auth-page .site-content { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; height: 100% !important; display: flex !important; align-items: center !important; justify-content: center !important; }
         /* Hide the nested body + page/wrapper divs from header include */
         body.auth-page #page, body.auth-page #wrapper_full, body.auth-page .content_all_warpper, body.auth-page .page_wapper { display: none !important; }
+
+        body:not(.auth-page) .header_area {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+            background: #ffffff;
+            box-shadow: 0 2px 14px rgba(15, 23, 42, 0.08);
+        }
+        body:not(.auth-page) .header_area .main-header {
+            background: #ffffff;
+        }
+        body:not(.auth-page) main {
+            padding-top: var(--mirashka-header-offset, 132px);
+        }
+        body:not(.auth-page) .dropdown-menu.mega-border {
+            z-index: 10000;
+        }
+        @media (max-width: 991.98px) {
+            body:not(.auth-page) main {
+                padding-top: var(--mirashka-header-offset, 72px);
+            }
+        }
     </style>
     
     {{-- Critical CSS: Load main styles FIRST (blocking but fast) --}}
@@ -333,11 +359,23 @@
     });
     </script>
     
-    {{-- ANTI-FOUC: Reveal page when ready --}}
+    {{-- ANTI-FOUC: Reveal page when ready + sticky header offset --}}
     <script>
+        function setStickyHeaderOffset() {
+            if (document.body.classList.contains('auth-page')) return;
+            var header = document.getElementById('header_contents');
+            if (!header) return;
+            document.documentElement.style.setProperty(
+                '--mirashka-header-offset',
+                header.offsetHeight + 'px'
+            );
+        }
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
+            setStickyHeaderOffset();
         });
+        window.addEventListener('resize', setStickyHeaderOffset);
+        document.addEventListener('DOMContentLoaded', setStickyHeaderOffset);
     </script>
 </body>
 

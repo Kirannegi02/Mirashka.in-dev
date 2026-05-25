@@ -97,7 +97,7 @@
 
 <div class="whatwedo-pane" data-whatwedo-pane="workforce-efficiency" role="tabpanel" aria-hidden="true">
   <div class="whatwedo-service-cards">
-    <a href="{{ route('linkedinauthoritybuilding') }}" class="whatwedo-service-card">
+    <a href="{{ route('workforce.sub', 'policy-design-compliance-audit') }}" class="whatwedo-service-card">
       <div class="whatwedo-service-head">
         <span class="whatwedo-service-icon gold"><i class="ri-bookmark-line"></i></span>
         <h5 class="whatwedo-service-title">Policy Design &amp; Compliance Audit</h5>
@@ -107,7 +107,7 @@
       <span class="whatwedo-service-link">Read More <i class="ri-arrow-right-line"></i></span>
     </a>
 
-    <a href="{{ route('leadershipmediatraining') }}" class="whatwedo-service-card">
+    <a href="{{ route('workforce.sub', 'payroll-outsourcing-administration') }}" class="whatwedo-service-card">
       <div class="whatwedo-service-head">
         <span class="whatwedo-service-icon"><i class="ri-bar-chart-box-line"></i></span>
         <h5 class="whatwedo-service-title">Payroll Outsourcing &amp; Administration</h5>
@@ -117,7 +117,7 @@
       <span class="whatwedo-service-link">Read More <i class="ri-arrow-right-line"></i></span>
     </a>
 
-    <a href="{{ route('influencecoaching') }}" class="whatwedo-service-card">
+    <a href="{{ route('workforce.sub', 'remote-hr-solutions') }}" class="whatwedo-service-card">
       <div class="whatwedo-service-head">
         <span class="whatwedo-service-icon"><i class="ri-user-line"></i></span>
         <h5 class="whatwedo-service-title">Remote HR Solutions</h5>

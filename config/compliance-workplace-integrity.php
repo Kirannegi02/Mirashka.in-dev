@@ -4,6 +4,17 @@
  * Category page: Compliance & Workplace Integrity Solutions
  */
 return [
+    'sections' => [
+        'hero',
+        'risk',
+        'services',
+        'framework',
+        'workplace_integrity',
+        'deliverables',
+        'suitable_for',
+        'sub_services',
+    ],
+
     'meta' => [
         'title' => 'Compliance & Workplace Integrity Solutions | Mirashka',
         'description' => 'Proactive legal and HR safeguards to protect your business and workforce. Policy frameworks, compliance audits and workplace ethics training.',
@@ -16,7 +27,7 @@ return [
         'tagline' => 'Proactive legal and HR safeguards to protect your business and workforce.',
         'content' => 'Your business cannot grow confidently if policies, documentation, workplace conduct and compliance systems are weak. Mirashka helps organizations create legally aware, employee-friendly and risk-controlled workplaces through expert HR consultation, policy frameworks, compliance audits and workplace ethics training.',
         'headline' => 'Protect your business before HR risks become disputes',
-        'image' => 'assets/admin/image/banner/hr-advisory.webp',
+        'image' => 'assets/frontend/img/compliance/cwi-hero.png',
         'primary_cta' => 'Get Compliance Readiness Review',
         'secondary_cta' => 'Speak to an HR Advisor',
     ],
@@ -26,7 +37,11 @@ return [
         'heading' => 'Why informal HR practices create hidden liabilities',
         'lead' => 'Scaling your team is exciting — but informal HR creates hidden liabilities you cannot see until they become disputes.',
         'content' => 'When policies live in memory, documentation is outdated and managers act on instinct, small gaps become expensive problems — statutory notices, penalties, attrition and reputational damage. Mirashka helps you move from reactive firefighting to a compliance system you can defend.',
-        'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
+        'image' => 'assets/frontend/img/compliance/cwi-risk.png',
+        'list_label' => 'Common compliance gaps',
+        'visual_alt' => 'Workplace compliance gaps and policy risks visualized for leadership review',
+        'visual_caption_title' => 'From risk chaos to HR clarity',
+        'visual_caption_text' => 'Structured policies, documentation and compliance visibility in one place.',
         'cta' => 'Speak to an HR Advisor',
         'risks' => [
             'Verbal policies with no audit trail',
@@ -42,7 +57,7 @@ return [
         'before_title' => 'Services Overview',
         'heading' => 'Expert support across every compliance touchpoint',
         'content' => 'From legal advisory and policy design to audits and ethics training — a structured path that keeps your workplace compliant as you scale.',
-        'image' => 'assets/admin/image/banner/hr-advisory.webp',
+        'image' => 'assets/frontend/img/compliance/cwi-services.png',
         'image_alt' => 'HR advisors reviewing compliance policies with leadership team',
         'items' => [
             [
@@ -104,11 +119,11 @@ return [
         ],
     ],
 
-    'integrity' => [
-        'eyebrow' => 'Workplace Integrity',
+    'workplace_integrity' => [
+        'eyebrow' => 'Workplace Integrity Model',
         'heading' => 'Safe, fair and accountable culture',
         'content' => 'Compliance is not only paperwork — it is how people experience fairness at work. Mirashka embeds integrity into conduct standards, grievance handling and leadership accountability — so your teams feel protected and your organization stays defensible.',
-        'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+        'image' => 'assets/frontend/img/compliance/cwi-integrity.png',
         'image_alt' => 'Leadership team collaborating on workplace integrity and compliance',
         'features' => [
             [
@@ -151,7 +166,7 @@ return [
                 'title' => 'Policy & handbook suite',
                 'text' => 'Legally aligned documentation tailored to your headcount, industry and operating model.',
                 'icon' => 'ri-book-2-line',
-                'image' => 'assets/admin/image/banner/hr-advisory.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-deliverable-policy.png',
                 'bullets' => [
                     'Custom employee handbooks',
                     'Policy templates & registers',
@@ -162,14 +177,14 @@ return [
                 'style' => 'featured',
                 'title' => 'Compliance audit reports',
                 'text' => 'Gap assessments with severity scoring and a prioritized remediation roadmap your team can execute.',
-                'image' => 'assets/admin/image/case-study/media/it-posh-gallery-safe.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-deliverable-audit.png',
             ],
             [
                 'style' => 'standard',
                 'title' => 'Training & attendance records',
                 'text' => 'Proof of due diligence for POSH, ethics and manager training — ready for internal or statutory review.',
                 'icon' => 'ri-calendar-check-line',
-                'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-deliverable-training.png',
                 'bullets' => [
                     'POSH & ethics session logs',
                     'Role-based attendance registers',
@@ -215,7 +230,7 @@ return [
         'content' => 'A focused assessment of your policies, documentation gaps and workplace risk exposure — with a practical action plan your leadership team can execute.',
         'button' => 'Get Compliance Readiness Review',
         'secondary' => 'Speak to an HR Advisor',
-        'image' => 'assets/admin/image/case-study/jyogi-team.webp',
-        'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
+        'image' => 'assets/frontend/img/compliance/cwi-cta-person.png',
+        'bg_image' => 'assets/frontend/img/compliance/cwi-cta-bg.png',
     ],
 ];

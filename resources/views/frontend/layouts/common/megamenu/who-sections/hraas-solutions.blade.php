@@ -15,12 +15,21 @@
     background: #fff;
   }
 
+  .whatwedo-hraas-feature-img-link {
+    display: block;
+    text-decoration: none;
+  }
+
   .whatwedo-hraas-feature img {
     width: 100%;
     height: 110px;
     object-fit: cover;
     display: block;
     margin-bottom: 8px;
+  }
+
+  .whatwedo-hraas-feature-img-link:hover img {
+    opacity: 0.92;
   }
 
   .whatwedo-hraas-feature h5 {
@@ -131,14 +140,16 @@
 <div class="whatwedo-pane" data-whatwedo-pane="hraas-solutions" role="tabpanel" aria-hidden="true">
   <div class="whatwedo-hraas-layout">
     <div class="whatwedo-hraas-feature">
-      <img src="{{ asset('assets/admin/image/banner/hraas-solutions.webp') }}" alt="Build Your HR Operating System" loading="lazy">
+      <a href="{{ route('hr-as-a-service') }}" class="whatwedo-hraas-feature-img-link">
+        <img src="{{ asset('assets/frontend/img/hraas/hraas-v3-hero.png') }}" alt="Build Your HR Operating System" loading="lazy">
+      </a>
       <h5>Build Your HR Operating System</h5>
       <p>From hiring and payroll to compliance and leadership, Mirashka works as your extended HR office.</p>
-      <a href="{{ route('hraas') }}">Explore HRaaS Solutions</a>
+      <a href="{{ route('hr-as-a-service') }}">Explore HRaaS Solutions</a>
     </div>
 
     <div class="whatwedo-hraas-grid">
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'hr-outsourcing') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/HR-Outsourcing.png" alt="HR Outsourcing" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">HR Outsourcing</h6>
@@ -146,7 +157,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'employer-branding') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employer-branding.png" alt="Employer Branding" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Employer Branding</h6>
@@ -154,7 +165,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'candidate-sourcing') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/candidate-Sourcing.png" alt="Candidate Sourcing" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Candidate Sourcing</h6>
@@ -162,7 +173,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'employee-engagement-performance') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-engagement.png" alt="Employee Engagement and Performance" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Employee Engagement &amp; Performance</h6>
@@ -170,7 +181,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'employee-surveys-retention') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/employee-surveys.png" alt="Employee Surveys and Retention" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">Employee Surveys &amp; Retention</h6>
@@ -178,7 +189,7 @@
         </div>
       </a>
 
-      <a href="https://mirashka.in/service/payroll-management/" class="whatwedo-hraas-card">
+      <a href="{{ route('hr-as-a-service.sub', 'hr-technology-solutions') }}" class="whatwedo-hraas-card">
         <img src="https://mirashka.co.in/wp-content/uploads/2025/02/HR-Technology-solution.png" alt="HR Technology Solutions" class="whatwedo-hraas-icon" loading="lazy">
         <div>
           <h6 class="whatwedo-hraas-title">HR Technology Solutions</h6>

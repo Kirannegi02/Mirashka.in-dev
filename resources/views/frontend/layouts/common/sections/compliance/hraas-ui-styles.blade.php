@@ -443,6 +443,19 @@
         object-fit: contain;
         align-self: flex-end;
     }
+    .cwi-sub-page-cta__inner {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .cwi-sub-page-cta__text {
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin: 0 auto 22px;
+    }
+    .cwi-sub-section--light { background: #f6f8f7; }
+    .cwi-sub-section--dark.bg_dark_3 { background: #0d1612 !important; }
+
     @media (max-width: 991.98px) {
         .cwi-focus-split { padding: 40px 0 32px; }
         .cwi-focus-split .cwi-focus-sidebar-col {

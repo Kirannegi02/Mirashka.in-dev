@@ -13,8 +13,8 @@ return [
     'hero' => [
         'label' => 'Mirashka HRaaS',
         'title' => 'Your HR Department, Built as a Service',
-        'tagline' => 'Hire better. Stay compliant. Build stronger teams. Scale with confidence.',
-        'intro' => 'Mirashka HRaaS helps startups, SMEs, family businesses, franchises and growing companies manage HR with the structure of a large enterprise and the agility of an extended partner. From compliance, payroll and policies to recruitment, leadership hiring, employee engagement and HR technology, we build the people engine your business needs to grow responsibly.',
+        'tagline' => null,
+        'intro' => 'Mirashka helps growing businesses manage hiring, payroll, compliance, leadership, culture and employee experience through one integrated HRaaS model.',
         'image' => 'assets/frontend/img/hraas/hraas-hero-split.webp',
         'primary_cta' => 'Book HR Discovery Call',
         'secondary_cta' => 'Get HR Health Check',
@@ -73,27 +73,31 @@ return [
                 'label' => 'Compliance & Workplace Integrity',
                 'icon' => 'ri-shield-check-line',
                 'image' => 'assets/admin/image/banner/hr-advisory.webp',
+                'route' => 'compliance',
             ],
             [
                 'label' => 'Workforce Management & Process Optimization',
                 'icon' => 'ri-settings-3-line',
                 'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
+                'route' => 'workforce',
             ],
             [
                 'label' => 'Leadership & Organizational Excellence',
                 'icon' => 'ri-vip-crown-line',
                 'image' => 'assets/admin/image/banner/senior-leaders.webp',
+                'route' => 'leadership-organization',
             ],
             [
                 'label' => 'Talent Acquisition & Staffing Excellence',
                 'icon' => 'ri-user-search-line',
                 'image' => 'assets/admin/image/banner/staffing-manpower.webp',
+                'route' => 'talent-acquisition',
             ],
             [
                 'label' => 'HR as a Service',
                 'icon' => 'ri-service-line',
                 'image' => 'assets/admin/image/banner/hraas-solutions.webp',
-                'route' => 'hraas',
+                'route' => 'hr-as-a-service',
             ],
         ],
     ],
@@ -170,7 +174,7 @@ return [
     'dashboard' => [
         'before_title' => 'HR Visibility',
         'heading' => 'Visibility that leadership can act on',
-        'content' => 'Track hiring, payroll, compliance and engagement in one structured HR reporting format built for leadership decisions.',
+        'content' => 'Track hiring status, employee records, payroll milestones, compliance tasks, engagement scores, retention signals and performance review cycles in one structured HR reporting format.',
         'cta' => 'Request HR Consultation',
         'tabs' => [
             [

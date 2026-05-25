@@ -26,7 +26,7 @@ return [
             ],
             'card' => [
                 'title' => 'Expert Legal & HR Consultations',
-                'image' => 'assets/admin/image/banner/hr-advisory.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-card-legal.png',
             ],
             'hero' => [
                 'label' => 'Expert Legal & HR Consultations',
@@ -35,7 +35,7 @@ return [
                 'image' => 'assets/admin/image/banner/hr-advisory.webp',
             ],
             'process' => [
-                'before_title' => 'How It Works',
+                'before_title' => 'What We Cover',
                 'heading' => 'Expert guidance when people decisions matter most',
                 'steps' => [
                     [
@@ -130,7 +130,7 @@ return [
             ],
             'card' => [
                 'title' => 'Policy & Documentation Excellence',
-                'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-card-policy.png',
             ],
             'hero' => [
                 'label' => 'Policy & Documentation Excellence',
@@ -139,7 +139,7 @@ return [
                 'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
             ],
             'process' => [
-                'before_title' => 'How It Works',
+                'before_title' => 'What We Cover',
                 'heading' => 'From policy chaos to a documented HR foundation',
                 'steps' => [
                     [
@@ -234,7 +234,7 @@ return [
             ],
             'card' => [
                 'title' => 'Compliance & Risk Assessments',
-                'image' => 'assets/frontend/img/hraas/hraas-health-check.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-card-audit.png',
             ],
             'hero' => [
                 'label' => 'Compliance & Risk Assessments',
@@ -243,7 +243,7 @@ return [
                 'image' => 'assets/frontend/img/hraas/hraas-health-check.webp',
             ],
             'process' => [
-                'before_title' => 'How It Works',
+                'before_title' => 'What We Cover',
                 'heading' => 'Structured audits with clear remediation paths',
                 'steps' => [
                     [
@@ -338,7 +338,7 @@ return [
             ],
             'card' => [
                 'title' => 'Workplace Ethics & Prevention Training',
-                'image' => 'assets/admin/image/case-study/media/it-posh-gallery-inclusive.webp',
+                'image' => 'assets/frontend/img/compliance/cwi-card-training.png',
             ],
             'hero' => [
                 'label' => 'Workplace Ethics & Prevention Training',
@@ -347,7 +347,7 @@ return [
                 'image' => 'assets/admin/image/case-study/media/it-posh-gallery-inclusive.webp',
             ],
             'process' => [
-                'before_title' => 'How It Works',
+                'before_title' => 'What We Cover',
                 'heading' => 'Prevention training that changes behaviour — not just checkboxes',
                 'steps' => [
                     [
