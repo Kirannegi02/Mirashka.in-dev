@@ -6,6 +6,7 @@
 return [
     'compliance-workplace-integrity' => [
         'label' => 'Compliance & Workplace Integrity',
+        'nav_tab_lines' => ['Compliance & Workplace', 'Integrity'],
         'short_label' => 'Compliance',
         'route_name' => 'compliance',
         'faq_key' => 'compliance',
@@ -17,6 +18,7 @@ return [
     ],
     'workforce-management' => [
         'label' => 'Workforce Management',
+        'nav_tab_lines' => ['Workforce Management'],
         'short_label' => 'Workforce',
         'route_name' => 'workforce',
         'faq_key' => 'workforce',
@@ -28,6 +30,7 @@ return [
     ],
     'leadership-organization' => [
         'label' => 'Leadership & Organization',
+        'nav_tab_lines' => ['Leadership & Organization'],
         'short_label' => 'Leadership',
         'route_name' => 'leadership-organization',
         'faq_key' => 'leadership',
@@ -39,6 +42,7 @@ return [
     ],
     'talent-acquisition-staffing' => [
         'label' => 'Talent Acquisition & Staffing',
+        'nav_tab_lines' => ['Talent Acquisition &', 'Staffing'],
         'short_label' => 'Talent',
         'route_name' => 'talent-acquisition',
         'faq_key' => 'talent',
@@ -50,6 +54,7 @@ return [
     ],
     'hr-as-a-service' => [
         'label' => 'HR as a Service',
+        'menu_lines' => ['HR as a', 'Service'],
         'short_label' => 'HRaaS',
         'route_name' => 'hr-as-a-service',
         'faq_key' => 'hraas',

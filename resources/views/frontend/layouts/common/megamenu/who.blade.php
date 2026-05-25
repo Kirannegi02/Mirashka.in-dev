@@ -2,16 +2,26 @@
   .whatwedo-mega {
     padding: 18px 22px 22px;
     background: #fff;
+    overflow-x: hidden;
   }
 
   .whatwedo-tabs {
-    display: flex;
-    align-items: center;
-    gap: 34px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 28px;
+    align-items: flex-end;
     border-bottom: 1px solid #e8e8e8;
     margin-bottom: 18px;
-    overflow-x: auto;
-    white-space: nowrap;
+    padding: 0 4px;
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .whatwedo-tabs::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   .whatwedo-tab-btn {
@@ -25,7 +35,21 @@
     cursor: pointer;
     transition: color 0.2s ease;
     text-decoration: none;
-    display: inline-block;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .whatwedo-tab-btn__label {
+    display: block;
+  }
+
+  .whatwedo-tab-btn__line {
+    display: block;
+    white-space: nowrap;
   }
 
   .whatwedo-tab-btn:hover {
@@ -48,10 +72,17 @@
   }
 
   .whatwedo-tab-page-group {
-    display: inline-flex;
-    align-items: flex-end;
-    gap: 8px;
-    flex-shrink: 0;
+    position: relative;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    padding-right: 32px;
+    overflow: visible;
+  }
+
+  .whatwedo-tab-page-group .whatwedo-tab-btn {
+    width: 100%;
+    min-width: 0;
   }
 
   .whatwedo-tab-page-group .whatwedo-tab-btn {
@@ -62,22 +93,23 @@
   }
 
   .whatwedo-tab-open-page {
-    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: 9px;
     display: block;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 9px;
+    width: 28px;
+    height: 28px;
     padding: 0;
     border-radius: 50%;
     border: 1px solid #d3a126;
     background: #fff;
     color: #b8860b;
     text-decoration: none;
-    flex-shrink: 0;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: scale(0.9);
-    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease, pointer-events 0s;
   }
 
   .whatwedo-tab-open-page i {
@@ -95,6 +127,7 @@
   .whatwedo-tab-page-group:hover .whatwedo-tab-open-page {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: scale(1);
   }
 
@@ -132,11 +165,18 @@
     }
 
     .whatwedo-tabs {
-      gap: 20px;
+      column-gap: 14px;
+      padding: 0 2px;
     }
 
     .whatwedo-tab-btn {
       font-size: 15px;
+    }
+
+    .whatwedo-tab-open-page {
+      width: 26px;
+      height: 26px;
+      margin-bottom: 8px;
     }
 
   }
@@ -149,37 +189,41 @@
   <ul class="dropdown-menu width_100_percentage mega-border">
     <li>
       <div class="whatwedo-mega">
+        @php $whatWeDoCategories = config('what-we-do-categories', []); @endphp
         <div class="whatwedo-tabs" role="tablist" aria-label="What we do categories">
-          <div class="whatwedo-tab-page-group whatwedo-tab-compliance-group is-active">
-            <button class="whatwedo-tab-btn active" type="button" role="tab" aria-selected="true" data-whatwedo-tab="compliance-integrity">Compliance &amp; Workplace Integrity</button>
-            <a href="{{ route('compliance') }}" class="whatwedo-tab-open-page" title="Open Compliance &amp; Workplace Integrity page" aria-label="Open Compliance &amp; Workplace Integrity page">
-              <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-          <div class="whatwedo-tab-page-group whatwedo-tab-workforce-group">
-            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="workforce-efficiency">Workforce Management</button>
-            <a href="{{ route('workforce') }}" class="whatwedo-tab-open-page" title="Open Workforce Management page" aria-label="Open Workforce Management page">
-              <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-          <div class="whatwedo-tab-page-group whatwedo-tab-leadership-group">
-            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="leadership-mastery">Leadership &amp; Organization</button>
-            <a href="{{ route('leadership-organization') }}" class="whatwedo-tab-open-page" title="Open Leadership &amp; Organization page" aria-label="Open Leadership &amp; Organization page">
-              <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-          <div class="whatwedo-tab-page-group whatwedo-tab-talent-group">
-            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hiring-excellence">Talent Acquisition &amp; Staffing</button>
-            <a href="{{ route('talent-acquisition') }}" class="whatwedo-tab-open-page" title="Open Talent Acquisition &amp; Staffing page" aria-label="Open Talent Acquisition &amp; Staffing page">
-              <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-          <div class="whatwedo-tab-page-group whatwedo-tab-hraas-group">
-            <button class="whatwedo-tab-btn" type="button" role="tab" aria-selected="false" data-whatwedo-tab="hraas-solutions">HR as a Service</button>
-            <a href="{{ route('hr-as-a-service') }}" class="whatwedo-tab-open-page" title="Open HR as a Service page" aria-label="Open HR as a Service page">
-              <i class="ri-external-link-line"></i>
-            </a>
-          </div>
+          @foreach($whatWeDoCategories as $cat)
+            @php
+              $tabKey = $cat['megamenu_tab'] ?? '';
+              $menuLines = $cat['nav_tab_lines'] ?? [$cat['label'] ?? ''];
+              $pageLabel = $cat['label'] ?? '';
+            @endphp
+            <div
+              class="whatwedo-tab-page-group{{ $loop->first ? ' is-active' : '' }}"
+              data-whatwedo-tab="{{ $tabKey }}"
+            >
+              <button
+                class="whatwedo-tab-btn{{ $loop->first ? ' active' : '' }}"
+                type="button"
+                role="tab"
+                aria-selected="{{ $loop->first ? 'true' : 'false' }}"
+                data-whatwedo-tab="{{ $tabKey }}"
+              >
+                <span class="whatwedo-tab-btn__label">
+                  @foreach($menuLines as $line)
+                    <span class="whatwedo-tab-btn__line">{{ $line }}</span>
+                  @endforeach
+                </span>
+              </button>
+              <a
+                href="{{ route($cat['route_name']) }}"
+                class="whatwedo-tab-open-page"
+                title="Open {{ $pageLabel }} page"
+                aria-label="Open {{ $pageLabel }} page"
+              >
+                <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          @endforeach
         </div>
 
         @include('frontend.layouts.common.megamenu.who-sections.compliance-integrity')
@@ -213,13 +257,13 @@
       }
     }
 
-    var tabPageGroups = {
-      'compliance-integrity': document.querySelector('.whatwedo-tab-compliance-group'),
-      'workforce-efficiency': document.querySelector('.whatwedo-tab-workforce-group'),
-      'leadership-mastery': document.querySelector('.whatwedo-tab-leadership-group'),
-      'hiring-excellence': document.querySelector('.whatwedo-tab-talent-group'),
-      'hraas-solutions': document.querySelector('.whatwedo-tab-hraas-group'),
-    };
+    var tabPageGroups = {};
+    document.querySelectorAll('.whatwedo-tab-page-group[data-whatwedo-tab]').forEach(function (group) {
+      var key = group.getAttribute('data-whatwedo-tab');
+      if (key) {
+        tabPageGroups[key] = group;
+      }
+    });
 
     function activateTab(tabKey, activeButton) {
       tabButtons.forEach(function (btn) {

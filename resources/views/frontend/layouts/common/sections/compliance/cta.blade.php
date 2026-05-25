@@ -45,15 +45,18 @@
         background: #fff !important;
         color: #0f172a !important;
     }
-    .compliance-shared-cta__person {
-        max-height: 280px;
+    .compliance-shared-cta__visual {
+        max-height: 260px;
+        max-width: min(380px, 42vw);
         width: auto;
         object-fit: contain;
-        align-self: flex-end;
+        align-self: center;
+        border-radius: 12px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
     }
     @media (max-width: 991px) {
         .compliance-shared-cta__overlay { grid-template-columns: 1fr; }
-        .compliance-shared-cta__person { display: none; }
+        .compliance-shared-cta__visual { display: none; }
     }
 </style>
 @endonce
@@ -61,9 +64,11 @@
     $cta = $cta ?? config('compliance-sub-services.shared.cta', config('compliance-workplace-integrity.cta', []));
     $primaryLabel = $primaryLabel ?? ($cta['button'] ?? 'Get Compliance Readiness Review');
     $secondaryLabel = $secondaryLabel ?? ($cta['secondary'] ?? 'Speak to an HR Advisor');
+    $sectionClass = $sectionClass ?? '';
+    $ctaBg = str_contains($sectionClass, 'dark') ? 'transparent' : '#f6f8f7';
 @endphp
 
-<section class="compliance-shared-cta">
+<section class="compliance-shared-cta {{ $sectionClass }}" style="background: {{ $ctaBg }};">
     <div class="container">
         <div class="compliance-shared-cta__card" style="background-image: url({{ asset($cta['bg_image'] ?? '') }});">
             <div class="compliance-shared-cta__overlay">
@@ -77,7 +82,7 @@
                 </div>
                 @if(!empty($cta['image']))
                     <img
-                        class="compliance-shared-cta__person d-none d-lg-block"
+                        class="compliance-shared-cta__visual d-none d-lg-block"
                         src="{{ asset($cta['image']) }}"
                         alt=""
                         loading="lazy"

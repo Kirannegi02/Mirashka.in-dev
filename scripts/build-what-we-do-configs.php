@@ -96,20 +96,162 @@ function build_sidebar(string $label, string $heading, string $content, string $
     ];
 }
 
+function build_dash_tabs_from_process(array $steps, string $fallbackImage): array
+{
+    $tabs = [];
+    foreach ($steps as $i => $step) {
+        $tabs[] = [
+            'label' => $step['title'],
+            'heading' => $step['title'],
+            'content' => $step['text'],
+            'image' => $step['image'] ?? $fallbackImage,
+        ];
+    }
+    return $tabs;
+}
+
+/** @var array<string, array<string, array{hero: string, focus: string, card: string, steps: string[]}>> $subServiceImages */
+$subServiceImages = require __DIR__ . '/sub-service-images.php';
+/** @var array<string, array<string, array{standout?: array, experience?: array}>> $subExtraSections */
+$subExtraSections = require __DIR__ . '/sub-service-extra-sections.php';
+
+function build_sub_standout(array $d, array $imgMap): array
+{
+    $steps = $d['process_steps'] ?? [];
+    $stepImages = $imgMap['steps'] ?? [];
+    $hero = $imgMap['hero'] ?? img_at(0);
+    $focus = $imgMap['focus'] ?? $hero;
+    $last = $steps !== [] ? $steps[count($steps) - 1] : null;
+    $first = $steps[0] ?? null;
+    $second = $steps[1] ?? null;
+
+    $leftImg = $stepImages[1] ?? $stepImages[0] ?? $focus;
+    $rightImg = $stepImages[2] ?? $stepImages[3] ?? $hero;
+    if ($leftImg === $rightImg && isset($stepImages[3])) {
+        $rightImg = $stepImages[3];
+    }
+
+    return [
+        'before_title' => 'Why Mirashka',
+        'heading' => 'Stand Out From The Rest',
+        'grid' => [
+            'left_image' => $leftImg,
+            'left_card' => [
+                'icon' => $first['icon'] ?? 'ri-lightbulb-line',
+                'title' => $first['title'] ?? 'Our Approach',
+                'text' => $first['text'] ?? ($d['hero_content'] ?? ''),
+            ],
+            'center' => [
+                'icon' => 'ri-list-check-2',
+                'title' => $d['standout_center_title'] ?? 'What We Deliver',
+                'text' => $d['standout_center_text'] ?? sprintf(
+                    'Structured %s with practical guidance and documented outputs your leadership team can track.',
+                    strtolower($d['title'])
+                ),
+                'list' => array_map(
+                    static fn (array $s): string => $s['title'],
+                    $steps !== [] ? $steps : [['title' => $d['title']]]
+                ),
+                'cta' => $d['primary_cta'],
+            ],
+            'right_card' => [
+                'icon' => $last['icon'] ?? 'ri-award-line',
+                'title' => $last['title'] ?? 'Ready to Get Started',
+                'text' => $last['text'] ?? ($d['focus_content'] ?? ''),
+            ],
+            'right_image' => $rightImg,
+        ],
+    ];
+}
+
+function build_sub_experience(array $d, array $imgMap): array
+{
+    $steps = $d['process_steps'] ?? [];
+    $pillars = [];
+    foreach (array_slice($steps, 0, 3) as $i => $step) {
+        $pillars[] = [
+            'num' => pad_step($i + 1),
+            'title' => $step['title'],
+        ];
+    }
+    $expImage = $imgMap['hero'] ?? img_at(0);
+    if ($expImage === ($imgMap['focus'] ?? '')) {
+        $stepImages = $imgMap['steps'] ?? [];
+        $expImage = $stepImages[0] ?? $expImage;
+    }
+
+    $firstStep = $steps[0] ?? null;
+
+    return [
+        'heading' => $d['experience_heading'] ?? ($d['hero_heading'] ?? $d['title']),
+        'content' => $d['experience_content'] ?? ($d['hero_content'] ?? ''),
+        'image' => $expImage,
+        'badge_icon' => $d['experience_badge_icon'] ?? ($firstStep['icon'] ?? 'ri-customer-service-2-line'),
+        'cta' => $d['primary_cta'],
+        'cta_url' => $d['experience_cta_url'] ?? null,
+        'pillars' => $pillars,
+    ];
+}
+
+function apply_sub_extra_sections(array $svc, array $d, string $category, string $slug): array
+{
+    global $subServiceImages, $subExtraSections;
+    $imgMap = $subServiceImages[$category][$slug] ?? [];
+    $override = $subExtraSections[$category][$slug] ?? [];
+
+    $svc['standout'] = $override['standout'] ?? build_sub_standout($d, $imgMap);
+    $svc['experience'] = $override['experience'] ?? build_sub_experience($d, $imgMap);
+
+    return $svc;
+}
+
+function apply_sub_service_images(array $d, string $category, string $slug): array
+{
+    global $subServiceImages;
+    $map = $subServiceImages[$category][$slug] ?? null;
+    if ($map === null) {
+        return $d;
+    }
+    $d['image'] = $map['card'] ?? $d['image'] ?? null;
+    $d['hero_image'] = $map['hero'] ?? $d['hero_image'] ?? $d['image'] ?? null;
+    $d['focus_image'] = $map['focus'] ?? $d['focus_image'] ?? $d['image'] ?? null;
+    $d['focus_position'] = $map['focus_position'] ?? $d['focus_position'] ?? 'center center';
+    if (! empty($map['bottom_cta'])) {
+        $ctaBgs = [
+            'compliance' => 'assets/frontend/img/compliance/cwi-cta-bg.png',
+            'workforce' => 'assets/frontend/img/workforce/wfm-cta-bg-v2.png',
+            'leadership' => 'assets/frontend/img/leadership/ldr-hero-boardroom.png',
+            'talent-acquisition' => 'assets/frontend/img/talent-acquisition/ta-hero-hiring.png',
+            'hraas' => 'assets/frontend/img/hraas/hraas-v3-cta-bg.png',
+        ];
+        $d['bottom_cta'] = array_merge($d['bottom_cta'] ?? [], [
+            'image' => $map['bottom_cta'],
+            'bg_image' => $ctaBgs[$category] ?? $ctaBgs['compliance'],
+        ]);
+    }
+    if (! empty($map['steps']) && ! empty($d['process_steps'])) {
+        foreach ($d['process_steps'] as $i => &$step) {
+            $step['image'] = $map['steps'][$i] ?? $map['hero'];
+        }
+        unset($step);
+    }
+    return $d;
+}
+
 function build_sub_service(array $d): array
 {
-    $img = $d['image'] ?? img_at(0);
+    $img = $d['hero_image'] ?? $d['image'] ?? img_at(0);
+    $cardImg = $d['image'] ?? $img;
     $steps = $d['process_steps'] ?? [];
-    $stepTitles = array_map(static fn (array $s): string => $s['title'], $steps);
-    $stepSummary = $stepTitles !== []
-        ? implode(', ', array_slice($stepTitles, 0, 3)) . (count($stepTitles) > 3 ? ', and more' : '')
-        : 'the core phases below';
+    $lastStep = $steps !== [] ? $steps[count($steps) - 1] : null;
 
     $dashContent = $d['dash_content'] ?? sprintf(
-        'Mirashka structures %s across %s — with practical guidance, documented outputs and progress your leadership team can track.',
-        strtolower($d['title']),
-        $stepSummary
+        'Explore how Mirashka delivers %s — with practical guidance, documented outputs and progress your leadership team can track at every step.',
+        $d['title']
     );
+
+    $outcomeHeading = $d['outcome_heading'] ?? ($lastStep['title'] ?? 'Ready to move forward');
+    $outcomeContent = $d['outcome_content'] ?? ($lastStep['text'] ?? ($d['focus_content'] ?? $d['hero_content'] ?? ''));
 
     return [
         'meta' => [
@@ -119,7 +261,7 @@ function build_sub_service(array $d): array
         ],
         'card' => [
             'title' => $d['title'],
-            'image' => $img,
+            'image' => $cardImg,
         ],
         'hero' => [
             'label' => $d['title'],
@@ -133,15 +275,15 @@ function build_sub_service(array $d): array
             $d['process_heading'] ?? ('How ' . $d['title'] . ' works')
         ),
         'dashboard' => build_dashboard(
-            $d['dash_before'] ?? 'Service Focus',
+            $d['dash_before'] ?? 'In Detail',
             $d['dash_heading'] ?? ($d['process_heading'] ?? $d['title']),
             $dashContent,
             $d['primary_cta'],
-            $d['dash_tabs']
+            build_dash_tabs_from_process($steps, $img)
         ),
         'sidebar' => build_sidebar(
             $d['sidebar_label'] ?? 'What You Receive',
-            $d['sidebar_heading'] ?? ($d['focus_title'] ?? $d['title']),
+            $d['sidebar_heading'] ?? 'How Mirashka supports you',
             $d['sidebar_content'] ?? ($d['focus_content'] ?? $d['hero_content'] ?? ''),
             $d['primary_cta'],
             $d['sidebar_items']
@@ -151,7 +293,14 @@ function build_sub_service(array $d): array
             'title' => $d['focus_title'],
             'content' => $d['focus_content'],
             'image' => $d['focus_image'] ?? $d['image'] ?? $img,
-            'image_position' => $d['focus_position'] ?? 'center center',
+            'image_position' => $d['focus_position'] ?? $d['focus_image_position'] ?? 'center center',
+        ],
+        'outcome' => [
+            'before_title' => $d['outcome_before'] ?? 'Outcome',
+            'heading' => $outcomeHeading,
+            'content' => $outcomeContent,
+            'button' => $d['primary_cta'],
+            'secondary' => $d['secondary_cta'],
         ],
         'page_cta' => [
             'button' => $d['primary_cta'],

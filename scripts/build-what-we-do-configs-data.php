@@ -3,7 +3,16 @@
 /** @var callable build_sub_service */
 /** @var callable build_category_page */
 
-$subShared = fn (string $parentRoute, string $parentLabel, string $ctaHeading, string $ctaContent, string $ctaBtn, string $secondary) => [
+$subShared = fn (
+    string $parentRoute,
+    string $parentLabel,
+    string $ctaHeading,
+    string $ctaContent,
+    string $ctaBtn,
+    string $secondary,
+    string $ctaImage = 'assets/admin/image/case-study/jyogi-team.webp',
+    string $ctaBg = 'assets/admin/image/banner/hr-advisory.webp',
+) => [
     'shared' => [
         'parent_route' => $parentRoute,
         'parent_label' => $parentLabel,
@@ -12,8 +21,8 @@ $subShared = fn (string $parentRoute, string $parentLabel, string $ctaHeading, s
             'content' => $ctaContent,
             'button' => $ctaBtn,
             'secondary' => $secondary,
-            'image' => 'assets/admin/image/case-study/jyogi-team.webp',
-            'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
+            'image' => $ctaImage,
+            'bg_image' => $ctaBg,
         ],
     ],
     'services' => [],
@@ -168,7 +177,7 @@ $wfSubs = [
         'process_heading' => 'Dedicated remote HR without building a full department',
         'process_steps' => [
             ['title' => 'What Remote HR Covers', 'text' => 'Scope definition across hiring support, lifecycle, compliance and reporting.', 'icon' => 'ri-list-check-2'],
-            ['title' => 'Dedicated HR Coordinator', 'text' => 'Named coordinator for employees, managers and leadership queries.', 'icon' => 'ri-user-star-line'],
+            ['title' => 'Dedicated HR Coordinator Model', 'text' => 'Named coordinator for employees, managers and leadership queries.', 'icon' => 'ri-user-star-line'],
             ['title' => 'Employee Record Management', 'text' => 'Master data, documents, acknowledgements and audit-ready files.', 'icon' => 'ri-folder-user-line'],
             ['title' => 'Onboarding and Exit Support', 'text' => 'Structured checklists, communication and documentation for every transition.', 'icon' => 'ri-user-shared-line'],
             ['title' => 'Monthly HR Reporting', 'text' => 'Workforce snapshot, open compliance items and operational priorities.', 'icon' => 'ri-bar-chart-grouped-line'],
@@ -190,10 +199,11 @@ $wfSubs = [
     ],
 ];
 
-$workforceSubServices = $subShared('workforce', 'Workforce Management', 'Optimize Your HR Operations', 'Structured HR operations review with practical recommendations for policy, payroll and remote HR desk setup.', 'Optimize Your HR Operations', 'Speak to an HR Advisor');
+$workforceSubServices = $subShared('workforce', 'Workforce Management', 'Optimize Your HR Operations', 'Structured HR operations review with practical recommendations for policy, payroll and remote HR desk setup.', 'Optimize Your HR Operations', 'Speak to an HR Advisor', 'assets/frontend/img/workforce/wfm-cta-person-v2.png', 'assets/frontend/img/workforce/wfm-cta-bg-v2.png');
 $workforceSubServices['services'] = [];
 foreach ($wfSubs as $slug => $d) {
-    $workforceSubServices['services'][$slug] = build_sub_service(array_merge($d, ['image' => $d['image'] ?? img_at(abs(crc32($slug)) % 6)]));
+    $d = apply_sub_service_images($d, 'workforce', $slug);
+    $workforceSubServices['services'][$slug] = apply_sub_extra_sections(build_sub_service($d), $d, 'workforce', $slug);
 }
 
 // --- LEADERSHIP ---
@@ -439,10 +449,11 @@ $ldSubs = [
     ],
 ];
 
-$leadershipSubServices = $subShared('leadership-organization', 'Leadership & Organization', 'Start Leadership Readiness Review', 'Review succession readiness, leadership pipeline gaps and advisory priorities with actionable recommendations.', 'Start Leadership Readiness Review', 'Speak to a Leadership Advisor');
+$leadershipSubServices = $subShared('leadership-organization', 'Leadership & Organization', 'Start Leadership Readiness Review', 'Review succession readiness, leadership pipeline gaps and advisory priorities with actionable recommendations.', 'Start Leadership Readiness Review', 'Speak to a Leadership Advisor', 'assets/frontend/img/leadership/ldr-cta-advisory.png', 'assets/frontend/img/leadership/ldr-hero-boardroom.png');
 $leadershipSubServices['services'] = [];
 foreach ($ldSubs as $slug => $d) {
-    $leadershipSubServices['services'][$slug] = build_sub_service(array_merge($d, ['image' => $d['image'] ?? img_at(abs(crc32($slug)) % 6)]));
+    $d = apply_sub_service_images($d, 'leadership', $slug);
+    $leadershipSubServices['services'][$slug] = apply_sub_extra_sections(build_sub_service($d), $d, 'leadership', $slug);
 }
 
 // --- TALENT ACQUISITION ---
@@ -723,10 +734,11 @@ $taSubs = [
     ],
 ];
 
-$talentSubServices = $subShared('talent-acquisition', 'Talent Acquisition & Staffing', 'Start Hiring Support', 'Hiring assessment with role prioritization, recommended channels and staffing model for your timeline and budget.', 'Start Hiring Support', 'Speak to a Hiring Advisor');
+$talentSubServices = $subShared('talent-acquisition', 'Talent Acquisition & Staffing', 'Start Hiring Support', 'Hiring assessment with role prioritization, recommended channels and staffing model for your timeline and budget.', 'Start Hiring Support', 'Speak to a Hiring Advisor', 'assets/frontend/img/talent-acquisition/ta-cta-hiring.png', 'assets/frontend/img/talent-acquisition/ta-hero-hiring.png');
 $talentSubServices['services'] = [];
 foreach ($taSubs as $slug => $d) {
-    $talentSubServices['services'][$slug] = build_sub_service(array_merge($d, ['image' => $d['image'] ?? img_at(abs(crc32($slug)) % 6)]));
+    $d = apply_sub_service_images($d, 'talent-acquisition', $slug);
+    $talentSubServices['services'][$slug] = apply_sub_extra_sections(build_sub_service($d), $d, 'talent-acquisition', $slug);
 }
 
 // --- HR AS A SERVICE ---
@@ -996,8 +1008,9 @@ $hrSubs = [
     ],
 ];
 
-$hraasSubServices = $subShared('hr-as-a-service', 'HR as a Service', 'Build My HRaaS Plan', 'Tailored HRaaS scope with modules, reporting rhythm and technology priorities for your growth stage.', 'Build My HRaaS Plan', 'Speak to an HR Advisor');
+$hraasSubServices = $subShared('hr-as-a-service', 'HR as a Service', 'Build My HRaaS Plan', 'Tailored HRaaS scope with modules, reporting rhythm and technology priorities for your growth stage.', 'Build My HRaaS Plan', 'Speak to an HR Advisor', 'assets/frontend/img/hraas/hraas-v3-cta-person.png', 'assets/frontend/img/hraas/hraas-v3-cta-bg.png');
 $hraasSubServices['services'] = [];
 foreach ($hrSubs as $slug => $d) {
-    $hraasSubServices['services'][$slug] = build_sub_service(array_merge($d, ['image' => $d['image'] ?? img_at(abs(crc32($slug)) % 6)]));
+    $d = apply_sub_service_images($d, 'hraas', $slug);
+    $hraasSubServices['services'][$slug] = apply_sub_extra_sections(build_sub_service($d), $d, 'hraas', $slug);
 }

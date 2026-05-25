@@ -244,12 +244,20 @@
         aspect-ratio: 16 / 9;
         min-height: 260px;
         max-height: 320px;
+        width: 100%;
+        display: block;
     }
     .cwi-focus-split .hraas-focus-card__image img {
         width: 100%;
         height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         object-fit: cover;
         display: block;
+    }
+    .cwi-sub-page .cwi-focus-split .hraas-focus-card__image img {
+        transform: scale(1.14);
+        transform-origin: center center;
     }
     .cwi-focus-split .hraas-focus-card__body {
         padding: 26px 28px 30px;

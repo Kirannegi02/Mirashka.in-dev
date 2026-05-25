@@ -4,17 +4,6 @@
  * Category page: Leadership & Organizational Excellence Solutions
  */
 return [
-    'sections' => [
-        'hero',
-        'risk',
-        'services',
-        'framework',
-        'workplace_integrity',
-        'deliverables',
-        'suitable_for',
-        'sub_services',
-    ],
-
     'meta' => [
         'title' => 'Leadership & Organizational Excellence | Mirashka',
         'description' => 'Executive search, board advisory, succession planning, leadership assessment and talent strategy for growth-focused organizations.',
@@ -26,7 +15,7 @@ return [
         'tagline' => 'Empowering businesses with visionary leadership, future-ready strategies and inclusive growth.',
         'content' => 'Leadership determines the quality of decisions, culture and execution. Mirashka helps organizations identify, assess, develop and transition leaders who can drive growth, governance, transformation and long-term business continuity.',
         'headline' => 'Build leadership that can carry your next stage of growth',
-        'image' => 'assets/frontend/img/leadership/ldr-hero-boardroom.png',
+        'image' => 'assets/admin/image/banner/hr-advisory.webp',
         'primary_cta' => 'Start Leadership Readiness Review',
         'secondary_cta' => 'Speak to a Leadership Advisor',
     ],
@@ -35,8 +24,7 @@ return [
         'heading' => 'When business outgrows existing structure',
         'lead' => 'Promotions based on tenure, unclear succession and leaders stretched beyond their current capability slow execution and culture.',
         'content' => 'Mirashka brings structure to leadership hiring, board advisory, succession and assessment — so your next stage of growth has the right people at the top.',
-        'image' => 'assets/frontend/img/leadership/ldr-risk-org-growth.png',
-        'visual_alt' => 'Leadership and organizational structure under growth pressure',
+        'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
         'cta' => 'Speak to a Leadership Advisor',
         'risks' => [
             'Key roles filled without structured assessment',
@@ -51,7 +39,7 @@ return [
         'before_title' => 'Services Overview',
         'heading' => 'Leadership support across the executive lifecycle',
         'content' => 'From executive search and board advisory to succession, assessment and talent strategy — integrated leadership excellence.',
-        'image' => 'assets/frontend/img/leadership/ldr-services-lifecycle.png',
+        'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
         'image_alt' => 'Leadership support across the executive lifecycle',
         'items' => [
             [
@@ -118,11 +106,11 @@ return [
         ],
     ],
     'workplace_integrity' => [
-        'eyebrow' => 'Board & CEO Advisory Model',
+        'eyebrow' => 'Board & CEO Advisory',
         'heading' => 'Governance and strategy leadership can trust',
         'content' => 'We help boards and CEOs strengthen governance rhythm, decision systems and performance architecture — so leadership stays aligned as the business scales.',
-        'image' => 'assets/frontend/img/leadership/ldr-board-advisory.png',
-        'image_alt' => 'Boardroom strategy session with leadership alignment charts',
+        'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+        'image_alt' => 'Governance and strategy leadership can trust',
         'theme' => 'dark',
         'features' => [
             [
@@ -164,7 +152,7 @@ return [
                 'title' => 'Executive search deliverables',
                 'text' => 'Role maps, shortlists, evaluation reports and onboarding support.',
                 'icon' => 'ri-user-star-line',
-                'image' => 'assets/frontend/img/leadership/ldr-deliverable-search.png',
+                'image' => 'assets/admin/image/banner/hr-advisory.webp',
                 'bullets' => [
                     'Leadership role definition',
                     'Culture & business fit assessment',
@@ -175,14 +163,14 @@ return [
                 'style' => 'featured',
                 'title' => 'Succession & transition plan',
                 'text' => 'Readiness audit, transition calendar and 90-day performance framework.',
-                'image' => 'assets/frontend/img/leadership/ldr-deliverable-succession.png',
+                'image' => 'assets/admin/image/case-study/jyogi-team.webp',
             ],
             [
                 'style' => 'standard',
                 'title' => 'Talent strategy roadmap',
                 'text' => 'Workforce planning, gap analysis and pipeline design aligned to strategy.',
                 'icon' => 'ri-map-2-line',
-                'image' => 'assets/frontend/img/leadership/ldr-deliverable-talent.png',
+                'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
                 'bullets' => [
                     'Workforce planning',
                     'Talent gap analysis',
@@ -226,7 +214,7 @@ return [
         'content' => 'A leadership readiness review covering succession, pipeline gaps and advisory priorities — with clear next steps for your board and CEO.',
         'button' => 'Start Leadership Readiness Review',
         'secondary' => 'Speak to a Leadership Advisor',
-        'image' => 'assets/frontend/img/leadership/ldr-cta-advisory.png',
-        'bg_image' => 'assets/frontend/img/leadership/ldr-hero-boardroom.png',
+        'image' => 'assets/admin/image/case-study/jyogi-team.webp',
+        'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
     ],
 ];

@@ -2,20 +2,8 @@
 
 /**
  * Category page: HR as a Service
- * Images: assets/frontend/img/hraas/hraas-v3-*
  */
 return [
-    'sections' => [
-        'hero',
-        'risk',
-        'services',
-        'framework',
-        'workplace_integrity',
-        'deliverables',
-        'suitable_for',
-        'sub_services',
-    ],
-
     'meta' => [
         'title' => 'HR as a Service | Mirashka',
         'description' => 'Your dedicated HR partner on demand. HR outsourcing, employer branding, engagement, surveys and HR technology.',
@@ -27,7 +15,7 @@ return [
         'tagline' => 'Your dedicated HR partner, on demand.',
         'content' => 'Mirashka HRaaS gives businesses access to a complete HR function without building a full internal department from day one. We manage HR operations, hiring support, employer branding, engagement, surveys, retention and HR technology implementation through a flexible service model.',
         'headline' => 'A complete HR office without the full-time overhead',
-        'image' => 'assets/frontend/img/hraas/hraas-v3-hero.png',
+        'image' => 'assets/admin/image/banner/hr-advisory.webp',
         'primary_cta' => 'Build My HRaaS Plan',
         'secondary_cta' => 'Speak to an HR Advisor',
     ],
@@ -36,12 +24,7 @@ return [
         'heading' => 'Scale people systems as the business grows',
         'lead' => 'Building a full HR department too early is expensive; waiting too long creates compliance, culture and hiring risk.',
         'content' => 'HR as a Service gives you flexible capacity — operations, branding, engagement and technology — scaled to your stage and growth plan.',
-        'image' => 'assets/frontend/img/hraas/hraas-v3-risk.png',
-        'list_label' => 'HR gaps HRaaS addresses',
-        'visual_alt' => 'Scaling people systems as the business grows',
-        'visual_caption_placement' => 'below',
-        'visual_caption_title' => 'From HR overload to on-demand capacity',
-        'visual_caption_text' => 'Modular HR operations, branding, engagement and technology scaled to your stage.',
+        'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
         'cta' => 'Speak to an HR Advisor',
         'risks' => [
             'HR leader hire delayed but workload is not',
@@ -56,8 +39,8 @@ return [
         'before_title' => 'Services Overview',
         'heading' => 'Full HR function — modular and flexible',
         'content' => 'Outsourcing, branding, sourcing, engagement, surveys and HR tech — compose the HR office you need today and expand tomorrow.',
-        'image' => 'assets/frontend/img/hraas/hraas-v3-services.png',
-        'image_alt' => 'Modular HRaaS — compose outsourcing, branding, sourcing, engagement and technology',
+        'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
+        'image_alt' => 'Full HR function — modular and flexible',
         'items' => [
             [
                 'step' => '01',
@@ -128,12 +111,12 @@ return [
             ],
         ],
     ],
-    'integrity' => [
-        'eyebrow' => 'Dedicated HR Partner Model',
+    'workplace_integrity' => [
+        'eyebrow' => 'Dedicated HR Partner',
         'heading' => 'Human expertise with operational discipline',
         'content' => 'Your HRaaS partner combines advisory judgment with structured delivery — so people operations keep pace with business ambition.',
-        'image' => 'assets/frontend/img/hraas/hraas-v3-partner.png',
-        'image_alt' => 'Dedicated HR partner — human expertise with operational discipline',
+        'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+        'image_alt' => 'Human expertise with operational discipline',
         'theme' => 'dark',
         'features' => [
             [
@@ -175,7 +158,7 @@ return [
                 'title' => 'HR operations pack',
                 'text' => 'Lifecycle support, documentation, payroll coordination and monthly review.',
                 'icon' => 'ri-folder-shield-line',
-                'image' => 'assets/frontend/img/hraas/hraas-v3-deliverable-ops.png',
+                'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
                 'bullets' => [
                     'Employee lifecycle support',
                     'Documentation management',
@@ -186,14 +169,14 @@ return [
                 'style' => 'featured',
                 'title' => 'Employer brand & engagement',
                 'text' => 'EVP, career content, performance frameworks and pulse insights.',
-                'image' => 'assets/frontend/img/hraas/hraas-v3-deliverable-brand.png',
+                'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
             ],
             [
                 'style' => 'standard',
                 'title' => 'HR technology roadmap',
                 'text' => 'Assessment, tool selection, implementation and analytics setup.',
                 'icon' => 'ri-cpu-line',
-                'image' => 'assets/frontend/img/hraas/hraas-v3-deliverable-tech.png',
+                'image' => 'assets/frontend/img/hraas/hraas-health-check.webp',
                 'bullets' => [
                     'HR tech assessment',
                     'Implementation roadmap',
@@ -237,7 +220,7 @@ return [
         'content' => 'Build a tailored HRaaS plan — scope, modules, reporting rhythm and technology priorities aligned to your growth stage.',
         'button' => 'Build My HRaaS Plan',
         'secondary' => 'Speak to an HR Advisor',
-        'image' => 'assets/frontend/img/hraas/hraas-v3-cta-person.png',
-        'bg_image' => 'assets/frontend/img/hraas/hraas-v3-cta-bg.png',
+        'image' => 'assets/admin/image/case-study/jyogi-team.webp',
+        'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
     ],
 ];

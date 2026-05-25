@@ -4,17 +4,6 @@
  * Category page: Talent Acquisition & Staffing Excellence
  */
 return [
-    'sections' => [
-        'hero',
-        'risk',
-        'services',
-        'framework',
-        'workplace_integrity',
-        'deliverables',
-        'suitable_for',
-        'sub_services',
-    ],
-
     'meta' => [
         'title' => 'Talent Acquisition & Staffing Excellence | Mirashka',
         'description' => 'Flexible, scalable hiring — IT staffing, general staffing, apprenticeships, RPO and executive search focused on quality and fit.',
@@ -26,7 +15,7 @@ return [
         'tagline' => 'Flexible, scalable hiring solutions to power your workforce.',
         'content' => 'Mirashka helps businesses hire faster and smarter through IT staffing, general staffing, apprenticeship support, specialist recruitment, RPO and executive search. We work as an extended hiring engine focused on quality, speed and cultural fit.',
         'headline' => 'Talent matched to your timeline',
-        'image' => 'assets/frontend/img/talent-acquisition/ta-hero-hiring.png',
+        'image' => 'assets/admin/image/banner/hr-advisory.webp',
         'primary_cta' => 'Start Hiring Support',
         'secondary_cta' => 'Speak to a Hiring Advisor',
     ],
@@ -35,8 +24,7 @@ return [
         'heading' => 'Good talent is available, but finding fit is difficult',
         'lead' => 'Open roles stay vacant, hiring managers lose time to screening, and mis-hires create costly rework.',
         'content' => 'Mirashka brings structured sourcing, screening and reporting so you hire people who fit skills, culture and timeline — not just résumés.',
-        'image' => 'assets/frontend/img/talent-acquisition/ta-risk-hiring-challenges.png',
-        'visual_alt' => 'Hiring challenges — vacant roles and inconsistent screening',
+        'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
         'cta' => 'Speak to a Hiring Advisor',
         'risks' => [
             'Long time-to-fill on critical roles',
@@ -51,7 +39,7 @@ return [
         'before_title' => 'Services Overview',
         'heading' => 'Hiring models for every workforce need',
         'content' => 'From IT and general staffing to apprenticeships, specialist recruitment, RPO and executive search — one partner for hiring excellence.',
-        'image' => 'assets/frontend/img/talent-acquisition/ta-services-recruitment.png',
+        'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
         'image_alt' => 'Hiring models for every workforce need',
         'items' => [
             [
@@ -127,8 +115,8 @@ return [
         'eyebrow' => 'Candidate Quality Framework',
         'heading' => 'Hire for fit — not just availability',
         'content' => 'We evaluate skills, motivation, communication and culture alignment so hiring managers spend time only on candidates worth interviewing.',
-        'image' => 'assets/frontend/img/talent-acquisition/ta-candidate-quality.png',
-        'image_alt' => 'Structured candidate screening and culture-fit assessment',
+        'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+        'image_alt' => 'Hire for fit — not just availability',
         'theme' => 'dark',
         'features' => [
             [
@@ -170,7 +158,7 @@ return [
                 'title' => 'Candidate shortlists',
                 'text' => 'Screened candidates with fit notes and interview readiness.',
                 'icon' => 'ri-user-follow-line',
-                'image' => 'assets/frontend/img/talent-acquisition/ta-deliverable-shortlists.png',
+                'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
                 'bullets' => [
                     'Role requirement mapping',
                     'Screening scorecards',
@@ -181,14 +169,14 @@ return [
                 'style' => 'featured',
                 'title' => 'RPO hiring command center',
                 'text' => 'Dedicated recruiter, pipeline management and weekly hiring dashboard.',
-                'image' => 'assets/frontend/img/talent-acquisition/ta-deliverable-rpo.png',
+                'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
             ],
             [
                 'style' => 'standard',
                 'title' => 'Executive search pack',
                 'text' => 'Confidential outreach, evaluation reports and selection support.',
                 'icon' => 'ri-briefcase-line',
-                'image' => 'assets/frontend/img/talent-acquisition/ta-deliverable-executive.png',
+                'image' => 'assets/admin/image/banner/hr-advisory.webp',
                 'bullets' => [
                     'Market mapping',
                     'Confidential outreach',
@@ -232,7 +220,7 @@ return [
         'content' => 'Hiring support assessment with role prioritization, channel strategy and recommended staffing model for your timeline.',
         'button' => 'Start Hiring Support',
         'secondary' => 'Speak to a Hiring Advisor',
-        'image' => 'assets/frontend/img/talent-acquisition/ta-cta-hiring.png',
-        'bg_image' => 'assets/frontend/img/talent-acquisition/ta-hero-hiring.png',
+        'image' => 'assets/admin/image/case-study/jyogi-team.webp',
+        'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
     ],
 ];
