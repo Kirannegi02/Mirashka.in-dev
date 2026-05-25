@@ -164,28 +164,28 @@
 
 <div class="whatwedo-pane active" data-whatwedo-pane="compliance-integrity" role="tabpanel">
   <div class="whatwedo-cards">
-    <a href="https://mirashka.in/service/expert-legal-hr-consultations/" class="whatwedo-card">
+    <a href="{{ route('compliance.sub', 'expert-legal-hr-consultations') }}" class="whatwedo-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/expert-legal-and-HR-consultation.webp" alt="Expert legal and HR consultations" class="whatwedo-card-img" loading="lazy">
       <h5 class="whatwedo-card-title">Expert Legal &amp; HR Consultations</h5>
       <span class="whatwedo-card-divider"></span>
       <span class="whatwedo-link">Read More <i class="ri-arrow-right-line"></i></span>
     </a>
 
-    <a href="https://mirashka.in/service/policy-documentation-excellence/" class="whatwedo-card">
+    <a href="{{ route('compliance.sub', 'policy-documentation-excellence') }}" class="whatwedo-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/pollution-documentation-excellence2.webp" alt="Policy and documentation excellence" class="whatwedo-card-img" loading="lazy">
       <h5 class="whatwedo-card-title">Policy &amp; Documentation Excellence</h5>
       <span class="whatwedo-card-divider"></span>
       <span class="whatwedo-link">Read More <i class="ri-arrow-right-line"></i></span>
     </a>
 
-    <a href="https://mirashka.in/service/compliance-risk-assessments/" class="whatwedo-card">
+    <a href="{{ route('compliance.sub', 'compliance-risk-assessments') }}" class="whatwedo-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/compliance-and-risk-assessment.webp" alt="Compliance and risk assessments" class="whatwedo-card-img" loading="lazy">
       <h5 class="whatwedo-card-title">Compliance &amp; Risk Assessments</h5>
       <span class="whatwedo-card-divider"></span>
       <span class="whatwedo-link">Read More <i class="ri-arrow-right-line"></i></span>
     </a>
 
-    <a href="https://mirashka.in/service/workplace-ethics-prevention-training/" class="whatwedo-card">
+    <a href="{{ route('compliance.sub', 'workplace-ethics-training') }}" class="whatwedo-card">
       <img src="https://mirashka.co.in/wp-content/uploads/2024/06/workplace-ethics-prevention-training.webp" alt="Workplace ethics and prevention training" class="whatwedo-card-img" loading="lazy">
       <h5 class="whatwedo-card-title">Workplace Ethics &amp; Prevention Training</h5>
       <span class="whatwedo-card-divider"></span>

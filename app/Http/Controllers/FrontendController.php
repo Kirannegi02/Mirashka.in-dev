@@ -75,6 +75,26 @@ class FrontendController extends Controller
         return view('frontend.pages.compliance-workplace-integrity', compact('data'));
     }
 
+    public function complianceSubService(string $slug)
+    {
+        $services = config('compliance-sub-services.services', []);
+
+        if (! isset($services[$slug])) {
+            abort(404);
+        }
+
+        $service = $services[$slug];
+        $meta = $service['meta'] ?? [];
+
+        $data = [
+            'title' => $meta['title'] ?? 'Compliance | Mirashka',
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.compliance.sub-service', compact('data', 'service', 'slug'));
+    }
+
     public function whymirashka()
     {
         $meta = config('why_mirashka.meta', []);

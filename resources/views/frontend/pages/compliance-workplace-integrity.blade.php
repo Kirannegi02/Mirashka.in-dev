@@ -3,6 +3,8 @@
 @php
     $page = config('compliance-workplace-integrity');
     $hero = $page['hero'];
+    $complianceSubServices = config('compliance-sub-services.services', []);
+    $complianceServiceSlugs = array_keys($complianceSubServices);
 @endphp
 
 @section('content')
@@ -372,6 +374,12 @@
         line-height: 1.55;
         color: rgba(255, 255, 255, 0.72);
     }
+    .cwi-services-step__link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .cwi-services-step__link:hover { color: var(--cwi-mint); }
     .cwi-services__media {
         margin: 0;
         border-radius: 14px;
@@ -819,7 +827,42 @@
         color: var(--cwi-slate);
     }
 
-    /* 8. CTA — light band with dark card (Guardian close) */
+    /* Sub-service nav cards (shared with sub-pages) */
+    .cwi-related-services__card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #e8edf2;
+        height: 100%;
+        transition: box-shadow 0.25s ease;
+    }
+    .cwi-related-services__card:hover { box-shadow: 0 12px 32px rgba(0, 96, 57, 0.12); }
+    .cwi-related-services__card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+    .cwi-related-services__body { padding: 20px 20px 22px; }
+    .cwi-related-services__body h3 {
+        margin: 0 0 12px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--cwi-navy);
+        line-height: 1.35;
+    }
+    .cwi-related-services__body h3 a { color: inherit; text-decoration: none; }
+    .cwi-related-services__link {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--cwi-green);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+    .cwi-related-services__link:hover { color: var(--cwi-navy); }
+
+    /* 8. CTA — shared partial */
     .cwi-cta { padding: 48px 0 0; background: #f6f8f7; }
     #faqs-compliance.mirashka-faq-category {
         padding-top: 28px;
@@ -1051,11 +1094,18 @@
         <div class="cwi-services__process">
             <div class="cwi-services__col cwi-services__col--left">
                 @foreach($serviceLeft as $service)
+                    @php $serviceIndex = $loop->index; @endphp
                     <article class="cwi-services-step cwi-reveal">
                         <span class="cwi-services-step__watermark" aria-hidden="true">{{ $service['step'] }}</span>
                         <span class="cwi-services-step__icon" aria-hidden="true"><i class="{{ $service['icon'] }}"></i></span>
                         <div class="cwi-services-step__body">
-                            <h3>{{ $service['title'] }}</h3>
+                            <h3>
+                                @if(isset($complianceServiceSlugs[$serviceIndex]))
+                                    <a href="{{ route('compliance.sub', $complianceServiceSlugs[$serviceIndex]) }}" class="cwi-services-step__link">{{ $service['title'] }}</a>
+                                @else
+                                    {{ $service['title'] }}
+                                @endif
+                            </h3>
                             <p>{{ $service['text'] }}</p>
                         </div>
                     </article>
@@ -1074,11 +1124,18 @@
 
             <div class="cwi-services__col cwi-services__col--right">
                 @foreach($serviceRight as $service)
+                    @php $serviceIndex = $loop->index + 2; @endphp
                     <article class="cwi-services-step cwi-services-step--right cwi-reveal">
                         <span class="cwi-services-step__watermark" aria-hidden="true">{{ $service['step'] }}</span>
                         <span class="cwi-services-step__icon" aria-hidden="true"><i class="{{ $service['icon'] }}"></i></span>
                         <div class="cwi-services-step__body">
-                            <h3>{{ $service['title'] }}</h3>
+                            <h3>
+                                @if(isset($complianceServiceSlugs[$serviceIndex]))
+                                    <a href="{{ route('compliance.sub', $complianceServiceSlugs[$serviceIndex]) }}" class="cwi-services-step__link">{{ $service['title'] }}</a>
+                                @else
+                                    {{ $service['title'] }}
+                                @endif
+                            </h3>
                             <p>{{ $service['text'] }}</p>
                         </div>
                     </article>
@@ -1227,24 +1284,36 @@
     </div>
 </section>
 
-{{-- 8. CTA --}}
-<section class="cwi-cta">
-    <div class="container cwi-reveal">
-        <div class="cwi-cta__card" style="background-image: url({{ asset($page['cta']['bg_image']) }});">
-            <div class="cwi-cta__overlay">
-                <div class="cwi-cta__copy">
-                    <h2>{{ $page['cta']['heading'] }}</h2>
-                    <p>{{ $page['cta']['content'] }}</p>
-                    <div class="cwi-cta__actions theme_btn_all color_two">
-                        <a href="{{ route('projectenquiries') }}" class="theme-btn one">{{ $page['cta']['button'] }} <i class="icon-right-arrow"></i></a>
-                        <a href="{{ route('projectenquiries') }}" class="theme-btn two">{{ $page['cta']['secondary'] }}</a>
-                    </div>
-                </div>
-                <img class="cwi-cta__person d-none d-lg-block" src="{{ asset($page['cta']['image']) }}" alt="" loading="lazy" aria-hidden="true">
+{{-- 8. Sub-service cards --}}
+@if(count($complianceSubServices))
+<section class="cwi-sub-services-nav cwi-section--light" style="padding: 64px 0 48px; background: #f6f8f7;">
+    <div class="container">
+        <div class="title_all_box style_one text-center dark_color cwi-reveal">
+            <div class="title_sections">
+                <div class="before_title">Explore Services</div>
+                <h2 class="title">Compliance solutions in detail</h2>
             </div>
+        </div>
+        <div class="row gutter_30px" style="margin-top: 32px;">
+            @foreach($complianceSubServices as $subSlug => $sub)
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article class="cwi-related-services__card cwi-reveal">
+                        <a href="{{ route('compliance.sub', $subSlug) }}">
+                            <img src="{{ asset($sub['card']['image']) }}" alt="{{ $sub['card']['title'] }}" loading="lazy">
+                        </a>
+                        <div class="cwi-related-services__body">
+                            <h3><a href="{{ route('compliance.sub', $subSlug) }}">{{ $sub['card']['title'] }}</a></h3>
+                            <a href="{{ route('compliance.sub', $subSlug) }}" class="cwi-related-services__link">Read More <i class="icon-right-arrow"></i></a>
+                        </div>
+                    </article>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>
+@endif
+
+@include('frontend.layouts.common.sections.compliance.cta')
 
 </div>
 

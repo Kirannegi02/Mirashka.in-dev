@@ -53,6 +53,9 @@ Route::get('/podcasting-services', [FrontendController::class, 'podcastingservic
 Route::get('/what-we-do', [FrontendController::class, 'whatwedo'])->name('whatwedo');
 Route::get('/hraas', [FrontendController::class, 'hraas'])->name('hraas');
 Route::get('/compliance-workplace-integrity', [FrontendController::class, 'compliance'])->name('compliance');
+Route::get('/compliance-workplace-integrity/{slug}', [FrontendController::class, 'complianceSubService'])
+    ->where('slug', 'expert-legal-hr-consultations|policy-documentation-excellence|compliance-risk-assessments|workplace-ethics-training')
+    ->name('compliance.sub');
 Route::redirect('/hraas/compliance-workplace-integrity', '/compliance-workplace-integrity', 301);
 Route::get('/why-mirashka', [FrontendController::class, 'whymirashka'])->name('whymirashka');
 Route::get('/partnerships-contact', [FrontendController::class, 'partnershipscontact'])->name('partnershipscontact');
