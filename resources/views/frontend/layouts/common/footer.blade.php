@@ -6,7 +6,7 @@
                <img class="mir-footer-logo" src="https://mirashka.digital/assets/frontend/img/logo.png" alt="Mirashka logo">
             </a>
             <p class="mt-4 mb-2 mir-footer-about">
-               Mirashka is a design-led growth partner unifying brand, technology, and marketing into one operating system. Through its SPROUT framework, we launch products, build demand, secure trust, and scale revenue with disciplined execution, transparent dashboards, and repeatable, founder-friendly playbooks that scale.
+               Mirashka turns people challenges into growth systems—combining HRaaS, talent, compliance, leadership and technology to help businesses build stronger teams and future-ready organizations.
             </p>
          </div>
 

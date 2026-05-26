@@ -1,5 +1,7 @@
-
-<section class="blog-section bg_light_1">
+@php
+   $insights = request()->is('/') ? config('home-bottom.insights', []) : [];
+@endphp
+<section class="blog-section bg_light_1 blogs-section">
    <div class="pd_top_80"></div>
 
    <div class="container">
@@ -10,15 +12,17 @@
            <div class="col-lg-8">
               <div class="title_all_box style_one dark_color">
                  <div class="title_sections">
-                    <div class="before_title">Find Out Our</div>
-                    <h2>Insights &amp; Intelligence</h2>
-                    
+                    <div class="before_title">{{ $insights['label'] ?? 'Find Out Our' }}</div>
+                    <h2>{{ $insights['heading'] ?? 'Insights & Intelligence' }}</h2>
+                    @if(!empty($insights['subheading']))
+                       <p class="home-insights__subheading">{{ $insights['subheading'] }}</p>
+                    @endif
                  </div>
               </div>
            </div>
            <div class="col-lg-4">
               <div class="theme_btn_all color_one text-md-end">
-                 <a href="{{ url('blog/') }}" class="theme-btn one">Explore All Insights</a>
+                 <a href="{{ url('blog/') }}" class="theme-btn one">{{ $insights['cta'] ?? 'Explore All Insights' }}</a>
                  <div class="pd_bottom_30"></div>
               </div>
            </div>
@@ -89,3 +93,15 @@
 
    <div class="pd_bottom_60"></div>
 </section>
+@if(request()->is('/'))
+<style>
+   .home-insights__subheading {
+      margin: 12px 0 0;
+      max-width: 40rem;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #555;
+      font-weight: 400;
+   }
+</style>
+@endif

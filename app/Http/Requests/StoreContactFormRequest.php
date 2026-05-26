@@ -18,6 +18,18 @@ class StoreContactFormRequest extends FormRequest
             $normalized['message'] = $this->input('project_details');
         }
 
+        $extras = [];
+        if ($this->filled('team_size')) {
+            $extras[] = 'Team Size: '.$this->input('team_size');
+        }
+        if ($this->filled('service_required')) {
+            $extras[] = 'Service Required: '.$this->input('service_required');
+        }
+        if ($extras !== []) {
+            $prefix = implode("\n", $extras)."\n\n";
+            $normalized['message'] = $prefix.($this->input('message') ?? '');
+        }
+
         if (! empty($normalized)) {
             $this->merge($normalized);
         }
@@ -42,8 +54,10 @@ class StoreContactFormRequest extends FormRequest
             'name'         => 'required|string|max:255',
             'phone'        => 'required|string|max:20',
             'email'        => 'required|email',
-            'company_name' => 'nullable|string|max:255',
-            'message'      => 'required|string',
+            'company_name'      => 'nullable|string|max:255',
+            'team_size'         => 'nullable|string|max:100',
+            'service_required'  => 'nullable|string|max:255',
+            'message'           => 'required|string',
         ];
     }
 }

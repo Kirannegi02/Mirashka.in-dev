@@ -368,8 +368,8 @@
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections">
                      <div class="before_title text-white">Our Methodology</div>
-                     <h2 class="text-white">From Discovery to Dominance</h2>
-                     <p class="text-white">A proven seven-step engagement path: Discover → Diagnose → Strategise → Craft → Engage → Amplify → Report & Optimise. Each stage crafted to turn CXO narratives into measurable media impact.</p>
+                     <h2 class="text-white">From HR discovery to workforce excellence</h2>
+                     <p class="text-white">Mirashka follows a structured engagement methodology that converts HR requirements into measurable execution. We do not start with random hiring or scattered advisory. We begin with diagnosis, build the right HR roadmap, deploy systems and continuously optimize the people function.</p>
                   </div>
                   <!--===============spacing==============-->
                   <div class="pd_bottom_20"></div>

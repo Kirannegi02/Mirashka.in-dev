@@ -217,7 +217,14 @@ $(document).ready(function() {
 function creote_swiper_options() {
     var swiperElements = document.querySelectorAll('.swiper-container');
     swiperElements.forEach(function(swiperElement) {
-      var swiperOptions = JSON.parse(swiperElement.getAttribute('data-swiper'));
+      if (swiperElement.getAttribute('data-swiper-manual') === 'true') {
+        return;
+      }
+      var swiperAttr = swiperElement.getAttribute('data-swiper');
+      if (!swiperAttr) {
+        return;
+      }
+      var swiperOptions = JSON.parse(swiperAttr);
       new Swiper(swiperElement, swiperOptions);
     });
 }

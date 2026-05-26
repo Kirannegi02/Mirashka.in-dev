@@ -1,13 +1,17 @@
+@php
+    $finalCta = request()->is('/') ? config('home-bottom.final_cta', []) : [];
+    $showEnquiryForm = ! request()->is('/');
+@endphp
+@if($showEnquiryForm)
 <section class="cm-support-section pricing-section doc-plan">
     <div class="container px-2">
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="section-header-one">
-                    <h2 class="section-title">You are one step closer to building<br> your next growth chapter</h2>
+                    <h2 class="section-title">{!! $finalCta['heading'] ?? 'You are one step closer to building<br> your next growth chapter' !!}</h2>
                     <div class="middle mt-2"></div>
                     <p>
-                        Share your goals and project requirements with Mirashka. Our team will review your brief and
-                        connect with a practical strategy across brand, technology, and performance marketing.
+                        {{ $finalCta['intro'] ?? 'Share your goals and project requirements with Mirashka. Our team will review your brief and connect with a practical strategy across brand, technology, and performance marketing.' }}
                     </p>
                 </div>
             </div>
@@ -17,14 +21,13 @@
                 <div class="card pricing-card pricing-card-active rounded-10 doc-plan-rise w-100 h-100">
                     <div class="card-body">
                         <div class="pricing-header">
-                            <img src="{{ asset('assets/frontend/img/page/contact.jpg') }}" alt="What is included" class="doc-plan-card-img">
+                            <img src="{{ asset($finalCta['sidebar_image'] ?? 'assets/frontend/img/page/contact.jpg') }}" alt="{{ $finalCta['sidebar_image_alt'] ?? 'What is included' }}" class="doc-plan-card-img">
                         </div>
                         <div class="pricing-info">
-                            <h2 class="text-white">What you get</h2>
+                            <h2 class="text-white">{{ $finalCta['sidebar_title'] ?? 'What you get' }}</h2>
                             <hr class="doc-plan-card-divider">
                             <p class="text-white mb-0">
-                                Discovery call, execution roadmap, and transparent next steps tailored to your business goals,
-                                team structure, timeline, and expected outcomes.
+                                {{ $finalCta['sidebar_text'] ?? 'Discovery call, execution roadmap, and transparent next steps tailored to your business goals, team structure, timeline, and expected outcomes.' }}
                             </p>
                         </div>
                     </div>
@@ -57,19 +60,19 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="doc-plan-field">
-                                        <label class="doc-plan-label mb-2" for="project-enquiry-project">Project Name <span class="text-danger">*</span></label>
-                                        <input type="text" id="project-enquiry-project" class="form-control form-control-sm" name="project_name" placeholder="Enter project name" required>
+                                        <label class="doc-plan-label mb-2" for="project-enquiry-project">{{ $finalCta['form_project_label'] ?? 'Project Name' }} <span class="text-danger">*</span></label>
+                                        <input type="text" id="project-enquiry-project" class="form-control form-control-sm" name="project_name" placeholder="{{ $finalCta['form_project_placeholder'] ?? 'Enter project name' }}" required>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="doc-plan-field">
-                                        <label class="doc-plan-label mb-2" for="project-enquiry-details">Project Details <span class="text-danger">*</span></label>
-                                        <textarea class="form-control form-control-sm doc-plan-textarea" id="project-enquiry-details" rows="2" name="project_details" placeholder="Describe your project..." required></textarea>
+                                        <label class="doc-plan-label mb-2" for="project-enquiry-details">{{ $finalCta['form_details_label'] ?? 'Project Details' }} <span class="text-danger">*</span></label>
+                                        <textarea class="form-control form-control-sm doc-plan-textarea" id="project-enquiry-details" rows="2" name="project_details" placeholder="{{ $finalCta['form_details_placeholder'] ?? 'Describe your project...' }}" required></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group-btn mb-0 pt-1">
-                                <button type="submit" class="btn btn-primary prime-btn submitBtn" id="project-enquiry-submit">Submit Enquiry</button>
+                                <button type="submit" class="btn btn-primary prime-btn submitBtn" id="project-enquiry-submit">{{ $finalCta['submit_label'] ?? 'Submit Enquiry' }}</button>
                             </div>
                         </form>
                     </div>
@@ -334,6 +337,7 @@
         }
     }
 </style>
+@endif
 <section class="way-section py-2">
     <div class="container px-2">
         <div class="way-bg">
@@ -349,15 +353,15 @@
             <div class="row align-items-end mx-0">
                 <div class="col-lg-7 col-md-12 px-2">
                     <div class="section-inner-header way-inner-header mb-0 py-2">
-                        <h2>Take the first step towards accelerating your brand and business</h2>
-                        <p>Get strategic clarity and expert execution tailored for your growth journey. Start today for stronger outcomes and scalable momentum</p>
-                        <a href="{{ url('/project-enquiries') }}" class="btn btn-primary">Contact Us</a>
+                        <h2>{{ $finalCta['way_heading'] ?? 'Take the first step towards accelerating your brand and business' }}</h2>
+                        <p>{{ $finalCta['way_text'] ?? 'Get strategic clarity and expert execution tailored for your growth journey. Start today for stronger outcomes and scalable momentum' }}</p>
+                        <a href="{{ url($finalCta['way_button_url'] ?? '/project-enquiries') }}" class="btn btn-primary">{{ $finalCta['way_button'] ?? 'Contact Us' }}</a>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-12 px-2">
                     <div class="way-img">
-                        <img src="{{ asset('assets/frontend/img/page/contactUs.png') }}" class="img-fluid" alt="doctor-way-image">
+                        <img src="{{ asset($finalCta['way_image'] ?? 'assets/frontend/img/page/contactUs.png') }}" class="img-fluid" alt="{{ $finalCta['way_image_alt'] ?? 'Contact Mirashka HR' }}">
                     </div>
                 </div>
             </div>
