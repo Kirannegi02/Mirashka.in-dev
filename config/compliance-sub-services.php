@@ -75,13 +75,13 @@ return [
                         'label' => 'Issues We Support',
                         'heading' => 'Issues We Support',
                         'content' => 'Disciplinary actions, performance exits, leave disputes, contract interpretation, POSH queries and manager escalations.',
-                        'image' => 'assets/frontend/img/compliance/cwi-integrity.png',
+                        'image' => 'assets/frontend/img/compliance/cwi-risk.png',
                     ],
                     [
                         'label' => 'How Consultation Works',
                         'heading' => 'How Consultation Works',
                         'content' => 'Structured intake, fact review, options with risk implications and a recommended path aligned to labour law and your culture.',
-                        'image' => 'assets/frontend/img/compliance/cwi-risk.png',
+                        'image' => 'assets/frontend/img/compliance/cwi-deliverable-audit.png',
                     ],
                     [
                         'label' => 'Documentation Support',
@@ -119,15 +119,15 @@ return [
                 'tag' => 'Expert Consultation',
                 'title' => 'Practical HR and legal guidance before critical people decisions',
                 'content' => 'We sit with your founders and HR team to review facts, interpret policy and recommend a defensible course of action before letters go out or disputes begin.',
-                'image' => 'assets/frontend/img/compliance/cwi-card-legal.png',
-                'image_position' => '72% center',
+                'image' => 'assets/frontend/img/compliance/cwi-integrity.png',
+                'image_position' => 'center center',
             ],
             'page_cta' => [
                 'button' => 'Speak to an HR Advisor',
                 'secondary' => 'Get Compliance Readiness Review',
             ],
             'bottom_cta' => [
-                'image' => 'assets/frontend/img/compliance/cwi-deliverable-audit.png',
+                'image' => 'assets/frontend/img/compliance/cwi-card-legal.png',
                 'bg_image' => 'assets/frontend/img/compliance/cwi-cta-bg.png',
             ],
             'outcome' => [
@@ -170,7 +170,7 @@ return [
             'experience' => [
                 'heading' => 'Create clarity before critical people decisions',
                 'content' => 'Mirashka gives business owners and HR teams practical HR and legal consultation — so you interpret policy correctly, manage risk and document every step before disputes begin.',
-                'image' => 'assets/frontend/img/compliance/cwi-hero.png',
+                'image' => 'assets/frontend/img/compliance/cwi-deliverable-audit.png',
                 'cta' => 'Speak to an HR Advisor',
                 'pillars' => [
                     [

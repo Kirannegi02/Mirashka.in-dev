@@ -193,8 +193,17 @@
     .hraas-dashboard-pane__bg {
         position: absolute;
         inset: 0;
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
+        background: #1a2332;
+    }
+    .hraas-dashboard-pane__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
     }
     .hraas-dashboard-pane__overlay {
         position: absolute;
@@ -240,10 +249,10 @@
         position: relative;
         overflow: hidden;
         line-height: 0;
-        background: #e8edf2;
+        background: #0f172a;
         aspect-ratio: 16 / 9;
-        min-height: 260px;
-        max-height: 320px;
+        min-height: 280px;
+        max-height: 360px;
         width: 100%;
         display: block;
     }
@@ -253,11 +262,8 @@
         min-width: 100%;
         min-height: 100%;
         object-fit: cover;
+        object-position: var(--cwi-focus-position, center center);
         display: block;
-    }
-    .cwi-sub-page .cwi-focus-split .hraas-focus-card__image img {
-        transform: scale(1.14);
-        transform-origin: center center;
     }
     .cwi-focus-split .hraas-focus-card__body {
         padding: 26px 28px 30px;

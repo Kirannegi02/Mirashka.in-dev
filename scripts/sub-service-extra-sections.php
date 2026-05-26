@@ -40,7 +40,7 @@ return [
             'experience' => [
                 'heading' => 'Create clarity before critical people decisions',
                 'content' => 'Mirashka gives business owners and HR teams practical HR and legal consultation — so you interpret policy correctly, manage risk and document every step before disputes begin.',
-                'image' => 'assets/frontend/img/compliance/cwi-hero.png',
+                'image' => 'assets/frontend/img/compliance/cwi-deliverable-audit.png',
                 'cta' => 'Speak to an HR Advisor',
                 'pillars' => [
                     ['num' => '01', 'title' => 'When You Need Expert Guidance'],
@@ -175,6 +175,96 @@ return [
                     ['num' => '01', 'title' => 'POSH Awareness'],
                     ['num' => '02', 'title' => 'Manager Sensitization'],
                     ['num' => '03', 'title' => 'Certificate & Record Keeping'],
+                ],
+            ],
+        ],
+    ],
+    'leadership' => [
+        'ceo-succession-performance-acceleration' => [
+            'standout' => [
+                'before_title' => 'Why Mirashka',
+                'heading' => 'Stand Out From The Rest',
+                'grid' => [
+                    'left_image' => 'assets/frontend/img/leadership/ldr-card-assessment.png',
+                    'left_card' => [
+                        'icon' => 'ri-user-star-line',
+                        'title' => 'Succession Readiness',
+                        'text' => 'Assess CEO and leadership bench strength before transition risk becomes a business crisis.',
+                    ],
+                    'center' => [
+                        'icon' => 'ri-line-chart-line',
+                        'title' => 'What We Deliver',
+                        'text' => 'Structured succession planning, performance acceleration and board-aligned leadership development.',
+                        'list' => [
+                            'Succession Planning',
+                            'CEO Performance Acceleration',
+                            'Leadership Pipeline Review',
+                            'Board Alignment',
+                        ],
+                        'cta' => 'Start Leadership Readiness Review',
+                    ],
+                    'right_card' => [
+                        'icon' => 'ri-award-line',
+                        'title' => 'Ready for the Next Chapter',
+                        'text' => 'Clear milestones, coaching cadence and governance reporting your board can track.',
+                    ],
+                    'right_image' => 'assets/frontend/img/leadership/ldr-deliverable-search.png',
+                ],
+            ],
+            'experience' => [
+                'heading' => 'Prepare leaders before the transition moment arrives',
+                'content' => 'Mirashka partners with boards and CEOs on succession readiness, performance acceleration and leadership pipeline depth — with practical plans your organization can execute.',
+                'image' => 'assets/frontend/img/leadership/ldr-cta-advisory.png',
+                'cta' => 'Start Leadership Readiness Review',
+                'pillars' => [
+                    ['num' => '01', 'title' => 'Succession Planning'],
+                    ['num' => '02', 'title' => 'CEO Performance Acceleration'],
+                    ['num' => '03', 'title' => 'Leadership Pipeline Review'],
+                ],
+            ],
+        ],
+    ],
+    'hraas' => [
+        'employee-engagement-performance' => [
+            'standout' => [
+                'before_title' => 'Why Mirashka',
+                'heading' => 'Stand Out From The Rest',
+                'grid' => [
+                    'left_image' => 'assets/frontend/img/hraas/hraas-v3-deliverable-ops.png',
+                    'left_card' => [
+                        'icon' => 'ri-emotion-happy-line',
+                        'title' => 'Engagement That Drives Performance',
+                        'text' => 'Programs, KRAs and review cadence designed for real manager follow-through — not annual paperwork alone.',
+                    ],
+                    'center' => [
+                        'icon' => 'ri-bar-chart-box-line',
+                        'title' => 'What We Deliver',
+                        'text' => 'Engagement frameworks, performance structures and feedback loops aligned to business outcomes.',
+                        'list' => [
+                            'Engagement Program Design',
+                            'KRA & Goal Frameworks',
+                            'Review Cadence',
+                            'Manager Feedback Loops',
+                        ],
+                        'cta' => 'Build My HRaaS Plan',
+                    ],
+                    'right_card' => [
+                        'icon' => 'ri-team-line',
+                        'title' => 'Retain Your Best People',
+                        'text' => 'Connect culture, performance and retention drivers with leadership-ready reporting.',
+                    ],
+                    'right_image' => 'assets/frontend/img/hraas/hraas-leadership-spotlight.webp',
+                ],
+            ],
+            'experience' => [
+                'heading' => 'Turn engagement into measurable performance',
+                'content' => 'We design engagement programs, performance review structures, goal-setting frameworks and manager communication routines that improve productivity and retention.',
+                'image' => 'assets/frontend/img/hraas/hraas-expert-digital.webp',
+                'cta' => 'Build My HRaaS Plan',
+                'pillars' => [
+                    ['num' => '01', 'title' => 'Engagement Program Design'],
+                    ['num' => '02', 'title' => 'KRA & Goal Frameworks'],
+                    ['num' => '03', 'title' => 'Review Cadence'],
                 ],
             ],
         ],

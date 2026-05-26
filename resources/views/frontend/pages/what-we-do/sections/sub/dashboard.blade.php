@@ -34,11 +34,15 @@
                         data-hraas-dashboard-pane="{{ $index }}"
                         role="tabpanel"
                     >
-                        <div
-                            class="hraas-dashboard-pane__bg"
-                            style="background-image: url('{{ asset($tab['image']) }}');"
-                            aria-hidden="true"
-                        ></div>
+                        <div class="hraas-dashboard-pane__bg" aria-hidden="true">
+                            <img
+                                class="hraas-dashboard-pane__img"
+                                src="{{ asset($tab['image']) }}"
+                                alt=""
+                                loading="lazy"
+                                style="object-position: {{ $tab['image_position'] ?? 'center center' }};"
+                            >
+                        </div>
                         <div class="hraas-dashboard-pane__overlay" aria-hidden="true"></div>
                         <div class="hraas-dashboard-pane__inner">
                             <div class="hraas-dashboard-pane__copy">

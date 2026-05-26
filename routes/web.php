@@ -51,8 +51,7 @@ Route::get('/project-enquiries', [FrontendController::class, 'projectenquiries']
 Route::get('/policy-advocacy', [FrontendController::class, 'policyadvocacy'])->name('policyadvocacy');
 Route::get('/podcasting-services', [FrontendController::class, 'podcastingservices'])->name('podcastingservices');
 Route::get('/what-we-do', [FrontendController::class, 'whatwedo'])->name('whatwedo');
-Route::redirect('/hraas/compliance-workplace-integrity', '/compliance-workplace-integrity', 301);
-Route::redirect('/hraas', '/hr-as-a-service', 301);
+
 
 foreach (config('what-we-do-categories', []) as $categorySlug => $category) {
     $subSlugs = implode('|', array_keys(config($category['sub_services_config'].'.services', [])));

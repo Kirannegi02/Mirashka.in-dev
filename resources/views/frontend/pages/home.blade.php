@@ -228,6 +228,17 @@
 
 
    <!---about us  --->
+   <style>
+      .about-section .who-we-are-tab-icon {
+         margin-right: 6px;
+         font-size: 1.05em;
+         vertical-align: -2px;
+         color: var(--primary-color-one, #006039);
+      }
+      .about-section .tabs_header ul li a.active .who-we-are-tab-icon {
+         color: inherit;
+      }
+   </style>
    <section class="about-section" id="about">
       <!--===============spacing==============-->
       <div class="pd_bottom_80"></div>
@@ -237,10 +248,10 @@
             <div class="col-xl-6 col-lg-12 col-md-12 mb-sm-5 mb-md-5 mb-lg-5 mb-xl-0">
                <div class="image_boxes style_one">
                   <div class="image one">
-                     <img src="{{ asset('assets/frontend/img/who-we-are.webp') }}" class="img-fluid" alt="who we are first" width="486" height="729" />
+                     <img src="{{ asset('assets/frontend/img/hraas/hraas-v3-partner.png') }}" class="img-fluid" alt="Business leader with HR consultant" width="486" height="729" loading="lazy" />
                   </div>
                   <div class="image two">
-                     <img src="{{ asset('assets/frontend/img/video.webp') }}" class="img-fluid" alt="who-we-are second" width="241" height="241" />
+                     <img src="{{ asset('assets/frontend/img/workforce/wfm-reporting-team-hands.png') }}" class="img-fluid" alt="Team collaboration and onboarding" width="241" height="241" loading="lazy" />
 
                   </div>
                   <div class="year_of_experience">
@@ -257,12 +268,10 @@
                <div class="title_all_box style_one dark_color">
                   <div class="title_sections left">
                      <div class="before_title">Who We Are</div>
-                     <h2>We Elevate CXO Influence & Brand Impact</h2>
+                     <h2>We Build People Systems That Help Businesses Scale</h2>
                      <div class="description_box">
-                        <p>We help CXOs, Corporates & Brands to become industry thought leaders through elite PR and content – delivering brand authority and qualified leads
-                        </p>
-                        <p>At Mirashka, we specialize in premium PR and authority-building for CXOs and corporate leaders—combining top-tier media placements with business-focused storytelling that fuels visibility, credibility, and qualified pipeline growth.
-                        </p>
+                        <p>Mirashka is a Human Resource, staffing and HRaaS partner for startups, MSMEs, family businesses, franchises and growing companies. We help organizations find the right talent, strengthen leadership, manage compliance, streamline HR operations and build people-first systems that support business growth.</p>
+                        <p>At Mirashka, we believe the right people shape the future of businesses. Our mission is to connect visionary leaders with transformative opportunities while helping companies build structured, compliant and high-performing teams.</p>
                      </div>
                      <!--===============spacing==============-->
                      <div class="pd_top_20"></div>
@@ -278,13 +287,13 @@
                      <div class="tabs_header clearfix">
                         <ul class="showcase_tabs_btns nav-pills nav clearfix">
                            <li class="nav-item">
-                              <a class="s_tab_btn nav-link active" data-tab="#tabtabone">Mission</a>
+                              <a class="s_tab_btn nav-link active" data-tab="#tabtabone"><i class="ri-focus-3-line who-we-are-tab-icon" aria-hidden="true"></i> Mission</a>
                            </li>
                            <li class="nav-item">
-                              <a class="s_tab_btn nav-link" data-tab="#tabtabtwo">Vision</a>
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabtwo"><i class="ri-eye-line who-we-are-tab-icon" aria-hidden="true"></i> Vision</a>
                            </li>
                            <li class="nav-item">
-                              <a class="s_tab_btn nav-link" data-tab="#tabtabthree">Values</a>
+                              <a class="s_tab_btn nav-link" data-tab="#tabtabthree"><i class="ri-heart-3-line who-we-are-tab-icon" aria-hidden="true"></i> Values</a>
                            </li>
                         </ul>
                      </div>
@@ -293,27 +302,33 @@
                            <div class="s_tab fade active-tab show" id="tabtabone">
                               <div class="tab_content one">
                                  <div class="content_bx">
-                                    <p>To amplify visionary voices and build reputations that move markets—through insight-driven PR, executive positioning, and creative content.</p>
+                                    <p>To democratize professional HR support through flexible HRaaS models, helping new entrepreneurs, startups and growing companies access the tools, talent and HR systems they need to build and scale.</p>
                                  </div>
                               </div>
                            </div>
                            <div class="s_tab fade" id="tabtabtwo">
                               <div class="tab_content one">
                                  <div class="content_bx">
-                                    <p>To become India’s most respected boutique PR partner for CXOs, founders, and purpose-led brands looking to lead conversations and drive change.</p>
+                                    <p>To become the go-to HR partner for emerging businesses and established enterprises by redefining workforce management with agile, affordable and expert-led HR solutions.</p>
                                  </div>
                               </div>
                            </div>
                            <div class="s_tab fade" id="tabtabthree">
                               <div class="tab_content one">
                                  <div class="content_bx">
-                                    <p>Integrity, agility, and creativity guide us. We listen deeply, act transparently, and stay relentlessly curious to deliver real, lasting impact.</p>
+                                    <p>Integrity, clarity, responsiveness, compliance discipline, people-first thinking and business ownership guide every Mirashka HR engagement.</p>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
+               </div>
+               <!--===============spacing==============-->
+               <div class="pd_top_25"></div>
+               <!--===============spacing==============-->
+               <div class="theme_btn_all color_one">
+                  <a href="{{ route('aboutus') }}" class="theme-btn one">More About Mirashka HR</a>
                </div>
             </div>
          </div>
@@ -328,8 +343,8 @@
                         <img src="{{ asset('assets/frontend/img/1.webp') }}" alt="discover how we transform" width="138" height="190">
                      </div>
                      <div class="con_box">
-                        <h2>Discover how we transform leadership into influence</h2>
-                        <a href="#enquiry">More About Us <i class="icon-right-arrow-long"></i></a>
+                        <h2>Discover how we help businesses build stronger people systems</h2>
+                        <a href="{{ route('aboutus') }}">More About Mirashka HR <i class="icon-right-arrow-long"></i></a>
                      </div>
                   </div>
                </div>
@@ -355,6 +370,246 @@
    </section>
    <!---about us  --->
 
+   {{-- Section 3: Why Mirashka (home-only) --}}
+   <style>
+      .home-why-mirashka {
+         padding: 88px 0 96px;
+         background: linear-gradient(165deg, #0a1410 0%, #0f1f18 38%, #152a22 70%, #0d1612 100%);
+         overflow: hidden;
+      }
+      .home-why-mirashka__inner {
+         max-width: 1400px;
+         margin: 0 auto;
+         padding: 0 28px;
+      }
+      .home-why-mirashka__header {
+         text-align: center;
+         max-width: 1100px;
+         margin: 0 auto 52px;
+         padding: 0;
+      }
+      .home-why-mirashka__eyebrow {
+         display: inline-block;
+         font-size: 12px;
+         font-weight: 700;
+         letter-spacing: 0.14em;
+         text-transform: uppercase;
+         color: #7dcea8;
+         margin-bottom: 14px;
+      }
+      .home-why-mirashka__title {
+         font-size: clamp(1.75rem, 3.8vw, 2.65rem);
+         font-weight: 800;
+         line-height: 1.2;
+         color: #fff;
+         margin: 0 0 16px;
+      }
+      .home-why-mirashka__tagline {
+         font-size: 1.05rem;
+         font-weight: 600;
+         color: rgba(255, 255, 255, 0.92);
+         margin: 0 0 14px;
+         line-height: 1.5;
+      }
+      .home-why-mirashka__intro {
+         font-size: 1rem;
+         line-height: 1.75;
+         color: rgba(255, 255, 255, 0.78);
+         margin: 0;
+      }
+      .home-why-mirashka__stage {
+         display: grid;
+         grid-template-columns: minmax(0, 1fr) minmax(320px, 380px) minmax(0, 1fr);
+         gap: 32px 56px;
+         align-items: center;
+         width: 100%;
+         margin: 0 auto;
+         padding: 0;
+      }
+      .home-why-mirashka__col {
+         display: flex;
+         flex-direction: column;
+         gap: 0;
+      }
+      .home-why-mirashka__col--left {
+         align-items: flex-end;
+         text-align: right;
+      }
+      .home-why-mirashka__col--right {
+         align-items: flex-start;
+         text-align: left;
+      }
+      .home-why-mirashka__card {
+         position: relative;
+         padding: 28px 12px 32px;
+         max-width: 420px;
+         width: 100%;
+      }
+      .home-why-mirashka__card + .home-why-mirashka__card {
+         border-top: 1px solid rgba(125, 206, 168, 0.18);
+      }
+      .home-why-mirashka__card-num {
+         position: absolute;
+         top: 18px;
+         font-size: clamp(3.5rem, 6vw, 5rem);
+         font-weight: 800;
+         line-height: 1;
+         color: rgba(255, 255, 255, 0.06);
+         pointer-events: none;
+         user-select: none;
+      }
+      .home-why-mirashka__col--left .home-why-mirashka__card-num { right: 0; }
+      .home-why-mirashka__col--right .home-why-mirashka__card-num { left: 0; }
+      .home-why-mirashka__card-icon {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 44px;
+         height: 44px;
+         margin-bottom: 14px;
+         color: #7dcea8;
+         font-size: 28px;
+         line-height: 1;
+      }
+      .home-why-mirashka__card h3 {
+         font-size: 1.1rem;
+         font-weight: 700;
+         color: #fff;
+         margin: 0 0 10px;
+         line-height: 1.35;
+         position: relative;
+         z-index: 1;
+      }
+      .home-why-mirashka__card p {
+         font-size: 0.92rem;
+         line-height: 1.65;
+         color: rgba(255, 255, 255, 0.75);
+         margin: 0;
+         position: relative;
+         z-index: 1;
+      }
+      .home-why-mirashka__center {
+         flex-shrink: 0;
+         width: 100%;
+         max-width: 380px;
+      }
+      .home-why-mirashka__center img {
+         display: block;
+         width: 100%;
+         height: auto;
+         min-height: 400px;
+         max-height: 500px;
+         object-fit: cover;
+         border-radius: 20px;
+         box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
+         border: 1px solid rgba(125, 206, 168, 0.2);
+      }
+      .home-why-mirashka__cta-wrap {
+         text-align: center;
+         margin-top: 48px;
+         padding: 0 15px;
+      }
+      .home-why-mirashka__cta {
+         display: inline-flex;
+         align-items: center;
+         gap: 10px;
+         padding: 16px 36px;
+         background: #006039;
+         color: #fff !important;
+         font-size: 0.9rem;
+         font-weight: 700;
+         border-radius: 6px;
+         text-decoration: none;
+         transition: background 0.25s ease, transform 0.25s ease;
+         box-shadow: 0 12px 32px rgba(0, 96, 57, 0.35);
+      }
+      .home-why-mirashka__cta:hover {
+         background: #004d2e;
+         color: #fff !important;
+         transform: translateY(-2px);
+      }
+      @media (max-width: 991px) {
+         .home-why-mirashka__stage {
+            grid-template-columns: 1fr;
+            gap: 0;
+         }
+         .home-why-mirashka__center {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto 8px;
+            order: -1;
+         }
+         .home-why-mirashka__col--left,
+         .home-why-mirashka__col--right {
+            align-items: stretch;
+            text-align: left;
+         }
+         .home-why-mirashka__card {
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+         }
+         .home-why-mirashka__col--left .home-why-mirashka__card-num { left: 0; right: auto; }
+      }
+   </style>
+   <section class="content-section home-why-mirashka" id="home-why-mirashka">
+      <div class="home-why-mirashka__inner">
+         <header class="home-why-mirashka__header">
+            <span class="home-why-mirashka__eyebrow">Why Mirashka</span>
+            <h2 class="home-why-mirashka__title">Why Growing Businesses Choose Mirashka HR</h2>
+            <p class="home-why-mirashka__tagline">Your extended people partner for strategy, hiring, payroll and compliant growth.</p>
+            <p class="home-why-mirashka__intro">Because Mirashka does not work like a conventional placement agency. We work as an extended people partner — combining HR strategy, recruitment execution, payroll coordination, legal and compliance awareness, leadership hiring and HR technology into one practical operating model.</p>
+         </header>
+
+         <div class="home-why-mirashka__stage">
+            <div class="home-why-mirashka__col home-why-mirashka__col--left">
+               <article class="home-why-mirashka__card">
+                  <span class="home-why-mirashka__card-num" aria-hidden="true">01</span>
+                  <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="ri-briefcase-4-line"></i></span>
+                  <h3>End-to-End HR Solutions</h3>
+                  <p>Recruitment, compliance, payroll, documentation, legal support and workforce advisory under one roof.</p>
+               </article>
+               <article class="home-why-mirashka__card">
+                  <span class="home-why-mirashka__card-num" aria-hidden="true">02</span>
+                  <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="ri-user-star-line"></i></span>
+                  <h3>Leadership Hiring Expertise</h3>
+                  <p>Specialized search support for senior roles, CXOs and transformational leaders.</p>
+               </article>
+            </div>
+
+            <div class="home-why-mirashka__center">
+               <img
+                  src="{{ asset('assets/frontend/img/home/home-why-mirashka-hero.png') }}"
+                  alt="Founder and HR consultant reviewing workforce strategy in a modern office"
+                  loading="lazy"
+                  width="300"
+                  height="420"
+               >
+            </div>
+
+            <div class="home-why-mirashka__col home-why-mirashka__col--right">
+               <article class="home-why-mirashka__card">
+                  <span class="home-why-mirashka__card-num" aria-hidden="true">03</span>
+                  <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="ri-shield-check-line"></i></span>
+                  <h3>Tailored Legal &amp; Compliance Support</h3>
+                  <p>Employment-law-aligned guidance, policy support, audits and workplace risk mitigation.</p>
+               </article>
+               <article class="home-why-mirashka__card">
+                  <span class="home-why-mirashka__card-num" aria-hidden="true">04</span>
+                  <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="ri-line-chart-line"></i></span>
+                  <h3>HRaaS Flexibility</h3>
+                  <p>Scalable HR support designed for startups, MSMEs and growing businesses that need expert HR without heavy fixed cost.</p>
+               </article>
+            </div>
+         </div>
+
+         <div class="home-why-mirashka__cta-wrap">
+            <a href="https://calendly.com/elevateonemedia/30min" class="home-why-mirashka__cta" target="_blank" rel="noopener noreferrer">
+               Book Your 30-Minute Discovery Call <i class="ri-arrow-right-line" aria-hidden="true"></i>
+            </a>
+         </div>
+      </div>
+   </section>
 
    <!----CTA END -->
    <section class="contact-section"

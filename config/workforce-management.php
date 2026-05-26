@@ -15,7 +15,7 @@ return [
         'tagline' => 'Streamlining HR operations to drive efficiency, compliance and business growth.',
         'content' => 'Mirashka helps companies move from person-dependent HR operations to process-driven HR systems. We design policies, manage payroll, optimize employee records and provide remote HR support so leadership can focus on business growth.',
         'headline' => 'Make HR operations structured, accurate and scalable',
-        'image' => 'assets/admin/image/banner/hr-advisory.webp',
+        'image' => 'assets/frontend/img/workforce/wfm-hero.png',
         'primary_cta' => 'Optimize Your HR Operations',
         'secondary_cta' => 'Speak to an HR Advisor',
     ],
@@ -24,7 +24,11 @@ return [
         'heading' => 'Manual HR creates delays, errors and confusion',
         'lead' => 'When HR lives in spreadsheets, memory and ad-hoc messages, payroll slips, documentation gaps and employee queries pile up fast.',
         'content' => 'Growing teams need repeatable processes — not heroic effort from one overloaded HR person. Mirashka builds the operating rhythm, records and reporting your leadership can trust.',
-        'image' => 'assets/frontend/img/hraas/hraas-problem-dashboard.webp',
+        'image' => 'assets/frontend/img/workforce/wfm-risk.png',
+        'list_label' => null,
+        'visual_alt' => null,
+        'visual_caption_title' => null,
+        'visual_caption_text' => null,
         'cta' => 'Speak to an HR Advisor',
         'risks' => [
             'Payroll inputs scattered across email and chat',
@@ -39,7 +43,7 @@ return [
         'before_title' => 'Services Overview',
         'heading' => 'Structured support across core HR operations',
         'content' => 'From policy audits and payroll coordination to a dedicated remote HR desk — one integrated path to scalable people operations.',
-        'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
+        'image' => 'assets/frontend/img/workforce/wfm-services-center.png',
         'image_alt' => 'Structured support across core HR operations',
         'items' => [
             [
@@ -97,7 +101,7 @@ return [
         'eyebrow' => 'Remote HR Desk',
         'heading' => 'Your extended HR team — without full-time overhead',
         'content' => 'Mirashka acts as your remote HR desk: dedicated coordination, employee communication, compliance follow-ups and monthly reporting so founders stay focused on growth.',
-        'image' => 'assets/admin/image/case-study/media/jyogi-gallery-engagement.webp',
+        'image' => 'assets/frontend/img/workforce/wfm-remote-feature.png',
         'image_alt' => 'Your extended HR team — without full-time overhead',
         'theme' => 'dark',
         'features' => [
@@ -140,7 +144,7 @@ return [
                 'title' => 'Policy & audit outputs',
                 'text' => 'Reviewed policies, gap reports and implementation guides managers can follow.',
                 'icon' => 'ri-book-2-line',
-                'image' => 'assets/admin/image/banner/hr-advisory.webp',
+                'image' => 'assets/frontend/img/workforce/wfm-card-policy.png',
                 'bullets' => [
                     'Policy gap review',
                     'Compliance alignment',
@@ -151,14 +155,14 @@ return [
                 'style' => 'featured',
                 'title' => 'Payroll & administration pack',
                 'text' => 'Structured payroll inputs, payslip support, statutory coordination and query resolution.',
-                'image' => 'assets/frontend/img/hraas/hraas-hr-dashboard.webp',
+                'image' => 'assets/frontend/img/workforce/wfm-card-payroll.png',
             ],
             [
                 'style' => 'standard',
                 'title' => 'Remote HR desk reporting',
                 'text' => 'Monthly HR summaries, employee records hygiene and compliance follow-up trackers.',
                 'icon' => 'ri-dashboard-line',
-                'image' => 'assets/frontend/img/hraas/hraas-health-check.webp',
+                'image' => 'assets/frontend/img/workforce/wfm-card-remote.png',
                 'bullets' => [
                     'Monthly HR report',
                     'Employee record management',
@@ -202,7 +206,7 @@ return [
         'content' => 'A focused review of your HR processes, payroll workflow and documentation — with a practical plan to make operations structured and scalable.',
         'button' => 'Optimize Your HR Operations',
         'secondary' => 'Speak to an HR Advisor',
-        'image' => 'assets/admin/image/case-study/jyogi-team.webp',
-        'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
+        'image' => 'assets/frontend/img/workforce/wfm-cta-person-v2.png',
+        'bg_image' => 'assets/frontend/img/workforce/wfm-cta-bg-v2.png',
     ],
 ];

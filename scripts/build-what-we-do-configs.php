@@ -309,7 +309,7 @@ function build_sub_service(array $d): array
     ];
 }
 
-function build_services_overview(array $items, string $before, string $heading, string $content, int $imgIdx = 0): array
+function build_services_overview(array $items, string $before, string $heading, string $content, int $imgIdx = 0, ?string $image = null): array
 {
     $rows = [];
     foreach ($items as $i => $item) {
@@ -324,7 +324,7 @@ function build_services_overview(array $items, string $before, string $heading, 
         'before_title' => $before,
         'heading' => $heading,
         'content' => $content,
-        'image' => img_at($imgIdx),
+        'image' => $image ?? img_at($imgIdx),
         'image_alt' => $heading,
         'items' => $rows,
     ];
@@ -372,7 +372,11 @@ function build_category_page(array $d): array
             'heading' => $d['risk_heading'],
             'lead' => $d['risk_lead'],
             'content' => $d['risk_content'],
-            'image' => img_at(2),
+            'image' => $d['risk_image'] ?? img_at(2),
+            'list_label' => $d['risk_list_label'] ?? null,
+            'visual_alt' => $d['risk_visual_alt'] ?? null,
+            'visual_caption_title' => $d['risk_visual_caption_title'] ?? null,
+            'visual_caption_text' => $d['risk_visual_caption_text'] ?? null,
             'cta' => $d['secondary_cta'],
             'risks' => $d['risks'],
         ],
@@ -381,7 +385,8 @@ function build_category_page(array $d): array
             $d['services_before'] ?? 'Services Overview',
             $d['services_heading'],
             $d['services_content'],
-            1
+            1,
+            $d['services_image'] ?? null
         ),
         'framework' => build_framework(
             $d['framework_steps'],
@@ -393,7 +398,7 @@ function build_category_page(array $d): array
             'eyebrow' => $d['integrity_eyebrow'],
             'heading' => $d['integrity_heading'],
             'content' => $d['integrity_content'],
-            'image' => img_at(5),
+            'image' => $d['integrity_image'] ?? img_at(5),
             'image_alt' => $d['integrity_heading'],
             'theme' => 'dark',
             'features' => $d['integrity_features'],
@@ -418,8 +423,8 @@ function build_category_page(array $d): array
             'content' => $d['cta_content'],
             'button' => $d['primary_cta'],
             'secondary' => $d['secondary_cta'],
-            'image' => 'assets/admin/image/case-study/jyogi-team.webp',
-            'bg_image' => 'assets/admin/image/banner/hr-advisory.webp',
+            'image' => $d['cta_image'] ?? 'assets/admin/image/case-study/jyogi-team.webp',
+            'bg_image' => $d['cta_bg_image'] ?? 'assets/admin/image/banner/hr-advisory.webp',
         ],
     ];
 }
@@ -473,6 +478,56 @@ function write_config(string $path, string $docblock, array $data): void
 
 // --- Category + sub-service definitions loaded from part 2 ---
 require __DIR__ . '/build-what-we-do-configs-data.php';
+
+/** @var array<string, array<string, mixed>> $categoryPageImages */
+$categoryPageImages = require __DIR__ . '/category-images.php';
+
+function apply_category_page_images(array $page, string $configKey): array
+{
+    global $categoryPageImages;
+    $map = $categoryPageImages[$configKey] ?? [];
+    if ($map === []) {
+        return $page;
+    }
+    if (! empty($map['hero_image'])) {
+        $page['hero']['image'] = $map['hero_image'];
+    }
+    if (! empty($map['risk_image'])) {
+        $page['risk']['image'] = $map['risk_image'];
+    }
+    foreach (['risk_list_label', 'risk_visual_alt', 'risk_visual_caption_title', 'risk_visual_caption_text'] as $riskKey) {
+        if (! empty($map[$riskKey])) {
+            $page['risk'][$riskKey] = $map[$riskKey];
+        }
+    }
+    if (! empty($map['services_image'])) {
+        $page['services']['image'] = $map['services_image'];
+    }
+    if (! empty($map['integrity_image'])) {
+        $page['workplace_integrity']['image'] = $map['integrity_image'];
+    }
+    if (! empty($map['cta_image'])) {
+        $page['cta']['image'] = $map['cta_image'];
+    }
+    if (! empty($map['cta_bg_image'])) {
+        $page['cta']['bg_image'] = $map['cta_bg_image'];
+    }
+    if (! empty($map['deliverable_images']) && ! empty($page['deliverables']['cards'])) {
+        foreach ($page['deliverables']['cards'] as $i => &$card) {
+            if (isset($map['deliverable_images'][$i])) {
+                $card['image'] = $map['deliverable_images'][$i];
+            }
+        }
+        unset($card);
+    }
+
+    return $page;
+}
+
+$workforceCategory = apply_category_page_images($workforceCategory, 'workforce-management');
+$leadershipCategory = apply_category_page_images($leadershipCategory, 'leadership-organization');
+$talentCategory = apply_category_page_images($talentCategory, 'talent-acquisition-staffing');
+$hraasCategory = apply_category_page_images($hraasCategory, 'hr-as-a-service');
 
 $outputs = [
     ['workforce-management.php', 'Category page: Workforce Management & Process Optimization', $workforceCategory],
