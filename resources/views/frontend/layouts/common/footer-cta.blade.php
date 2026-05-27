@@ -355,7 +355,7 @@
                     <div class="section-inner-header way-inner-header mb-0 py-2">
                         <h2>{{ $finalCta['way_heading'] ?? 'Take the first step towards accelerating your brand and business' }}</h2>
                         <p>{{ $finalCta['way_text'] ?? 'Get strategic clarity and expert execution tailored for your growth journey. Start today for stronger outcomes and scalable momentum' }}</p>
-                        <a href="{{ url($finalCta['way_button_url'] ?? '/project-enquiries') }}" class="btn btn-primary">{{ $finalCta['way_button'] ?? 'Contact Us' }}</a>
+                        <a href="{{ url($finalCta['way_button_url'] ?? '/project-enquiries') }}" class="btn btn-primary theme-btn one">{{ $finalCta['way_button'] ?? 'Contact Us' }}</a>
                     </div>
                 </div>
 

@@ -35,14 +35,15 @@ a.animateme i.fa.fa-angle-down {
 #para24{background-image: linear-gradient(to right, #000000, #00000000), url(../img/banner4.webp); background-position: center;background-size: cover;}
 
 #homeOneBanner .pmv-bottom {
-    margin-top: -60px;
-    margin-bottom: 18px;
+    margin-top: -72px;
+    margin-bottom: 24px;
 }
 #homeOneBanner.home2-pmv-section .pmv-bottom .pmv-nav ul li a {
     font-weight: 800;
 }
 .boxsl1, .boxsl2, .boxsl3, .boxsl4, .boxsl5, .boxsl6 {
-    height: 535px;
+    height: auto;
+    min-height: max(680px, 82vh);
 }
 #homeOneBanner .tab-pane {
     position: relative;
@@ -60,7 +61,7 @@ a.animateme i.fa.fa-angle-down {
     z-index: 2;
 }
 .tentArea {
-    padding: 90px 0 25px;
+    padding: 90px 0 12px;
 }
 #homeOneBanner.home2-pmv-section .pmv-bottom .pmv-nav ul li a {
     padding-bottom: 12px;

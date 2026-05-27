@@ -5,10 +5,10 @@
 
 @section('content')
 
+@include('frontend.pages.home-sections.home-typography')
+
 <style>
    p.gold {
-
-      font-size: 20px;
       margin-bottom: 0;
       margin-top: 10px;
    }
@@ -16,7 +16,16 @@
    .textbg {
       background-color: #FFFFFF;
       padding: 10px 10px 10px 10px !important;
-      border-radius: 10px !important;
+      border-radius: 8px !important;
+   }
+
+   #homeOneBanner {
+      position: relative;
+   }
+
+   #homeOneBanner .tab-content {
+      position: relative;
+      min-height: max(680px, 82vh);
    }
 
    #homeOneBanner .tab-pane {
@@ -24,9 +33,38 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 70vh;
+      min-height: max(680px, 82vh);
+      height: auto !important;
+      padding-bottom: 88px;
+      box-sizing: border-box;
+   }
 
-      align-items: center;
+   #homeOneBanner .tab-pane .container {
+      padding-top: 72px;
+      padding-bottom: 24px;
+   }
+
+   #homeOneBanner .tentArea {
+      padding-bottom: 12px;
+   }
+
+   #homeOneBanner .animate_down {
+      margin-top: 20px;
+      margin-bottom: 0;
+   }
+
+   #homeOneBanner .pmv-bottom {
+      position: relative;
+      z-index: 5;
+      margin-top: -72px;
+      margin-bottom: 24px;
+      pointer-events: none;
+   }
+
+   #homeOneBanner .pmv-bottom .pmv-nav,
+   #homeOneBanner .pmv-bottom .container,
+   #homeOneBanner .pmv-bottom a {
+      pointer-events: auto;
    }
 
    /* Dark overlay */
@@ -46,9 +84,22 @@
 
    /* Mobile responsive height */
    @media (max-width: 768px) {
+      #homeOneBanner .tab-content {
+         min-height: max(560px, 78vh);
+      }
+
       #homeOneBanner .tab-pane {
-         min-height: 60vh;
-         padding: 40px 0;
+         min-height: max(560px, 78vh);
+         padding-bottom: 72px;
+      }
+
+      #homeOneBanner .tab-pane .container {
+         padding-top: 48px;
+      }
+
+      #homeOneBanner .pmv-bottom {
+         margin-top: -56px;
+         margin-bottom: 16px;
       }
    }
 
@@ -57,25 +108,8 @@
       max-width: 520px;
    }
 
-   /* Desktop title */
-   #homeOneBanner h2 {
-      font-size: 32px;
-      line-height: 1.2;
-   }
-
    /* Mobile fixes */
    @media (max-width: 768px) {
-
-      #homeOneBanner h2 {
-         font-size: 28px;
-         /* title small */
-         line-height: 1.3;
-      }
-
-      #homeOneBanner p {
-         font-size: 15px;
-      }
-
       .tentArea {
          text-align: center;
          margin: auto;
@@ -83,15 +117,6 @@
 
       .animate_down {
          margin-top: 15px;
-      }
-
-      .theme_btn_all a {
-         padding: 10px 22px;
-         font-size: 14px;
-      }
-
-      .gold {
-         font-size: 16px;
       }
    }
 {{-- Legacy methodology card styles live in home-sections.methodology-legacy --}}
@@ -102,7 +127,7 @@
     box-shadow: none;
 }
 </style>
-<div id="content" class="site-content ">
+<div id="content" class="site-content mirashka-home">
    <!--banner home-->
    <section id="homeOneBanner" class="home2-pmv-section">
 
@@ -450,11 +475,11 @@
          display: inline-flex;
          align-items: center;
          justify-content: center;
-         width: 44px;
-         height: 44px;
-         margin-bottom: 14px;
+         width: 56px;
+         height: 56px;
+         margin-bottom: 16px;
          color: #7dcea8;
-         font-size: 28px;
+         font-size: 36px;
          line-height: 1;
       }
       .home-why-mirashka__card h3 {
@@ -486,7 +511,7 @@
          min-height: 400px;
          max-height: 500px;
          object-fit: cover;
-         border-radius: 20px;
+         border-radius: 8px;
          box-shadow: 0 28px 64px rgba(0, 0, 0, 0.45);
          border: 1px solid rgba(125, 206, 168, 0.2);
       }
@@ -494,25 +519,6 @@
          text-align: center;
          margin-top: 48px;
          padding: 0 15px;
-      }
-      .home-why-mirashka__cta {
-         display: inline-flex;
-         align-items: center;
-         gap: 10px;
-         padding: 16px 36px;
-         background: #006039;
-         color: #fff !important;
-         font-size: 0.9rem;
-         font-weight: 700;
-         border-radius: 6px;
-         text-decoration: none;
-         transition: background 0.25s ease, transform 0.25s ease;
-         box-shadow: 0 12px 32px rgba(0, 96, 57, 0.35);
-      }
-      .home-why-mirashka__cta:hover {
-         background: #004d2e;
-         color: #fff !important;
-         transform: translateY(-2px);
       }
       @media (max-width: 991px) {
          .home-why-mirashka__stage {
@@ -589,7 +595,7 @@
          </div>
 
          <div class="home-why-mirashka__cta-wrap">
-            <a href="https://calendly.com/elevateonemedia/30min" class="home-why-mirashka__cta" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/elevateonemedia/30min" class="home-why-mirashka__cta theme-btn one" target="_blank" rel="noopener noreferrer">
                Book Your 30-Minute Discovery Call <i class="ri-arrow-right-line" aria-hidden="true"></i>
             </a>
          </div>
@@ -639,7 +645,7 @@
          grid-template-columns: minmax(280px, 36%) minmax(0, 64%);
          align-items: stretch;
          gap: 0;
-         border-radius: 28px;
+         border-radius: 8px;
          overflow: hidden;
          box-shadow: 0 32px 80px rgba(6, 13, 10, 0.14);
          border: 1px solid rgba(0, 96, 57, 0.12);
@@ -666,7 +672,7 @@
          align-items: center;
          gap: 8px;
          padding: 6px 14px 6px 10px;
-         border-radius: 100px;
+         border-radius: 8px;
          background: rgba(125, 206, 168, 0.12);
          border: 1px solid rgba(125, 206, 168, 0.28);
          font-size: 11px;
@@ -746,7 +752,7 @@
          display: none;
       }
       .home-growth-reality__timeline-step {
-         font-size: 10px;
+         font-size: 0.8125rem;
          font-weight: 800;
          letter-spacing: 0.1em;
          text-transform: uppercase;
@@ -764,7 +770,7 @@
          align-items: flex-start;
          gap: 14px;
          padding: 18px 20px;
-         border-radius: 14px;
+         border-radius: 8px;
          background: rgba(0, 96, 57, 0.35);
          border: 1px solid rgba(125, 206, 168, 0.25);
       }
@@ -772,7 +778,7 @@
          flex-shrink: 0;
          width: 40px;
          height: 40px;
-         border-radius: 10px;
+         border-radius: 8px;
          background: #006039;
          color: #fff;
          display: flex;
@@ -872,7 +878,7 @@
          padding: 11px 12px;
          background: #f8faf9;
          border: 1px solid #e8eeeb;
-         border-radius: 10px;
+         border-radius: 8px;
          font-size: 0.84rem;
          font-weight: 600;
          color: #1e293b;
@@ -987,26 +993,6 @@
       .home-growth-reality__cta-copy span {
          font-size: 0.85rem;
          color: #64748b;
-      }
-      .home-growth-reality__cta {
-         display: inline-flex;
-         align-items: center;
-         gap: 10px;
-         padding: 14px 28px;
-         background: #006039;
-         color: #fff !important;
-         font-size: 0.88rem;
-         font-weight: 700;
-         border-radius: 100px;
-         text-decoration: none;
-         white-space: nowrap;
-         transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-         box-shadow: 0 10px 28px rgba(0, 96, 57, 0.28);
-      }
-      .home-growth-reality__cta:hover {
-         background: #004d2e;
-         color: #fff !important;
-         transform: translateY(-2px);
       }
       @media (max-width: 991px) {
          .home-growth-reality__shell {
@@ -1155,7 +1141,7 @@
                      <strong>Know where your HR stands today</strong>
                      <span>Free readiness review — gaps, risks and next steps.</span>
                   </div>
-                  <a href="{{ route('projectenquiries') }}" class="home-growth-reality__cta">
+                  <a href="{{ route('projectenquiries') }}" class="home-growth-reality__cta theme-btn one">
                      Get HR Health Check <i class="ri-arrow-right-line" aria-hidden="true"></i>
                   </a>
                </div>
@@ -1270,7 +1256,7 @@
          align-items: center;
          gap: 8px;
          padding: 5px 14px;
-         border-radius: 100px;
+         border-radius: 8px;
          border: 1px solid rgba(125, 206, 168, 0.35);
          background: rgba(0, 96, 57, 0.2);
          font-size: 10px;
@@ -1300,33 +1286,13 @@
          line-height: 1.65;
          color: rgba(255, 255, 255, 0.72);
       }
-      .home-hr-os__cta {
-         display: inline-flex;
-         align-items: center;
-         gap: 8px;
-         padding: 12px 26px;
-         background: #7dcea8;
-         color: #0a1410 !important;
-         font-size: 0.85rem;
-         font-weight: 800;
-         border-radius: 100px;
-         text-decoration: none;
-         white-space: nowrap;
-         transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-         box-shadow: 0 8px 28px rgba(125, 206, 168, 0.22);
-      }
-      .home-hr-os__cta:hover {
-         background: #fff;
-         color: #006039 !important;
-         transform: translateY(-2px);
-      }
       .home-hr-os__constellation {
          position: relative;
-         padding-top: 8px;
+         padding-top: 20px;
       }
       .home-hr-os__connector {
          position: absolute;
-         top: 52px;
+         top: 54px;
          left: 4%;
          right: 4%;
          height: 2px;
@@ -1343,7 +1309,7 @@
       }
       .home-hr-os__hub {
          position: absolute;
-         top: 0;
+         top: -32px;
          left: 50%;
          transform: translateX(-50%);
          z-index: 3;
@@ -1351,7 +1317,7 @@
          align-items: center;
          gap: 10px;
          padding: 10px 18px 10px 12px;
-         border-radius: 100px;
+         border-radius: 8px;
          background: linear-gradient(135deg, #006039 0%, #0a2a1f 100%);
          border: 1px solid rgba(125, 206, 168, 0.45);
          box-shadow: 0 8px 32px rgba(0, 96, 57, 0.45);
@@ -1370,12 +1336,12 @@
          flex-shrink: 0;
       }
       .home-hr-os__hub strong {
-         font-size: 0.68rem;
+         font-size: 0.875rem;
          font-weight: 800;
-         letter-spacing: 0.05em;
+         letter-spacing: 0.06em;
          text-transform: uppercase;
          color: #fff;
-         line-height: 1.25;
+         line-height: 1.3;
       }
       .home-hr-os__nodes {
          position: relative;
@@ -1383,7 +1349,7 @@
          display: grid;
          grid-template-columns: repeat(5, minmax(0, 1fr));
          gap: 12px;
-         padding-top: 44px;
+         padding-top: 72px;
       }
       .home-hr-os__node {
          position: relative;
@@ -1393,7 +1359,7 @@
          gap: 10px;
          padding: 16px 14px 14px;
          min-height: 168px;
-         border-radius: 16px;
+         border-radius: 8px;
          background: rgba(255, 255, 255, 0.04);
          border: 1px solid rgba(125, 206, 168, 0.16);
          text-decoration: none;
@@ -1437,7 +1403,7 @@
       .home-hr-os__node-icon {
          width: 36px;
          height: 36px;
-         border-radius: 10px;
+         border-radius: 8px;
          background: rgba(0, 96, 57, 0.4);
          color: #7dcea8;
          display: flex;
@@ -1481,7 +1447,7 @@
       }
       .home-hr-os__node-dot {
          position: absolute;
-         top: -36px;
+         top: -58px;
          left: 50%;
          transform: translateX(-50%);
          width: 10px;
@@ -1580,7 +1546,7 @@
             text-align: center;
          }
          .home-hr-os__hub strong {
-            font-size: 0.62rem;
+            font-size: 0.8125rem;
          }
       }
       @media (max-width: 400px) {
@@ -1600,7 +1566,7 @@
             </div>
             <div class="home-hr-os__top-right">
                <p class="home-hr-os__intro">Mirashka brings together strategy, process, people, compliance and execution through five integrated HR pillars. A business can start with one service and gradually scale into a complete HRaaS model.</p>
-               <a href="{{ route('whatwedo') }}" class="home-hr-os__cta">
+               <a href="{{ route('whatwedo') }}" class="home-hr-os__cta theme-btn one">
                   Explore HR Services <i class="ri-arrow-right-line" aria-hidden="true"></i>
                </a>
             </div>
@@ -1649,6 +1615,7 @@
    </script>
 
    @include('frontend.pages.home-sections.pillars')
+   @include('frontend.pages.home-sections.home-sections-ui-fixes')
 
    {{-- Section 11: Mirashka Methodology (HR — banner + photo-card grid) --}}
    @include('frontend.pages.home-sections.methodology-banner-legacy')

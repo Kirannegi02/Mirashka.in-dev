@@ -97,7 +97,7 @@
     </style>
 </head>
 
-<body class="{{ request()->is('client-portal-login*') ? 'auth-page' : '' }}">
+<body class="{{ request()->is('client-portal-login*') ? 'auth-page' : '' }}{{ request()->is('/') ? ' page-home' : '' }}">
     {{-- Notification Flash Messages --}}
     @include('components.notification')
 

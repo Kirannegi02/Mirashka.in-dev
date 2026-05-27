@@ -13,12 +13,14 @@
          'cta' => 'Request Compliance Readiness Review',
          'cta_route' => 'compliance',
          'category_route' => 'compliance',
-         'image' => 'assets/frontend/img/compliance/cwi-hero.png',
-         'image2' => 'assets/frontend/img/compliance/cwi-integrity.png',
-         'image_alt' => 'Compliance shield with employee handbook, HR advisor and workplace training',
+         'image' => 'assets/frontend/img/compliance/cwi-bento-meeting.png',
+         'image2' => 'assets/frontend/img/compliance/cwi-bento-advisor.png',
+         'image_alt' => 'HR and legal professionals reviewing compliance policies in a modern office',
+         'image2_alt' => 'HR advisor supporting faster, safer people decisions for leadership teams',
          'side_a' => [
             'icon' => 'ri-information-line',
             'title' => 'Why compliance matters',
+            'text' => 'Mirashka helps businesses build safer, compliant workplaces with clarity, policy and legal awareness.',
          ],
          'side_b' => [
             'icon' => 'ri-shield-check-line',
@@ -150,7 +152,7 @@
       align-items: center;
       gap: 8px;
       padding: 5px 14px;
-      border-radius: 100px;
+      border-radius: 8px;
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 0.14em;
@@ -189,7 +191,7 @@
       align-items: center;
       gap: 10px;
       padding: 13px 28px;
-      border-radius: 100px;
+      border-radius: 8px;
       font-size: 0.88rem;
       font-weight: 700;
       text-decoration: none;
@@ -216,7 +218,7 @@
    }
    .home-pillar__media {
       position: relative;
-      border-radius: 20px;
+      border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
    }
@@ -231,7 +233,7 @@
       bottom: 14px;
       left: 14px;
       padding: 8px 14px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: rgba(10, 20, 16, 0.85);
       border: 1px solid rgba(125, 206, 168, 0.35);
       font-size: 0.68rem;
@@ -263,7 +265,7 @@
       display: flex;
       gap: 12px;
       padding: 14px;
-      border-radius: 14px;
+      border-radius: 8px;
       text-decoration: none;
       transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
    }
@@ -290,7 +292,7 @@
       flex-shrink: 0;
       width: 40px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -327,7 +329,7 @@
       gap: 44px;
       align-items: center;
    }
-   .home-pillar--ops .home-pillar__media { min-height: 360px; border-radius: 24px; }
+   .home-pillar--ops .home-pillar__media { min-height: 360px; border-radius: 8px; }
    .home-pillar__steps {
       list-style: none;
       margin: 0 0 24px;
@@ -348,7 +350,7 @@
    .home-pillar__step-num {
       width: 48px;
       height: 48px;
-      border-radius: 14px;
+      border-radius: 8px;
       background: var(--hp-green);
       color: #fff;
       display: flex;
@@ -391,7 +393,7 @@
       display: grid;
       grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
       gap: 0;
-      border-radius: 20px;
+      border-radius: 8px;
       overflow: hidden;
       border: 1px solid rgba(125, 206, 168, 0.15);
       box-shadow: 0 28px 72px rgba(0, 0, 0, 0.5);
@@ -422,7 +424,7 @@
       left: 16px;
       z-index: 2;
       padding: 6px 12px;
-      border-radius: 100px;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.95);
       font-size: 0.65rem;
       font-weight: 800;
@@ -437,7 +439,7 @@
       z-index: 2;
       max-width: 220px;
       padding: 12px 14px;
-      border-radius: 12px;
+      border-radius: 8px;
       background: rgba(0, 96, 57, 0.85);
       border: 1px solid rgba(125, 206, 168, 0.35);
       backdrop-filter: blur(8px);
@@ -500,7 +502,7 @@
       gap: 12px;
       padding: 12px 14px;
       margin-bottom: 8px;
-      border-radius: 12px;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(125, 206, 168, 0.1);
       transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
@@ -516,7 +518,7 @@
    .home-wfm-hub__item-icon {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: rgba(0, 96, 57, 0.45);
       color: var(--hp-mint);
       display: flex;
@@ -544,7 +546,7 @@
       gap: 10px;
       width: fit-content;
       padding: 13px 28px;
-      border-radius: 100px;
+      border-radius: 8px;
       background: var(--hp-mint);
       color: #0a1410 !important;
       font-size: 0.85rem;
@@ -585,7 +587,7 @@
    .home-pillar--boardroom .home-pillar__media {
       min-height: 260px;
       max-height: none;
-      border-radius: 18px;
+      border-radius: 8px;
       border: 1px solid #dce8e2;
       box-shadow: 0 16px 48px rgba(0, 96, 57, 0.1);
    }
@@ -602,7 +604,7 @@
       align-items: flex-start;
       gap: 12px;
       padding: 14px 16px;
-      border-radius: 14px;
+      border-radius: 8px;
       transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
    }
    .home-pillar--light .home-pillar__mosaic-item {
@@ -628,7 +630,7 @@
       flex-shrink: 0;
       width: 36px;
       height: 36px;
-      border-radius: 10px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -718,7 +720,7 @@
       display: grid;
       grid-template-columns: minmax(200px, 32%) minmax(0, 1fr);
       gap: 0;
-      border-radius: 18px;
+      border-radius: 8px;
       overflow: hidden;
       border: 1px solid rgba(125, 206, 168, 0.18);
       box-shadow: 0 20px 48px rgba(0, 0, 0, 0.45);
@@ -779,7 +781,7 @@
       gap: 8px;
       align-items: start;
       padding: 10px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(125, 206, 168, 0.12);
       transition: background 0.2s ease, border-color 0.2s ease;
@@ -791,7 +793,7 @@
    .home-talent-spine__cell-icon {
       width: 28px;
       height: 28px;
-      border-radius: 7px;
+      border-radius: 8px;
       background: rgba(125, 206, 168, 0.12);
       color: var(--hp-mint);
       display: flex;
@@ -841,7 +843,7 @@
       align-items: center;
       gap: 8px;
       padding: 10px 22px;
-      border-radius: 100px;
+      border-radius: 8px;
       background: var(--hp-mint);
       color: #030806 !important;
       font-size: 0.8rem;
@@ -885,7 +887,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(260px, 36%);
       gap: 0;
-      border-radius: 20px;
+      border-radius: 8px;
       overflow: hidden;
       background: #fff;
       border: 1px solid #dce8e2;
@@ -919,7 +921,7 @@
       gap: 10px;
       align-items: start;
       padding: 10px 10px 10px 12px;
-      border-radius: 10px;
+      border-radius: 8px;
       border-left: 3px solid #dce8e2;
       background: #f8fbf9;
       transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
@@ -962,7 +964,7 @@
       width: fit-content;
       margin-top: 4px;
       padding: 11px 24px;
-      border-radius: 100px;
+      border-radius: 8px;
       background: var(--hp-green);
       color: #fff !important;
       font-size: 0.82rem;
@@ -996,7 +998,7 @@
       bottom: 14px;
       z-index: 2;
       padding: 12px 14px;
-      border-radius: 12px;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.94);
       border: 1px solid #dce8e2;
       box-shadow: 0 8px 24px rgba(0, 96, 57, 0.1);
@@ -1046,42 +1048,80 @@
    .home-pillar__bento {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas:
-         "img-lt center card-rt"
-         "card-lb center img-rb";
       gap: 10px;
       align-items: stretch;
    }
-   .home-pillar__bento-img-lt { grid-area: img-lt; }
-   .home-pillar__bento-card-lb { grid-area: card-lb; }
-   .home-pillar__bento-center { grid-area: center; }
-   .home-pillar__bento-card-rt { grid-area: card-rt; }
-   .home-pillar__bento-img-rb { grid-area: img-rb; }
+   .home-pillar__bento-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 0;
+      min-width: 0;
+   }
+   .home-pillar__bento-center {
+      min-width: 0;
+   }
    .home-pillar__bento-photo {
-      border-radius: 16px;
+      border-radius: 8px;
       overflow: hidden;
-      height: 100%;
       min-height: 0;
       box-shadow: 0 8px 28px rgba(0, 96, 57, 0.1);
       border: 1px solid #dce8e2;
    }
+   .home-pillar__bento-col .home-pillar__bento-photo {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 140px;
+   }
    .home-pillar__bento-photo img {
       width: 100%;
       height: 100%;
+      flex: 1 1 auto;
       min-height: 0;
       object-fit: cover;
+      object-position: center center;
       display: block;
    }
+   .home-pillar__bento-col--left .home-pillar__bento-photo img {
+      object-position: center 35%;
+   }
+   .home-pillar__bento-col--right .home-pillar__bento-photo img {
+      object-position: center 20%;
+   }
+   .home-pillar__bento-col .home-pillar__bento-tile {
+      flex: 0 0 auto;
+      height: auto;
+      padding: 11px 13px;
+   }
+   .home-pillar--bento .home-pillar__bento-col .home-pillar__bento-tile p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+   }
+   .home-pillar--bento .home-pillar__bento-tile-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+      margin-bottom: 6px;
+   }
+   .home-pillar--bento .home-pillar__bento-col .home-pillar__bento-tile h3 {
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+   }
    .home-pillar__bento-tile {
-      border-radius: 14px;
+      border-radius: 8px;
       padding: 14px;
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       background: #fff;
       border: 1px solid #dce8e2;
       box-shadow: 0 4px 18px rgba(0, 96, 57, 0.06);
+   }
+   .home-pillar__bento-main.home-pillar__bento-tile {
+      height: 100%;
    }
    .home-pillar__bento-tile-icon {
       width: 36px;
@@ -1159,23 +1199,23 @@
    }
    .home-pillar__bento-svc {
       padding: 10px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: #f8faf9;
       border: 1px solid #e8eeeb;
    }
    .home-pillar__bento-svc strong {
       display: block;
-      font-size: 0.74rem;
+      font-size: 1.375rem;
       font-weight: 700;
       color: #0f172a;
-      line-height: 1.3;
-      margin-bottom: 3px;
+      line-height: 1.25;
+      margin-bottom: 6px;
    }
    .home-pillar__bento-svc span {
       display: block;
-      font-size: 0.7rem;
-      line-height: 1.4;
-      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #475569;
    }
    .home-pillar__bento-cta {
       display: flex;
@@ -1184,7 +1224,7 @@
       gap: 8px;
       width: 100%;
       padding: 11px 16px;
-      border-radius: 10px;
+      border-radius: 8px;
       background: var(--hp-green);
       color: #fff !important;
       font-size: 0.7rem;
@@ -1237,11 +1277,9 @@
    @media (max-width: 991px) {
       .home-pillar__bento {
          grid-template-columns: 1fr 1fr;
-         grid-template-rows: auto;
-         grid-template-areas:
-            "center center"
-            "img-lt card-rt"
-            "card-lb img-rb";
+      }
+      .home-pillar__bento-center {
+         grid-column: 1 / -1;
       }
       .home-pillar--shield .home-pillar__grid,
       .home-pillar--ops .home-pillar__grid,
@@ -1270,13 +1308,14 @@
       .home-pillar--bento { padding: 32px 0 36px; }
       .home-pillar__bento {
          grid-template-columns: 1fr;
-         grid-template-rows: auto;
-         grid-template-areas:
-            "center"
-            "img-lt"
-            "card-rt"
-            "card-lb"
-            "img-rb";
+      }
+      .home-pillar__bento-center {
+         grid-column: auto;
+      }
+      .home-pillar__bento-col .home-pillar__bento-photo {
+         flex: 0 0 auto;
+         aspect-ratio: 16 / 10;
+         min-height: 200px;
       }
       .home-pillar__bento-svc-grid {
          grid-template-columns: 1fr;
@@ -1303,13 +1342,15 @@
             @if($pillar['layout'] === 'bento')
                @php $bentoIcon = $pillar['services'][0]['icon'] ?? 'ri-shield-check-line'; @endphp
                <div class="home-pillar__bento hp-reveal">
-                  <div class="home-pillar__bento-img-lt home-pillar__bento-photo">
-                     <img src="{{ asset($pillar['image']) }}" alt="{{ $pillar['image_alt'] }}" loading="lazy" width="380" height="260">
-                  </div>
-                  <div class="home-pillar__bento-card-lb home-pillar__bento-tile">
-                     <span class="home-pillar__bento-tile-icon" aria-hidden="true"><i class="{{ $pillar['side_a']['icon'] }}"></i></span>
-                     <h3>{{ $pillar['side_a']['title'] }}</h3>
-                     <p>{{ $pillar['content'] }}</p>
+                  <div class="home-pillar__bento-col home-pillar__bento-col--left">
+                     <div class="home-pillar__bento-photo">
+                        <img src="{{ asset($pillar['image']) }}" alt="{{ $pillar['image_alt'] }}" loading="lazy" width="400" height="620">
+                     </div>
+                     <div class="home-pillar__bento-tile">
+                        <span class="home-pillar__bento-tile-icon" aria-hidden="true"><i class="{{ $pillar['side_a']['icon'] }}"></i></span>
+                        <h3>{{ $pillar['side_a']['title'] }}</h3>
+                        <p>{{ $pillar['side_a']['text'] ?? $pillar['content'] }}</p>
+                     </div>
                   </div>
                   <div class="home-pillar__bento-center home-pillar__bento-tile home-pillar__bento-main">
                      <span class="home-pillar__label">{{ $pillar['label'] }} — {{ $pillar['section'] }}</span>
@@ -1326,17 +1367,19 @@
                            </div>
                         @endforeach
                      </div>
-                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-pillar__bento-cta">
+                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-pillar__bento-cta theme-btn one">
                         {{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i>
                      </a>
                   </div>
-                  <div class="home-pillar__bento-card-rt home-pillar__bento-tile">
-                     <span class="home-pillar__bento-tile-icon" aria-hidden="true"><i class="{{ $pillar['side_b']['icon'] }}"></i></span>
-                     <h3>{{ $pillar['side_b']['title'] }}</h3>
-                     <p>{{ $pillar['side_b']['text'] }}</p>
-                  </div>
-                  <div class="home-pillar__bento-img-rb home-pillar__bento-photo">
-                     <img src="{{ asset($pillar['image2']) }}" alt="{{ $pillar['section'] }}" loading="lazy" width="380" height="260">
+                  <div class="home-pillar__bento-col home-pillar__bento-col--right">
+                     <div class="home-pillar__bento-tile">
+                        <span class="home-pillar__bento-tile-icon" aria-hidden="true"><i class="{{ $pillar['side_b']['icon'] }}"></i></span>
+                        <h3>{{ $pillar['side_b']['title'] }}</h3>
+                        <p>{{ $pillar['side_b']['text'] }}</p>
+                     </div>
+                     <div class="home-pillar__bento-photo">
+                        <img src="{{ asset($pillar['image2']) }}" alt="{{ $pillar['image2_alt'] ?? $pillar['section'] }}" loading="lazy" width="400" height="620">
+                     </div>
                   </div>
                </div>
 
@@ -1362,7 +1405,7 @@
                         @endforeach
                      </div>
                      <div style="margin-top: 24px;">
-                        <a href="{{ route('projectenquiries') }}" class="home-pillar__cta">{{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        <a href="{{ route('projectenquiries') }}" class="home-pillar__cta theme-btn one">{{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                      </div>
                   </div>
                </div>
@@ -1392,7 +1435,7 @@
                            </article>
                         @endforeach
                      </div>
-                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-wfm-hub__cta">
+                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-wfm-hub__cta theme-btn one">
                         {{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i>
                      </a>
                   </div>
@@ -1404,7 +1447,7 @@
                      <span class="home-pillar__label">{{ $pillar['label'] }} — {{ $pillar['section'] ?? 'Leadership & Organizational Excellence' }}</span>
                      <h2 class="home-pillar__heading" id="{{ $pillar['id'] }}-title">{{ $pillar['heading'] }}</h2>
                      <p class="home-pillar__content">{{ $pillar['content'] }}</p>
-                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-pillar__cta">{{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                     <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-pillar__cta theme-btn one">{{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                   </div>
                   <div class="home-pillar__media">
                      <img src="{{ asset($pillar['image']) }}" alt="{{ $pillar['image_alt'] }}" loading="lazy" width="480" height="280">
@@ -1450,7 +1493,7 @@
                         </div>
                         <div class="home-talent-spine__foot">
                            <span class="home-talent-spine__foot-label">Recruitment &amp; staffing</span>
-                           <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-talent-spine__cta">
+                           <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-talent-spine__cta theme-btn one">
                               {{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i>
                            </a>
                         </div>
@@ -1478,7 +1521,7 @@
                               </li>
                            @endforeach
                         </ul>
-                        <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-hraas-suite__cta">
+                        <a href="{{ route($pillar['cta_route'] ?? 'projectenquiries') }}" class="home-hraas-suite__cta theme-btn one">
                            {{ $pillar['cta'] }} <i class="ri-arrow-right-line" aria-hidden="true"></i>
                         </a>
                      </div>
