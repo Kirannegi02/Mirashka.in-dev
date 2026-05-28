@@ -5,6 +5,7 @@
     $leftFeatureText = $covers[1] ?? 'Role clarity';
     $rightFeatureTitle = $covers[2] ?? 'Payroll structure';
     $rightFeatureText = $covers[3] ?? 'Employee documentation';
+    $healthVideoUrl = $health['video_url'] ?? 'https://www.youtube.com/embed/-VK0axfge4A';
 @endphp
 
 <style>
@@ -191,7 +192,13 @@
                 onerror="this.onerror=null;this.src='{{ asset($health['image_fallback'] ?? 'assets/frontend/img/compliance/cwi-bento-meeting.png') }}';"
                 alt="Industry-wise HR maturity dashboard with six industry clusters and risk score indicators"
             >
-            <a href="{{ $health['cta']['href'] ?? '#industry-form' }}" class="industry-health-showcase__play" aria-label="Open health check">
+            <a
+                href="{{ $healthVideoUrl }}"
+                class="industry-health-showcase__play"
+                data-fancybox="industry-health-video"
+                data-type="iframe"
+                aria-label="Play industry health check video"
+            >
                 <i class="icon-play"></i>
             </a>
         </div>
