@@ -19,11 +19,20 @@ class StoreContactFormRequest extends FormRequest
         }
 
         $extras = [];
+        if ($this->filled('industry')) {
+            $extras[] = 'Industry: '.$this->input('industry');
+        }
+        if ($this->filled('sub_industry')) {
+            $extras[] = 'Sub-Industry: '.$this->input('sub_industry');
+        }
         if ($this->filled('team_size')) {
             $extras[] = 'Team Size: '.$this->input('team_size');
         }
         if ($this->filled('service_required')) {
             $extras[] = 'Service Required: '.$this->input('service_required');
+        }
+        if ($this->filled('preferred_call_time')) {
+            $extras[] = 'Preferred Call Time: '.$this->input('preferred_call_time');
         }
         if ($extras !== []) {
             $prefix = implode("\n", $extras)."\n\n";

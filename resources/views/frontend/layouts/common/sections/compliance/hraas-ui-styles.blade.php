@@ -232,6 +232,37 @@
         line-height: 1.65;
         color: rgba(255, 255, 255, 0.88);
     }
+    .hraas-dashboard-pane__text + .hraas-dashboard-pane__text {
+        margin-top: 1rem;
+    }
+    .hraas-dashboard-pane__copy--list {
+        max-width: 520px;
+    }
+    .hraas-dashboard-pane__list {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+    }
+    .hraas-dashboard-pane__list li {
+        position: relative;
+        padding: 0 0 0.65rem 1.35rem;
+        font-size: 1rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .hraas-dashboard-pane__list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #7dce88;
+    }
+    .hraas-dashboard-pane__list li:last-child {
+        padding-bottom: 0;
+    }
     /* Focus split — matches HRaaS people_excellence layout */
     .cwi-focus-split {
         padding: 56px 0 40px;

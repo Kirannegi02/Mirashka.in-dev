@@ -46,6 +46,16 @@ class FrontendController extends Controller
         return view('frontend.pages.whoweserve');
     }
 
+    public function industriesweserve()
+    {
+        $data = [];
+        $data['title'] = config('industries-we-serve.meta.title');
+        $data['description'] = config('industries-we-serve.meta.purpose');
+        $data['keywords'] = 'industries we serve, industry specific HR, HRaaS, payroll, compliance, staffing';
+
+        return view('frontend.pages.industriesweserve', compact('data'));
+    }
+
     public function whatwedo()
     {
         return view('frontend.pages.whatwedo');

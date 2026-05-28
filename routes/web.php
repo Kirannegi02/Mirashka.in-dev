@@ -40,6 +40,7 @@ Route::get('/capital-markets-communication', [FrontendController::class, 'capita
 Route::get('/client', [FrontendController::class, 'client'])->name('client');
 Route::get('/voice-of-leadership-podcast-audioip', [FrontendController::class, 'voiceofleadershippodcastaudioip'])->name('voiceofleadershippodcastaudioip');
 Route::get('/who-we-serve', [FrontendController::class, 'whoweserve'])->name('whoweserve');
+Route::get('/industries-we-serve', [FrontendController::class, 'industriesweserve'])->name('industriesweserve');
 Route::get('/strategic-media-placements', [FrontendController::class, 'strategicmediaplacements'])->name('strategicmediaplacements');
 Route::get('/speaking-engagements-events', [FrontendController::class, 'speakingengagementsevents'])->name('speakingengagementsevents');
 Route::get('/reputation-risk-crisis-preparedness', [FrontendController::class, 'reputationriskcrisispreparedness'])->name('reputationriskcrisispreparedness');

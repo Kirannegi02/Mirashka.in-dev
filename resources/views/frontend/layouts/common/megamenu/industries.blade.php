@@ -113,7 +113,7 @@
 </style>
 
 <li class="menu-item menu-item-has-children dropdown active dropdown_full position-static mega_menu nav-item">
-  <a href="{{ route('whoweserve') }}" class="dropdown-toggle nav-link">
+  <a href="{{ route('industriesweserve') }}" class="dropdown-toggle nav-link">
     <span>Industries</span>
   </a>
   <ul class="dropdown-menu width_100_percentage mega-border">
