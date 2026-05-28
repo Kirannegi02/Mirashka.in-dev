@@ -18,7 +18,12 @@
                     <div class="hraas-dashboard-sidebar-pain">
                         <ul class="hraas-dashboard-sidebar-pain-list">
                             @foreach ($painPoints as $point)
-                                <li>{{ $point }}</li>
+                                <li>
+                                    <span class="hraas-dashboard-point-icon" aria-hidden="true">
+                                        <i class="ri-checkbox-circle-fill"></i>
+                                    </span>
+                                    <span class="hraas-dashboard-point-text">{{ $point }}</span>
+                                </li>
                             @endforeach
                         </ul>
                     </div>

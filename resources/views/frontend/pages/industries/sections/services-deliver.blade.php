@@ -37,6 +37,9 @@
         text-transform: uppercase;
         color: #7dcea8;
         margin-bottom: 14px;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: 2px;
     }
     .industries-services-deliver .home-why-mirashka__title {
         font-size: clamp(1.75rem, 3.8vw, 2.65rem);
@@ -99,11 +102,15 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 72px;
-        height: 72px;
+        width: 96px;
+        height: 96px;
         margin-bottom: 16px;
         color: #7dcea8;
-        font-size: 2.75rem;
+        font-size: 4.2rem !important;
+        line-height: 1;
+    }
+    .industries-services-deliver .home-why-mirashka__card-icon i {
+        font-size: 4.2rem !important;
         line-height: 1;
     }
     .industries-services-deliver .home-why-mirashka__card h3 {

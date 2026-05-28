@@ -20,16 +20,16 @@
     }
     #industriesHeroBanner .tab-content {
         position: relative;
-        min-height: max(680px, 82vh);
+        min-height: 0;
     }
     #industriesHeroBanner .tab-pane {
         position: relative;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        min-height: max(680px, 82vh);
+        min-height: 0;
         height: auto !important;
-        padding-bottom: 88px;
+        padding-bottom: 0;
         box-sizing: border-box;
     }
     #industriesHeroBanner .tab-pane::before {
@@ -43,17 +43,23 @@
         pointer-events: none;
     }
     #industriesHeroBanner .tab-pane .container {
-        padding-top: 72px;
-        padding-bottom: 24px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         position: relative;
         z-index: 2;
     }
     #industriesHeroBanner .tentArea {
-        padding-bottom: 12px;
+        padding: 40px 0;
         max-width: 1060px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
+    }
+    #industriesHeroBanner .tentArea > :first-child {
+        margin-top: 0 !important;
+    }
+    #industriesHeroBanner .tentArea > :last-child {
+        margin-bottom: 0 !important;
     }
     #industriesHeroBanner .tentArea h2.text-white {
         font-size: var(--industries-heading);
@@ -62,7 +68,7 @@
         margin-bottom: 12px;
     }
     #industriesHeroBanner .tentArea p.text-white {
-        margin: 12px 0 20px;
+        margin: 12px 0 12px;
         max-width: 100%;
     }
     #industriesHeroBanner .tentArea .textbg {
@@ -73,7 +79,7 @@
     #industriesHeroBanner .animate_down {
         margin-top: 20px;
         margin-bottom: 0;
-    }
+        padding-bottom: 0;    }
     #industriesHeroBanner .container {
         position: relative;
         z-index: 2;
@@ -130,17 +136,19 @@
     @media (max-width: 768px) {
         #industriesHeroBanner .tab-content,
         #industriesHeroBanner .tab-pane {
-            min-height: max(560px, 78vh);
+            min-height: 0;
         }
         #industriesHeroBanner .tab-pane {
-            padding-bottom: 72px;
+            padding-bottom: 0;
         }
         #industriesHeroBanner .tab-pane .container {
-            padding-top: 48px;
+            padding-top: 0;
+            padding-bottom: 24px;
         }
         #industriesHeroBanner .tentArea {
             text-align: center;
             margin: auto;
+            padding: 24px 0;
         }
     }
 
@@ -148,7 +156,7 @@
         --industries-radius: 8px;
         --industries-text: 17px;
         --industries-heading: clamp(1.75rem, 3.2vw, 2.25rem);
-        --industries-eyebrow: 12px;
+        --industries-eyebrow: clamp(16px, 1.25vw, 20px);
         --industries-line: 1.7;
     }
     .industries-page,
@@ -165,9 +173,12 @@
     .industries-page .before_title {
         letter-spacing: 0.06em;
         text-transform: uppercase;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+        text-decoration-thickness: 2px;
     }
     .industries-page .title_all_box .title_sections .before_title {
-        text-decoration: none;
+        text-decoration: underline;
         padding-bottom: 0;
     }
     .industries-page .cwi-title-draw .title_sections .before_title::after,
@@ -183,12 +194,13 @@
     }
     .industries-reality-dashboard .hraas-dashboard-panel {
         grid-template-columns: minmax(280px, 320px) 1fr;
-        align-items: center;
+        align-items: stretch;
         min-height: 0;
         margin-top: 28px;
     }
     .industries-reality-dashboard .hraas-dashboard-tabs {
-        align-self: center;
+        align-self: stretch;
+        height: 100%;
     }
     .industries-reality-dashboard .hraas-dashboard-sidebar-pain {
         padding: 16px 20px 12px;
@@ -200,8 +212,10 @@
         width: 100%;
     }
     .industries-reality-dashboard .hraas-dashboard-sidebar-pain-list li {
-        position: relative;
-        padding: 5px 0 5px 14px;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 6px 0;
         font-size: 0.8125rem;
         font-weight: 500;
         line-height: 1.35;
@@ -215,18 +229,26 @@
     .industries-reality-dashboard .hraas-dashboard-sidebar-pain-list li:last-child {
         padding-bottom: 0;
     }
-    .industries-reality-dashboard .hraas-dashboard-sidebar-pain-list li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.72em;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: #006039;
+    .industries-reality-dashboard .hraas-dashboard-point-icon {
+        flex: 0 0 16px;
+        width: 16px;
+        height: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5em;
+        color: #006039;
+        font-size: 0.78rem;
+        line-height: 1;
     }
-    .industries-reality-dashboard .hraas-dashboard-sidebar-pain-list li:first-child::before {
-        top: 0.45em;
+    .industries-reality-dashboard .hraas-dashboard-point-icon i {
+        display: block;
+        line-height: 1;
+    }
+    .industries-reality-dashboard .hraas-dashboard-point-text {
+        display: block;
+        flex: 1 1 auto;
+        min-width: 0;
     }
     .industries-reality-dashboard .hraas-dashboard-cta {
         padding: 16px 20px;
@@ -238,6 +260,10 @@
     }
     .industries-reality-dashboard .hraas-dashboard-stage {
         min-height: 380px;
+        height: 100%;
+    }
+    .industries-reality-dashboard .hraas-dashboard-pane {
+        min-height: 100%;
     }
     .industries-reality-dashboard .hraas-dashboard-pane__overlay {
         background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.82) 100%);
@@ -364,6 +390,32 @@
     }
     .industries-page .service-list li { margin-bottom: 6px; }
     .industries-page .section-cta { margin-top: 28px; }
+    /* Uniform section spacing across industries page */
+    .industries-page > section {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 72px !important;
+        padding-bottom: 72px !important;
+    }
+    .industries-page > section#industriesHeroBanner {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .industries-page > section#industry-health-check {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .industries-page > section .pd_top_80,
+    .industries-page > section .pd_top_90,
+    .industries-page > section .pd_top_100,
+    .industries-page > section .pd_bottom_70,
+    .industries-page > section .pd_bottom_80,
+    .industries-page > section .pd_bottom_90 {
+        display: none !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
     .industries-grid-showcase {
         position: relative;
         isolation: isolate;
@@ -396,7 +448,7 @@
         padding-bottom: 48px !important;
     }
     .industries-grid-showcase__wrap {
-        margin-top: 32px;
+        margin-top: 52px;
     }
     .industries-grid-showcase__stage {
         position: relative;
@@ -437,9 +489,9 @@
         color: #64748b;
         padding: 20px 24px;
         text-align: left;
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 600;
-        line-height: 1.25;
+        line-height: 28px;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -450,6 +502,8 @@
         color: #006847;
         min-width: 36px;
         font-weight: 800;
+        font-size: 16px;
+        line-height: 28px;
     }
     .industries-grid-showcase__tab.active {
         background: rgba(0, 96, 57, 0.06);
@@ -523,18 +577,20 @@
         justify-content: center;
     }
     .industries-grid-showcase__kicker {
-        margin: 0 0 6px;
-        font-size: 0.95rem;
+        margin: 0 0 15px;
+        font-size: 34px !important;
+        line-height: 44px !important;
+        font-weight: 600;
         text-decoration: underline;
         text-underline-offset: 3px;
         color: rgba(255, 255, 255, 0.95);
     }
     .industries-grid-showcase__title {
-        margin: 0 0 14px;
+        margin: 0 0 20px;
         color: #fff;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
-        line-height: 1.2;
+        font-size: 50px !important;
+        line-height: 60px !important;
+        font-weight: 700 !important;
     }
     .industries-grid-showcase__pills {
         display: flex;
@@ -556,10 +612,10 @@
     }
     .industries-grid-showcase__desc {
         margin: 0 0 16px;
-        color: rgba(255, 255, 255, 0.92);
+        color: rgba(255, 255, 255, 0.82);
         max-width: 820px;
-        font-size: 1rem;
-        line-height: 1.65;
+        font-size: 16px !important;
+        line-height: 30px !important;
     }
     .industries-grid-showcase__cta {
         display: inline-flex !important;
@@ -622,6 +678,15 @@
     }
     .industries-approach-section.service_section.bg-dark-section {
         background: #101820 !important;
+    }
+    .industries-approach-section .pd_top_50 {
+        padding-top: 6px !important;
+    }
+    .industries-approach-section .pd_bottom_50 {
+        padding-bottom: 6px !important;
+    }
+    .industries-approach-section .pd_bottom_20 {
+        padding-bottom: 4px !important;
     }
     .industries-approach-section .title_all_box.light_color .before_title {
         color: var(--primary-color-one, #078586);
@@ -710,10 +775,12 @@
         --mi-green: #006847;
         --mi-blue: #2980B9;
         --mi-gold: #D48C24;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
     .industries-pulse-hero {
         background: linear-gradient(135deg, #006847 0%, #005a3a 50%, #004530 100%);
-        padding: 64px 0 96px;
+        padding: 48px 0 96px !important;
         overflow: visible;
     }
     .industries-pulse-hero__bg {
@@ -735,6 +802,9 @@
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.85);
         margin-bottom: 12px;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+        text-decoration-thickness: 2px;
     }
     .industries-pulse-hero .pulse-heading {
         color: #fff;
@@ -827,7 +897,7 @@
         margin-top: -64px;
         position: relative;
         z-index: 3;
-        padding-bottom: 80px;
+        padding-bottom: 0 !important;
     }
     .industries-pulse-panel-wrap .pulse-panel {
         background: #fff;
@@ -838,6 +908,16 @@
     }
     .industries-pulse-panel-wrap .pulse-cards-grid > .col {
         display: flex;
+    }
+    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view {
+        display: block;
+    }
+    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view > .col {
+        display: none;
+    }
+    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view > .col.is-active {
+        display: block;
+        width: 100%;
     }
     .industries-pulse-panel-wrap .pulse-ignite-card {
         border-radius: calc(var(--industries-radius, 8px) + 6px);
@@ -906,6 +986,34 @@
     .industries-pulse-panel-wrap .pulse-card-link i {
         color: inherit;
     }
+    @media (min-width: 992px) {
+        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card {
+            display: grid;
+            grid-template-columns: minmax(280px, 38%) 1fr;
+            grid-template-rows: auto auto;
+            min-height: 0;
+        }
+        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-thumb {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            height: 240px;
+            border-radius: calc(var(--industries-radius, 8px) + 6px) 0 0 calc(var(--industries-radius, 8px) + 6px);
+        }
+        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-thumb img {
+            height: 240px;
+        }
+        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card .card-body {
+            grid-column: 2;
+            grid-row: 1;
+            justify-content: flex-start;
+        }
+        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card .card-footer {
+            grid-column: 2;
+            grid-row: 2;
+            margin-top: 0;
+            border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+        }
+    }
     @media (max-width: 991px) {
         .industries-pulse-hero .pulse-pill-wrap {
             overflow-x: auto;
@@ -959,6 +1067,49 @@
     .industries-page .faqs-section .title_all_box h2 {
         color: #fff;
     }
+    .industries-page .faqs-section .title_all_box {
+        text-align: left !important;
+        margin-bottom: 28px;
+    }
+    .industries-page .faqs-section .title_all_box .title_sections {
+        max-width: 760px;
+        margin: 0;
+    }
+    .industries-page .faqs-section .faq-layout {
+        align-items: stretch;
+    }
+    .industries-page .faqs-section .faq-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .industries-page .faqs-section .faq-visual {
+        position: relative;
+        min-height: 100%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(125, 206, 168, 0.28);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+        background: #0d1f18;
+    }
+    .industries-page .faqs-section .faq-visual img {
+        flex: 1 1 auto;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+    .industries-page .faqs-section .faq-visual::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(165deg, rgba(10, 28, 20, 0.1) 0%, rgba(10, 28, 20, 0.45) 100%);
+    }
     .industries-page .faqs-section .accordion dd,
     .industries-page .faqs-section .accordion .accordion-content {
         position: relative;
@@ -997,8 +1148,8 @@
     }
     .industries-page .faqs-section .section-cta {
         display: flex;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
     .industries-page .faqs-section .section-cta .theme-btn.one {
         display: inline-flex;
@@ -1012,6 +1163,27 @@
         background: #fff !important;
         color: #006847 !important;
         border-color: #006847 !important;
+    }
+    .industries-page .faqs-section .faq-layout > [class*="col-lg-"] {
+        display: flex;
+    }
+    @media (max-width: 991px) {
+        .industries-page .faqs-section .title_all_box {
+            text-align: center !important;
+        }
+        .industries-page .faqs-section .title_all_box .title_sections {
+            margin: 0 auto;
+        }
+        .industries-page .faqs-section .faq-visual img {
+            min-height: 280px;
+        }
+        .industries-page .faqs-section .faq-layout > [class*="col-lg-"] {
+            display: block;
+        }
+        .industries-page .faqs-section .section-cta {
+            justify-content: center;
+            text-align: center;
+        }
     }
     .industries-page .usecase-tags {
         display: flex;
@@ -1237,8 +1409,8 @@
                     <h2>{{ $p['faq_blog']['heading'] }}</h2>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-9">
+            <div class="row faq-layout g-4 align-items-stretch">
+                <div class="col-lg-7 faq-left">
                     <div class="faq_section type_one">
                         <div class="block_faq">
                             <div class="accordion">
@@ -1255,10 +1427,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="section-cta">
+                        <a href="{{ url($p['faq_blog']['cta']['href']) }}" class="theme-btn one">{{ $p['faq_blog']['cta']['label'] }}</a>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center section-cta">
-                <a href="{{ url($p['faq_blog']['cta']['href']) }}" class="theme-btn one">{{ $p['faq_blog']['cta']['label'] }}</a>
+                <div class="col-lg-5">
+                    <div class="faq-visual">
+                        <img
+                            src="{{ asset('assets/frontend/img/industries/industry-form-consultant.webp') }}"
+                            onerror="this.onerror=null;this.src='{{ asset('assets/frontend/img/compliance/cwi-bento-advisor.png') }}';"
+                            alt="Mirashka industry HR consultant discussing business-specific people strategy"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pd_bottom_80"></div>
@@ -1350,6 +1532,17 @@
         font-size: var(--industries-eyebrow) !important;
         line-height: 1.4 !important;
     }
+    /* Keep industries grid overlay headline sizes larger than global defaults */
+    .industries-page .industries-grid-showcase__kicker {
+        font-size: 34px !important;
+        line-height: 44px !important;
+        font-weight: 600 !important;
+    }
+    .industries-page .industries-grid-showcase__title {
+        font-size: var(--industries-heading) !important;
+        line-height: 1.25 !important;
+        font-weight: 800 !important;
+    }
     .industries-page .industries-pulse-hero .pulse-pills .nav-link,
     .industries-page .industries-pulse-hero .pulse-pills .nav-link .pulse-pill-title {
         font-size: var(--industries-text) !important;
@@ -1365,6 +1558,9 @@
     .industries-page [class*="__play"],
     .industries-page .industry-video-hero__nav-btn i {
         font-size: 22px !important;
+    }
+    .industries-page .industries-approach-section .icon_image i {
+        font-size: 40px !important;
     }
     .industries-page .home-why-mirashka__card-num {
         font-size: clamp(2.75rem, 5vw, 4rem) !important;
@@ -1461,6 +1657,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pulseWrap) {
         var pills = pulseWrap.querySelectorAll('[data-pulse-tab]');
         var pulseCards = pulseWrap.querySelectorAll('[data-pulse-card]');
+        var pulseGrid = pulseWrap.querySelector('.pulse-cards-grid');
+
+        if (pulseGrid) {
+            pulseGrid.classList.add('is-single-view');
+        }
 
         function setActivePulse(index) {
             pills.forEach(function (btn, i) {
@@ -1469,12 +1670,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
             });
             pulseCards.forEach(function (card, i) {
-                card.classList.toggle('is-highlighted', i === index);
+                var isActiveCard = i === index;
+                card.classList.toggle('is-highlighted', isActiveCard);
+                card.setAttribute('aria-hidden', isActiveCard ? 'false' : 'true');
+                var col = card.closest('.col');
+                if (col) {
+                    col.classList.toggle('is-active', isActiveCard);
+                }
             });
-            var activeCard = pulseCards[index];
-            if (activeCard) {
-                activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-            }
         }
 
         pills.forEach(function (btn) {
@@ -1490,6 +1693,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 setActivePulse(parseInt(card.getAttribute('data-pulse-card'), 10));
             });
         });
+        setActivePulse(0);
     }
 });
 </script>

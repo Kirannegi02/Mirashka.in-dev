@@ -1,6 +1,6 @@
 @php
     $finalCta = request()->is('/') ? config('home-bottom.final_cta', []) : [];
-    $showEnquiryForm = ! request()->is('/');
+    $showEnquiryForm = ! request()->is('/') && ! request()->is('industries-we-serve*');
 @endphp
 @if($showEnquiryForm)
 <section class="cm-support-section pricing-section doc-plan">

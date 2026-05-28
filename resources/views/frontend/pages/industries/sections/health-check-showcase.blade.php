@@ -26,8 +26,13 @@
         color: #fff;
         text-decoration: underline;
         text-underline-offset: 4px;
+        text-decoration-thickness: 2px;
         margin-bottom: 10px;
         font-weight: 700;
+        font-size: var(--industries-eyebrow, 18px);
+        line-height: 1.4;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
     }
     .industry-health-showcase__title {
         color: #fff;
