@@ -1,11 +1,11 @@
-﻿@extends('frontend.layouts.app')
+﻿
 
 
-@section('title', 'Home Page')
+<?php $__env->startSection('title', 'Home Page'); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
-@include('frontend.pages.home-sections.home-typography')
+<?php echo $__env->make('frontend.pages.home-sections.home-typography', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <style>
    p.gold {
@@ -119,7 +119,7 @@
          margin-top: 15px;
       }
    }
-{{-- Legacy methodology card styles live in home-sections.methodology-legacy --}}
+
 .client_logo_carousel .swiper-slide .image img {
      box-shadow: none; 
 }
@@ -133,13 +133,13 @@
 
       <div class="tab-content">
 
-         @foreach($banners as $key => $banner)
+         <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
          <div
-            class="tab-pane fade boxsl{{ $key+2 }} {{ $key == 0 ? 'active show' : '' }}"
-            id="para{{ $key+2 }}"
-            style="background-image: url('{{ imageUrl($banner->image) }}'); background-size: cover; background-position: center;"
+            class="tab-pane fade boxsl<?php echo e($key+2); ?> <?php echo e($key == 0 ? 'active show' : ''); ?>"
+            id="para<?php echo e($key+2); ?>"
+            style="background-image: url('<?php echo e(imageUrl($banner->image)); ?>'); background-size: cover; background-position: center;"
             role="img"
-            aria-label="{{ $banner->title }}">
+            aria-label="<?php echo e($banner->title); ?>">
             <!--<div class="banner-overlay"></div>-->
             <div class="container">
                <div class="row align-items-center-">
@@ -147,35 +147,39 @@
                      <div class="tentArea">
 
                         <p class="gold textbg mb-4">
-                           {{ $banner->sub_heading }}
+                           <?php echo e($banner->sub_heading); ?>
+
                         </p>
 
                         <h2 class="text-white">
-                           {{ $banner->title }}
+                           <?php echo e($banner->title); ?>
+
                         </h2>
 
                         <span class="line"></span>
 
                         <p class="text-white">
-                           {{ $banner->description }}
+                           <?php echo e($banner->description); ?>
+
                         </p>
 
-                        @if($banner->button_link)
+                        <?php if($banner->button_link): ?>
                         <ul class="animate_down list-unstyled">
                            <li class="theme_btn_all">
-                              <a href="{{ $banner->button_link }}" class="theme-btn one">
-                                 {{ $banner->button_text ?? 'Our Service' }}
+                              <a href="<?php echo e($banner->button_link); ?>" class="theme-btn one">
+                                 <?php echo e($banner->button_text ?? 'Our Service'); ?>
+
                               </a>
                            </li>
                         </ul>
-                        @endif
+                        <?php endif; ?>
 
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         @endforeach
+         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
       </div>
 
@@ -183,13 +187,14 @@
          <div class="container">
             <div class="pmv-nav">
                <ul class="nav">
-                  @foreach($banners as $key => $banner)
+                  <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <li>
-                     <a href="#para{{ $key+2 }}" class="{{ $key==0 ? 'active' : '' }}">
-                        {{ $key + 1 }}
+                     <a href="#para<?php echo e($key+2); ?>" class="<?php echo e($key==0 ? 'active' : ''); ?>">
+                        <?php echo e($key + 1); ?>
+
                      </a>
                   </li>
-                  @endforeach
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                </ul>
             </div>
          </div>
@@ -259,10 +264,10 @@
             <div class="col-xl-6 col-lg-12 col-md-12 mb-sm-5 mb-md-5 mb-lg-5 mb-xl-0">
                <div class="image_boxes style_one">
                   <div class="image one">
-                     <img src="{{ asset('assets/frontend/img/hraas/hraas-v3-partner.png') }}" class="img-fluid" alt="Business leader with HR consultant" width="486" height="729" loading="lazy" />
+                     <img src="<?php echo e(asset('assets/frontend/img/hraas/hraas-v3-partner.png')); ?>" class="img-fluid" alt="Business leader with HR consultant" width="486" height="729" loading="lazy" />
                   </div>
                   <div class="image two">
-                     <img src="{{ asset('assets/frontend/img/workforce/wfm-reporting-team-hands.png') }}" class="img-fluid" alt="Team collaboration and onboarding" width="241" height="241" loading="lazy" />
+                     <img src="<?php echo e(asset('assets/frontend/img/workforce/wfm-reporting-team-hands.png')); ?>" class="img-fluid" alt="Team collaboration and onboarding" width="241" height="241" loading="lazy" />
 
                   </div>
                   <div class="year_of_experience">
@@ -330,7 +335,7 @@
                   </div>
                </div>
                <div class="theme_btn_all color_one">
-                  <a href="{{ route('aboutus') }}" class="theme-btn one">More About Mirashka HR</a>
+                  <a href="<?php echo e(route('aboutus')); ?>" class="theme-btn one">More About Mirashka HR</a>
                </div>
             </div>
          </div>
@@ -342,11 +347,11 @@
                <div class="link_box_contents style_one">
                   <div class="link_content_bx">
                      <div class="image_box">
-                        <img src="{{ asset('assets/frontend/img/1.webp') }}" alt="discover how we transform" width="138" height="190">
+                        <img src="<?php echo e(asset('assets/frontend/img/1.webp')); ?>" alt="discover how we transform" width="138" height="190">
                      </div>
                      <div class="con_box">
                         <h2>Discover how we help businesses build stronger people systems</h2>
-                        <a href="{{ route('aboutus') }}">More About Mirashka HR <i class="icon-right-arrow-long"></i></a>
+                        <a href="<?php echo e(route('aboutus')); ?>">More About Mirashka HR <i class="icon-right-arrow-long"></i></a>
                      </div>
                   </div>
                </div>
@@ -359,7 +364,7 @@
                         <a href="https://calendly.com/elevateonemedia/30min">Get Appointment <i class="icon-right-arrow-long"></i></a>
                      </div>
                      <div class="image_box">
-                        <img src="{{ asset('assets/frontend/img/2.webp') }}" alt="why india's cxos choose" width="138" height="190">
+                        <img src="<?php echo e(asset('assets/frontend/img/2.webp')); ?>" alt="why india's cxos choose" width="138" height="190">
                      </div>
                   </div>
                </div>
@@ -372,7 +377,7 @@
    </section>
    <!---about us  --->
 
-   {{-- Section 3: Why Mirashka (home-only) --}}
+   
    <style>
       .home-why-mirashka {
          padding: 88px 0 96px;
@@ -563,9 +568,9 @@
             </div>
 
             <div class="home-why-mirashka__center">
-               <img src="{{ asset('assets/frontend/img/home/home-why-mirashka-hero.png') }}" alt="Founder" loading="lazy" width="300" height="420">
+               <img src="<?php echo e(asset('assets/frontend/img/home/home-why-mirashka-hero.png')); ?>" alt="Founder" loading="lazy" width="300" height="420">
                <div class="home-why-mirashka__cta-wrap">
-                  <a href="{{ url('contact-us') }}" class="home-why-mirashka__cta theme-btn one" target="_blank" rel="noopener noreferrer">
+                  <a href="<?php echo e(url('contact-us')); ?>" class="home-why-mirashka__cta theme-btn one" target="_blank" rel="noopener noreferrer">
                      Book Your 30-Minute Discovery Call <i class="ri-arrow-right-line" aria-hidden="true"></i>
                   </a>
                </div>
@@ -590,7 +595,7 @@
       </div>
    </section>
 
-   {{-- Section 4: The Growth Reality (home-only) --}}
+   
    <style>
       .home-growth-reality {
          position: relative;
@@ -1065,7 +1070,7 @@
             <div class="home-growth-reality__aside hgr-reveal hgr-reveal--right" data-hgr-delay="2">
                <figure class="home-growth-reality__visual hgr-reveal" data-hgr-delay="3">
                   <img
-                     src="{{ asset('assets/frontend/img/home/home-growth-reality.png') }}"
+                     src="<?php echo e(asset('assets/frontend/img/home/home-growth-reality.png')); ?>"
                      alt="Before and after HR transformation — from scattered spreadsheets to a structured HR dashboard"
                      loading="lazy"
                      width="640"
@@ -1117,7 +1122,7 @@
                      <strong>Know where your HR stands today</strong>
                      <span>Free readiness review — gaps, risks and next steps.</span>
                   </div>
-                  <a href="{{ route('projectenquiries') }}" class="home-growth-reality__cta theme-btn one">
+                  <a href="<?php echo e(route('projectenquiries')); ?>" class="home-growth-reality__cta theme-btn one">
                      Get HR Health Check <i class="ri-arrow-right-line" aria-hidden="true"></i>
                   </a>
                </div>
@@ -1144,8 +1149,8 @@
    })();
    </script>
 
-   {{-- Section 5: Mirashka HR Operating System (home-only) --}}
-   @php
+   
+   <?php
       $homeHrOsPillars = [
          [
             'title' => 'Compliance & Workplace Integrity',
@@ -1178,7 +1183,7 @@
             'route' => '#piller-5',
          ],
       ];
-   @endphp
+   ?>
 <style>
 .title_all_box.style_three .title_sections .before_title::before {
     background: #ffffff;
@@ -1214,28 +1219,28 @@
                   <div class="project_caro_section style_two light_color">
                      <div class="swiper-container">
                         <div class="row">
-                           @foreach($homeHrOsPillars as $pillar)
+                           <?php $__currentLoopData = $homeHrOsPillars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pillar): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                            <div class="col project_post style_seven">
                               <div class="image_box">
-                                 <img src="{{ asset($pillar['image']) }}" class="img-fluid" alt="img">
+                                 <img src="<?php echo e(asset($pillar['image'])); ?>" class="img-fluid" alt="img">
                               </div>
                               <div class="content_box ">
-                                 <h2 class="title_pro"><a href="{{ url($pillar['route']) }}" rel="bookmark">{!! $pillar['title'] !!}</a></h2>
+                                 <h2 class="title_pro"><a href="<?php echo e(url($pillar['route'])); ?>" rel="bookmark"><?php echo $pillar['title']; ?></a></h2>
                                  <p style="color: #fff;border-bottom: 1px solid;border-radius: 7px;">Read More</p>
                                  <div class="image_zoom_box ">
-                                    <a href="{{ asset($pillar['image']) }}" data-fancybox="gallery"><span
+                                    <a href="<?php echo e(asset($pillar['image'])); ?>" data-fancybox="gallery"><span
                                           class="fa fa-plus zoom_icon"></span></a>
                                  </div>
                               </div>
                               <div class="overlay ">
                                  <div class="text ">
-                                    <h2 class="title_pro"><a href="{{ url($pillar['route']) }}" rel="bookmark">{!! $pillar['title'] !!}</a></h2>
-                                    <p class="short_desc">{{ $pillar['text'] }}</p>
-                                    <a href="{{ url($pillar['route']) }}" class="read_more tp_five ">Read More</a>
+                                    <h2 class="title_pro"><a href="<?php echo e(url($pillar['route'])); ?>" rel="bookmark"><?php echo $pillar['title']; ?></a></h2>
+                                    <p class="short_desc"><?php echo e($pillar['text']); ?></p>
+                                    <a href="<?php echo e(url($pillar['route'])); ?>" class="read_more tp_five ">Read More</a>
                                  </div>
                               </div>
                            </div>
-                           @endforeach
+                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                      </div>
                   </div>                    
@@ -1296,7 +1301,7 @@
                <div class="icon_box_all style_nine  border_r_0">
                   <div class="icon_content">
                      <div class="icon">
-                        <img src="{{ asset('assets/frontend/images/010-job-search.png') }}" class="img-fluid svg_image" alt="icon png">
+                        <img src="<?php echo e(asset('assets/frontend/images/010-job-search.png')); ?>" class="img-fluid svg_image" alt="icon png">
                      </div>
                      <div class="text_box">
                         <h2><a href="javascript:void();">Expert Legal & HR Consultations</a></h2>
@@ -1309,7 +1314,7 @@
                <div class="icon_box_all style_nine bg_light_2 border_r_0">
                   <div class="icon_content">
                      <div class="icon">
-                        <img src="{{ asset('assets/frontend/images/process-icon-im-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                        <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                      </div>
                      <div class="text_box">
                         <h2><a href="javascript:void();">Policy & Documentation Excellence</a></h2>
@@ -1322,7 +1327,7 @@
                <div class="icon_box_all style_nine  border_r_0">
                   <div class="icon_content">
                      <div class="icon">
-                        <img src="{{ asset('assets/frontend/images/service-ico-2.png') }}" class="img-fluid svg_image" alt="icon png">
+                        <img src="<?php echo e(asset('assets/frontend/images/service-ico-2.png')); ?>" class="img-fluid svg_image" alt="icon png">
                      </div>
                      <div class="text_box">
                         <h2><a href="javascript:void();">Compliance & Risk Assessments</a></h2>
@@ -1335,7 +1340,7 @@
                <div class="icon_box_all style_nine bg_light_2">
                   <div class="icon_content">
                      <div class="icon">
-                        <img src="{{ asset('assets/frontend/images/process-icon-im-2.png') }}" class="img-fluid svg_image" alt="icon png">
+                        <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-2.png')); ?>" class="img-fluid svg_image" alt="icon png">
                      </div>
                      <div class="text_box">
                         <h2><a href="javascript:void();">Workplace Ethics & Prevention Training</a></h2>
@@ -1377,7 +1382,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img loading="lazy" width="350" height="220" src="{{ asset('assets/img/policy-design.png') }}" alt="img">
+                     <img loading="lazy" width="350" height="220" src="<?php echo e(asset('assets/img/policy-design.png')); ?>" alt="img">
                   </div>
                   <div class="service_content icon_yes">
                      <div class="icon_box">
@@ -1392,7 +1397,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img loading="lazy" width="350" height="220" src="{{ asset('assets/img/payrole.png') }}" alt="img">
+                     <img loading="lazy" width="350" height="220" src="<?php echo e(asset('assets/img/payrole.png')); ?>" alt="img">
                   </div>
                   <div class="service_content icon_yes">
                      <div class="icon_box">
@@ -1407,7 +1412,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img loading="lazy" width="350" height="220" src="{{ asset('assets/img/remote-hr.png') }}" alt="img">
+                     <img loading="lazy" width="350" height="220" src="<?php echo e(asset('assets/img/remote-hr.png')); ?>" alt="img">
                   </div>
                   <div class="service_content icon_yes">
                      <div class="icon_box">
@@ -1446,7 +1451,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/service-ico-n-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/service-ico-n-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#" class="color_white">Executive Search & Leadership Hiring</a></h2>
@@ -1465,7 +1470,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/process-icon-im-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#">Board & CEO Advisory</a></h2>
@@ -1484,7 +1489,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/service-ico-n-2.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/service-ico-n-2.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#" class="color_white">CEO Succession & Performance Acceleration</a></h2>
@@ -1503,7 +1508,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/process-icon-im-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#">Executive Assessment & Leadership Consulting</a></h2>
@@ -1522,7 +1527,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/service-ico-n-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/service-ico-n-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#" class="color_white">HR & Talent Strategy Advisory</a></h2>
@@ -1541,7 +1546,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/process-icon-im-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#">Digital Transformation & Workforce Evolution</a></h2>
@@ -1560,7 +1565,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/service-ico-n-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/service-ico-n-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#" class="color_white">Diversity, Equity & Inclusion Advisory</a></h2>
@@ -1579,7 +1584,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/process-icon-im-1.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/process-icon-im-1.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#">Family Business Leadership Solutions</a></h2>
@@ -1598,7 +1603,7 @@
                      <div class="content_box clearfix">
                         <div class="icon">
                            <div class="img">
-                              <img src="{{ asset('assets/frontend/images/service-ico-n-2.png') }}" class="img-fluid svg_image" alt="icon png">
+                              <img src="<?php echo e(asset('assets/frontend/images/service-ico-n-2.png')); ?>" class="img-fluid svg_image" alt="icon png">
                            </div>
                         </div>
                         <h2><a href="#" class="color_white">Restructuring & Organizational Transformation</a></h2>
@@ -1614,7 +1619,7 @@
       </div>
    </section>
 
-   <section class="service-section bg_op_3" style="background: url({{ asset('assets/frontend/images/home-12-service-bg.jpg') }}); margin-top: 60px;" id="piller-4">
+   <section class="service-section bg_op_3" style="background: url(<?php echo e(asset('assets/frontend/images/home-12-service-bg.jpg')); ?>); margin-top: 60px;" id="piller-4">
       <!--===============spacing==============-->
       <div class="pd_top_65"></div>
       <!--===============spacing==============-->
@@ -1643,7 +1648,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img loading="lazy" width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/early-stage-startups.webp') }}" alt="img">
+                           <img loading="lazy" width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/early-stage-startups.webp')); ?>" alt="img">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1659,7 +1664,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/ai-deep-tech-&-innovation-led-firms.webp') }}" alt="img" loading="lazy">
+                           <img width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/ai-deep-tech-&-innovation-led-firms.webp')); ?>" alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1675,7 +1680,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/category-creators-&-challenger-brands.webp') }}" alt="img" loading="lazy">
+                           <img width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/category-creators-&-challenger-brands.webp')); ?>" alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1691,7 +1696,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img loading="lazy" width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/tech-companies-&-SaaS-brands.webp') }}" alt="img">
+                           <img loading="lazy" width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/tech-companies-&-SaaS-brands.webp')); ?>" alt="img">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1707,7 +1712,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/funded-scale-ups.webp') }}" alt="img" loading="lazy">
+                           <img width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/funded-scale-ups.webp')); ?>" alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1723,7 +1728,7 @@
                   <div class="grid_box _card">
                      <div class="service_post style_three">
                         <div class="image_box">
-                           <img width="350" height="220" src="{{ asset('assets/frontend/img/company-packages/who-we-serve/enterprise-&-mid-market-leaders.webp') }}" alt="img" loading="lazy">
+                           <img width="350" height="220" src="<?php echo e(asset('assets/frontend/img/company-packages/who-we-serve/enterprise-&-mid-market-leaders.webp')); ?>" alt="img" loading="lazy">
                         </div>
                         <div class="text_box">
                            <div class="text_box_inner">
@@ -1745,7 +1750,7 @@
       <!--===============spacing==============-->
    </section>
 
-   <section class="project-section bg_op_1" style="background: url({{ asset('assets/frontend/images/projects/project-background-6-min.jpg') }});" id="piller-5">
+   <section class="project-section bg_op_1" style="background: url(<?php echo e(asset('assets/frontend/images/projects/project-background-6-min.jpg')); ?>);" id="piller-5">
       <!--===============spacing==============-->
       <div class="pd_top_65"></div>
       <!--===============spacing==============-->
@@ -1818,7 +1823,7 @@
                            <div class="project_post style_nine">
                               <div class="image">
                                  <img loading="lazy" width="295" height="400"
-                                    src="{{ asset('assets/img/hr-outsourcing.png') }}" class="img-fluid" alt="img">
+                                    src="<?php echo e(asset('assets/img/hr-outsourcing.png')); ?>" class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
                                  <p>Full-service HR management including payroll, benefits administration and compliance oversight.</p>
@@ -1829,7 +1834,7 @@
                         <div class="swiper-slide">
                            <div class="project_post style_nine">
                               <div class="image">
-                                 <img width="295" height="400" src="{{ asset('assets/img/branding.png') }}"
+                                 <img width="295" height="400" src="<?php echo e(asset('assets/img/branding.png')); ?>"
                                     class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
@@ -1841,7 +1846,7 @@
                         <div class="swiper-slide">
                            <div class="project_post style_nine">
                               <div class="image">
-                                 <img width="295" height="400" src="{{ asset('assets/img/candidate.png') }}"
+                                 <img width="295" height="400" src="<?php echo e(asset('assets/img/candidate.png')); ?>"
                                     class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
@@ -1853,7 +1858,7 @@
                         <div class="swiper-slide">
                            <div class="project_post style_nine">
                               <div class="image">
-                                 <img loading="lazy" width="295" height="400" src="{{ asset('assets/img/engagement.png') }}" class="img-fluid" alt="img">
+                                 <img loading="lazy" width="295" height="400" src="<?php echo e(asset('assets/img/engagement.png')); ?>" class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
                                  <p>Engagement strategies, performance frameworks and real-time employee feedback programs.</p>
@@ -1864,7 +1869,7 @@
                         <div class="swiper-slide">
                            <div class="project_post style_nine">
                               <div class="image"> 
-                                 <img width="295" height="400" src="{{ asset('assets/img/surveys.png') }}"
+                                 <img width="295" height="400" src="<?php echo e(asset('assets/img/surveys.png')); ?>"
                                     class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
@@ -1876,7 +1881,7 @@
                         <div class="swiper-slide">
                            <div class="project_post style_nine">
                               <div class="image">
-                                 <img loading="lazy" width="295" height="400" src="{{ asset('assets/img/hr-technology.png') }}" class="img-fluid" alt="img">
+                                 <img loading="lazy" width="295" height="400" src="<?php echo e(asset('assets/img/hr-technology.png')); ?>" class="img-fluid" alt="img">
                               </div>
                               <div class="project_caro_content">
                                  <p>HR software, analytics platforms and automation tools to improve HR efficiency.</p>
@@ -2047,7 +2052,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/discover.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/discover.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2062,7 +2067,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/diagnose.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/diagnose.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2077,7 +2082,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/design.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/design.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2092,7 +2097,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/deploy.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/deploy.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2107,7 +2112,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/develop.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/develop.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2122,7 +2127,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/digitize.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/digitize.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2137,7 +2142,7 @@
                   <a href="#services" class="custom-button">Start HR Discovery <i class="fa fa-arrow-right"></i></a></a>
                </div>
                <div class="card-image-container">
-                  <img src="{{ asset('assets/img/drive.png') }}" class="card-img-top" alt="Card Image 1">
+                  <img src="<?php echo e(asset('assets/img/drive.png')); ?>" class="card-img-top" alt="Card Image 1">
                </div>
             </div>
          </div>
@@ -2145,34 +2150,36 @@
    </div>
 </div>
 
-   {{-- Section 12: Integrated HR & Workforce Services --}}
-   @include('frontend.pages.home-sections.integrated-hr-services')
+   
+   <?php echo $__env->make('frontend.pages.home-sections.integrated-hr-services', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
-   {{-- Section 13: Industries We Serve --}}
-   @include('frontend.pages.home-sections.industries')
+   
+   <?php echo $__env->make('frontend.pages.home-sections.industries', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-   {{-- Section 14: Strategic Partnership + HR Enquiry Form --}}
-   @include('frontend.pages.home-sections.strategic-partnership')
+   
+   <?php echo $__env->make('frontend.pages.home-sections.strategic-partnership', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-   {{-- Section 15: Why Choose Mirashka / Our Edge --}}
-   @include('frontend.pages.home-sections.why-choose')
+   
+   <?php echo $__env->make('frontend.pages.home-sections.why-choose', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-   {{-- Section 16: Proof, FAQs (Insights & Final CTA follow via layout) --}}
-   @php $homeBottom = config('home-bottom', []); @endphp
-   @include('frontend.pages.home-sections.clients')
+   
+   <?php $homeBottom = config('home-bottom', []); ?>
+   <?php echo $__env->make('frontend.pages.home-sections.clients', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-   @include('frontend.layouts.common.sections.testimonials', [
+   <?php echo $__env->make('frontend.layouts.common.sections.testimonials', [
       'sectionClass' => 'px-3 px-md-5',
       'compactTop' => true,
       'beforeTitle' => $homeBottom['testimonials']['before_title'] ?? 'Proof of Impact',
       'sectionTitle' => $homeBottom['testimonials']['section_title'] ?? 'Client Testimonials',
       'sectionSubtitle' => $homeBottom['testimonials']['section_subtitle'] ?? '',
-   ])
+   ], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-   @include('frontend.pages.home-sections.faqs')
-
-
+   <?php echo $__env->make('frontend.pages.home-sections.faqs', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
-@endsection
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH F:\xampp\htdocs\Mirashka.in-dev\resources\views/frontend/pages/home.blade.php ENDPATH**/ ?>

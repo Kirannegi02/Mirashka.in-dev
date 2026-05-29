@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $data['title'] ?? 'Mirashka' }}</title>
-    <meta name="title" content="{{ $data['title'] ?? '' }}">
-    <meta name="description" content="{{ $data['description'] ?? '' }}">
-    <meta name="keywords" content="{{ $data['keywords'] ?? '' }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
+    <title><?php echo e($data['title'] ?? 'Mirashka'); ?></title>
+    <meta name="title" content="<?php echo e($data['title'] ?? ''); ?>">
+    <meta name="description" content="<?php echo e($data['description'] ?? ''); ?>">
+    <meta name="keywords" content="<?php echo e($data['keywords'] ?? ''); ?>">
     
-    {{-- Preconnect to external domains for faster connection --}}
+    
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    {{-- Favicon --}}
+    
     <link rel="icon" type="image/png" sizes="192x192" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
     <link rel="apple-touch-icon" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
     
-    {{-- ANTI-FOUC: Hide body initially --}}
+    
     <style>
         body {
             visibility: hidden;
@@ -98,27 +98,46 @@
 }
     </style>
     
-    {{-- Critical CSS: Load main styles FIRST (blocking but fast) --}}
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/pawan.css') }}">
     
-    {{-- Icon fonts --}}
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/bootstrap.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/responsive.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/pawan.css')); ?>">
+    
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
     
-    {{-- Non-critical CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/owl.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/swiper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/jquery.fancybox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/icomoon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/flexslider.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/scss/elements/theme-css.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/vj.css') }}">
-    <x-mirashka-fonts />
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/mirashka-fonts.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/scss/elements/color-switcher/color.css') }}">
+    
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/owl.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/swiper.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/jquery.fancybox.min.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/icomoon.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/flexslider.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/scss/elements/theme-css.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/vj.css')); ?>">
+    <?php if (isset($component)) { $__componentOriginal38911123848a7a173ba3df67e89ccbb8 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal38911123848a7a173ba3df67e89ccbb8 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.mirashka-fonts','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('mirashka-fonts'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal38911123848a7a173ba3df67e89ccbb8)): ?>
+<?php $attributes = $__attributesOriginal38911123848a7a173ba3df67e89ccbb8; ?>
+<?php unset($__attributesOriginal38911123848a7a173ba3df67e89ccbb8); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal38911123848a7a173ba3df67e89ccbb8)): ?>
+<?php $component = $__componentOriginal38911123848a7a173ba3df67e89ccbb8; ?>
+<?php unset($__componentOriginal38911123848a7a173ba3df67e89ccbb8); ?>
+<?php endif; ?>
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/mirashka-fonts.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/frontend/css/scss/elements/color-switcher/color.css')); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
         <style type="text/css">
@@ -131,62 +150,62 @@
     </style>
 </head>
 
-<body class="{{ request()->is('client-portal-login*') ? 'auth-page' : '' }}{{ request()->is('/') ? ' page-home' : '' }}">
-    {{-- Notification Flash Messages --}}
-    @include('components.notification')
+<body class="<?php echo e(request()->is('client-portal-login*') ? 'auth-page' : ''); ?><?php echo e(request()->is('/') ? ' page-home' : ''); ?>">
+    
+    <?php echo $__env->make('components.notification', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-    @php $isAuth = request()->is('client-portal-login*'); @endphp
+    <?php $isAuth = request()->is('client-portal-login*'); ?>
 
-    @includeWhen(!$isAuth, 'frontend.layouts.common.header')
+    <?php echo $__env->renderWhen(!$isAuth, 'frontend.layouts.common.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path'])); ?>
 
-    <main class="{{ $isAuth ? 'main-auth' : '' }}">
-        @yield('content')
+    <main class="<?php echo e($isAuth ? 'main-auth' : ''); ?>">
+        <?php echo $__env->yieldContent('content'); ?>
     </main>
 
-    @if(!$isAuth)
-        @include('frontend.layouts.common.sections.blogs')
-        @include('frontend.layouts.common.footer-cta')
-        @include('frontend.layouts.common.footer')
-    @endif
+    <?php if(!$isAuth): ?>
+        <?php echo $__env->make('frontend.layouts.common.sections.blogs', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('frontend.layouts.common.footer-cta', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('frontend.layouts.common.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php endif; ?>
 
-    {{-- jQuery MUST load first - render blocking but required --}}
-    <script src="{{ asset('assets/frontend/js/jquery-3.6.0.min.js') }}" defer></script>
     
-    {{-- Bootstrap after jQuery --}}
-    <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/jquery-3.6.0.min.js')); ?>" defer></script>
     
-    {{-- Lightweight libraries - defer loading --}}
+    
+    <script src="<?php echo e(asset('assets/frontend/js/bootstrap.min.js')); ?>" defer></script>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js" defer></script>
     
-    {{-- jQuery plugins --}}
-    <script src="{{ asset('assets/frontend/js/jquery.fancybox.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/jQuery.style.switcher.min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/jquery.flexslider-min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/isotope.min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/jquery.countTo.js') }}" defer></script>
     
-    {{-- Other libraries --}}
-    <script src="{{ asset('assets/frontend/js/color-scheme.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/owl.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/swiper.min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/countdown.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/simpleParallax.min.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/appear.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/sharer.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/validation.js') }}" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/jquery.fancybox.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/jQuery.style.switcher.min.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/jquery.flexslider-min.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/isotope.min.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/jquery.countTo.js')); ?>" defer></script>
     
-    {{-- Custom JS --}}
-    <script src="{{ asset('assets/frontend/js/toast-notify.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/map-helper.js') }}" defer></script>
-    <script src="{{ asset('assets/frontend/js/creote-extension.js') }}" defer></script>
     
-    {{-- External libraries --}}
+    <script src="<?php echo e(asset('assets/frontend/js/color-scheme.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/owl.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/swiper.min.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/countdown.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/simpleParallax.min.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/appear.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/sharer.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/validation.js')); ?>" defer></script>
+    
+    
+    <script src="<?php echo e(asset('assets/frontend/js/toast-notify.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/map-helper.js')); ?>" defer></script>
+    <script src="<?php echo e(asset('assets/frontend/js/creote-extension.js')); ?>" defer></script>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js" defer></script>
 
-    @stack('scripts')
+    <?php echo $__env->yieldPushContent('scripts'); ?>
 
-    {{-- Inline critical JS for form handling - runs immediately --}}
+    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Contact form handler with timeout
@@ -208,7 +227,7 @@
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 30000);
 
-                    const response = await fetch("{{ route('contact.submit') }}", {
+                    const response = await fetch("<?php echo e(route('contact.submit')); ?>", {
                         method: 'POST',
                         body: new FormData(form),
                         headers: {
@@ -265,7 +284,7 @@
                     const controller = new AbortController();
                     const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-                    const response = await fetch("{{ route('webinar.register') }}", {
+                    const response = await fetch("<?php echo e(route('webinar.register')); ?>", {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
@@ -304,7 +323,7 @@
     });
     </script>
 
-    {{-- Webinar Registration Modal --}}
+    
     <div class="modal fade" id="webinarRegisterModal" tabindex="-1">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
@@ -315,7 +334,7 @@
                 <div class="modal-body pt-0">
                     <div id="webinarModalAlert" class="alert d-none"></div>
                     <form id="webinarRegistrationForm">
-                        @csrf
+                        <?php echo csrf_field(); ?>
                         <input type="hidden" name="webinar_id" id="webinar_id">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -373,7 +392,7 @@
         </div>
     </div>
 
-    {{-- Modal initialization - runs after Bootstrap loads --}}
+    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const registerModal = document.getElementById('webinarRegisterModal');
@@ -393,7 +412,7 @@
     });
     </script>
     
-    {{-- ANTI-FOUC: Reveal page when ready + sticky header offset --}}
+    
     <script>
         function setStickyHeaderOffset() {
             if (document.body.classList.contains('auth-page')) return;
@@ -414,3 +433,4 @@
 </body>
 
 </html>
+<?php /**PATH F:\xampp\htdocs\Mirashka.in-dev\resources\views/frontend/layouts/app.blade.php ENDPATH**/ ?>

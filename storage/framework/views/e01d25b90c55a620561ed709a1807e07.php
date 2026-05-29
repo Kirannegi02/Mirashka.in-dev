@@ -1,6 +1,4 @@
-@extends('frontend.layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
    <style type="text/css">
       .theme-btn.two {
@@ -39,7 +37,7 @@
    </style>
    <!---sliders-->
    <section class="single_banner style_one bg_op_1  custom_black_overlay p-0"
-      style="background-image: url({{ asset('assets/frontend/img/Whatwedo/we-build-influence-banner.webp')  }});">
+      style="background-image: url(<?php echo e(asset('assets/frontend/img/Whatwedo/we-build-influence-banner.webp')); ?>);">
       <div class="container">
          <div class="row d-flex align-items-center">
 
@@ -104,7 +102,7 @@
    </section>
    <!---sliders-->
 
-   {{-- Section 4: The Growth Reality (home-only) --}}
+   
    <style>
       .home-growth-reality {
          position: relative;
@@ -530,7 +528,7 @@
       <div class="home-growth-reality__inner">
          <div class="home-growth-reality__shell hgr-reveal hgr-reveal--scale" data-hgr-delay="1">
             <div class="home-growth-reality__story hgr-reveal hgr-reveal--left" data-hgr-delay="2">
-               <img src="{{ asset('assets/img/piller4.png') }}" alt="Before" loading="lazy" width="640" height="400">
+               <img src="<?php echo e(asset('assets/img/piller4.png')); ?>" alt="Before" loading="lazy" width="640" height="400">
             </div>
             <div class="home-growth-reality__aside hgr-reveal hgr-reveal--right" data-hgr-delay="2">
                <div class="home-growth-reality__pains hgr-reveal" data-hgr-delay="4">
@@ -577,7 +575,7 @@
                      <strong>Know where your HR stands today</strong>
                      <span>Free readiness review — gaps, risks and next steps.</span>
                   </div>
-                  <a href="{{ route('projectenquiries') }}" class="home-growth-reality__cta theme-btn one">
+                  <a href="<?php echo e(route('projectenquiries')); ?>" class="home-growth-reality__cta theme-btn one">
                      Get HR Health Check <i class="ri-arrow-right-line" aria-hidden="true"></i>
                   </a>
                </div>
@@ -734,7 +732,7 @@
 <div class="slider-container pb-5">
    <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-         <div class="carousel-item active" style="background-image: url({{ asset('assets/img/protect.png') }});">
+         <div class="carousel-item active" style="background-image: url(<?php echo e(asset('assets/img/protect.png')); ?>);">
             <div class="carousel-caption">
                <div class="title-before">P — Protect</div>
                <h5>Compliance & Workplace Integrity</h5>
@@ -742,7 +740,7 @@
                <p>Protect the business with legal guidance, policy frameworks, HR audits, workplace ethics and POSH-compliant prevention training.</p>
             </div>
          </div>
-         <div class="carousel-item" style="background-image: url({{ asset('assets/img/unify.png') }});">
+         <div class="carousel-item" style="background-image: url(<?php echo e(asset('assets/img/unify.png')); ?>);">
             <div class="carousel-caption">
                <div class="title-before">U — Unify</div>
                <h5>Workforce Management & Process Optimization</h5>
@@ -750,7 +748,7 @@
                <p>Unify payroll, documentation, HR policies, onboarding, employee records and remote HR operations into one structured rhythm.</p>
             </div>
          </div>
-         <div class="carousel-item" style="background-image: url({{ asset('assets/img/lead.png') }});">
+         <div class="carousel-item" style="background-image: url(<?php echo e(asset('assets/img/lead.png')); ?>);">
             <div class="carousel-caption">
                <div class="title-before">L — Lead</div>
                <h5>Leadership & Organizational Excellence</h5>
@@ -758,7 +756,7 @@
                <p>Build future-ready leadership through executive search, CEO advisory, succession planning, family business governance, leadership assessment and transformation support.</p>
             </div>
          </div>
-         <div class="carousel-item" style="background-image: url({{ asset('assets/img/source.png') }});">
+         <div class="carousel-item" style="background-image: url(<?php echo e(asset('assets/img/source.png')); ?>);">
             <div class="carousel-caption">
                <div class="title-before">S — Source</div>
                <h5>Talent Acquisition & Staffing Excellence</h5>
@@ -766,7 +764,7 @@
                <p>Source the right talent through IT staffing, general staffing, NAPS support, IT recruitment, RPO and executive search.</p>
             </div>
          </div>
-         <div class="carousel-item" style="background-image: url({{ asset('assets/img/empower.png') }});">
+         <div class="carousel-item" style="background-image: url(<?php echo e(asset('assets/img/empower.png')); ?>);">
             <div class="carousel-caption">
                <div class="title-before">E — Empower</div>
                <h5>HR as a Service</h5>
@@ -808,7 +806,7 @@
 </script>
 
 
-   @php
+   <?php
       $homeHrOsPillars = [
          [
             'title' => 'Compliance & Workplace Integrity',
@@ -841,7 +839,7 @@
             'route' => '/#piller-5',
          ],
       ];
-   @endphp
+   ?>
 <style>
 .title_all_box.style_three .title_sections .before_title::before {
     background: #ffffff;
@@ -874,28 +872,28 @@
                   <div class="project_caro_section style_two light_color">
                      <div class="swiper-container">
                         <div class="row">
-                           @foreach($homeHrOsPillars as $pillar)
+                           <?php $__currentLoopData = $homeHrOsPillars; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $pillar): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                            <div class="col project_post style_seven">
                               <div class="image_box">
-                                 <img src="{{ asset($pillar['image']) }}" class="img-fluid" alt="img">
+                                 <img src="<?php echo e(asset($pillar['image'])); ?>" class="img-fluid" alt="img">
                               </div>
                               <div class="content_box ">
-                                 <h2 class="title_pro"><a href="{{ url($pillar['route']) }}" rel="bookmark">{!! $pillar['title'] !!}</a></h2>
+                                 <h2 class="title_pro"><a href="<?php echo e(url($pillar['route'])); ?>" rel="bookmark"><?php echo $pillar['title']; ?></a></h2>
                                  <p style="color: #fff;border-bottom: 1px solid;border-radius: 7px;">Read More</p>
                                  <div class="image_zoom_box ">
-                                    <a href="{{ asset($pillar['image']) }}" data-fancybox="gallery"><span
+                                    <a href="<?php echo e(asset($pillar['image'])); ?>" data-fancybox="gallery"><span
                                           class="fa fa-plus zoom_icon"></span></a>
                                  </div>
                               </div>
                               <div class="overlay ">
                                  <div class="text ">
-                                    <h2 class="title_pro"><a href="{{ url($pillar['route']) }}" rel="bookmark">{!! $pillar['title'] !!}</a></h2>
-                                    <p class="short_desc">{{ $pillar['text'] }}</p>
-                                    <a href="{{ url($pillar['route']) }}" class="read_more tp_five ">Read More</a>
+                                    <h2 class="title_pro"><a href="<?php echo e(url($pillar['route'])); ?>" rel="bookmark"><?php echo $pillar['title']; ?></a></h2>
+                                    <p class="short_desc"><?php echo e($pillar['text']); ?></p>
+                                    <a href="<?php echo e(url($pillar['route'])); ?>" class="read_more tp_five ">Read More</a>
                                  </div>
                               </div>
                            </div>
-                           @endforeach
+                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                      </div>
                   </div>                    
@@ -918,7 +916,7 @@
          <div class="row">
             <div class="col-xl-6 col-lg-12 mb-5 mb-lg-5 mb-xl-0">
                <div class="image_boxes style_three">
-                  <img src="{{ asset('assets/frontend/img/Whatwedo/from-visibility-to-authority.webp') }}" class="background_image" alt="image">
+                  <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/from-visibility-to-authority.webp')); ?>" class="background_image" alt="image">
 
                </div>
             </div>
@@ -949,7 +947,7 @@
 
 
    <section class="service-section bg_op_1 position-relative"
-      style="background: url('{{ asset('assets/frontend/images/home-13-service-bg.jpg') }}');">
+      style="background: url('<?php echo e(asset('assets/frontend/images/home-13-service-bg.jpg')); ?>');">
 
       <div class="pd_top_90"></div>
 
@@ -999,7 +997,7 @@
                      <!-- FOUNDERS -->
                      <div class="service_box type_one clearfix">
                         <div class="image_box">
-                           <img src="{{ asset('assets/frontend/img/Whatwedo/who-we-work/founders-&-entrepreneurs.webp') }}" class="img-fluid"
+                           <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/who-we-work/founders-&-entrepreneurs.webp')); ?>" class="img-fluid"
                               alt="img" />
                            <div class="overlay"></div>
                         </div>
@@ -1020,7 +1018,7 @@
                      <!-- CXOs -->
                      <div class="service_box type_one clearfix">
                         <div class="image_box">
-                           <img src="{{ asset('assets/frontend/img/Whatwedo/who-we-work/cxos-&-senior-leadership.webp') }}" class="img-fluid"
+                           <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/who-we-work/cxos-&-senior-leadership.webp')); ?>" class="img-fluid"
                               alt="img" />
                            <div class="overlay"></div>
                         </div>
@@ -1041,7 +1039,7 @@
                      <!-- BUSINESS OWNERS -->
                      <div class="service_box type_one clearfix">
                         <div class="image_box">
-                           <img src="{{ asset('assets/frontend/img/Whatwedo/who-we-work/business-owners-&-promoters.webp') }}" class="img-fluid"
+                           <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/who-we-work/business-owners-&-promoters.webp')); ?>" class="img-fluid"
                               alt="img" />
                            <div class="overlay"></div>
                         </div>
@@ -1062,7 +1060,7 @@
                      <!-- CELEBRITIES -->
                      <div class="service_box type_one clearfix">
                         <div class="image_box">
-                           <img src="{{ asset('assets/frontend/img/Whatwedo/who-we-work/celebrities-&-influencers.webp') }}" class="img-fluid"
+                           <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/who-we-work/celebrities-&-influencers.webp')); ?>" class="img-fluid"
                               alt="img" />
                            <div class="overlay"></div>
                         </div>
@@ -1083,7 +1081,7 @@
                      <!-- CORPORATES -->
                      <div class="service_box type_one clearfix">
                         <div class="image_box">
-                           <img src="{{ asset('assets/frontend/img/Whatwedo/who-we-work/corporates-&-institutions.webp') }}" class="img-fluid"
+                           <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/who-we-work/corporates-&-institutions.webp')); ?>" class="img-fluid"
                               alt="img" />
                            <div class="overlay"></div>
                         </div>
@@ -1141,7 +1139,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/executive-influence-media-authority.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/executive-influence-media-authority.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1149,7 +1147,7 @@
                         <span class="icon icon-megaphone"></span>
                      </div>
                      <h2 class="title_service">
-                        <a href="{{ url('/executive-in-fluence-media-authority') }}">Executive Influence & Media Authority</a>
+                        <a href="<?php echo e(url('/executive-in-fluence-media-authority')); ?>">Executive Influence & Media Authority</a>
                      </h2>
                      <p class="short_desc">
                         Strategic media visibility, executive profiling, thought leadership placements, and
@@ -1165,7 +1163,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/cxo-digital-presence-&-thought-leadership.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/cxo-digital-presence-&-thought-leadership.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1179,7 +1177,7 @@
                         LinkedIn authority, influence coaching, leadership media training, and digital thought-leadership
                         strategy.
                      </p>
-                     <a class="read_more" href="{{ url('/digital-presence-thought-leadership') }}">Read More <i class="icon-right-arrow-long"></i></a>
+                     <a class="read_more" href="<?php echo e(url('/digital-presence-thought-leadership')); ?>">Read More <i class="icon-right-arrow-long"></i></a>
                   </div>
                </div>
             </div>
@@ -1189,7 +1187,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/voice-of-leadership-podcast-&-audio-ip.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/voice-of-leadership-podcast-&-audio-ip.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1203,7 +1201,7 @@
                         Podcast concept development, executive audio positioning, editorial architecture, and voice-led
                         thought leadership platforms.
                      </p>
-                     <a class="read_more" href="{{ url('/voice-of-leadership-podcast-audioip') }}">Read More <i class="icon-right-arrow-long"></i></a>
+                     <a class="read_more" href="<?php echo e(url('/voice-of-leadership-podcast-audioip')); ?>">Read More <i class="icon-right-arrow-long"></i></a>
                   </div>
                </div>
             </div>
@@ -1213,7 +1211,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/reputation-capital-&-awards-positioning.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/reputation-capital-&-awards-positioning.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1228,7 +1226,7 @@
                         Awards consulting, recognition strategy, founder and CXO positioning, and reputation-strengthening
                         external validation.
                      </p>
-                     <a class="read_more" href="{{ url('/reputation-capital-awards-positioning') }}">Read More <i class="icon-right-arrow-long"></i></a>
+                     <a class="read_more" href="<?php echo e(url('/reputation-capital-awards-positioning')); ?>">Read More <i class="icon-right-arrow-long"></i></a>
                   </div>
                </div>
             </div>
@@ -1238,7 +1236,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/cxo-presence-&-industry-visibility.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/cxo-presence-&-industry-visibility.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1247,7 +1245,7 @@
                         <span class="icon icon-briefcase"></span>
                      </div>
                      <h2 class="title_service">
-                        <a href="{{ url('/cxo-presence-industry-visibility') }}">CXO Presence & Industry Visibility</a>
+                        <a href="<?php echo e(url('/cxo-presence-industry-visibility')); ?>">CXO Presence & Industry Visibility</a>
                      </h2>
                      <p class="short_desc">
                         Speaking engagements, investor visibility, capital markets communication, and strategic stage-led
@@ -1263,7 +1261,7 @@
                <div class="service_post style_one">
                   <div class="image">
                      <div class="overlay"></div>
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/one-reputation/regional-impact-communication.webp') }}" class="img-fluid"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/one-reputation/regional-impact-communication.webp')); ?>" class="img-fluid"
                         alt="img">
                   </div>
                   <div class="service_content icon_yes">
@@ -1278,7 +1276,7 @@
                         Localised media strategy, regional relevance, multi-market communication, and geography-sensitive
                         brand trust building.
                      </p>
-                     <a class="read_more" href="{{ url('/regional-impact-communication') }}">Read More <i class="icon-right-arrow-long"></i></a>
+                     <a class="read_more" href="<?php echo e(url('/regional-impact-communication')); ?>">Read More <i class="icon-right-arrow-long"></i></a>
                   </div>
                </div>
             </div>
@@ -1374,11 +1372,11 @@
                <div class="image_boxes style_five">
 
                   <div class="image_box one">
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/image_1.webp') }}" class="img-fluid" alt="img">
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/image_1.webp')); ?>" class="img-fluid" alt="img">
                   </div>
 
                   <div class="image_box two">
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/image_2.webp') }}" class="img-fluid two" alt="img">
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/image_2.webp')); ?>" class="img-fluid two" alt="img">
                   </div>
 
                </div>
@@ -1554,7 +1552,7 @@
             </div>
             <div class="col-lg-4">
                <div class="theme_btn_all color_one text-md-end">
-                  <a href="{{ route('strategicmediaplacements') }}" class="theme-btn one">Explore All Services</a>
+                  <a href="<?php echo e(route('strategicmediaplacements')); ?>" class="theme-btn one">Explore All Services</a>
                   <div class="pd_bottom_30"></div>
                </div>
             </div>
@@ -1590,11 +1588,11 @@
    <div class="service_carousel style_one">
       <div class="image">
          <div class="overlay"></div>
-         <img src="{{ asset('assets/frontend/img/executive.png') }}">
+         <img src="<?php echo e(asset('assets/frontend/img/executive.png')); ?>">
       </div>
       <div class="content">
          <div class="icon_box">
-            <span><img src="{{ asset('assets/frontend/img/Executive.svg') }}"></span>
+            <span><img src="<?php echo e(asset('assets/frontend/img/Executive.svg')); ?>"></span>
          </div>
          <h2 class="title_service"><a href="#">Enterprise Tech & B2B SaaS</a></h2>
          <p class="text-white">
@@ -1609,14 +1607,14 @@
    <div class="service_carousel style_one">
       <div class="image">
          <div class="overlay"></div>
-         <img src="{{ asset('assets/frontend/img/Whatwedo/sectors/ai-deep-tech-&-innovation.webp') }}">
+         <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/sectors/ai-deep-tech-&-innovation.webp')); ?>">
       </div>
       <div class="content">
          <div class="icon_box">
-            <span><img src="{{ asset('assets/frontend/img/CXO-Digital.svg') }}"></span>
+            <span><img src="<?php echo e(asset('assets/frontend/img/CXO-Digital.svg')); ?>"></span>
          </div>
          <h2 class="title_service">
-            <a href="{{ route('aideeptech') }}">AI, Deep Tech & Innovation</a>
+            <a href="<?php echo e(route('aideeptech')); ?>">AI, Deep Tech & Innovation</a>
          </h2>
          <p class="text-white">
             Translating complex technologies into clear, compelling narratives that media, investors, and stakeholders can understand and engage with effectively.
@@ -1630,11 +1628,11 @@
    <div class="service_carousel style_one">
       <div class="image">
          <div class="overlay"></div>
-         <img src="{{ asset('assets/frontend/img/Whatwedo/sectors/health-&-wellness.webp') }}">
+         <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/sectors/health-&-wellness.webp')); ?>">
       </div>
       <div class="content">
          <div class="icon_box">
-            <span><img src="{{ asset('assets/frontend/img/Voice.svg') }}"></span>
+            <span><img src="<?php echo e(asset('assets/frontend/img/Voice.svg')); ?>"></span>
          </div>
          <h2 class="title_service"><a href="#">Health & Wellness</a></h2>
          <p class="text-white">
@@ -1649,14 +1647,14 @@
    <div class="service_carousel style_one">
       <div class="image">
          <div class="overlay"></div>
-         <img src="{{ asset('assets/frontend/img/Whatwedo/sectors/BFSI-&-fintech.webp') }}">
+         <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/sectors/BFSI-&-fintech.webp')); ?>">
       </div>
       <div class="content">
          <div class="icon_box">
-            <span><img src="{{ asset('assets/frontend/img/Reputation.svg') }}"></span>
+            <span><img src="<?php echo e(asset('assets/frontend/img/Reputation.svg')); ?>"></span>
          </div>
          <h2 class="title_service">
-            <a href="{{ route('bfsifintech') }}">BFSI & Fintech</a>
+            <a href="<?php echo e(route('bfsifintech')); ?>">BFSI & Fintech</a>
          </h2>
          <p class="text-white">
             Driving trust through consistent communication, leadership visibility, and credibility-focused narratives across evolving financial and regulatory ecosystems.
@@ -1670,14 +1668,14 @@
    <div class="service_carousel style_one">
       <div class="image">
          <div class="overlay"></div>
-         <img src="{{ asset('assets/frontend/img/Whatwedo/sectors/luxury-&-premium-brands.webp') }}">
+         <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/sectors/luxury-&-premium-brands.webp')); ?>">
       </div>
       <div class="content">
          <div class="icon_box">
-            <span><img src="{{ asset('assets/frontend/img/CXO.svg') }}"></span>
+            <span><img src="<?php echo e(asset('assets/frontend/img/CXO.svg')); ?>"></span>
          </div>
          <h2 class="title_service">
-            <a href="{{ route('luxurybrands') }}">Luxury & Premium Brands</a>
+            <a href="<?php echo e(route('luxurybrands')); ?>">Luxury & Premium Brands</a>
          </h2>
          <p class="text-white">
             Crafting aspirational brand narratives that enhance perception, desirability, and visibility while maintaining exclusivity and strong market positioning.
@@ -1729,7 +1727,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">01</span>
@@ -1745,7 +1743,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">02</span>
@@ -1761,7 +1759,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">03</span>
@@ -1777,7 +1775,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">04</span>
@@ -1793,7 +1791,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">05</span>
@@ -1809,7 +1807,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">06</span>
@@ -1825,7 +1823,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">07</span>
@@ -1839,7 +1837,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                <div class="choose_box type_one">
                   <div class="image_box">
-                     <img src="{{ asset('assets/frontend/img/CXO-level.svg') }}" class="img-fluid svg_image" alt="icon">
+                     <img src="<?php echo e(asset('assets/frontend/img/CXO-level.svg')); ?>" class="img-fluid svg_image" alt="icon">
                   </div>
                   <div class="content_box">
                      <span class="step_no">08</span>
@@ -1866,13 +1864,13 @@
             <div class="col-xl-6 col-lg-12 mb-5 mb-lg-5 mb-xl-0">
                <div class="creote-image-box image-box-overlap">
                   <div class="image_boxes style_eight">
-                     <img src="{{ asset('assets/frontend/img/Whatwedo/why.webp') }}"
+                     <img src="<?php echo e(asset('assets/frontend/img/Whatwedo/why.webp')); ?>"
                         class="img-fluid image_fit height_500px pd_right_30" alt="img">
                      <div class="row no-space">
                         <div class="col-lg-5"></div>
                         <div
                            class="col-lg-7 bg_dark_2 mr_top_minus_150 pd_top_50 pd_left_70 pd_right_50 pd_bottom_20 bg_op_1"
-                           style="background-image: url({{ asset('assets/images/pannern-n3.png') }})!important;">
+                           style="background-image: url(<?php echo e(asset('assets/images/pannern-n3.png')); ?>)!important;">
                            <div class="title_all_box style_one light_color">
                               <div class="title_sections left">
                                  <div class="before_title color_white">Why Mirashka</div>
@@ -1959,7 +1957,7 @@
                <div class="pd_bottom_20"></div>
 
                <div class="theme_btn_all color_one">
-                  <a href="{{ route('projectenquiries') }}" class="theme-btn one">
+                  <a href="<?php echo e(route('projectenquiries')); ?>" class="theme-btn one">
                      Start a Conversation
                   </a>
                </div>
@@ -1971,8 +1969,8 @@
       <div class="pd_bottom_90"></div>
 
    </section>
-     @include('frontend.layouts.common.sections.clients')
-   @include('frontend.layouts.common.sections.casestudies')
+     <?php echo $__env->make('frontend.layouts.common.sections.clients', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+   <?php echo $__env->make('frontend.layouts.common.sections.casestudies', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     <section class="faqs-section">
 
       <div class="pd_top_80"></div>
@@ -1998,7 +1996,7 @@
             <!-- LEFT SIDE (UNCHANGED IMAGES + METRICS) -->
             <div class="col-xl-3 col-lg-6 mb-5">
                <div class="simple_image_boxes height_360px parallax_cover">
-                  <img src="{{ asset('assets/frontend/img/faq1.jpg') }}" class="simp_img cover-parallax">
+                  <img src="<?php echo e(asset('assets/frontend/img/faq1.jpg')); ?>" class="simp_img cover-parallax">
                </div>
                <div class="mr_bottom_25"></div>
                <div class="progress_bar">
@@ -2011,7 +2009,7 @@
 
             <div class="col-xl-3 col-lg-6 mb-5">
                <div class="simple_image_boxes height_360px parallax_cover">
-                  <img src="{{ asset('assets/frontend/img/faq2.jpg') }}" class="simp_img cover-parallax">
+                  <img src="<?php echo e(asset('assets/frontend/img/faq2.jpg')); ?>" class="simp_img cover-parallax">
                </div>
                <div class="mr_bottom_25"></div>
                <div class="progress_bar">
@@ -2109,7 +2107,7 @@
       <div class="pd_bottom_60"></div>
 
    </section>
-   @include('frontend.layouts.common.sections.success')
+   <?php echo $__env->make('frontend.layouts.common.sections.success', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 
@@ -2118,4 +2116,5 @@
 
 
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('frontend.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH F:\xampp\htdocs\Mirashka.in-dev\resources\views/frontend/pages/whatwedo.blade.php ENDPATH**/ ?>

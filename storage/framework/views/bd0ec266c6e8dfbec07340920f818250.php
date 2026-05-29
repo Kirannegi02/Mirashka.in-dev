@@ -1,4 +1,4 @@
-{{-- Uniform typography for the home page — Mirashka type scale --}}
+
 <style>
    .mirashka-home,
    body.page-home .blog-section,
@@ -316,3 +316,4 @@
       border-radius: 50% !important;
    }
 </style>
+<?php /**PATH F:\xampp\htdocs\Mirashka.in-dev\resources\views/frontend/pages/home-sections/home-typography.blade.php ENDPATH**/ ?>

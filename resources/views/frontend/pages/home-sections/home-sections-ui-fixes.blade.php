@@ -23,9 +23,6 @@
       letter-spacing: 0.06em !important;
       line-height: 1.3 !important;
    }
-   .mirashka-home .home-growth-reality__timeline-step {
-      font-size: 0.8125rem !important;
-   }
    @media (max-width: 640px) {
       .mirashka-home .home-hr-os__hub strong {
          font-size: 0.8125rem !important;
