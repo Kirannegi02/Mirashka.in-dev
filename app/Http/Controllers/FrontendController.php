@@ -14,7 +14,7 @@ class FrontendController extends Controller
     {
         $banners = Banner::where('status', 'active')->latest()->get();
         $data = [];
-        $data['title'] = "Global Best PR Agency with 15+ Years of Excellence";
+        $data['title'] = "HR staffing and HRaaS partner";
 		$data['description'] = "From behind the scenes to front-page features we elevate CXOs, corporates, and visionaries with premium PR";
 		$data['keywords'] = "pr firms near me, top pr firms, pr agency near me, best pr agency in delhi ncr, pr agency in new delhi, pr agency in noida, top pr agency in noida, celebrity pr agency in mumbai";
 

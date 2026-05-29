@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     
-    <link rel="icon" type="image/png" sizes="192x192" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
-    <link rel="apple-touch-icon" href="https://mirashka.co.in/wp-content/uploads/2024/04/cropped-cropped-mirashka-logo-1-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo e(asset('assets/img/favicon.png')); ?>">
+    <link rel="apple-touch-icon" href="<?php echo e(asset('assets/img/favicon.png')); ?>">
     
     
     <style>
