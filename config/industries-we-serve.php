@@ -104,7 +104,7 @@ return [
                 'subcategories' => ['Pharmaceuticals', 'Hospitals & Clinics', 'Medical Devices'],
                 'description' => 'People solutions for healthcare businesses where reliability, empathy, process discipline and regulatory awareness are essential.',
                 'cta' => 'Explore Healthcare',
-                'route' => 'healthwellness',
+                'route' => 'industries.healthcare',
                 'icon' => 'icon-pharmacy',
                 'image' => 'asassets/frontend/img/compliance/cwi-integrity.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-hero.png',

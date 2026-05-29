@@ -23,7 +23,7 @@
                 <div class="cwi-integrity__actions">
                     @if(!empty($section['cta']))
                     <div class="theme_btn_all">
-                        <a href="{{ route('projectenquiries') }}" class="theme-btn one cwi-btn-cta cwi-btn-cta--on-dark">{{ $section['cta'] }} <i class="icon-right-arrow"></i></a>
+                        <a href="{{ $section['cta_href'] ?? route('projectenquiries') }}" class="theme-btn one cwi-btn-cta cwi-btn-cta--on-dark">{{ $section['cta'] }} <i class="icon-right-arrow"></i></a>
                     </div>
                     @endif
                     @if(!empty($section['trust_name']))
