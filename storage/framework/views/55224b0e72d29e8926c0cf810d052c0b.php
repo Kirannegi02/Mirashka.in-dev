@@ -8,117 +8,17 @@
 <?php echo $__env->make('frontend.pages.home-sections.home-typography', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <style>
-   p.gold {
-      margin-bottom: 0;
-      margin-top: 10px;
-   }
+p.gold {
+   margin-bottom: 0;
+   margin-top: 10px;
+}
 
-   .textbg {
-      background-color: #FFFFFF;
-      padding: 10px 10px 10px 10px !important;
-      border-radius: 8px !important;
-   }
-
-   #homeOneBanner {
-      position: relative;
-   }
-
-   #homeOneBanner .tab-content {
-      position: relative;
-      min-height: max(680px, 82vh);
-   }
-
-   #homeOneBanner .tab-pane {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: max(540px, 82vh);
-      height: auto !important;
-      padding-bottom: 35px;
-      box-sizing: border-box;
-   }
-
-   #homeOneBanner .tab-pane .container {
-      padding-top: 72px;
-      padding-bottom: 24px;
-   }
-
-   #homeOneBanner .tentArea {
-      padding: 0;
-   }
-
-   #homeOneBanner .animate_down {
-      margin-top: 20px;
-      margin-bottom: 0;
-   }
-
-   #homeOneBanner .pmv-bottom {
-      position: relative;
-      z-index: 5;
-      margin-top: -190px;
-      margin-bottom: 24px;
-      pointer-events: none;
-   }
-
-   #homeOneBanner .pmv-bottom .pmv-nav,
-   #homeOneBanner .pmv-bottom .container,
-   #homeOneBanner .pmv-bottom a {
-      pointer-events: auto;
-   }
-
-   /* Dark overlay */
-   #homeOneBanner .banner-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      /* adjust darkness here */
-      z-index: 1;
-   }
-
-   /* Content above overlay */
-   #homeOneBanner .container {
-      position: relative;
-      z-index: 2;
-   }
-
-   /* Mobile responsive height */
-   @media (max-width: 768px) {
-      #homeOneBanner .tab-content {
-         min-height: max(560px, 78vh);
-      }
-
-      #homeOneBanner .tab-pane {
-         min-height: max(560px, 78vh);
-         padding-bottom: 72px;
-      }
-
-      #homeOneBanner .tab-pane .container {
-         padding-top: 48px;
-      }
-
-      #homeOneBanner .pmv-bottom {
-         margin-top: -56px;
-         margin-bottom: 16px;
-      }
-   }
-
-   /* Banner content control */
-   .tentArea {
-      max-width: 650px;
-   }
-
-   /* Mobile fixes */
-   @media (max-width: 768px) {
-      .tentArea {
-         text-align: center;
-         margin: auto;
-      }
-
-      .animate_down {
-         margin-top: 15px;
-      }
-   }
+.textbg {
+   background-color: #FFFFFF;
+   padding: 5px 10px 4px 10px !important;
+   border-radius: 8px !important;
+   width: fit-content;
+}
 
 .client_logo_carousel .swiper-slide .image img {
      box-shadow: none; 
@@ -128,121 +28,8 @@
 }
 </style>
 <div id="content" class="site-content mirashka-home">
-   <!--banner home-->
-   <section id="homeOneBanner" class="home2-pmv-section">
 
-      <div class="tab-content">
-
-         <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-         <div
-            class="tab-pane fade boxsl<?php echo e($key+2); ?> <?php echo e($key == 0 ? 'active show' : ''); ?>"
-            id="para<?php echo e($key+2); ?>"
-            style="background-image: url('<?php echo e(imageUrl($banner->image)); ?>'); background-size: cover; background-position: center;"
-            role="img"
-            aria-label="<?php echo e($banner->title); ?>">
-            <!--<div class="banner-overlay"></div>-->
-            <div class="container">
-               <div class="row align-items-center-">
-                  <div class="col-lg-8 col-sm-12">
-                     <div class="tentArea">
-
-                        <p class="gold textbg mb-4">
-                           <?php echo e($banner->sub_heading); ?>
-
-                        </p>
-
-                        <h2 class="text-white">
-                           <?php echo e($banner->title); ?>
-
-                        </h2>
-
-                        <span class="line"></span>
-
-                        <p class="text-white">
-                           <?php echo e($banner->description); ?>
-
-                        </p>
-
-                        <?php if($banner->button_link): ?>
-                        <ul class="animate_down list-unstyled">
-                           <li class="theme_btn_all">
-                              <a href="<?php echo e($banner->button_link); ?>" class="theme-btn one">
-                                 <?php echo e($banner->button_text ?? 'Our Service'); ?>
-
-                              </a>
-                           </li>
-                        </ul>
-                        <?php endif; ?>
-
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-      </div>
-
-      <div class="pmv-bottom">
-         <div class="container">
-            <div class="pmv-nav">
-               <ul class="nav">
-                  <?php $__currentLoopData = $banners; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $banner): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                  <li>
-                     <a href="#para<?php echo e($key+2); ?>" class="<?php echo e($key==0 ? 'active' : ''); ?>">
-                        <?php echo e($key + 1); ?>
-
-                     </a>
-                  </li>
-                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-               </ul>
-            </div>
-         </div>
-      </div>   
-
-   </section>
-
-
-   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-         const tabs = document.querySelectorAll('#homeOneBanner .tab-pane');
-         const tabLinks = document.querySelectorAll('#homeOneBanner .pmv-nav .nav a');
-         let currentIndex = 0;
-         const totalSlides = tabs.length;
-
-         function showSlide(index) {
-            tabs.forEach((tab, i) => {
-               tab.classList.remove('active', 'show');
-               tabLinks[i].classList.remove('active');
-            });
-            tabs[index].classList.add('active', 'show');
-            tabLinks[index].classList.add('active');
-            currentIndex = index;
-         }
-
-         function nextSlide() {
-            const nextIndex = (currentIndex + 1) % totalSlides;
-            showSlide(nextIndex);
-         }
-
-         setInterval(nextSlide, 5000);
-
-         tabLinks.forEach((link, i) => {
-            link.addEventListener('click', (e) => {
-               e.preventDefault(); // prevent default jump
-               showSlide(i);
-            });
-         });
-
-         showSlide(currentIndex);
-      });
-   </script>
-
-   <!--banner home-->
-
-
-
-
+   <?php echo $__env->make('frontend.pages.home-sections.homeBanner', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
    <!---about us  --->
    <style>
       .about-section .who-we-are-tab-icon {
@@ -2165,7 +1952,7 @@
 
    
    <?php $homeBottom = config('home-bottom', []); ?>
-   <?php echo $__env->make('frontend.pages.home-sections.clients', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+   <?php echo $__env->make('frontend.pages.home-sections.homeClients', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
    <?php echo $__env->make('frontend.layouts.common.sections.testimonials', [
       'sectionClass' => 'px-3 px-md-5',

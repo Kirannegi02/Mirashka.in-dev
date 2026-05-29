@@ -8,118 +8,18 @@
 @include('frontend.pages.home-sections.home-typography')
 
 <style>
-   p.gold {
-      margin-bottom: 0;
-      margin-top: 10px;
-   }
+p.gold {
+   margin-bottom: 0;
+   margin-top: 10px;
+}
 
-   .textbg {
-      background-color: #FFFFFF;
-      padding: 10px 10px 10px 10px !important;
-      border-radius: 8px !important;
-   }
+.textbg {
+   background-color: #FFFFFF;
+   padding: 5px 10px 4px 10px !important;
+   border-radius: 8px !important;
+   width: fit-content;
+}
 
-   #homeOneBanner {
-      position: relative;
-   }
-
-   #homeOneBanner .tab-content {
-      position: relative;
-      min-height: max(680px, 82vh);
-   }
-
-   #homeOneBanner .tab-pane {
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: max(540px, 82vh);
-      height: auto !important;
-      padding-bottom: 35px;
-      box-sizing: border-box;
-   }
-
-   #homeOneBanner .tab-pane .container {
-      padding-top: 72px;
-      padding-bottom: 24px;
-   }
-
-   #homeOneBanner .tentArea {
-      padding: 0;
-   }
-
-   #homeOneBanner .animate_down {
-      margin-top: 20px;
-      margin-bottom: 0;
-   }
-
-   #homeOneBanner .pmv-bottom {
-      position: relative;
-      z-index: 5;
-      margin-top: -190px;
-      margin-bottom: 24px;
-      pointer-events: none;
-   }
-
-   #homeOneBanner .pmv-bottom .pmv-nav,
-   #homeOneBanner .pmv-bottom .container,
-   #homeOneBanner .pmv-bottom a {
-      pointer-events: auto;
-   }
-
-   /* Dark overlay */
-   #homeOneBanner .banner-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      /* adjust darkness here */
-      z-index: 1;
-   }
-
-   /* Content above overlay */
-   #homeOneBanner .container {
-      position: relative;
-      z-index: 2;
-   }
-
-   /* Mobile responsive height */
-   @media (max-width: 768px) {
-      #homeOneBanner .tab-content {
-         min-height: max(560px, 78vh);
-      }
-
-      #homeOneBanner .tab-pane {
-         min-height: max(560px, 78vh);
-         padding-bottom: 72px;
-      }
-
-      #homeOneBanner .tab-pane .container {
-         padding-top: 48px;
-      }
-
-      #homeOneBanner .pmv-bottom {
-         margin-top: -56px;
-         margin-bottom: 16px;
-      }
-   }
-
-   /* Banner content control */
-   .tentArea {
-      max-width: 650px;
-   }
-
-   /* Mobile fixes */
-   @media (max-width: 768px) {
-      .tentArea {
-         text-align: center;
-         margin: auto;
-      }
-
-      .animate_down {
-         margin-top: 15px;
-      }
-   }
-{{-- Legacy methodology card styles live in home-sections.methodology-legacy --}}
 .client_logo_carousel .swiper-slide .image img {
      box-shadow: none; 
 }
@@ -128,116 +28,8 @@
 }
 </style>
 <div id="content" class="site-content mirashka-home">
-   <!--banner home-->
-   <section id="homeOneBanner" class="home2-pmv-section">
 
-      <div class="tab-content">
-
-         @foreach($banners as $key => $banner)
-         <div
-            class="tab-pane fade boxsl{{ $key+2 }} {{ $key == 0 ? 'active show' : '' }}"
-            id="para{{ $key+2 }}"
-            style="background-image: url('{{ imageUrl($banner->image) }}'); background-size: cover; background-position: center;"
-            role="img"
-            aria-label="{{ $banner->title }}">
-            <!--<div class="banner-overlay"></div>-->
-            <div class="container">
-               <div class="row align-items-center-">
-                  <div class="col-lg-8 col-sm-12">
-                     <div class="tentArea">
-
-                        <p class="gold textbg mb-4">
-                           {{ $banner->sub_heading }}
-                        </p>
-
-                        <h2 class="text-white">
-                           {{ $banner->title }}
-                        </h2>
-
-                        <span class="line"></span>
-
-                        <p class="text-white">
-                           {{ $banner->description }}
-                        </p>
-
-                        @if($banner->button_link)
-                        <ul class="animate_down list-unstyled">
-                           <li class="theme_btn_all">
-                              <a href="{{ $banner->button_link }}" class="theme-btn one">
-                                 {{ $banner->button_text ?? 'Our Service' }}
-                              </a>
-                           </li>
-                        </ul>
-                        @endif
-
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         @endforeach
-
-      </div>
-
-      <div class="pmv-bottom">
-         <div class="container">
-            <div class="pmv-nav">
-               <ul class="nav">
-                  @foreach($banners as $key => $banner)
-                  <li>
-                     <a href="#para{{ $key+2 }}" class="{{ $key==0 ? 'active' : '' }}">
-                        {{ $key + 1 }}
-                     </a>
-                  </li>
-                  @endforeach
-               </ul>
-            </div>
-         </div>
-      </div>   
-
-   </section>
-
-
-   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-         const tabs = document.querySelectorAll('#homeOneBanner .tab-pane');
-         const tabLinks = document.querySelectorAll('#homeOneBanner .pmv-nav .nav a');
-         let currentIndex = 0;
-         const totalSlides = tabs.length;
-
-         function showSlide(index) {
-            tabs.forEach((tab, i) => {
-               tab.classList.remove('active', 'show');
-               tabLinks[i].classList.remove('active');
-            });
-            tabs[index].classList.add('active', 'show');
-            tabLinks[index].classList.add('active');
-            currentIndex = index;
-         }
-
-         function nextSlide() {
-            const nextIndex = (currentIndex + 1) % totalSlides;
-            showSlide(nextIndex);
-         }
-
-         setInterval(nextSlide, 5000);
-
-         tabLinks.forEach((link, i) => {
-            link.addEventListener('click', (e) => {
-               e.preventDefault(); // prevent default jump
-               showSlide(i);
-            });
-         });
-
-         showSlide(currentIndex);
-      });
-   </script>
-
-   <!--banner home-->
-
-
-
-
+   @include('frontend.pages.home-sections.homeBanner')
    <!---about us  --->
    <style>
       .about-section .who-we-are-tab-icon {
@@ -2160,7 +1952,7 @@
 
    {{-- Section 16: Proof, FAQs (Insights & Final CTA follow via layout) --}}
    @php $homeBottom = config('home-bottom', []); @endphp
-   @include('frontend.pages.home-sections.clients')
+   @include('frontend.pages.home-sections.homeClients')
 
    @include('frontend.layouts.common.sections.testimonials', [
       'sectionClass' => 'px-3 px-md-5',

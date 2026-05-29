@@ -724,11 +724,13 @@
    }
 </style>
 <div class="title_all_box style_one text-center dark_color mt-5 pt-3">
-   <div class="title_sections">
-      <div class="before_title">The Mirashka HR Framework</div>
-      <h2 class="title">PULSE — The Mirashka People Operating Framework</h2>
-      <div class="middle"></div>
-      <p>Mirashka has organized its HR services into the PULSE Framework — a practical five-part model that helps businesses protect the organization, unify HR operations, build leadership, source the right talent and empower long-term workforce growth.</p>
+   <div class="container">
+      <div class="title_sections">
+         <div class="before_title">The Mirashka HR Framework</div>
+         <h2 class="title">PULSE — The Mirashka People Operating Framework</h2>
+         <div class="middle"></div>
+         <p>Mirashka has organized its HR services into the PULSE Framework — a practical five-part model that helps businesses protect the organization, unify HR operations, build leadership, source the right talent and empower long-term workforce growth.</p>
+      </div>
    </div>
 </div>
 <div class="slider-container pb-5">
@@ -909,6 +911,8 @@
     <!--===============spacing==============-->
 
    </section>
+
+   
 
    <section class="image-section-two">
       <!--===============spacing==============-->

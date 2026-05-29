@@ -341,7 +341,7 @@
 </style>
 <?php endif; ?>
 <section class="way-section py-2">
-    <div class="container px-2">
+    <div class="container">
         <div class="way-bg">
             <div class="way-shapes-img">
                 <div class="way-shapes-left">
@@ -363,7 +363,7 @@
 
                 <div class="col-lg-5 col-md-12 px-2">
                     <div class="way-img">
-                        <img src="<?php echo e(asset($finalCta['way_image'] ?? 'assets/frontend/img/page/contactUs.png')); ?>" class="img-fluid" alt="<?php echo e($finalCta['way_image_alt'] ?? 'Contact Mirashka HR'); ?>">
+                        <img src="<?php echo e(asset($finalCta['way_image'] ?? 'assets/img/boy.png')); ?>" class="img-fluid" alt="<?php echo e($finalCta['way_image_alt'] ?? 'Contact Mirashka HR'); ?>">
                     </div>
                 </div>
             </div>
@@ -388,8 +388,8 @@
         overflow: hidden;
         border-radius: 22px;
         background: linear-gradient(120deg, #014d2f 0%, #026a3d 52%, #0b8a4d 100%);
-        min-height: 450px;
-        padding: 60px 70px 0;
+        min-height: 390px;
+        padding: 0 70px 0;
         margin-bottom: 0 !important;
     }
 
@@ -446,7 +446,7 @@
     }
 
     .way-img img {
-        height: 430px !important;
+        height: 400px !important;
         max-height: none !important;
         width: auto !important;
         max-width: none !important;

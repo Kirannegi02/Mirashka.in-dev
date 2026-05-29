@@ -63,7 +63,7 @@ return [
         'way_text' => 'Share your HR challenge with Mirashka. Our team will review your current structure and suggest a practical roadmap for hiring, compliance, payroll, leadership and employee experience.',
         'way_button' => 'Submit HR Enquiry',
         'way_button_url' => '/project-enquiries',
-        'way_image' => 'assets/frontend/img/page/contactUs.png',
+        'way_image' => 'assets/img/boy.png',
         'way_image_alt' => 'Contact Mirashka',
         'form_project_label' => 'Company / Team Name',
         'form_project_placeholder' => 'Enter your company or team name',
