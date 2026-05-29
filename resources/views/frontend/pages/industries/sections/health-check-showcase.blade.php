@@ -56,20 +56,22 @@
     }
     .industry-health-showcase__feature {
         display: grid;
-        grid-template-columns: 34px minmax(0, 1fr);
-        gap: 10px;
-        align-items: start;
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
     }
     .industry-health-showcase__feature i {
-        width: 34px;
-        height: 34px;
+        width: 44px;
+        height: 44px;
         border-radius: 8px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: rgba(255, 255, 255, 0.14);
-        color: #fff;
-        font-size: 18px;
+        background: #fff;
+        color: #006847;
+        font-size: 22px;
+        margin-top: 4px;
+        align-self: center;
     }
     .industry-health-showcase__feature h4 {
         margin: 0 0 3px;
