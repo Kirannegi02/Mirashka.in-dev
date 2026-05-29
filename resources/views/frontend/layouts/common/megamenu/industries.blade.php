@@ -136,14 +136,14 @@
               <span class="industries-chip-label">Insurance</span>
             </a>
 
-            <a href="{{ route('healthwellness') }}" class="industries-chip">
+            <a href="{{ route('industries.healthcare') }}" class="industries-chip">
               <img src="{{ asset('assets/frontend/img/menu/health-wellness.jpg') }}" class="industries-chip-image" alt="Pharmaceuticals" loading="lazy">
               <span class="industries-chip-label">Pharmaceuticals</span>
             </a>
           </div>
 
           <div class="industries-chip-row">
-            <a href="{{ route('healthwellness') }}" class="industries-chip">
+            <a href="{{ route('industries.healthcare') }}" class="industries-chip">
               <img src="{{ asset('assets/frontend/img/menu/health-wellness.jpg') }}" class="industries-chip-image" alt="Medical Devices" loading="lazy">
               <span class="industries-chip-label">Medical Devices</span>
             </a>

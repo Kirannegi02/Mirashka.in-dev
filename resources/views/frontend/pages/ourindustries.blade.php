@@ -43,7 +43,7 @@
                 'subcategories' => ['Pharmaceuticals', 'Hospitals & Clinics', 'Medical Devices'],
                 'image' => 'assets/frontend/img/compliance/cwi-integrity.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-hero.png',
-                'route' => 'healthwellness',
+                'route' => 'industries.healthcare',
             ],
             [
                 'title' => 'Technology',

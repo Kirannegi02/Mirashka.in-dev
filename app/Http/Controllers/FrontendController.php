@@ -66,6 +66,31 @@ class FrontendController extends Controller
         return view('frontend.pages.ourindustries', compact('data'));
     }
 
+    public function industryCategory(string $categorySlug)
+    {
+        $category = config('industry-category-registry.'.$categorySlug);
+
+        if (! $category) {
+            abort(404);
+        }
+
+        $configKey = $category['page_config'] ?? 'industry-categories.'.$categorySlug;
+        $page = config($configKey, []);
+
+        if (empty($page)) {
+            abort(404);
+        }
+
+        $meta = $page['meta'] ?? [];
+        $data = [
+            'title' => $meta['title'] ?? ($category['label'].' | Mirashka'),
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.industries.category', compact('data', 'categorySlug', 'category', 'page'));
+    }
+
     public function whatwedo()
     {
         return view('frontend.pages.whatwedo');
