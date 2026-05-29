@@ -56,6 +56,16 @@ class FrontendController extends Controller
         return view('frontend.pages.industriesweserve', compact('data'));
     }
 
+    public function ourindustries()
+    {
+        $data = [];
+        $data['title'] = 'Our Industries | Mirashka';
+        $data['description'] = 'Explore the industries Mirashka serves with tailored HR, talent and workforce solutions across financial services, healthcare, technology, retail, industrial and automobile sectors.';
+        $data['keywords'] = 'our industries, industries we serve, industry HR solutions, Mirashka industries';
+
+        return view('frontend.pages.ourindustries', compact('data'));
+    }
+
     public function whatwedo()
     {
         return view('frontend.pages.whatwedo');
