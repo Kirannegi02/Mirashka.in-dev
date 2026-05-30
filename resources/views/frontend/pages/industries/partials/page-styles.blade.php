@@ -479,7 +479,6 @@
     .industries-page .usecase-card,
     .industries-page .faq-card,
     .industries-page .blog-preview-card,
-    .industries-page .industry-form-wrap,
     .industries-page .process_box_outer_two,
     .industries-page .service-mini-card,
     .industries-page input,
@@ -495,8 +494,13 @@
     .industries-page #pulse.industries-section--light,
     .industries-page #industry-hiring-strategy.industries-section--light,
     .industries-page #industry-use-cases.industries-section--light,
-    .industries-page #industry-form.industries-section--light {
-        background: var(--industries-off-white, #fafafa) !important;
+    .industries-page #industry-form.industries-section--light,
+    .industries-page #industry-form.industry-lead-showcase {
+        background: #fff !important;
+    }
+    .industries-page .industry-lead-showcase .industry-form-wrap,
+    .industries-page .industry-lead-showcase .contact_form_box_inner {
+        background: transparent !important;
     }
     .industries-page .industries-section--dark,
     .industries-page #industry-subcategories.industries-section--dark,
@@ -774,10 +778,22 @@
         border: 1px solid rgba(255, 255, 255, 0.28);
         color: #fff;
         border-radius: 8px;
-        padding: 4px 10px;
+        padding: 0;
         font-size: 0.74rem;
         line-height: 1.35;
         white-space: nowrap;
+    }
+    .industries-grid-showcase__pills li a {
+        display: inline-block;
+        padding: 4px 10px;
+        color: #fff !important;
+        text-decoration: none;
+    }
+    .industries-grid-showcase__pills li a:hover,
+    .industries-grid-showcase__pills li a:focus {
+        color: #fff !important;
+        text-decoration: none;
+        opacity: 0.92;
     }
     .industries-grid-showcase__desc {
         margin: 0 0 16px;

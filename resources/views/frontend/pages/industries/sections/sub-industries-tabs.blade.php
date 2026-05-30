@@ -67,7 +67,7 @@
                                         @endphp
                                         <div
                                             class="s_tab fade {{ $loop->first ? 'active-tab show' : '' }}"
-                                            id="{{ $tabId }}"
+                                            id="{{ !empty($card['anchor']) ? $card['anchor'] : $tabId }}"
                                             role="tabpanel"
                                         >
                                             <div
@@ -86,8 +86,13 @@
                                                         </ul>
                                                     @endif
                                                     <p>{{ $card['description'] ?? '' }}</p>
+                                                    @php
+                                                        $cardHref = ! empty($card['route']) && ! empty($card['slug'])
+                                                            ? route($card['route'], ['slug' => $card['slug']])
+                                                            : ($card['href'] ?? $ctaHref);
+                                                    @endphp
                                                     <a
-                                                        href="{{ $card['href'] ?? $ctaHref }}"
+                                                        href="{{ $cardHref }}"
                                                         class="theme-btn one industry-segment-cta"
                                                     >{{ $card['cta'] ?? 'Explore' }}</a>
                                                 </div>

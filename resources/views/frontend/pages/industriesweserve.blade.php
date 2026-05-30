@@ -605,10 +605,22 @@
         border: 1px solid rgba(255, 255, 255, 0.28);
         color: #fff;
         border-radius: 8px;
-        padding: 4px 10px;
+        padding: 0;
         font-size: 0.74rem;
         line-height: 1.35;
         white-space: nowrap;
+    }
+    .industries-grid-showcase__pills li a {
+        display: inline-block;
+        padding: 4px 10px;
+        color: #fff !important;
+        text-decoration: none;
+    }
+    .industries-grid-showcase__pills li a:hover,
+    .industries-grid-showcase__pills li a:focus {
+        color: #fff !important;
+        text-decoration: none;
+        opacity: 0.92;
     }
     .industries-grid-showcase__desc {
         margin: 0 0 16px;
@@ -1344,7 +1356,15 @@
                                 <h3 class="industries-grid-showcase__title" id="industry-grid-title">{{ $p['industries_grid']['cards'][0]['title'] }}</h3>
                                 <ul class="industries-grid-showcase__pills" id="industry-grid-pills">
                                     @foreach ($p['industries_grid']['cards'][0]['subcategories'] as $sub)
-                                        <li>{{ $sub }}</li>
+                                        @php
+                                            $subLabel = is_array($sub) ? ($sub['label'] ?? '') : $sub;
+                                            $subHref = is_array($sub)
+                                                ? (! empty($sub['route']) && ! empty($sub['slug'])
+                                                    ? route($sub['route'], ['slug' => $sub['slug']])
+                                                    : url($sub['href'] ?? '#'))
+                                                : '#';
+                                        @endphp
+                                        <li><a href="{{ $subHref }}">{{ $subLabel }}</a></li>
                                     @endforeach
                                 </ul>
                                 <p class="industries-grid-showcase__desc" id="industry-grid-desc">{{ $p['industries_grid']['cards'][0]['description'] }}</p>
@@ -1572,9 +1592,21 @@
 
 @php
     $industryCardsForJs = collect($p['industries_grid']['cards'] ?? [])->map(function ($card) {
+        $subs = collect($card['subcategories'] ?? [])->map(function ($sub) {
+            if (is_array($sub)) {
+                $href = ! empty($sub['route']) && ! empty($sub['slug'])
+                    ? route($sub['route'], ['slug' => $sub['slug']])
+                    : url($sub['href'] ?? '#');
+
+                return ['label' => $sub['label'] ?? '', 'href' => $href];
+            }
+
+            return ['label' => (string) $sub, 'href' => '#'];
+        })->values()->all();
+
         return [
             'title' => $card['title'] ?? '',
-            'subcategories' => $card['subcategories'] ?? [],
+            'subcategories' => $subs,
             'description' => $card['description'] ?? '',
             'cta' => $card['cta'] ?? 'Explore',
             'href' => route($card['route'] ?? 'home'),
@@ -1619,7 +1651,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         if (industryPills) {
             industryPills.innerHTML = (card.subcategories || []).map(function (sub) {
-                return '<li>' + sub + '</li>';
+                var label = (sub && sub.label) ? sub.label : sub;
+                var href = (sub && sub.href) ? sub.href : '#';
+                return '<li><a href="' + href + '">' + label + '</a></li>';
             }).join('');
         }
         industryTabs.forEach(function (tab, i) {

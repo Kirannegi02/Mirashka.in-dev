@@ -91,7 +91,11 @@ return [
         'cards' => [
             [
                 'title' => 'Financial Services',
-                'subcategories' => ['Banking', 'Insurance', 'Asset Management'],
+                'subcategories' => [
+                    ['label' => 'Banking', 'route' => 'industries.financial-services.sub', 'slug' => 'banking'],
+                    ['label' => 'Insurance', 'href' => '/industries/financial-services#insurance'],
+                    ['label' => 'Asset Management', 'href' => '/industries/financial-services#asset-management'],
+                ],
                 'description' => 'Compliance-driven talent solutions for institutions where trust, accuracy, documentation and customer responsibility matter deeply.',
                 'cta' => 'Explore Financial Services',
                 'route' => 'industries.financial-services',

@@ -88,7 +88,10 @@
                                 @if (! empty($card['outcome']))
                                     <p><strong>Outcome:</strong> {{ $card['outcome'] }}</p>
                                 @endif
-                                <a href="{{ $ctaHref }}" class="custom-button">{{ $ctaLabel }} <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="{{ $ctaHref }}" class="theme-btn one industries-use-cases-tabs__cta">
+                                    {{ $ctaLabel }}
+                                    <i class="ri-arrow-right-line" aria-hidden="true"></i>
+                                </a>
                             </div>
                             <div class="card-image-container">
                                 <img
@@ -264,22 +267,31 @@
     .industries-use-cases-tabs .card-text-container p strong {
         color: #006039;
     }
-    .industries-use-cases-tabs .custom-button {
-        border: 2px solid #000;
-        padding: 10px 25px;
-        border-radius: 49px;
-        color: #000;
-        font-weight: 700;
+    .industries-use-cases-tabs .industries-use-cases-tabs__cta.theme-btn.one {
         margin-top: 28px;
-        display: inline-flex;
+        display: inline-flex !important;
         align-items: center;
+        justify-content: center;
         gap: 8px;
+        width: auto !important;
+        max-width: 100%;
+        min-width: 160px;
+        min-height: 56px;
+        line-height: 1.35 !important;
+        padding: 0 28px !important;
+        border-radius: 10px 0 10px 0 !important;
+        white-space: normal;
+        text-align: center;
+        align-self: flex-start;
+        font-weight: 600;
         text-decoration: none;
     }
-    .industries-use-cases-tabs .custom-button:hover {
-        background: #006039;
-        border-color: #006039;
-        color: #fff;
+    .industries-use-cases-tabs .industries-use-cases-tabs__cta.theme-btn.one:hover {
+        border-radius: 0 10px 0 10px !important;
+    }
+    .industries-use-cases-tabs .industries-use-cases-tabs__cta.theme-btn.one i {
+        font-size: 1.1rem;
+        line-height: 1;
     }
     @media (max-width: 991.98px) {
         .industries-use-cases-tabs {

@@ -32,7 +32,11 @@
             [
                 'title' => 'Financial Services',
                 'description' => 'Compliance-driven talent solutions for institutions where trust, accuracy, documentation and customer responsibility matter deeply.',
-                'subcategories' => ['Banking', 'Insurance', 'Asset Management'],
+                'subcategories' => [
+                    ['label' => 'Banking', 'route' => 'industries.financial-services.sub', 'slug' => 'banking'],
+                    ['label' => 'Insurance', 'href' => '/industries/financial-services#insurance'],
+                    ['label' => 'Asset Management', 'href' => '/industries/financial-services#asset-management'],
+                ],
                 'image' => 'assets/frontend/img/compliance/cwi-risk.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-integrity.png',
                 'route' => 'industries.financial-services',
@@ -257,7 +261,15 @@
                                     @if (!empty($industry['subcategories']))
                                         <div class="our-industries-pills" role="list">
                                             @foreach ($industry['subcategories'] as $subcategory)
-                                                <a href="#" class="our-industries-pill" role="listitem">{{ $subcategory }}</a>
+                                                @php
+                                                    $pillLabel = is_array($subcategory) ? ($subcategory['label'] ?? '') : $subcategory;
+                                                    $pillHref = is_array($subcategory)
+                                                        ? (! empty($subcategory['route']) && ! empty($subcategory['slug'])
+                                                            ? route($subcategory['route'], ['slug' => $subcategory['slug']])
+                                                            : url($subcategory['href'] ?? '#'))
+                                                        : '#';
+                                                @endphp
+                                                <a href="{{ $pillHref }}" class="our-industries-pill" role="listitem">{{ $pillLabel }}</a>
                                             @endforeach
                                         </div>
                                     @endif

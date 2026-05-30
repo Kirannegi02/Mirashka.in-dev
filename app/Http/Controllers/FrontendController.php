@@ -91,6 +91,48 @@ class FrontendController extends Controller
         return view('frontend.pages.industries.category', compact('data', 'categorySlug', 'category', 'page'));
     }
 
+    public function industrySubCategory(string $slug, string $categorySlug)
+    {
+        $category = config('industry-category-registry.'.$categorySlug);
+
+        if (! $category) {
+            abort(404);
+        }
+
+        $subConfigKey = $category['subcategories_config'] ?? null;
+
+        if (! $subConfigKey) {
+            abort(404);
+        }
+
+        $subcategories = config($subConfigKey, []);
+
+        if (! isset($subcategories[$slug])) {
+            abort(404);
+        }
+
+        $page = $subcategories[$slug];
+
+        if (empty($page)) {
+            abort(404);
+        }
+
+        $meta = $page['meta'] ?? [];
+        $data = [
+            'title' => $meta['title'] ?? ($page['hero']['heading'] ?? $category['label']).' | Mirashka',
+            'description' => $meta['description'] ?? '',
+            'keywords' => $meta['keywords'] ?? '',
+        ];
+
+        return view('frontend.pages.industries.subcategory', compact(
+            'data',
+            'categorySlug',
+            'category',
+            'page',
+            'slug'
+        ));
+    }
+
     public function whatwedo()
     {
         return view('frontend.pages.whatwedo');

@@ -47,6 +47,17 @@ foreach (config('industry-category-registry', []) as $industrySlug => $industryC
     Route::get('/industries/'.$industrySlug, [FrontendController::class, 'industryCategory'])
         ->defaults('categorySlug', $industrySlug)
         ->name($industryCategory['route_name']);
+
+    $subConfigKey = $industryCategory['subcategories_config'] ?? null;
+    $subSlugs = $subConfigKey
+        ? implode('|', array_keys(config($subConfigKey, [])))
+        : '';
+    if ($subSlugs !== '') {
+        Route::get('/industries/'.$industrySlug.'/{slug}', [FrontendController::class, 'industrySubCategory'])
+            ->defaults('categorySlug', $industrySlug)
+            ->where('slug', $subSlugs)
+            ->name($industryCategory['route_name'].'.sub');
+    }
 }
 Route::get('/strategic-media-placements', [FrontendController::class, 'strategicmediaplacements'])->name('strategicmediaplacements');
 Route::get('/speaking-engagements-events', [FrontendController::class, 'speakingengagementsevents'])->name('speakingengagementsevents');

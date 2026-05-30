@@ -14,6 +14,7 @@ return [
         'label' => 'Financial Services',
         'route_name' => 'industries.financial-services',
         'page_config' => 'industry-categories.financial-services',
+        'subcategories_config' => 'industry-subcategories.financial-services',
     ],
     'technology' => [
         'label' => 'Technology',
