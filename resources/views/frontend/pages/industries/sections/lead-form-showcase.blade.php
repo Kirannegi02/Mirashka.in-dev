@@ -4,8 +4,12 @@
 
 <style>
     .industry-lead-showcase {
-        background: #f6f8fb;
-        padding: 78px 0 74px;
+        padding-top: var(--industries-section-pad, 80px) !important;
+        padding-bottom: var(--industries-section-pad, 80px) !important;
+    }
+    .industry-lead-showcase > .container {
+        padding-left: 28px;
+        padding-right: 28px;
     }
     .industry-lead-showcase__wrap {
         display: grid;
@@ -169,6 +173,10 @@
         color: #fff !important;
     }
     @media (max-width: 991px) {
+        .industry-lead-showcase {
+            padding-top: var(--industries-section-pad, 56px) !important;
+            padding-bottom: var(--industries-section-pad, 56px) !important;
+        }
         .industry-lead-showcase__wrap {
             grid-template-columns: 1fr;
         }
@@ -201,7 +209,7 @@
     }
 </style>
 
-<section id="industry-form" class="industry-lead-showcase">
+<section id="industry-form" class="industry-lead-showcase industries-section--light">
     <div class="container">
         <div class="industry-lead-showcase__wrap">
             <div class="industry-lead-showcase__left">
@@ -240,21 +248,34 @@
                                 <label for="industry-form-company">Company Name</label>
                                 <input type="text" id="industry-form-company" name="company_name" autocomplete="organization">
                             </div>
-                            <div class="col-md-6">
-                                <label for="industry-select">Industry</label>
-                                <select name="industry" id="industry-select" required>
-                                    <option value="">Select industry</option>
-                                    @foreach (array_keys($form['industries'] ?? []) as $industry)
-                                        <option value="{{ $industry }}">{{ $industry }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="sub-industry-select">Sub-Industry</label>
-                                <select name="sub_industry" id="sub-industry-select">
-                                    <option value="">Select sub-industry</option>
-                                </select>
-                            </div>
+                            @if (! empty($form['segments']))
+                                <input type="hidden" name="industry" value="Healthcare">
+                                <div class="col-md-6">
+                                    <label for="healthcare-segment-select">Healthcare Segment</label>
+                                    <select name="healthcare_segment" id="healthcare-segment-select" required>
+                                        <option value="">Select segment</option>
+                                        @foreach ($form['segments'] as $segment)
+                                            <option value="{{ $segment }}">{{ $segment }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @else
+                                <div class="col-md-6">
+                                    <label for="industry-select">Industry</label>
+                                    <select name="industry" id="industry-select" required>
+                                        <option value="">Select industry</option>
+                                        @foreach (array_keys($form['industries'] ?? []) as $industry)
+                                            <option value="{{ $industry }}">{{ $industry }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sub-industry-select">Sub-Industry</label>
+                                    <select name="sub_industry" id="sub-industry-select">
+                                        <option value="">Select sub-industry</option>
+                                    </select>
+                                </div>
+                            @endif
                             <div class="col-md-6">
                                 <label for="industry-form-team-size">Team Size</label>
                                 <input type="text" id="industry-form-team-size" name="team_size" placeholder="e.g. 10–50">
@@ -268,13 +289,13 @@
                                     @endforeach
                                 </select>
                             </div>
+                            <div class="col-md-6">
+                                <label for="industry-form-call-time">Preferred Call Time</label>
+                                <input type="text" id="industry-form-call-time" name="preferred_call_time" placeholder="e.g. Weekdays 10 AM–1 PM">
+                            </div>
                             <div class="col-12 industry-lead-showcase__challenge-field">
                                 <label for="industry-form-challenge">Key HR Challenge</label>
                                 <textarea id="industry-form-challenge" name="message" rows="3" required placeholder="Describe your key HR challenge…"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <label for="industry-form-call-time">Preferred Call Time</label>
-                                <input type="text" id="industry-form-call-time" name="preferred_call_time" placeholder="e.g. Weekdays 10 AM–1 PM">
                             </div>
                             <div class="col-12 industry-lead-showcase__form-actions">
                                 <button type="submit" class="theme-btn one submitBtn">{{ $form['submit'] ?? 'Submit Industry HR Enquiry' }}</button>

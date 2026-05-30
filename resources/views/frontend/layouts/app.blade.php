@@ -96,6 +96,34 @@
 .middle.whitte::after {
   border-bottom: 4px solid #ffffff;
 }
+
+/* Banner hero CTAs (What We Do, Industries, Our Industries) — readable on hover */
+.single_banner.style_one .theme_btn_all .theme-btn {
+    position: relative;
+    z-index: 2;
+}
+.single_banner.style_one .theme_btn_all.color_two a.theme-btn.one,
+.single_banner.style_one .theme_btn_all.color_two a.theme-btn.one.primary-color-two {
+    background: var(--primary-color-two, #282f3b) !important;
+    color: #fff !important;
+    border-color: var(--primary-color-two, #282f3b) !important;
+}
+.single_banner.style_one .theme_btn_all.color_two a.theme-btn.one:hover,
+.single_banner.style_one .theme_btn_all.color_two a.theme-btn.one.primary-color-two:hover {
+    background: #fff !important;
+    color: var(--primary-color-one, #006039) !important;
+    border-color: var(--primary-color-one, #006039) !important;
+}
+.single_banner.style_one .theme_btn_all .theme-btn.two {
+    background: transparent !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+.single_banner.style_one .theme_btn_all .theme-btn.two:hover {
+    background: var(--primary-color-one, #006039) !important;
+    color: #fff !important;
+    border-color: #fff !important;
+}
     </style>
     
     {{-- Critical CSS: Load main styles FIRST (blocking but fast) --}}

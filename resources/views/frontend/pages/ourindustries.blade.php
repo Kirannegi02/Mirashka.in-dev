@@ -35,7 +35,7 @@
                 'subcategories' => ['Banking', 'Insurance', 'Asset Management'],
                 'image' => 'assets/frontend/img/compliance/cwi-risk.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-integrity.png',
-                'route' => 'bfsifintech',
+                'route' => 'industries.financial-services',
             ],
             [
                 'title' => 'Healthcare',
@@ -51,7 +51,7 @@
                 'subcategories' => ['Software & SaaS', 'Hardware & Infrastructure', 'Emerging Technologies'],
                 'image' => 'assets/frontend/img/compliance/cwi-bento-meeting.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-risk.png',
-                'route' => 'enterprisetechsaas',
+                'route' => 'industries.technology',
             ],
             [
                 'title' => 'Consumer & Retail',
@@ -59,7 +59,7 @@
                 'subcategories' => ['E-commerce', 'Fashion & Apparel', 'Food & Beverage'],
                 'image' => 'assets/frontend/img/compliance/cwi-hero.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-services.png',
-                'route' => 'luxurybrands',
+                'route' => 'industries.consumer-retail',
             ],
             [
                 'title' => 'Industrial & Energy',
@@ -67,7 +67,7 @@
                 'subcategories' => ['Manufacturing', 'Oil & Gas', 'Renewable Energy'],
                 'image' => 'assets/frontend/img/compliance/cwi-integrity.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-bento-meeting.png',
-                'route' => 'infrastructureenergy',
+                'route' => 'industries.industrial-energy',
             ],
             [
                 'title' => 'Automobile',
@@ -75,7 +75,7 @@
                 'subcategories' => ['Automobile Accessories', 'Automobile Services', 'Automobile Dealerships & Mobility'],
                 'image' => 'assets/frontend/img/compliance/cwi-risk.png',
                 'image_fallback' => 'assets/frontend/img/compliance/cwi-hero.png',
-                'route' => 'industriesweserve',
+                'route' => 'industries.automobile',
             ],
         ],
     ];
@@ -83,10 +83,6 @@
 
 @section('content')
 <style type="text/css">
-    .theme-btn.two {
-        color: #ffffff;
-        border: 1px solid #ffffff;
-    }
     .single_banner.style_one .slider_content h1 {
         font-size: 38px;
         line-height: 50px;

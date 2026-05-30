@@ -9,149 +9,15 @@
         padding: 10px !important;
         border-radius: 8px !important;
     }
-    #industriesHeroBanner {
-        position: relative;
-    }
-    #industriesHeroBanner .tab-content {
-        position: relative;
-        min-height: 0;
-    }
-    #industriesHeroBanner .tab-pane {
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 0;
-        height: auto !important;
-        padding-bottom: 0;
-        box-sizing: border-box;
-    }
-    #industriesHeroBanner .tab-pane::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            radial-gradient(ellipse 85% 75% at 50% 42%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.72) 72%),
-            linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.62) 50%, rgba(0, 0, 0, 0.5) 100%);
-        z-index: 1;
-        pointer-events: none;
-    }
-    #industriesHeroBanner .tab-pane .container {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        position: relative;
-        z-index: 2;
-    }
-    #industriesHeroBanner .tentArea {
-        padding: 40px 0;
-        max-width: 1060px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-    }
-    #industriesHeroBanner .tentArea > :first-child {
-        margin-top: 0 !important;
-    }
-    #industriesHeroBanner .tentArea > :last-child {
-        margin-bottom: 0 !important;
-    }
-    #industriesHeroBanner .tentArea h2.text-white {
-        font-size: var(--industries-heading);
-        font-weight: 800;
-        line-height: 1.25;
-        margin-bottom: 12px;
-    }
-    #industriesHeroBanner .tentArea p.text-white {
-        margin: 12px 0 12px;
-        max-width: 100%;
-    }
-    #industriesHeroBanner .tentArea .textbg {
-        display: inline-block;
-        width: auto;
-        max-width: 100%;
-    }
-    #industriesHeroBanner .animate_down {
-        margin-top: 20px;
-        margin-bottom: 0;
-        padding-bottom: 0;    }
-    #industriesHeroBanner .container {
-        position: relative;
-        z-index: 2;
-    }
-    #industriesHeroBanner .hero-cta-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        justify-content: center;
-    }
-    #industriesHeroBanner .tentArea .line {
-        display: block;
-        margin: 12px auto 0;
-    }
-    #industriesHeroBanner .theme_btn_all .theme-btn {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 28px !important;
-        min-height: 52px !important;
-        min-width: 160px !important;
-        font-size: var(--industries-text) !important;
-        font-weight: 600 !important;
-        line-height: 1.25 !important;
-        text-decoration: none !important;
-        border-radius: 10px 0 10px 0 !important;
-        transition: all 0.5s ease !important;
-    }
-    #industriesHeroBanner .theme_btn_all .theme-btn.one {
-        background: var(--primary-color-one, #006039) !important;
-        color: #fff !important;
-        border: 1px solid var(--primary-color-one, #006039) !important;
-    }
-    #industriesHeroBanner .theme_btn_all .theme-btn.one:hover {
-        background: #fff !important;
-        color: var(--primary-color-one, #006039) !important;
-        border-color: var(--primary-color-one, #006039) !important;
-        border-radius: 0 10px 0 10px !important;
-    }
-    #industriesHeroBanner .theme_btn_all .theme-btn.two {
-        background: transparent !important;
-        color: #fff !important;
-        border: 1px solid #fff !important;
-    }
-    #industriesHeroBanner .theme_btn_all .theme-btn.two:hover {
-        background: #fff !important;
-        color: var(--primary-color-one, #006039) !important;
-        border-color: #fff !important;
-        border-radius: 0 10px 0 10px !important;
-    }
-    @media (max-width: 768px) {
-        #industriesHeroBanner .tab-content,
-        #industriesHeroBanner .tab-pane {
-            min-height: 0;
-        }
-        #industriesHeroBanner .tab-pane {
-            padding-bottom: 0;
-        }
-        #industriesHeroBanner .tab-pane .container {
-            padding-top: 0;
-            padding-bottom: 24px;
-        }
-        #industriesHeroBanner .tentArea {
-            text-align: center;
-            margin: auto;
-            padding: 24px 0;
-        }
-    }
-
     .industries-page {
         --industries-radius: 8px;
         --industries-text: 17px;
         --industries-heading: clamp(1.75rem, 3.2vw, 2.25rem);
         --industries-eyebrow: clamp(16px, 1.25vw, 20px);
         --industries-line: 1.7;
+        --industries-section-pad: 80px;
+        --industries-off-white: #fafafa;
+        --industries-section-alt: #e5e5e5;
     }
     .industries-page,
     .industries-page p,
@@ -175,11 +41,299 @@
         text-decoration: underline;
         padding-bottom: 0;
     }
+    /* Uniform section header rhythm: label → title → divider → intro */
+    .industries-page .industries-section-header,
+    .industries-page .title_all_box.style_one.text-center.dark_color {
+        margin-bottom: 0;
+        padding-top: 0;
+    }
+    .industries-page .industries-section-header .title_sections .before_title,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections .before_title {
+        display: block;
+        margin: 0 auto 14px;
+        padding: 0 0 8px;
+    }
+    .industries-page .industries-section-header .title_sections h2.title,
+    .industries-page .industries-section-header .title_sections > h2,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections h2.title,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections > h2 {
+        margin: 0 auto 22px;
+        padding: 0;
+    }
+    .industries-page .industries-section-header .title_sections > .middle,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections > .middle {
+        display: inline-block;
+        margin: 0 auto 24px;
+    }
+    .industries-page .industries-section-header .title_sections > p,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections > p {
+        max-width: 900px;
+        margin: 0 auto 16px;
+        padding: 0;
+    }
+    .industries-page .industries-section-header .title_sections > p:last-child,
+    .industries-page .title_all_box.style_one.text-center.dark_color .title_sections > p:last-child {
+        margin-bottom: 0;
+    }
+    .industries-page .home-growth-reality .home-growth-reality__inner,
+    .industries-page .industries-pulse-section__title + .slider-container,
+    .industries-page .industries-segments-tabs-wrap > .industries-segments-tabs,
+    .industries-page .industries-reality-tabs .inner_section {
+        margin-top: 48px;
+    }
+    .industries-page .industries-reality-tabs .industries-reality-tabs__challenges-title {
+        margin-top: 28px;
+    }
+    .industries-page .industries-segments-tabs-wrap .title_all_box,
+    .industries-page .industries-reality-standout .title_all_box.industries-section-header,
+    .industries-page .industries-reality-tabs__header {
+        margin-bottom: 0;
+    }
     .industries-page .cwi-title-draw .title_sections .before_title::after,
     .industries-page .cwi-title-draw.is-visible .title_sections .before_title::after {
         display: none !important;
         content: none !important;
     }
+    /* Reality tab section (Creote type_one) */
+    .industries-reality-tabs__section-name {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--primary-color-one, #006039);
+        margin: 0 0 10px;
+    }
+    .industries-reality-tabs__intro {
+        max-width: 920px;
+        margin: 0 auto 8px;
+    }
+    .industries-reality-tabs__intro p {
+        font-size: var(--industries-text, 17px);
+        line-height: 1.75;
+        color: var(--text-color-dark, #4a4e56);
+        margin: 0 0 16px;
+    }
+    .industries-reality-tabs__intro p:last-child {
+        margin-bottom: 0;
+    }
+    .industries-reality-tabs__challenges-title {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-weight: 800;
+        color: var(--heading-dark, #282f3b);
+        margin: 28px 0 0;
+    }
+    .industries-reality-tabs .inner_section {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header {
+        max-height: 520px;
+        overflow-y: auto;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header ul li a {
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 16px 0;
+        white-space: normal;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image {
+        max-width: 720px;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image h6 {
+        font-size: clamp(1rem, 2vw, 1.35rem);
+        line-height: 1.35;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image h2 {
+        font-size: clamp(1.35rem, 2.8vw, 2rem);
+        line-height: 1.25;
+        margin-bottom: 16px;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image p {
+        font-size: var(--industries-text, 16px);
+        line-height: 1.7;
+        opacity: 0.92;
+        margin-bottom: 14px;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image p:last-of-type {
+        margin-bottom: 20px;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image a.rd_more {
+        opacity: 1;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    @media (max-width: 991.98px) {
+        .industries-reality-tabs .tabs_all_box.type_one .tab_content .content_image {
+            margin-left: 0;
+            padding: 180px 24px 48px;
+        }
+        .industries-reality-tabs .tabs_all_box.type_one .tabs_header {
+            position: relative;
+            left: auto;
+            top: auto;
+            width: 100%;
+            max-height: none;
+            margin-bottom: 24px;
+        }
+        .industries-reality-tabs .tabs_all_box.type_one .tab_content {
+            min-height: 420px;
+        }
+    }
+    /* Tab sidebar: theme `a:hover` turns toll_free label green on green bg */
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .toll_free a,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .toll_free a {
+        color: #fff !important;
+        line-height: 1.35;
+        white-space: normal;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .toll_free a:hover,
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .toll_free a:focus,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .toll_free a:hover,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .toll_free a:focus {
+        color: #fff !important;
+    }
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .toll_free:hover,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .toll_free:hover {
+        filter: brightness(1.06);
+    }
+    /* Bootstrap nav-pills `.active` uses white text — invisible on white tab card */
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .nav-pills .nav-link.active,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .nav-pills .nav-link.active,
+    .industries-reality-tabs .tabs_all_box.type_one .tabs_header .nav-pills .nav-link:hover,
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header .nav-pills .nav-link:hover {
+        color: var(--primary-color-one, #006039) !important;
+    }
+
+    /* Sub-industries segments tab section (section pad on #industry-subcategories) */
+    .industries-segments-tabs-wrap {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .industries-segments-tabs-wrap .title_all_box {
+        margin-bottom: 0;
+    }
+    .industries-segments-tabs-wrap .title_sections p {
+        margin-bottom: 0;
+    }
+    .industries-segments-tabs {
+        margin-top: 20px;
+    }
+    .industries-segments-tabs .inner_section {
+        padding: 20px 0;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tab_over_all_box {
+        position: relative;
+        min-height: 460px;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header {
+        position: absolute;
+        left: 50px;
+        top: 50% !important;
+        transform: translateY(-50%);
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header ul {
+        padding-top: 0;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header ul li:first-child a {
+        padding-top: 14px;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tab_content {
+        min-height: 460px;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tab_content .content_image {
+        margin-left: 320px;
+        padding: 48px 40px 40px !important;
+        min-height: 460px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tab_content .content_image h6 {
+        font-size: clamp(1rem, 2vw, 1.35rem);
+        line-height: 1.35;
+        margin-bottom: 10px;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tab_content .content_image h2 {
+        font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+        line-height: 1.2;
+        margin-bottom: 14px;
+    }
+    .industries-segments-tabs .tabs_all_box.type_one .tabs_header ul li a {
+        font-size: 15px;
+        line-height: 1.4;
+        padding: 14px 0;
+        white-space: normal;
+    }
+    .industries-segments-tabs .content_image .industry-segment-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 14px;
+        padding: 0;
+        list-style: none;
+    }
+    .industries-segments-tabs .content_image .industry-segment-pills li {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        color: #fff;
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-size: 13px;
+        line-height: 1.35;
+        font-weight: 500;
+    }
+    .industries-segments-tabs .content_image .industry-segment-cta {
+        margin-top: 8px;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+        max-width: 100%;
+        min-width: 0;
+        min-height: 52px;
+        padding: 0 28px !important;
+        border-radius: 10px 0 10px 0 !important;
+        white-space: normal;
+        text-align: center;
+        align-self: flex-start;
+    }
+    .industries-segments-tabs .content_image p {
+        margin-bottom: 16px;
+        max-width: 640px;
+    }
+    @media (max-width: 991.98px) {
+        .industries-segments-tabs .inner_section {
+            padding: 16px 0;
+        }
+        .industries-segments-tabs .tabs_all_box.type_one .tab_over_all_box {
+            min-height: 0;
+        }
+        .industries-segments-tabs .tabs_all_box.type_one .tab_content {
+            min-height: 400px;
+        }
+        .industries-segments-tabs .tabs_all_box.type_one .tab_content .content_image {
+            margin-left: 0;
+            min-height: 0;
+            padding: 120px 24px 32px !important;
+            justify-content: flex-end;
+        }
+        .industries-segments-tabs .tabs_all_box.type_one .tabs_header {
+            position: relative;
+            left: auto;
+            top: auto !important;
+            transform: none;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+
     .industries-reality-dashboard .pd_top_80 {
         padding-top: 48px;
     }
@@ -333,7 +487,26 @@
     .industries-page textarea,
     .industries-page .video_box,
     .industries-page .industry-thumb,
-    .industries-page .bg-light-section { background: #f4f6f8; }
+    .industries-page .bg-light-section { background: var(--industries-section-alt, #e5e5e5); }
+    /* Alternate section backgrounds — light: 2, 4, 6, 8, 10 (off-white) | dark: 3, 7, 9 (grey) */
+    .industries-page .industries-section--light,
+    .industries-page #industry-reality.industries-section--light,
+    .industries-page #industry-reality.industries-section--light .cwi-standout,
+    .industries-page #pulse.industries-section--light,
+    .industries-page #industry-hiring-strategy.industries-section--light,
+    .industries-page #industry-use-cases.industries-section--light,
+    .industries-page #industry-form.industries-section--light {
+        background: var(--industries-off-white, #fafafa) !important;
+    }
+    .industries-page .industries-section--dark,
+    .industries-page #industry-subcategories.industries-section--dark,
+    .industries-page #industry-compliance.industries-section--dark,
+    .industries-page #industry-health-check.industries-section--dark {
+        background: var(--industries-section-alt, #e5e5e5) !important;
+    }
+    .industries-page .industries-compliance-services.bg_light_1 {
+        background: var(--industries-section-alt, #e5e5e5) !important;
+    }
     .industries-page .bg-dark-section {
         background: #101820;
         color: #fff;
@@ -384,24 +557,26 @@
     }
     .industries-page .service-list li { margin-bottom: 6px; }
     .industries-page .section-cta { margin-top: 28px; }
-    /* Uniform section spacing across industries page */
-    .industries-page > section {
+    /* Uniform section spacing — match What We Do (80px top & bottom) */
+    .industries-page > section,
+    .industries-page > #industry-subcategories {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding-top: 72px !important;
-        padding-bottom: 72px !important;
+        padding-top: var(--industries-section-pad) !important;
+        padding-bottom: var(--industries-section-pad) !important;
     }
-    .industries-page > section#industriesHeroBanner {
+    .industries-page .industry-challenge-solution,
+    .industries-page .cwi-integrity {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-    .industries-page > section#industry-health-check {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+    .industries-page .industries-compliance-services .mr_bottom_20 {
+        margin-bottom: 20px;
     }
     .industries-page > section .pd_top_80,
     .industries-page > section .pd_top_90,
     .industries-page > section .pd_top_100,
+    .industries-page > section .pd_bottom_40,
     .industries-page > section .pd_bottom_70,
     .industries-page > section .pd_bottom_80,
     .industries-page > section .pd_bottom_90 {
@@ -764,264 +939,14 @@
     .industries-approach-section .overlay_content {
         display: none !important;
     }
-    .industries-pulse-wrap {
-        --mi-red: #D94125;
-        --mi-green: #006847;
-        --mi-blue: #2980B9;
-        --mi-gold: #D48C24;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+    .industries-pulse-section .industries-pulse-section__title {
+        margin-top: 0;
+        padding-top: 0;
     }
-    .industries-pulse-hero {
-        background: linear-gradient(135deg, #006847 0%, #005a3a 50%, #004530 100%);
-        padding: 48px 0 96px !important;
-        overflow: visible;
-    }
-    .industries-pulse-hero__bg {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        opacity: 0.14;
-        pointer-events: none;
-    }
-    .industries-pulse-hero__bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 15%;
-    }
-    .industries-pulse-hero .pulse-kicker {
-        font-size: 0.875rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.85);
-        margin-bottom: 12px;
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-        text-decoration-thickness: 2px;
-    }
-    .industries-pulse-hero .pulse-heading {
-        color: #fff;
-        font-weight: 800;
-        margin-bottom: 12px;
-    }
-    .industries-pulse-hero .pulse-intro {
-        color: rgba(255, 255, 255, 0.92);
-        margin-bottom: 0;
-        max-width: 560px;
-    }
-    .industries-pulse-hero__preview {
-        border-radius: calc(var(--industries-radius, 8px) + 6px);
-        overflow: hidden;
-        max-height: 220px;
-        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
-        border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-    .industries-pulse-hero__preview img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        object-position: center 18%;
-        display: block;
-    }
-    .industries-pulse-hero .pulse-pill-wrap {
-        background: #1e2329;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 5px 8px;
-    }
-    .industries-pulse-hero .pulse-pills {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: stretch;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        width: 100%;
-    }
-    .industries-pulse-hero .pulse-pills .nav-item {
-        flex: 1 1 0;
-        min-width: 0;
-        display: flex;
-        position: relative;
-    }
-    .industries-pulse-hero .pulse-pills .nav-item:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 18%;
-        height: 64%;
-        width: 1px;
-        background: rgba(255, 255, 255, 0.16);
-        pointer-events: none;
-    }
-    .industries-pulse-hero .pulse-pills .nav-link {
-        border-radius: 8px !important;
-        padding: 10px 14px;
-        font-size: clamp(0.75rem, 1.35vw, 0.9rem);
-        font-weight: 600;
-        color: #fff !important;
-        background: transparent;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-        white-space: nowrap;
-        transition: background 0.25s ease, color 0.25s ease;
-    }
-    .industries-pulse-hero .pulse-pills .nav-link i,
-    .industries-pulse-hero .pulse-pills .nav-link .pulse-pill-title {
-        color: #fff !important;
-    }
-    .industries-pulse-hero .pulse-pills .nav-link i {
-        font-size: 0.95rem;
-        flex-shrink: 0;
-    }
-    .industries-pulse-hero .pulse-pills .nav-link.active {
-        background: var(--mi-gold);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-    .industries-pulse-hero .pulse-pills .nav-link.active i,
-    .industries-pulse-hero .pulse-pills .nav-link.active .pulse-pill-title {
-        color: #fff !important;
-    }
-    .industries-pulse-panel-wrap {
-        margin-top: -64px;
-        position: relative;
-        z-index: 3;
-        padding-bottom: 0 !important;
-    }
-    .industries-pulse-panel-wrap .pulse-panel {
-        background: #fff;
-        border-radius: calc(var(--industries-radius, 8px) + 10px);
-        padding: 24px 24px 20px;
-        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
-        border: 1px solid rgba(0, 0, 0, 0.06);
-    }
-    .industries-pulse-panel-wrap .pulse-cards-grid > .col {
-        display: flex;
-    }
-    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view {
-        display: block;
-    }
-    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view > .col {
-        display: none;
-    }
-    .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view > .col.is-active {
-        display: block;
-        width: 100%;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card {
-        border-radius: calc(var(--industries-radius, 8px) + 6px);
-        border: 2px solid rgba(15, 23, 42, 0.08);
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-        width: 100%;
-        min-height: 360px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-        cursor: pointer;
-    }
-    .industries-pulse-panel-wrap .pulse-cards-grid.is-filtered .pulse-ignite-card:not(.is-highlighted) {
-        opacity: 0.52;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card.is-highlighted {
-        border-color: var(--mi-green);
-        box-shadow: 0 16px 40px rgba(0, 104, 71, 0.22);
-        opacity: 1 !important;
-        transform: translateY(-4px);
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-thumb {
-        height: 160px;
-        flex-shrink: 0;
-        overflow: hidden;
-        border-radius: calc(var(--industries-radius, 8px) + 6px) calc(var(--industries-radius, 8px) + 6px) 0 0;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        transition: transform 0.45s ease;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card:hover .pulse-ignite-thumb img {
-        transform: scale(1.05);
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card .card-body h6 {
-        font-weight: 700;
-        color: #111;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card .card-body p {
-        color: #4b5563;
-        font-size: 0.92rem;
-        line-height: 1.55;
-    }
-    .industries-pulse-panel-wrap .pulse-ignite-card .card-footer {
-        margin-top: auto;
-        font-size: 0.9rem;
-    }
-    .industries-pulse-panel-wrap .pulse-card-link {
-        color: var(--mi-green);
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: gap 0.2s ease, color 0.2s ease;
-    }
-    .industries-pulse-panel-wrap .pulse-card-link:hover {
-        color: #004d30;
-        gap: 12px;
-    }
-    .industries-pulse-panel-wrap .pulse-card-link i {
-        color: inherit;
-    }
-    @media (min-width: 992px) {
-        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card {
-            display: grid;
-            grid-template-columns: minmax(280px, 38%) 1fr;
-            grid-template-rows: auto auto;
-            min-height: 0;
-        }
-        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-thumb {
-            grid-column: 1;
-            grid-row: 1 / span 2;
-            height: 240px;
-            border-radius: calc(var(--industries-radius, 8px) + 6px) 0 0 calc(var(--industries-radius, 8px) + 6px);
-        }
-        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-thumb img {
-            height: 240px;
-        }
-        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card .card-body {
-            grid-column: 2;
-            grid-row: 1;
-            justify-content: flex-start;
-        }
-        .industries-pulse-panel-wrap .pulse-cards-grid.is-single-view .pulse-ignite-card .card-footer {
-            grid-column: 2;
-            grid-row: 2;
-            margin-top: 0;
-            border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
-        }
-    }
-    @media (max-width: 991px) {
-        .industries-pulse-hero .pulse-pill-wrap {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        .industries-pulse-hero .pulse-pills {
-            min-width: 640px;
-        }
-        .industries-pulse-hero {
-            padding-bottom: 80px;
-        }
-        .industries-pulse-panel-wrap {
-            margin-top: -48px;
-        }
+    .industries-pulse-section .title_sections p {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .industries-page .process-flow-note {
         text-align: center;
@@ -1031,7 +956,7 @@
     /* Keep custom rebuilt sections isolated so following blocks don't overlap */
     .industries-page .industry-video-hr,
     .industries-page .industry-video-hero,
-    .industries-page .industry-health-showcase,
+    .industries-page .industry-health-industries,
     .industries-page .industry-lead-showcase,
     .industries-page .faqs-section {
         position: relative;
@@ -1040,14 +965,14 @@
     }
     .industries-page .industry-video-hr,
     .industries-page .industry-video-hero,
-    .industries-page .industry-health-showcase,
+    .industries-page .industry-health-industries,
     .industries-page .industry-lead-showcase {
         overflow: hidden;
     }
     .industries-page .faqs-section {
-        margin-top: 24px;
-        padding-top: 56px;
-        padding-bottom: 64px;
+        margin-top: 0 !important;
+        padding-top: var(--industries-section-pad, 80px) !important;
+        padding-bottom: var(--industries-section-pad, 80px) !important;
         background: linear-gradient(165deg, #081711 0%, #0b2018 45%, #0a1812 100%) !important;
         color: #fff;
     }
@@ -1252,16 +1177,18 @@
     .industries-page .pulse-heading,
     .industries-page .home-why-mirashka__title,
     .industries-page .industry-challenge-model__title,
-    .industries-page .industry-health-showcase__title,
+    .industries-page .industry-health-industries .title_sections .title,
     .industries-page .industry-lead-showcase__title,
-    .industries-page .industry-usecases-collage__head h2,
-    #industriesHeroBanner .tentArea h2.text-white {
+    .industries-page .industries-use-cases-tabs .title_sections .title,
+    .industries-page .industries-use-cases-tabs .title_sections h2.title,
+    .industries-page .industries-reality-standout .title_sections h2.title,
+    .industries-page .industries-reality-standout .title_sections > h2 {
         font-size: var(--industries-heading) !important;
         line-height: 1.25 !important;
     }
     .industries-page .before_title,
     .industries-page .pulse-kicker,
-    .industries-page .industry-health-showcase__label {
+    .industries-page .industry-health-industries .before_title {
         font-size: var(--industries-eyebrow) !important;
         line-height: 1.4 !important;
     }
@@ -1275,7 +1202,9 @@
         line-height: 1.25 !important;
         font-weight: 800 !important;
     }
-    #industriesHeroBanner .theme_btn_all .theme-btn {
-        font-size: var(--industries-text) !important;
+    @media (max-width: 991.98px) {
+        .industries-page {
+            --industries-section-pad: 56px;
+        }
     }
 </style>

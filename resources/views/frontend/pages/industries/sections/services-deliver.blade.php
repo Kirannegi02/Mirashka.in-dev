@@ -1,313 +1,294 @@
 @php
     $services = $services ?? [];
     $cards = $services['cards'] ?? [];
-    $leftCards = array_slice($cards, 0, (int) ceil(count($cards) / 2));
-    $rightCards = array_slice($cards, count($leftCards));
-    $leftTop = array_slice($leftCards, 0, 2);
-    $leftBottom = array_slice($leftCards, 2, 2);
-    $rightTop = array_slice($rightCards, 0, 2);
-    $rightBottom = array_slice($rightCards, 2, 2);
-    $serviceImage = asset($services['image'] ?? 'assets/frontend/img/home/home-why-mirashka-hero.png');
-    $serviceImageFallback = asset($services['image_fallback'] ?? 'assets/frontend/img/hraas/hraas-v3-hero.png');
-    $serviceImageSecondary = asset($services['image_secondary'] ?? 'assets/frontend/img/leadership/ldr-hero-boardroom.png');
-    $serviceImageSecondaryFallback = asset($services['image_secondary_fallback'] ?? $services['image_fallback'] ?? 'assets/frontend/img/hraas/hraas-page-partner.png');
+    $ctaHref = $services['cta']['href'] ?? 'whatwedo';
+    $ctaUrl = str_starts_with($ctaHref, '#') || str_starts_with($ctaHref, 'http')
+        ? $ctaHref
+        : route($ctaHref);
+    $cardImagePool = [
+        $services['image'] ?? 'assets/frontend/img/home/home-why-mirashka-hero.png',
+        $services['image_secondary'] ?? 'assets/frontend/img/compliance/cwi-services.png',
+        'assets/frontend/img/hraas/hraas-v3-hero.png',
+        'assets/frontend/img/compliance/cwi-bento-meeting.png',
+        'assets/frontend/img/talent-acquisition/ta-services-recruitment.png',
+        'assets/frontend/img/leadership/ldr-hero-boardroom.png',
+        'assets/frontend/img/workforce/wfm-card-payroll.png',
+        'assets/frontend/img/hraas/hraas-card-engagement.png',
+        'assets/frontend/img/compliance/cwi-card-policy.png',
+        'assets/frontend/img/industries/industry-healthcare.webp',
+    ];
+    $sectionBg = asset('assets/frontend/images/projects/project-background-6-min.jpg');
 @endphp
 
-<style>
-    .industries-services-deliver.home-why-mirashka {
-        padding: 88px 0 64px;
-        background: linear-gradient(165deg, #0a1410 0%, #0f1f18 38%, #152a22 70%, #0d1612 100%);
-        overflow: hidden;
-    }
-    .industries-services-deliver .home-why-mirashka__inner {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 28px;
-    }
-    .industries-services-deliver .home-why-mirashka__header {
-        text-align: center;
-        max-width: 1100px;
-        margin: 0 auto 52px;
-    }
-    .industries-services-deliver .home-why-mirashka__eyebrow {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #7dcea8;
-        margin-bottom: 14px;
-        text-decoration: underline;
-        text-underline-offset: 0.2em;
-        text-decoration-thickness: 2px;
-    }
-    .industries-services-deliver .home-why-mirashka__title {
-        font-size: clamp(1.75rem, 3.8vw, 2.65rem);
-        font-weight: 800;
-        line-height: 1.2;
-        color: #fff;
-        margin: 0 0 16px;
-    }
-    .industries-services-deliver .home-why-mirashka__intro {
-        font-size: 1rem;
-        line-height: 1.75;
-        color: rgba(255, 255, 255, 0.78);
-        margin: 0;
-    }
-    .industries-services-deliver .home-why-mirashka__stage {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-        width: 100%;
-    }
-    .industries-services-deliver .home-why-mirashka__row {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 400px) minmax(0, 1fr);
-        gap: 28px 48px;
-        align-items: stretch;
-    }
-    .industries-services-deliver .home-why-mirashka__col {
-        display: flex;
-        flex-direction: column;
-    }
-    .industries-services-deliver .home-why-mirashka__col--left {
-        align-items: flex-end;
-        text-align: right;
-    }
-    .industries-services-deliver .home-why-mirashka__col--right {
-        align-items: flex-start;
-        text-align: left;
-    }
-    .industries-services-deliver .home-why-mirashka__card {
-        position: relative;
-        padding: 22px 12px 24px;
-        max-width: 420px;
-        width: 100%;
-    }
-    .industries-services-deliver .home-why-mirashka__card + .home-why-mirashka__card {
-        border-top: 1px solid rgba(125, 206, 168, 0.18);
-    }
-    .industries-services-deliver .home-why-mirashka__card-num {
-        position: absolute;
-        top: 14px;
-        font-size: clamp(2.75rem, 5vw, 4rem);
-        font-weight: 800;
-        line-height: 1;
-        color: rgba(255, 255, 255, 0.06);
-        pointer-events: none;
-    }
-    .industries-services-deliver .home-why-mirashka__col--left .home-why-mirashka__card-num { right: 0; }
-    .industries-services-deliver .home-why-mirashka__col--right .home-why-mirashka__card-num { left: 0; }
-    .industries-services-deliver .home-why-mirashka__card-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 96px;
-        height: 96px;
-        margin-bottom: 16px;
-        color: #7dcea8;
-        font-size: 4.2rem !important;
-        line-height: 1;
-    }
-    .industries-services-deliver .home-why-mirashka__card-icon i {
-        font-size: 4.2rem !important;
-        line-height: 1;
-    }
-    .industries-services-deliver .home-why-mirashka__card h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #fff;
-        margin: 0 0 8px;
-        line-height: 1.35;
-        position: relative;
-        z-index: 1;
-    }
-    .industries-services-deliver .home-why-mirashka__card p {
-        font-size: 0.9rem;
-        line-height: 1.6;
-        color: rgba(255, 255, 255, 0.75);
-        margin: 0;
-        position: relative;
-        z-index: 1;
-    }
-    .industries-services-deliver .home-why-mirashka__center {
-        width: 100%;
-        max-width: 400px;
-        justify-self: center;
-        display: flex;
-        align-self: stretch;
-        min-height: 0;
-    }
-    .industries-services-deliver .home-why-mirashka__center-img {
-        flex: 1 1 auto;
-        display: flex;
-        width: 100%;
-        min-height: 100%;
-        overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(125, 206, 168, 0.2);
-    }
-    .industries-services-deliver .home-why-mirashka__center-img img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        min-height: 340px;
-        object-fit: cover;
-        object-position: center;
-    }
-    .industries-services-deliver .home-why-mirashka__cta-wrap {
-        text-align: center;
-        margin-top: 28px;
-    }
-    .industries-services-deliver .home-why-mirashka__cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .industries-services-deliver .home-why-mirashka__cta.theme-btn.one {
-        background: #006847 !important;
-        color: #fff !important;
-        border: 1px solid #006847 !important;
-    }
-    .industries-services-deliver .home-why-mirashka__cta.theme-btn.one:hover {
-        background: #fff !important;
-        color: #006847 !important;
-        border-color: #006847 !important;
-    }
-    .industries-services-deliver .home-why-mirashka__cta.theme-btn.one i {
-        color: inherit !important;
-    }
-    @media (max-width: 991px) {
-        .industries-services-deliver .home-why-mirashka__row {
-            grid-template-columns: 1fr;
-            gap: 0;
+@if (!empty($cards))
+<section
+    class="project-section industries-services-deliver bg_dark_1 bg_op_1 light_color"
+    id="industries-services"
+    style="background-color: #006039; background-image: url('{{ $sectionBg }}');"
+>
+    <style type="text/css">
+        .industries-services-deliver.project-section {
+            background-color: #006039 !important;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            overflow: hidden;
         }
-        .industries-services-deliver .home-why-mirashka__center {
-            max-width: 360px;
-            margin: 0 auto 16px;
-            order: -1;
+        .industries-services-deliver__head {
+            margin-bottom: 44px;
+            text-align: center;
         }
-        .industries-services-deliver .home-why-mirashka__row .home-why-mirashka__col {
-            order: 0;
+        .industries-services-deliver .title_sections {
+            text-align: center !important;
         }
-        .industries-services-deliver .home-why-mirashka__center {
-            align-self: auto;
+        .industries-services-deliver .title_all_box.style_one .title_sections .before_title,
+        .industries-services-deliver .title_all_box.style_one .title_sections h2 {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center !important;
         }
-        .industries-services-deliver .home-why-mirashka__center-img {
-            min-height: auto;
+        .industries-services-deliver .title_all_box.style_one .before_title {
+            color: #7dcea8;
+            margin-bottom: 12px;
+            text-align: center;
         }
-        .industries-services-deliver .home-why-mirashka__center-img img {
-            height: 240px;
-            min-height: 240px;
+        .industries-services-deliver .title_all_box.style_one h2 {
+            color: #fff;
+            font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+            line-height: 1.25;
+            margin-bottom: 0;
+            text-align: center;
+            max-width: 1000px;
         }
-        .industries-services-deliver .home-why-mirashka__col--left,
-        .industries-services-deliver .home-why-mirashka__col--right {
-            align-items: stretch;
-            text-align: left;
+        .industries-services-deliver__intro-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            max-width: 900px;
+            margin: 18px auto 0;
+            text-align: center;
         }
-        .industries-services-deliver .home-why-mirashka__card {
+        .industries-services-deliver__footer-cta {
+            margin-top: 36px;
+            text-align: center;
+        }
+        .industries-services-deliver__footer-cta .theme_btn_all .theme-btn.one {
+            display: inline-flex !important;
+            width: auto !important;
+            min-width: 220px;
             max-width: 100%;
-            padding-left: 0;
-            padding-right: 0;
         }
-        .industries-services-deliver .home-why-mirashka__col--left .home-why-mirashka__card-num {
-            left: 0;
-            right: auto;
+        .industries-services-deliver .theme_btn_all {
+            margin: 0;
         }
-    }
-</style>
+        .industries-services-deliver .theme_btn_all .theme-btn.one {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            line-height: 1.35 !important;
+            min-height: 52px;
+            width: 100%;
+            padding: 12px 24px !important;
+            white-space: normal;
+            text-align: center;
+            background: #fff !important;
+            color: #006039 !important;
+            border-color: #fff !important;
+        }
+        .industries-services-deliver .theme_btn_all .theme-btn.one:hover {
+            background: transparent !important;
+            color: #fff !important;
+            border-color: #fff !important;
+        }
+        .industries-services-deliver__carousel-wrap {
+            position: relative;
+            z-index: 1;
+            margin-top: 4px;
+        }
+        .industries-services-deliver .project_caro_section.carousel.style_three {
+            margin: 0;
+            padding: 0;
+        }
+        .industries-services-deliver .industries-services-swiper {
+            overflow: hidden;
+            padding: 4px 2px 0;
+        }
+        .industries-services-deliver .swiper-slide {
+            height: auto;
+            box-sizing: border-box;
+        }
+        .industries-services-deliver .project_post.style_nine {
+            margin: 0;
+            height: 100%;
+            cursor: default;
+            pointer-events: none;
+        }
+        .industries-services-deliver .project_post.style_nine .image_zoom_box {
+            display: none !important;
+        }
+        .industries-services-deliver .project_post.style_nine:hover .image::after {
+            bottom: -100%;
+        }
+        .industries-services-deliver .project_post.style_nine .image {
+            height: 320px;
+            border-radius: 8px;
+        }
+        @media (min-width: 1200px) {
+            .industries-services-deliver .project_post.style_nine .image {
+                height: 340px;
+            }
+        }
+        @media (min-width: 1400px) {
+            .industries-services-deliver .project_post.style_nine .image {
+                height: 360px;
+            }
+        }
+        .industries-services-deliver .project_post.style_nine .project_caro_content {
+            padding: 22px 18px 28px;
+        }
+        .industries-services-deliver .project_post.style_nine .project_caro_content h2 {
+            margin: 0 0 10px;
+            line-height: 1.35;
+        }
+        .industries-services-deliver .project_post.style_nine .project_caro_content h2,
+        .industries-services-deliver .project_post.style_nine .project_caro_content h2 span {
+            font-size: 17px !important;
+            font-weight: 700 !important;
+            line-height: 1.35 !important;
+            color: #fff;
+            cursor: default;
+            text-decoration: none;
+            display: block;
+        }
+        .industries-services-deliver .project_post.style_nine .project_caro_content p {
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            line-height: 1.55 !important;
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.88);
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .industries-services-deliver .p_pagination {
+            margin-top: 28px;
+        }
+        .industries-services-deliver .p_pagination .swiper-pagination {
+            position: relative;
+            padding: 0 !important;
+        }
+        .industries-services-deliver .p_pagination .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.45);
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+            margin: 0 6px !important;
+        }
+        .industries-services-deliver .p_pagination .swiper-pagination-bullet-active {
+            background: #fff;
+            width: 28px;
+            border-radius: 6px;
+        }
+        @media (max-width: 991.98px) {
+            .industries-services-deliver__head {
+                margin-bottom: 32px;
+            }
+            .industries-services-deliver__footer-cta {
+                margin-top: 28px;
+            }
+        }
+    </style>
 
-<section class="content-section home-why-mirashka industries-services-deliver" id="industries-services">
-    <div class="home-why-mirashka__inner">
-        <header class="home-why-mirashka__header">
-            <span class="home-why-mirashka__eyebrow">{{ $services['label'] ?? '' }}</span>
-            <h2 class="home-why-mirashka__title">{{ $services['heading'] ?? '' }}</h2>
-            <p class="home-why-mirashka__intro">{{ $services['content'] ?? '' }}</p>
-        </header>
-
-        <div class="home-why-mirashka__stage">
-            {{-- Row 1: services 01–02 | image 1 | services 05–06 --}}
-            <div class="home-why-mirashka__row home-why-mirashka__row--top">
-                <div class="home-why-mirashka__col home-why-mirashka__col--left">
-                    @foreach ($leftTop as $index => $card)
-                        <article class="home-why-mirashka__card">
-                            <span class="home-why-mirashka__card-num" aria-hidden="true">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
-                            <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="{{ $card['icon'] ?? 'ri-checkbox-circle-line' }}"></i></span>
-                            <h3>{{ $card['title'] }}</h3>
-                            <p>{{ $card['text'] }}</p>
-                        </article>
-                    @endforeach
-                </div>
-                <div class="home-why-mirashka__center">
-                    <div class="home-why-mirashka__center-img">
-                        <img
-                            src="{{ $serviceImage }}"
-                            onerror="this.onerror=null;this.src='{{ $serviceImageFallback }}';"
-                            alt="HR professionals reviewing workforce strategy"
-                            loading="lazy"
-                            width="400"
-                            height="280"
-                        >
-                    </div>
-                </div>
-                <div class="home-why-mirashka__col home-why-mirashka__col--right">
-                    @foreach ($rightTop as $index => $card)
-                        @php $num = count($leftCards) + $index + 1; @endphp
-                        <article class="home-why-mirashka__card">
-                            <span class="home-why-mirashka__card-num" aria-hidden="true">{{ str_pad($num, 2, '0', STR_PAD_LEFT) }}</span>
-                            <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="{{ $card['icon'] ?? 'ri-checkbox-circle-line' }}"></i></span>
-                            <h3>{{ $card['title'] }}</h3>
-                            <p>{{ $card['text'] }}</p>
-                        </article>
-                    @endforeach
+    <div class="container">
+        <div class="industries-services-deliver__head">
+            <div class="title_all_box style_one text-center light_color industries-section-header">
+                <div class="title_sections">
+                    @if (!empty($services['label']))
+                        <div class="before_title">{{ $services['label'] }}</div>
+                    @endif
+                    @if (!empty($services['heading']))
+                        <h2>{{ $services['heading'] }}</h2>
+                    @endif
                 </div>
             </div>
+            @if (!empty($services['content']))
+                <p class="industries-services-deliver__intro-text">{{ $services['content'] }}</p>
+            @endif
+        </div>
 
-            {{-- Row 2: services 03–04 | image 2 | services 07–08 --}}
-            <div class="home-why-mirashka__row home-why-mirashka__row--bottom">
-                <div class="home-why-mirashka__col home-why-mirashka__col--left">
-                    @foreach ($leftBottom as $index => $card)
-                        @php $num = 2 + $index + 1; @endphp
-                        <article class="home-why-mirashka__card">
-                            <span class="home-why-mirashka__card-num" aria-hidden="true">{{ str_pad($num, 2, '0', STR_PAD_LEFT) }}</span>
-                            <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="{{ $card['icon'] ?? 'ri-checkbox-circle-line' }}"></i></span>
-                            <h3>{{ $card['title'] }}</h3>
-                            <p>{{ $card['text'] }}</p>
-                        </article>
-                    @endforeach
-                </div>
-                <div class="home-why-mirashka__center">
-                    <div class="home-why-mirashka__center-img">
-                        <img
-                            src="{{ $serviceImageSecondary }}"
-                            onerror="this.onerror=null;this.src='{{ $serviceImageSecondaryFallback }}';"
-                            alt="Leadership and board advisory in a modern workplace"
-                            loading="lazy"
-                            width="400"
-                            height="280"
-                        >
+        <div class="industries-services-deliver__carousel-wrap">
+            <div class="project_caro_section carousel style_three">
+                <div
+                    class="swiper-container industries-services-swiper"
+                    id="industries-services-swiper"
+                    data-swiper='{
+                        "autoplay": { "delay": 6000, "disableOnInteraction": false },
+                        "freeMode": false,
+                        "loop": true,
+                        "speed": 800,
+                        "centeredSlides": false,
+                        "slidesPerView": 1,
+                        "spaceBetween": 16,
+                        "watchOverflow": true,
+                        "pagination": {
+                            "el": "#industries-services .industries-services-swiper-pagination",
+                            "clickable": true
+                        },
+                        "breakpoints": {
+                            "1600": { "slidesPerView": 5, "spaceBetween": 24 },
+                            "1400": { "slidesPerView": 4, "spaceBetween": 22 },
+                            "1200": { "slidesPerView": 3, "spaceBetween": 20 },
+                            "768": { "slidesPerView": 2, "spaceBetween": 18 },
+                            "576": { "slidesPerView": 1, "spaceBetween": 16 },
+                            "0": { "slidesPerView": 1, "spaceBetween": 16 }
+                        }
+                    }'
+                >
+                    <div class="swiper-wrapper">
+                        @foreach ($cards as $card)
+                            @php
+                                $cardImage = asset($card['image'] ?? $cardImagePool[$loop->index % count($cardImagePool)]);
+                                $cardImageFallback = asset(
+                                    $card['image_fallback']
+                                        ?? $cardImagePool[($loop->index + 1) % count($cardImagePool)]
+                                );
+                            @endphp
+                            <div class="swiper-slide">
+                                <div class="project_post style_nine industries-services-deliver__card">
+                                    <div class="image">
+                                        <img
+                                            loading="lazy"
+                                            src="{{ $cardImage }}"
+                                            class="img-fluid"
+                                            alt="{{ $card['title'] ?? 'Healthcare HR service' }}"
+                                            onerror="this.onerror=null;this.src='{{ $cardImageFallback }}';"
+                                        >
+                                    </div>
+                                    <div class="project_caro_content">
+                                        <h2 class="title_pro">
+                                            <span>{{ $card['title'] ?? '' }}</span>
+                                        </h2>
+                                        <p>{{ $card['text'] ?? '' }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                </div>
-                <div class="home-why-mirashka__col home-why-mirashka__col--right">
-                    @foreach ($rightBottom as $index => $card)
-                        @php $num = count($leftCards) + 2 + $index + 1; @endphp
-                        <article class="home-why-mirashka__card">
-                            <span class="home-why-mirashka__card-num" aria-hidden="true">{{ str_pad($num, 2, '0', STR_PAD_LEFT) }}</span>
-                            <span class="home-why-mirashka__card-icon" aria-hidden="true"><i class="{{ $card['icon'] ?? 'ri-checkbox-circle-line' }}"></i></span>
-                            <h3>{{ $card['title'] }}</h3>
-                            <p>{{ $card['text'] }}</p>
-                        </article>
-                    @endforeach
+                    <div class="p_pagination">
+                        <div class="swiper-pagination industries-services-swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="home-why-mirashka__cta-wrap">
-            <a href="{{ route($services['cta']['href'] ?? 'whatwedo') }}" class="home-why-mirashka__cta theme-btn one">
-                {{ $services['cta']['label'] ?? 'Explore Mirashka HR Services' }}
-                <i class="ri-arrow-right-line" aria-hidden="true"></i>
-            </a>
-        </div>
+        @if (!empty($services['cta']['label']))
+            <div class="industries-services-deliver__footer-cta">
+                <div class="theme_btn_all color_one">
+                    <a href="{{ $ctaUrl }}" class="theme-btn one">{{ $services['cta']['label'] }}</a>
+                </div>
+            </div>
+        @endif
     </div>
 </section>
+@endif

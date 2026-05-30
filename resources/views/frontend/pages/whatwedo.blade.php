@@ -3,13 +3,6 @@
 @section('content')
 
    <style type="text/css">
-      .theme-btn.two {
-
-         color: #ffffff;
-         border: 1px solid #ffffff;
-
-      }
-
       .single_banner.style_one .slider_content h1 {
          font-size: 38px;
          line-height: 50px;
